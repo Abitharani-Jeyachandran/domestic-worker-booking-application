@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
 
-if(isset($_POST['login'])) 
+if(isset($_POST['login']))
   {
     $username=$_POST['username'];
     $password=md5($_POST['password']);
@@ -42,40 +42,27 @@ echo "<script>alert('Invalid Details');</script>";
 ?>
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
-    <head>       
-        <title>Job Portal - Login Page</title>
+    <head>
+        <title>Admin - Login Page</title>
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
     </head>
     <body>
-      
+
         <div id="page-container" class="main-content-boxed">
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
-                <div class="bg-image" style="background-image: url('assets/img/photos/photo34@2x.jpg');">
+                <div class="bg-image" >
                     <div class="row mx-0 bg-black-op">
-                        <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
-                            <div class="p-30 invisible" data-toggle="appear">
-                                <p class="font-size-h3 font-w600 text-white">
-                                    Job Portal.
-                                </p>
-                                <p class="font-italic text-white-op">
-                                    Copyright &copy; <span class="js-year-copy">2020</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible" data-toggle="appear" data-class="animated fadeInRight">
+
+                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white visible">
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
-                                    <a class="link-effect font-w700" href="index.php">
-                                        <i class="si si-fire"></i>
-                                        <span class="font-size-xl">Job Portal </span>
-                                    </a>
-                                    <h1 class="h3 font-w700 mt-30 mb-10">Welcome to Your Dashboard</h1>
+                                    <h1 class="h3 font-w700 mt-30 mb-10">Welcome to Admin Dashboard</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
                                 </div>
-                               
+
                                 <form class="js-validation-signin px-30" method="post">
                                     <div class="form-group row">
                                         <div class="col-12">
@@ -101,12 +88,12 @@ echo "<script>alert('Invalid Details');</script>";
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-sm btn-hero btn-alt-primary" name="login">
-                                            <i class="si si-login mr-10"></i> Sign In
+                                             Sign In
                                         </button>
                                         <div class="mt-30">
-                                            
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="forgot-password.php">
-                                                <i class="fa fa-warning mr-5"></i> Forgot Password
+
+                                            <a class="mr-10 mb-5 d-inline-block" href="forgot-password.php">
+                                                Forgot Password
                                             </a>
                                             <a href="../index.php">Back Home!!</a>
                                         </div>

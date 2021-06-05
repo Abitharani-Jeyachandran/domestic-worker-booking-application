@@ -140,7 +140,7 @@ div.activeColour
     display: inline;
     left: 0;
     top:30px;
-    background:#E8E8E8;
+    background:#A020F0;
     padding-bottom:10px;
     z-index:10000;
 
@@ -156,7 +156,7 @@ div.activeColour
 
 .specialCntr
 {
-    background-color:#E8E8E8!important;
+    background-color:#A020F0!important;
     display:inline;
     position:absolute;
   width:176px;
@@ -280,12 +280,12 @@ h1{
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
   color: #fff;
   text-decoration: none;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top,#08c,#0077b3);
-  background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#0077b3));
-  background-image: -webkit-linear-gradient(top,#08c,#0077b3);
-  background-image: -o-linear-gradient(top,#08c,#0077b3);
-  background-image: linear-gradient(to bottom,#08c,#0077b3);
+  background-color: #A020F0;
+  background-image: -moz-linear-gradient(top,#08c,#A020F0);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#A020F0));
+  background-image: -webkit-linear-gradient(top,#08c,#A020F0);
+  background-image: -o-linear-gradient(top,#08c,#A020F0);
+  background-image: linear-gradient(to bottom,#08c,#A020F0);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',endColorstr='#ff0077b3',GradientType=0);
 }
