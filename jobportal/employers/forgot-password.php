@@ -5,12 +5,12 @@ include('includes/config.php');
 error_reporting(0);
 if(isset($_POST['submit']))
   {
- 
+
     // Getting post values
     $email=$_POST['emailid'];
     $companyname=$_POST['companyname'];
     $password=$_POST['password'];
-    //new password hasing 
+    //new password hasing
 $options = ['cost' => 12];
 $hashednewpass=password_hash($password, PASSWORD_BCRYPT, $options);
     // Fetch data from database on the basis of email and mobile
@@ -37,7 +37,7 @@ echo "<script type='text/javascript'> document.location ='emp-login.php'; </scri
 else{
 echo "<script>alert('Invalid details. Please try again');</script>";
   }
- 
+
 }
 ?>
 
@@ -46,7 +46,7 @@ echo "<script>alert('Invalid details. Please try again');</script>";
 <html>
 
 <head>
-<title>Employer Reset Your Account Password | Job Portal</title>
+<title>Employer Reset Your Account Password | Find Us</title>
 
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -66,7 +66,7 @@ document.changepassword.confirmpassword.focus();
 return false;
 }
 return true;
-}   
+}
 
 </script>
 </head>
@@ -77,10 +77,10 @@ return true;
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
  <?php include('includes/header.php');?>
-  <!--HEADER END--> 
+  <!--HEADER END-->
 
   <section id="inner-banner">
     <div class="container">
@@ -90,11 +90,11 @@ return true;
 
 
 
-  
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
     <!--SIGNUP SECTION START-->
 
     <section class="signup-section">
@@ -128,8 +128,8 @@ return true;
 <input type="password" class="form-control" name="password" id="confirmpassword" required placeholder="Confirm Password">
 
             </div>
-          
-<div class="input-box"> 
+
+<div class="input-box">
        <input type="submit" value="Sign in" name="submit">
      </div>
 
@@ -146,34 +146,33 @@ return true;
 
     </section>
 
-    <!--SIGNUP SECTION END--> 
+    <!--SIGNUP SECTION END-->
 
-    
+
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
   <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/jquery.noconflict.js"></script> 
-<script src="../js/theme-scripts.js"></script> 
-<script src="../js/form.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/jquery.noconflict.js"></script>
+<script src="../js/theme-scripts.js"></script>
+<script src="../js/form.js"></script>
 <script src="../js/custom.js"></script>
 
 </body>
 
 </html>
-

@@ -10,7 +10,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Job Portal - Jobseeker Lists</title>
+        <title>Find Us - Jobseeker Lists</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
@@ -18,9 +18,9 @@ if (strlen($_SESSION['jpaid']==0)) {
 
     </head>
     <body>
-        
+
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-           
+
            <?php include_once('includes/sidebar.php');?>
 
           <?php include_once('includes/header.php');?>
@@ -32,17 +32,17 @@ if (strlen($_SESSION['jpaid']==0)) {
                 <div class="content">
                     <h2 class="content-heading">Candidates Between Dates Report</h2>
 
-                   
+
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                       <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Candidates Between Dates Report</h3>
-                                    
+
                                 </div>
                         <div class="block-content block-content-full">
-                           
-                              
+
+
                             <?php
 $fdate=$_POST['fromdate'];
 $tdate=$_POST['todate'];
@@ -85,15 +85,15 @@ foreach($results as $row)
                                             <td class="font-w600"><?php echo "Inactive"; ?></td><?php } ?>
 
                                         <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDate);?></td>
-                                        
+
                                          <td class="d-none d-sm-table-cell"><a href="view-jobseeker-details.php?viewid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
-                                   
-                                
-                                
-                                  
+
+
+
+
                                 </tbody>
-                                 <?php 
+                                 <?php
 $cnt=$cnt+1;
 } } else { ?>
   <tr>

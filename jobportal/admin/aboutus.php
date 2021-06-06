@@ -25,14 +25,14 @@ echo '<script>alert("About us has been updated")</script>';
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - Update About Us</title>
+ <title>Find Us - Update About Us</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
 <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -42,7 +42,7 @@ echo '<script>alert("About us has been updated")</script>';
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
                     <h2 class="content-heading">Update About Us</h2>
                     <div class="row">
@@ -51,10 +51,10 @@ echo '<script>alert("About us has been updated")</script>';
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Update About Us</h3>
-                                    
+
                                 </div>
                                 <div class="block-content">
-                                   
+
                                     <form method="post">
                                 <?php
 
@@ -66,7 +66,7 @@ $cnt=1;
 if($query->rowCount() > 0)
 {
 foreach($results as $row)
-{               ?>        
+{               ?>
                                         <div class="form-group row">
                                             <label class="col-12" for="register1-email">Page Title:</label>
                                             <div class="col-12">
@@ -93,7 +93,7 @@ foreach($results as $row)
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->

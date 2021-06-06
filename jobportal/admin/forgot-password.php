@@ -25,7 +25,7 @@ $chngpwd1->execute();
 echo "<script>alert('Your Password succesfully changed');</script>";
 }
 else {
-echo "<script>alert('Email id or Mobile no is invalid');</script>"; 
+echo "<script>alert('Email id or Mobile no is invalid');</script>";
 }
 }
 
@@ -33,8 +33,8 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
 
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
-    <head>       
-        <title>Job Portal - Forgot Page</title>
+    <head>
+        <title>Find Us - Forgot Page</title>
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
         <script type="text/javascript">
 function valid()
@@ -50,7 +50,7 @@ return true;
 </script>
     </head>
     <body>
-      
+
         <div id="page-container" class="main-content-boxed">
             <!-- Main Container -->
             <main id="main-container">
@@ -60,7 +60,7 @@ return true;
                         <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                             <div class="p-30 invisible" data-toggle="appear">
                                 <p class="font-size-h3 font-w600 text-white">
-                                   Job Portal.
+                                   Find Us.
                                 </p>
                                 <p class="font-italic text-white-op">
                                     Copyright &copy; <span class="js-year-copy">2020</span>
@@ -78,7 +78,7 @@ return true;
                                     <h1 class="h3 font-w700 mt-30 mb-10">Don’t worry, we’ve got your back</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Please enter below detail</h2>
                                 </div>
-                               
+
                                 <form class="js-validation-signin px-30" method="post" name="chngpwd" onSubmit="return valid();">
                                     <div class="form-group row">
                                         <div class="col-12">
@@ -112,13 +112,13 @@ return true;
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-sm btn-hero btn-alt-primary" name="submit">
                                             <i class="si si-login mr-10"></i> Reset
                                         </button>
                                         <div class="mt-30">
-                                            
+
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="index.php">
                                                  <i class="fa fa-user text-muted mr-5"></i> Sign In
                                             </a>

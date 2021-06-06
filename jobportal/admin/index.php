@@ -63,7 +63,7 @@ echo "<script>alert('Invalid Details');</script>";
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
                                 </div>
 
-                                <form class="js-validation-signin px-30" method="post">
+                                <form class="col-12 js-validation-signin px-30" method="post">
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">

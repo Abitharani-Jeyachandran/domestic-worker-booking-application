@@ -6,9 +6,9 @@ error_reporting(0);
 if(isset($_POST['signup']))
 {
 //Getting Post Values
-$conrnper=$_POST['concernperson'];  
-$emaill=$_POST['email']; 
-$cmpnyname=$_POST['companyname']; 
+$conrnper=$_POST['concernperson'];
+$emaill=$_POST['email'];
+$cmpnyname=$_POST['companyname'];
 $tagline=$_POST['tagline'];
 $description=$_POST['description'];
 $website=$_POST['website'];
@@ -63,7 +63,7 @@ if($lastInsertId)
 {
 $msg="You have signup Successfully";
 }
-else 
+else
 {
 $error="Something went wrong.Please try again";
 }
@@ -81,7 +81,7 @@ $error="Email-id already exist. Please try again";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Employers | Signup</title>
+<title>Domestic Workers | Signup</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/color.css" rel="stylesheet" type="text/css">
@@ -100,56 +100,30 @@ $error="Email-id already exist. Please try again";
 </head>
 
 <body class="theme-style-1">
-<div id="wrapper"> 
+<div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>
-<!--HEADER END--> 
+<!--HEADER END-->
 
-  
+
   <!--INNER BANNER START-->
   <section id="inner-banner">
 
     <div class="container">
 
-      <h1>Employers</h1>
+      <h1>Domestic Workers</h1>
 
     </div>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
   <div id="main">
-
-    <section class="account-option">
-
-      <div class="container">
-
-        <div class="inner-box">
-
-          <div class="text-box">
-
-            <h4>Have an Account?</h4>
-
-            <p>If you don’t have an account you can create one below by entering your email address. </p>
-
-          </div>
-
-          <a href="emp-login.php" class="btn-style-1"><i class="fa fa-sign-in"></i>Sign in Now</a> </div>
-
-      </div>
-
-    </section>
-
-    <!--ACCOUNT OPTION SECTION END--> 
-
-
-     
-    
 
     <!--Signup FORM START-->
     <form name="empsignup" enctype="multipart/form-data" method="post">
@@ -166,22 +140,22 @@ $error="Email-id already exist. Please try again";
           <div class="row">
 
 <div class="col-md-6 col-sm-6">
-<label>Concern Person Name *</label>
-<input type="text" name="concernperson" placeholder="Concern Person Name" required autocomplete="off" />
+<label>Name *</label>
+<input type="text" name="concernperson" placeholder="Name" required autocomplete="off" />
 </div>
 
 <div class="col-md-6 col-sm-6">
-<label>Your Email *</label>
-<input type="email" name="email" id="email" onBlur="userAvailability()"  placeholder="you@jobsalerts.com" autocomplete="off"  required>
+<label>Nic No *</label>
+<input type="email" name="email" id="email" onBlur="userAvailability()"  placeholder="nic" autocomplete="off"  required>
  <span id="user-availability-status1" style="font-size:12px;"></span>
 </div>
 
  <div class="col-md-6 col-sm-6">
  <label>Password</label>
-<input type="password" name="empppassword" placeholder="e.g. “Pass@20178”" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+<input type="password" name="empppassword" placeholder="e.g. “Pass”" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
 </div>
 
-           
+
 <div class="col-md-6 col-sm-6">
 <label>Company Name</label>
 <input type="text" name="companyname" placeholder="Enter the Name of your Company" autocomplete="off" required>
@@ -199,14 +173,14 @@ $error="Email-id already exist. Please try again";
 </div>
 </div>
 
-         
+
 
 <div class="col-md-6 col-sm-6">
 <label>Website</label>
  <input type="url" name="website" placeholder="e.g. http://www.jobsalert.com" autocomplete="off" >
 </div>
 
-           
+
 
 <div class="col-md-6 col-sm-12">
 <label>Logo</label>
@@ -223,6 +197,8 @@ $error="Email-id already exist. Please try again";
               <div class="btn-col">
 
                 <input type="submit" name="signup" id="submit" value="Sign up">
+                <p>Already have account?</p><a href="emp-login.php" class="btn-style-1">Sign in Now</a> </div>
+
 
               </div>
 
@@ -230,38 +206,38 @@ $error="Email-id already exist. Please try again";
 
           </div>
 
-    
+
 
       </div>
 
     </section>
     </form>
-    <!--RESUME FORM END--> 
+    <!--RESUME FORM END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
 
   <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/editor.js"></script> 
-<script src="../js/jquery.accordion.js"></script> 
-<script src="../js/jquery.noconflict.js"></script> 
-<script src="../js/theme-scripts.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/editor.js"></script>
+<script src="../js/jquery.accordion.js"></script>
+<script src="../js/jquery.noconflict.js"></script>
+<script src="../js/theme-scripts.js"></script>
 <script src="../js/custom.js"></script>
       <script>
 function userAvailability() {
@@ -281,4 +257,3 @@ error:function (){}
 </body>
 
 </html>
-

@@ -5,7 +5,7 @@ include('includes/config.php');
 //error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{
@@ -22,11 +22,11 @@ if(isset($_POST['submit']))
 if (!empty($_POST['csrftoken'])) {
 if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
 
-$empid=$_SESSION['emplogin'];  
+$empid=$_SESSION['emplogin'];
 //Getting Post Values
-$category=$_POST['category'];  
-$jontitle=$_POST['jobtitle']; 
-$jobtype=$_POST['jobtype']; 
+$category=$_POST['category'];
+$jontitle=$_POST['jobtitle'];
+$jobtype=$_POST['jobtype'];
 $salpackg=$_POST['salarypackage'];
 $skills=$_POST['skills'];
 $exprnce=$_POST['experience'];
@@ -58,7 +58,7 @@ if($lastInsertId)
 $msg="Your job posted Successfully";
 unset( $_SESSION['token']);
 }
-else 
+else
 {
 $error="Something went wrong.Please try again";
 }
@@ -86,12 +86,12 @@ $error="Something went wrong.Please try again";
 
 
 <body class="theme-style-1">
-<div id="wrapper"> 
+<div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>
-<!--HEADER END--> 
+<!--HEADER END-->
 
-  
+
   <!--INNER BANNER START-->
   <section id="inner-banner">
 
@@ -103,17 +103,17 @@ $error="Something went wrong.Please try again";
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
   <div id="main">
     <!--Signup FORM START-->
     <form name="empsignup" enctype="multipart/form-data" method="post">
-<input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" /> 
- 
+<input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
+
 
     <section class="resum-form padd-tb">
 
@@ -130,7 +130,7 @@ $error="Something went wrong.Please try again";
 <label>Category*</label>
   <div class="selector">
        <select name='category' class="full-width">
-  <?php 
+  <?php
 $sqlt = "SELECT CategoryName FROM tblcategory order by CategoryName asc";
 $queryt = $dbh -> prepare($sqlt);
 $queryt -> execute();
@@ -142,7 +142,7 @@ foreach($results as $result)
 {?>
 <option value="<?php echo htmlentities($result->CategoryName);?>"><?php echo htmlentities($result->CategoryName);?></option>
  <?php  }} ?>
-              
+
 </select>
 </div>
 </div>
@@ -152,7 +152,7 @@ foreach($results as $result)
 <input type="text" name="jobtitle" required placeholder="e.g. Full Stack Developer" autocomplete="off">
 </div>
 </div>
-      
+
 <div class="row">
   <div class="col-md-6 col-sm-6">
  <label>Job Type</label>
@@ -232,42 +232,36 @@ foreach($results as $result)
 
           </div>
 
-    
+
 
       </div>
 
     </section>
     </form>
-    <!--RESUME FORM END--> 
+    <!--RESUME FORM END-->
 
   </div>
 
-  <!--MAIN END--> 
-
-  
-
-  <!--FOOTER START-->
-
-  <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
-
-</div>
+  <!--MAIN END-->
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/editor.js"></script> 
-<script src="../js/jquery.accordion.js"></script> 
-<script src="../js/jquery.noconflict.js"></script> 
-<script src="../js/theme-scripts.js"></script> 
+
+
+
+
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/editor.js"></script>
+<script src="../js/jquery.accordion.js"></script>
+<script src="../js/jquery.noconflict.js"></script>
+<script src="../js/theme-scripts.js"></script>
 <script src="../js/custom.js"></script>
 
 </body>
 
 </html>
 <?php } ?>
-

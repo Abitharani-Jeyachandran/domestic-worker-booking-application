@@ -5,18 +5,18 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['jpaid']==0)) {
   header('location:logout.php');
   } else{
-    
+
 ?>
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - View Employer Detail</title>
+ <title>Find Us - View Domestic Worker Detail</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -26,19 +26,19 @@ if (strlen($_SESSION['jpaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
-                    <h2 class="content-heading">View Employer Details</h2>
+                    <h2 class="content-heading">View Domestic Worker Details</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">View Employer Details</h3>
-                                    
+                                    <h3 class="block-title">View Domestic Worker Details</h3>
+
                                 </div>
                                 <div class="block-content">
-                                   
+
                                     <?php
                   $vid=$_GET['viewid'];
 
@@ -62,7 +62,7 @@ foreach($results as $row)
     <th>Company Tag Line</th>
     <td><?php  echo $row->CompanyTagline;?></td>
   </tr>
-  
+
 
   <tr>
     <th>Concern Person</th>
@@ -92,21 +92,21 @@ foreach($results as $row)
     <td><?php  echo $row->noOfEmployee;?></td>
     <th>Established Date</th>
     <td><?php  echo $row->establishedIn;?></td>
-    
+
 
   </tr>
- 
-   
+
+
 <?php $cnt=$cnt+1;}} ?>
 
-</table> 
+</table>
 
 
                                 </div>
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->

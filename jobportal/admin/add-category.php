@@ -10,13 +10,11 @@ if (strlen($_SESSION['jpaid']==0)) {
 
 
 $category=$_POST['category'];
-$description=$_POST['description'];
 
 
-$sql="insert into tblcategory(CategoryName,Description)values(:category,:description)";
+$sql="insert into tblcategory(CategoryName)values(:category)";
 $query=$dbh->prepare($sql);
 $query->bindParam(':category',$category,PDO::PARAM_STR);
-$query->bindParam(':description',$description,PDO::PARAM_STR);
 
 
  $query->execute();
@@ -31,20 +29,20 @@ echo "<script>window.location.href ='add-category.php'</script>";
          echo '<script>alert("Something Went Wrong. Please try again")</script>';
     }
 
-  
+
 }
 
 ?>
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - Add Category</title>
+ <title>Find Us - Add Category</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -54,34 +52,27 @@ echo "<script>window.location.href ='add-category.php'</script>";
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
-                    <h2 class="content-heading">Add Category</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Add Category</h3>
-                                   
+
                                 </div>
                                 <div class="block-content">
-                                   
+
                                     <form method="post">
-                                        
+
                                         <div class="form-group row">
                                             <label class="col-12" for="register1-email">Category:</label>
                                             <div class="col-12">
                                                 <input type="text" class="form-control" value="" name="category" required="true">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label class="col-12" for="register1-email">Category Description:</label>
-                                            <div class="col-12">
-                                                 <textarea class="form-control" rows="5" name="description" required="true"></textarea>
-                                            </div>
-                                        </div>
-                                      
+
                                         <div class="form-group row">
                                             <div class="col-12">
                                                 <button type="submit" class="btn btn-alt-success" name="submit">
@@ -95,7 +86,7 @@ echo "<script>window.location.href ='add-category.php'</script>";
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->

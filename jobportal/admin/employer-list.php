@@ -10,7 +10,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Job Portal - Employer Lists</title>
+        <title>Find Us - Employer Lists</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
@@ -18,9 +18,9 @@ if (strlen($_SESSION['jpaid']==0)) {
 
     </head>
     <body>
-        
+
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-           
+
            <?php include_once('includes/sidebar.php');?>
 
           <?php include_once('includes/header.php');?>
@@ -30,15 +30,13 @@ if (strlen($_SESSION['jpaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Employer Lists</h2>
 
-                   
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">Employer Lists</h3>
-                                  
+                                    <h3 class="block-title">Domestic Worker List</h3>
+
                                 </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
@@ -46,9 +44,9 @@ if (strlen($_SESSION['jpaid']==0)) {
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
-                                        <th>Company Name</th>
-                                       <th>Concern Person</th>
-                                       <th>Email</th>
+                                        <th>Worker Name</th>
+                                       <th>Nic No</th>
+                                       <th>Job Category</th>
                                         <th>Status</th>
                                         <th class="d-none d-sm-table-cell">Registration Date</th>
                                         <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
@@ -78,13 +76,13 @@ foreach($results as $row)
                                             <td class="font-w600"><?php echo "Inactive"; ?></td><?php } ?>
 
                                         <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDtae);?></td>
-                                        
+
                                          <td class="d-none d-sm-table-cell"><a href="view-employer-details.php?viewid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
-                                    <?php $cnt=$cnt+1;}} ?> 
-                                
-                                
-                                  
+                                    <?php $cnt=$cnt+1;}} ?>
+
+
+
                                 </tbody>
                             </table>
                         </div>

@@ -5,19 +5,19 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['jpaid']==0)) {
   header('location:logout.php');
   } else{
- 
+
 
 ?>
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - View Job Seeker</title>
+ <title>Find Us - View Job Seeker</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -27,7 +27,7 @@ if (strlen($_SESSION['jpaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
                     <h2 class="content-heading">View Jobseeker Details</h2>
                     <div class="row">
@@ -36,10 +36,10 @@ if (strlen($_SESSION['jpaid']==0)) {
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">View Jobseeker Details</h3>
-                                
+
                                 </div>
                                 <div class="block-content">
-                                   
+
                                     <?php
                   $vid=$_GET['viewid'];
 
@@ -61,14 +61,14 @@ foreach($results as $row)
     <th>Email ID</th>
     <td><?php  echo $row->EmailId;?></td>
   </tr>
-  
+
 
   <tr>
     <th>Contact Number</th>
     <td><?php  echo $row->ContactNumber;?></td>
    <th>Resume</th>
     <td><a href="../Jobseekersresumes/<?php echo htmlentities($row->Resume);?>" width="100" height="100" target="_blank">Resume</a></td>
-   
+
   </tr>
   <tr>
     <th colspan="6" style="text-align: center;color: blue">About Job Seeker</th></tr>
@@ -80,19 +80,19 @@ foreach($results as $row)
     <td><img src="../images/<?php echo $row->ProfilePic;?>" width="100" height="100"></td>
     <th>Skills</th>
     <td><?php  echo $row->Skills;?></td>
-    
+
   </tr>
-    
+
 <?php $cnt=$cnt+1;}} ?>
 
-</table> 
+</table>
 
 
                                 </div>
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->

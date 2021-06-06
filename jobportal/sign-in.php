@@ -69,7 +69,7 @@ echo "<script>alert('User not registered with us');</script>";
 
   <section id="inner-banner">
     <div class="container">
-      <h1>Login To Your Account</h1>
+      <h1>Job Seeker Login</h1>
     </div>
   </section>
 
@@ -88,17 +88,15 @@ echo "<script>alert('User not registered with us');</script>";
 
         <div class="holder">
 
-          <div class="thumb"><img src="images/account.png" alt="img"></div>
-
           <form method="post" name="emplsignin">
 
-            <div class="input-box"> <i class="fa fa-user"></i>
+            <div class="input-box">
 
 <input type="text" placeholder="Email-Id or Registered Mobile Number" name="emailmbile"  autocomplete="off" required>
 
             </div>
 
-            <div class="input-box"> <i class="fa fa-unlock"></i>
+            <div class="input-box">
 <input type="password" class="form-control" name="password" required placeholder="Password">
 
             </div>
@@ -108,14 +106,13 @@ echo "<script>alert('User not registered with us');</script>";
        <input type="submit" value="Sign in" name="signin">
      </div>
 
-            <a href="forgot-password.php" class="login">Forgot your Password</a> <b>OR</b>
+            <a href="forgot-password.php" class="login">Forgot your Password</a>
 
             <div class="login-social">
               <em>You Don't have an Account? <a href="sign-up.php">SIGN UP NOW</a></em> </div>
 
           </form>
-<a href="index.php"><i class="fa fa-home" aria-hidden="true" style="font-size: 30px;padding-top: 10px"></i>  Back Home!!!</a>
-        </div>
+</div>
 
       </div>
 

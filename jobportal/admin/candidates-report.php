@@ -5,19 +5,19 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['jpaid']==0)) {
   header('location:logout.php');
   } else{
- 
+
 
 ?>
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - Between Dates Report</title>
+ <title>Find Us - Report</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -27,7 +27,7 @@ if (strlen($_SESSION['jpaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
                     <h2 class="content-heading">Candidates Between Dates Report</h2>
                     <div class="row">
@@ -36,12 +36,12 @@ if (strlen($_SESSION['jpaid']==0)) {
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Candidates Between Dates Report</h3>
-                                    
+
                                 </div>
                                 <div class="block-content">
-                                   
+
                                     <form method="post" name="bwdatesreport" action="candidates-bwdates-reports-details.php">
-                                        
+
                                         <div class="form-group row">
                                             <label class="col-12" for="register1-email">From Date:</label>
                                             <div class="col-12">
@@ -54,7 +54,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                                                 <input type="date" class="form-control" id="todate" name="todate" value="" required='true'>
                                             </div>
                                         </div>
-                                      
+
                                         <div class="form-group row">
                                             <div class="col-12">
                                                 <button type="submit" class="btn btn-alt-success" name="submit">
@@ -68,7 +68,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->

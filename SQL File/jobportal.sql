@@ -30,10 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbladmin` (
   `ID` int(10) NOT NULL,
-  `AdminName` varchar(200) DEFAULT NULL,
   `UserName` varchar(200) DEFAULT NULL,
-  `MobileNumber` bigint(10) DEFAULT NULL,
-  `Email` varchar(200) DEFAULT NULL,
   `Password` varchar(200) DEFAULT NULL,
   `AdminRegdate` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -42,8 +39,8 @@ CREATE TABLE `tbladmin` (
 -- Dumping data for table `tbladmin`
 --
 
-INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`) VALUES
-(1, 'Admin', 'admin', 7987979878, 'admin@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2020-06-04 18:30:00');
+INSERT INTO `tbladmin` (`ID`, `UserName`, `Password`, `AdminRegdate`) VALUES
+(1, 'admin', 'f925916e2754e5e03f75dd58a5733251', '2020-06-04 18:30:00');
 
 -- --------------------------------------------------------
 
@@ -78,7 +75,6 @@ INSERT INTO `tblapplyjob` (`ID`, `UserId`, `JobId`, `Applydate`, `Status`, `Resp
 CREATE TABLE `tblcategory` (
   `id` int(11) NOT NULL,
   `CategoryName` varchar(200) NOT NULL,
-  `Description` mediumtext NOT NULL,
   `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL,
   `Is_Active` int(1) NOT NULL
@@ -88,11 +84,8 @@ CREATE TABLE `tblcategory` (
 -- Dumping data for table `tblcategory`
 --
 
-INSERT INTO `tblcategory` (`id`, `CategoryName`, `Description`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
-(2, 'Development - IT', 'Development -Information Technology.', '2018-09-03 06:32:34', '2020-06-05 11:53:56', 1),
-(3, 'HR', 'Human resoucre', '2018-09-03 06:33:33', '0000-00-00 00:00:00', 1),
-(4, 'Operations', 'Operations', '2018-09-03 06:34:27', '0000-00-00 00:00:00', 1),
-(5, 'Finance', 'Finance', '2020-06-05 11:26:40', '0000-00-00 00:00:00', 0),
+INSERT INTO `tblcategory` (`id`, `CategoryName`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
+(2, 'Development - IT', '2018-09-03 06:32:34', '2020-06-05 11:53:56', 1),
 (6, 'Admin', 'Adiminstrator', '2020-09-02 18:18:44', NULL, 0);
 
 -- --------------------------------------------------------
@@ -156,8 +149,6 @@ CREATE TABLE `tblemployers` (
 --
 
 INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `CompnayName`, `CompanyTagline`, `CompnayDescription`, `CompanyUrl`, `CompnayLogo`, `noOfEmployee`, `industry`, `typeBusinessEntity`, `lcation`, `establishedIn`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
-(1, 'Anuj kumar', 'phpgurukulofficial@gmail.com', '$2y$12$Y4pEX6/8NraaNKAAQ9TW3ObU9YEG1W8ygyrjyT.YyHqRGyb8B7TYK', 'PHPGurukul', 'Don\'t be afraid of source code', '<span style=\"color: rgb(29, 33, 41); font-family: Georgia, serif; font-size: 17px; white-space: pre-wrap;\">PHP GURUKUL is a vision to provide free and easy education to everyone over the web.\r\n\r\nWe have an aim to educate and provide you the power to make website anything. Anytime. We donâ€™t teach, we educate.\r\n\r\nWe provide Tutorials for many Programming languages on PHP GURUKUL.\r\n\r\nWe started this site with clear mission that we want to deliver complete details knowledge of Programming to our audience. We are sharing this knowledge in all areas that you can see in our site.\r\n\r\nItâ€™s gives the power to synthesis anything anywhere you want to. Its the ultimate tool to solve any problem. And we help you excel in that by working with you.\r\n\r\nThe basic essence of life is to learn, explore and synthesis. We provide you with the tools to make your dreams come true.\r\n\r\nOur website is totally for free and available 24/7 .\r\nyou can connect with at â€“ info(at)phpgurukul(dot)com</span>', 'https://phpgurukul.com/', '6ffdd42a2c60069b5e21ea2ec21ba319.png', '5', 'Education', 'LLP', 'New Delhi, India', '2015', '2020-06-01 18:30:00', '2020-09-02 15:58:12', 1),
-(2, 'John Doe', 'johndoe@test.com', '$2y$12$nXkgst8pnbalhqLftgocnuy8737IoNc2SC3ZTs7mDOavyX6bunZaS', 'Apple', 'Think beyond imagination', 'Lorem ipsum dolor sit amet, te ullum persecuti nam, ne vim lorem virtute. Summo abhorreant eos ei. Mel epicurei adversarium in, quodsi inermis gubergren sit ea. Sale aeque decore te quo, erant placerat concludaturque sit ex. Omnis malis assum cu vim. Vis cu nominati praesent dignissim, quo solum ludus regione ei. Ut mel denique lucilius.\r\n\r\nEi sit noster delectus, id qui inani detracto hendrerit, sed in nulla vidisse. His diceret feugait maluisset ut, pri id aperiri placerat insolens. Ad inermis vivendo maluisset vis, ius ei simul partem constituto. Ei affert euismod aliquando his, duo fabulas perpetua voluptatibus ut. Et vim vocibus docendi, eam cibo iuvaret evertitur ex, no adhuc malorum explicari ius. Pro augue suavitate tincidunt ex, pro in legere dicunt denique.', 'https://www.apple.com/in/', '80997ccfaf84ad6b5969bc0ee4c3a59b.jpg', NULL, NULL, NULL, NULL, NULL, '2020-05-31 18:30:00', '2020-06-08 06:57:00', 1),
 (3, 'Anuj Kumar', 'tcs@test.com', '$2y$12$BIu47aSN0S16.Jar1A2oKuOFy6pV4t8WJD3XC1h0ZXEQy4msRJbci', 'TCS', 'Information Technology', 'Tata Consultancy Services', 'http://tcs.com', 'd657a1ed79a3a39a0cff0628959bee52.png', '10000', 'IT', 'Pvt Ltd', 'New Delhi India', '2000', '2020-09-01 18:30:00', '2020-09-03 02:18:18', 1);
 
 -- --------------------------------------------------------

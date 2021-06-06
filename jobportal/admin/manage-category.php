@@ -10,21 +10,19 @@ if (strlen($_SESSION['jpaid']==0)) {
 if(isset($_GET['delid']))
 {
 $rid=intval($_GET['delid']);
-$sql="delete from tblcategory where ID=:rid";
+$sql="delete from tblcategory where id=:rid";
 $query=$dbh->prepare($sql);
 $query->bindParam(':rid',$rid,PDO::PARAM_STR);
 $query->execute();
- echo "<script>alert('Data deleted');</script>"; 
-  echo "<script>window.location.href = 'manage-category.php'</script>";     
-
-
+ echo "<script>alert('Data deleted');</script>";
+  echo "<script>window.location.href = 'manage-category.php'</script>";
 }
 
   ?>
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Job Portal - Manage Category</title>
+        <title>Find Us - Manage Category</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
@@ -32,9 +30,9 @@ $query->execute();
 
     </head>
     <body>
-        
+
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-           
+
            <?php include_once('includes/sidebar.php');?>
 
           <?php include_once('includes/header.php');?>
@@ -44,15 +42,13 @@ $query->execute();
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Manage Category</h2>
 
-                   
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Manage Category</h3>
-                                  
+
                                 </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
@@ -61,7 +57,7 @@ $query->execute();
                                     <tr>
                                         <th class="text-center"></th>
                                         <th>Category Name</th>
-                                       
+
                                         <th class="d-none d-sm-table-cell">Creation Date</th>
                                         <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
                                        </tr>
@@ -82,13 +78,13 @@ foreach($results as $row)
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->CategoryName);?></td>
                                         <td class="d-none d-sm-table-cell">$<?php  echo htmlentities($row->PostingDate);?></td>
-                                        
+
                                          <td class="d-none d-sm-table-cell"><a href="manage-services.php?delid=<?php echo ($row->ID);?>" onclick="return confirm('Do you really want to Delete ?');"><i class="fa fa-trash fa-delete" aria-hidden="true"></i></a> || <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                                     </tr>
-                                    <?php $cnt=$cnt+1;}} ?> 
-                                
-                                
-                                  
+                                    <?php $cnt=$cnt+1;}} ?>
+
+
+
                                 </tbody>
                             </table>
                         </div>

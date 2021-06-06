@@ -77,28 +77,22 @@ include('includes/config.php');
 
   <div class="banner-outer">
 
-    <div id="banner" class="element">  </div>
-
     <div class="caption">
 
       <div class="holder">
 
-        <h1>Find Us Here...</h1>
 
         <div class="btn-row"> <a href="job-search.php">Search Here</a> </div>
 
 
 <?php if (strlen($_SESSION['jsid']==0)) {?>
-        <div class="btn-row"> <a href="sign-up.php">Jobseeker</a> <a href="employers/emp-login.php">Employer</a> </div>
+        <div class="btn-row"> </br></br></br><a href="sign-up.php">Jobseeker</a> <a href="employers/emp-login.php">Domestic Worker</a> </div>
 <?php } ?>
       </div>
 
     </div>
 
-    <div class="browse-job-section">
 
-
-    </div>
 
   </div>
 

@@ -36,7 +36,7 @@ echo '<script>alert("Your current password is wrong")</script>';
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - Change Password</title>
+ <title>Find Us - Change Password</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 <script type="text/javascript">
 function checkpass()
@@ -48,13 +48,13 @@ document.changepassword.confirmpassword.focus();
 return false;
 }
 return true;
-}   
+}
 
 </script>
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -64,16 +64,15 @@ return true;
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
-                    <h2 class="content-heading">Change Password</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Change Password</h3>
-                                  
+
                                 </div>
                                 <div class="block-content">
                                     <form method="post" onsubmit="return checkpass();" name="changepassword">
@@ -95,7 +94,7 @@ return true;
                                                 <input type="password" class="form-control"  name="confirmpassword" id="confirmpassword"  required='true'>
                                             </div>
                                         </div>
-                                      
+
                                         <div class="form-group row">
                                             <div class="col-12">
                                                 <button type="submit" class="btn btn-alt-success" name="submit">
@@ -108,7 +107,7 @@ return true;
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->

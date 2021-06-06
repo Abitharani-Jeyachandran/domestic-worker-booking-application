@@ -5,7 +5,7 @@ include('includes/config.php');
 error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:logout.php');
 }
 else{ ?>
@@ -73,15 +73,15 @@ else{ ?>
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
 
  <?php include('includes/header.php');?>
 
-  <!--HEADER END--> 
+  <!--HEADER END-->
 
-  
+
 
   <!--INNER BANNER START-->
 <?php
@@ -107,13 +107,13 @@ foreach($results as $result)
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--RECENT JOB SECTION START-->
 
@@ -132,7 +132,7 @@ foreach($results as $result)
                 <div class="frame">
                   <a href="#"><img src="../images/<?php echo $result->ProfilePic;?>" width="100" height="100" alt="img"></a></div>
 
-            
+
 
 
      <div class="text-box">
@@ -145,89 +145,16 @@ foreach($results as $result)
                   <div class="clearfix"> <strong><i class="fa fa-envelope"></i><?php echo htmlentities($result->EmailId);?></strong> <strong>
                     <i class="fa fa-phone"></i><a href="#"><?php echo htmlentities($result->ContactNumber);?></a></strong> </div>
 
-                  <div class="btn-row"> <a href="../Jobseekersresumes/<?php echo htmlentities($result->Resume);?>" class="resume" target="_blank"><i class="fa fa-file-text-o"></i>Resume</a></div>
-
-                </div>
-
-
-              </div>
-
-              <div class="summary-box">
-
-                <h4>Summary About Me</h4>
-
-                <p><?php echo htmlentities($result->AboutMe);?>.</p>
-
-               
-
-              </div>
-<?php } ?>
-              <div class="summary-box">
-
-                <h4>Qualifications</h4>
-<?php
-//Getting User Id
-$canid=$_GET['canid'];
-// Fetching User Education Details
-$sql = "SELECT * from  tbleducation  where UserID=:canid";
-$query = $dbh -> prepare($sql);
-$query-> bindParam(':canid', $canid, PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-foreach($results as $result)
-{
- ?>
-                <div class="outer"> <strong class="title"><?php echo htmlentities($result->Qualification);?></strong>
-
-                  <div class="col"> <span><?php echo htmlentities($result->PassingYear);?></span>
-
-                    <p><strong style="color: blue">College/ School Name</strong>: <?php echo htmlentities($result->ClgorschName);?></p>
-                    <p><strong style="color: blue">Stream</strong>: <?php echo htmlentities($result->Stream);?></p>
-                    <p><strong style="color: blue">CGPA</strong>: <?php echo htmlentities($result->CGPA);?></p>
-                    <p><strong style="color: blue">Percentage</strong>: <?php echo htmlentities($result->Percentage);?></p>
                   </div>
 
-                </div>
 
-              
-               
-<?php } ?>
               </div>
 
-              <div class="summary-box">
 
-                <h4>Work Experience</h4>
-<?php
-//Getting User Id
-$canid=$_GET['canid'];
-// Fetching User Education Details
-$sql = "SELECT * from  tblexperience  where UserID=:canid";
-$query = $dbh -> prepare($sql);
-$query-> bindParam(':canid', $canid, PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-foreach($results as $result)
-{
- ?>
-                <div class="outer"> <strong class="title"><?php echo htmlentities($result->Designation);?> at <b>(<?php echo htmlentities($result->EmployerName);?>)</b></strong>
-
-                  <div class="col"> <span><?php echo htmlentities($result->FromDate);?> - <?php echo htmlentities($result->ToDate);?></span>
-
-                   <p><strong style="color: blue">Type of Employment: </strong>: <?php echo htmlentities($result->EmployementType);?></p>
-                   <p><strong style="color: blue">CTC: </strong>: <?php echo htmlentities($result->Ctc);?>(per month)</p>
-                    <p><strong style="color: blue">Skills: </strong>: <?php echo htmlentities($result->Skills);?></p>
-
-                  </div>
-
-                </div>
-
-               
-
-               
 <?php } ?>
-              </div>
 
-              
+
+
 
             </div>
 
@@ -241,35 +168,28 @@ foreach($results as $result)
 
     </section>
 
-    <!--RECENT JOB SECTION END--> 
+    <!--RECENT JOB SECTION END-->
 
   </div>
 
-  <!--MAIN END--> 
-
-  
-
-  <!--FOOTER START-->
- <?php include('includes/footer.php');?>
-
-  <!--FOOTER END--> 
-
-</div>
-
-<!--WRAPPER END--> 
+  <!--MAIN END-->
 
 
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/form.js"></script> 
+<!--WRAPPER END-->
+
+
+
+
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/form.js"></script>
 <script src="../js/custom.js"></script>
 </body>
 </html>
 <?php } ?>
-

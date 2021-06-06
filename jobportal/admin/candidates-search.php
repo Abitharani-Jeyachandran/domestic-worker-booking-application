@@ -1,4 +1,4 @@
-<?php
+Find Us<?php
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
@@ -10,7 +10,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Job Portal - Jobseeker Lists</title>
+        <title>Find Us - Jobseeker Lists</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
@@ -18,9 +18,9 @@ if (strlen($_SESSION['jpaid']==0)) {
 
     </head>
     <body>
-        
+
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-           
+
            <?php include_once('includes/sidebar.php');?>
 
           <?php include_once('includes/header.php');?>
@@ -32,13 +32,13 @@ if (strlen($_SESSION['jpaid']==0)) {
                 <div class="content">
                     <h2 class="content-heading">Candidates Search</h2>
 
-                   
+
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Candidates Search</h3>
-                                  
+
                                 </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
@@ -46,21 +46,21 @@ if (strlen($_SESSION['jpaid']==0)) {
                                 <div class="form-group">
                                     <label>Search by Mobile Number</label>
                                     <input id="searchdata" type="text" name="searchdata" required="true" class="form-control" placeholder="Candidate Mobile Number" maxlength="10" pattern="[0-9]+"></div>
-                                
+
                                 <br>
                                <button type="submit" class="btn btn-alt-success" name="search" id="submit"><i class="fa fa-plus mr-5"></i>Search</button>
                             </form>
                              <hr />
                             <?php
 if(isset($_POST['search']))
-{ 
+{
 
 $sdata=$_POST['searchdata'];
   ?>
-  
+
   <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title" align="center">Result against "<?php echo $sdata;?>" keyword</h3>
-                                  
+
                                 </div>
                                 <hr />
                             <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
@@ -99,15 +99,15 @@ foreach($results as $row)
                                             <td class="font-w600"><?php echo "Inactive"; ?></td><?php } ?>
 
                                         <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDate);?></td>
-                                        
+
                                          <td class="d-none d-sm-table-cell"><a href="view-jobseeker-details.php?viewid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
-                                   
-                                
-                                
-                                  
+
+
+
+
                                 </tbody>
-                                 <?php 
+                                 <?php
 $cnt=$cnt+1;
 } } else { ?>
   <tr>

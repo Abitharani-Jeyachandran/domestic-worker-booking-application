@@ -94,7 +94,7 @@ error:function (){}
 
     <div class="container">
 
-      <h1>Jobseeker</h1>
+      <h1>Jobseeker Signup</h1>
 
     </div>
 
@@ -108,25 +108,7 @@ error:function (){}
 
   <div id="main">
 
-    <section class="account-option">
 
-      <div class="container">
-
-        <div class="inner-box">
-
-          <div class="text-box">
-
-            <h4>Have an Account?</h4>
-
-            <p>If you don’t have an account you can create one below by entering your email address. </p>
-
-          </div>
-
-          <a href="sign-in.php" class="btn-style-1"><i class="fa fa-sign-in"></i>Sign in Now</a> </div>
-
-      </div>
-
-    </section>
 
     <!--ACCOUNT OPTION SECTION END-->
 
@@ -182,6 +164,8 @@ error:function (){}
               <div class="btn-col">
 
                 <input type="submit" name="signup" id="submit" value="Sign up">
+
+                <p>Already Have account?</p><a href="sign-in.php" class="btn-style-1" id="submit">Sign in Now</a>
 
               </div>
 

@@ -12,7 +12,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Job Portal- Between Employer Report</title>
+        <title>Find Us- Domestic Worker Report</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
@@ -20,9 +20,9 @@ if (strlen($_SESSION['jpaid']==0)) {
 
     </head>
     <body>
-        
+
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-           
+
            <?php include_once('includes/sidebar.php');?>
 
           <?php include_once('includes/header.php');?>
@@ -32,15 +32,15 @@ if (strlen($_SESSION['jpaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Employer Between Dates Report</h2>
+                    <h2 class="content-heading">Domestic Worker Between Dates Report</h2>
 
-                   
+
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                        <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title"> Employer Between Dates Report</h3>
-                                   
+                                    <h3 class="block-title"> Domestic Worker Between Dates Report</h3>
+
                                 </div>
                         <div class="block-content block-content-full">
                             <?php
@@ -85,15 +85,15 @@ foreach($results as $row)
                                             <td class="font-w600"><?php echo "Inactive"; ?></td><?php } ?>
 
                                         <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDtae);?></td>
-                                        
+
                                          <td class="d-none d-sm-table-cell"><a href="view-employer-details.php?viewid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
-                                   
-                                
-                                
-                                  
+
+
+
+
                                 </tbody>
-                                <?php 
+                                <?php
 $cnt=$cnt+1;
 } } else { ?>
   <tr>
@@ -102,7 +102,7 @@ $cnt=$cnt+1;
   </tr>
   <?php } ?>
                             </table>
-                            
+
                         </div>
                     </div>
                     <!-- END Dynamic Table Full Pagination -->

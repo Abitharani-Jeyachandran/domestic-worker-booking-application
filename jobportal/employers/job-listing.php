@@ -5,7 +5,7 @@ include('includes/config.php');
 //error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{
@@ -41,11 +41,11 @@ else{
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
   <?php include('includes/header.php');?>
-  <!--HEADER END--> 
+  <!--HEADER END-->
   <!--INNER BANNER START-->
 
   <section id="inner-banner">
@@ -58,17 +58,17 @@ else{
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
 
-  
 
-  
+
+
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--SEARCH BAR SECTION START-->
 
@@ -79,7 +79,7 @@ else{
             <div class="col-md-10">
               <input type="text" placeholder="Enter Job Title" name="jobtitle" required>
             </div>
-           
+
             <div class="col-md-2">
               <button type="submit" name="search"><i class="fa fa-search"></i></button>
             </div>
@@ -88,7 +88,7 @@ else{
       </div>
     </section>
 
-    <!--SEARCH BAR SECTION END--> 
+    <!--SEARCH BAR SECTION END-->
 
     <!--RECENT JOB SECTION START-->
 
@@ -120,7 +120,7 @@ if (isset($_GET['page_no']) && $_GET['page_no']!="") {
         $offset = ($page_no-1) * $no_of_records_per_page;
         $previous_page = $page_no - 1;
   $next_page = $page_no + 1;
-  $adjacents = "2"; 
+  $adjacents = "2";
 $ret = "SELECT jobId FROM tbljobs";
 $query1 = $dbh -> prepare($ret);
 $query1->execute();
@@ -145,79 +145,79 @@ foreach($results as $result)
  <li>
 <div class="box">
 <div class="thumb">
- <!-- logo --> 
+ <!-- logo -->
   <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>"><img src="employerslogo/<?php echo htmlentities($result->CompnayLogo);?>" alt="img" width="60" height="60"></a></div>
 
 <div class="text-col">
 <div class="hold" style="width:100%">
 
- <!-- Job Title -->  
+ <!-- Job Title -->
 <h4><a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" title='View Details'><?php echo htmlentities($result->jobTitle);?></a> --------- <em><a href="edit-job.php?jobid=<?php echo htmlentities($result->jobId);?>" title='Edit Job Details'>(Edit this job)</a></em></h4>
 
-<!-- Job Title limit 250 chars-->  
+<!-- Job Title limit 250 chars-->
 <p> <?php echo substr($result->jobDescription,0,300);?></p>
 
-<!-- Job Location --> 
+<!-- Job Location -->
 <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'><i class="fa fa-map-marker"></i>
 
-  <?php echo htmlentities($result->jobLocation);?></a> 
+  <?php echo htmlentities($result->jobLocation);?></a>
 
-<!-- Job Posting date --> 
+<!-- Job Posting date -->
 <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'><i class="fa fa-calendar"></i>
 <?php echo htmlentities($result->postinDate); ?>
- </a> 
+ </a>
 
 </div>
 </div>
 
-<!-- Job Package --> 
+<!-- Job Package -->
 <strong class="price"><i class="fa fa-money"></i>
   $<?php echo htmlentities($result->salaryPackage); ?></strong> <br />
 
 
 
-<!-- Job Type--> 
+<!-- Job Type-->
 <!--Full Time -->
 <?php if($result->jobType=='Full Time'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Part Time -->
 <?php if($result->jobType=='Part Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Half Time -->
 <?php if($result->jobType=='Half Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Freelance -->
 <?php if($result->jobType=='Freelance'):?>
-<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Contract -->
 <?php if($result->jobType=='Contract'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Internship -->
 <?php if($result->jobType=='Internship'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 
 <!--Temporary -->
 <?php if($result->jobType=='Temporary'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 
@@ -226,7 +226,7 @@ foreach($results as $result)
 
 </li>
 
-   <?php }} ?>            
+   <?php }} ?>
 
               </ul>
 
@@ -307,7 +307,7 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
 
           </div>
 
-          
+
 
         </div>
 
@@ -315,27 +315,23 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
 
     </section>
 
-    <!--RECENT JOB SECTION END--> 
+    <!--RECENT JOB SECTION END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
 
-  <!--FOOTER START-->
-  <?php include('includes/footer.php');?>
 
-  <!--FOOTER END--> 
 
 </div>
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/form.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/form.js"></script>
 <script src="../js/custom.js"></script>
 </body>
 </html>

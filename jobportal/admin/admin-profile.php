@@ -20,20 +20,20 @@ if (strlen($_SESSION['jpaid']==0)) {
 $query->execute();
 
         echo '<script>alert("Profile has been updated")</script>';
-     
+
 
   }
   ?>
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Job Portal - Admin Profile</title>
+ <title>Find Us - Admin Profile</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
-     
+
 
              <?php include_once('includes/sidebar.php');?>
 
@@ -43,7 +43,7 @@ $query->execute();
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                
+
                     <!-- Register Forms -->
                     <h2 class="content-heading">Admin Profile</h2>
                     <div class="row">
@@ -52,7 +52,7 @@ $query->execute();
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
                                     <h3 class="block-title">Admin Profile</h3>
-                                   
+
                                 </div>
                                 <div class="block-content">
                                     <?php
@@ -111,7 +111,7 @@ foreach($results as $row)
                             </div>
                             <!-- END Bootstrap Register -->
                         </div>
-                        
+
                        </div>
                 </div>
                 <!-- END Page Content -->
