@@ -133,12 +133,12 @@ foreach($results as $row)
 
                 <div class="text-col">
 
-                  <h2><a href="#"><?php  echo htmlentities($row->jobTitle);?></a></h2>
+                  <h2><a href="#"><?php  echo htmlentities($row->jobCategory);?></a></h2>
 
-                  <p><?php  echo htmlentities($row->CompnayName);?> <em><a href="index.php">(View All Jobs)</a></em></p>
+                  <p><?php  echo htmlentities($row->ConcernPerson);?> <em><a href="index.php">(View All Jobs)</a></em></p>
 
-                  <a href="#" class="text"><i class="fa fa-map-marker"></i><?php  echo htmlentities($row->jobLocation);?></a> <a href="#" class="text"><i class="fa fa-calendar"></i><?php  echo htmlentities($row->postinDate);?> </a> <strong class="price"><i class="fa fa-money"></i>$<?php  echo htmlentities($row->salaryPackage);?></strong>
-                  <div class="tags" style="padding-top: 10px"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>"><i class="fa fa-tags"></i><?php
+                  <a href="#" class="text">Location : <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
+                  <div class="tags" style="padding-top: 10px"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>"><?php
 if($row->Status=="")
 {
   echo "Not Responded Yet";

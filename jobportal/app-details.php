@@ -86,7 +86,7 @@ if (strlen($_SESSION['jsid']==0)) {
 
     <div class="container">
 
-      <h1><?php echo htmlentities($_SESSION['jsfname']);?>'s Application</h1>
+      <h1><?php echo htmlentities($_SESSION['jsfname']);?>'s Request</h1>
 
     </div>
 
@@ -132,31 +132,23 @@ foreach($results as $result)
 
      <div class="text-box">
 
-                  <h2 style="color: red">Jobs Details</h2>
-
 
                   <table class="table table-bordered table-hover data-tables">
     <tr>
-  <th>Job Title</th>
-  <td><?php  echo $result->jobTitle;?></td>
-  <th>Salary Package</th>
-  <td>$<?php  echo $result->salaryPackage;?></td>
+      <th>Job Descriptions</th>
+      <td colspan="3"><?php  echo $result->jobDescription;?></td>
   </tr>
    <tr>
-  <th>Job Descriptions</th>
-  <td colspan="3"><?php  echo $result->jobDescription;?></td>
+     <th>Salary Package</th>
+     <td>LKR <?php  echo $result->salaryPackage;?></td>
   </tr>
   <tr>
   <th>Job Location</th>
   <td><?php  echo $result->jobLocation;?></td>
-  <th>Skills Required</th>
-  <td><?php  echo $result->skillsRequired;?></td>
   </tr>
   <tr>
   <th>Apply Date</th>
   <td><?php  echo $result->Applydate;?></td>
-  <th>Last Date</th>
-  <td><?php  echo $result->JobExpdate;?></td>
   </tr>
 
 

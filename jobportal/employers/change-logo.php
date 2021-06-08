@@ -5,7 +5,7 @@ include('includes/config.php');
 //error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{
@@ -39,7 +39,7 @@ $query->bindParam(':logoname',$logoname,PDO::PARAM_STR);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
 $query->execute();
 
-$msg="Logo updated Successfully";
+$msg="Image updated Successfully";
 
 }
 
@@ -51,7 +51,7 @@ $msg="Logo updated Successfully";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Employers | Update Account Details</title>
+<title>Domestic Worker | Update Account Details</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/color.css" rel="stylesheet" type="text/css">
@@ -66,26 +66,26 @@ $msg="Logo updated Successfully";
 </head>
 
 <body class="theme-style-1">
-<div id="wrapper"> 
+<div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>
-<!--HEADER END--> 
+<!--HEADER END-->
 
-  
+
   <!--INNER BANNER START-->
   <section id="inner-banner">
 
     <div class="container">
 
-      <h1>Company logo</h1>
+      <h1>Image</h1>
 
     </div>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
@@ -125,13 +125,12 @@ foreach($results as $result)
 
 
 <div class="col-md-6 col-sm-6">
-<label>Current Company Logo</label>
 <img src="employerslogo/<?php echo htmlentities($result->CompnayLogo)?>" width="200"><br />
 </div>
 
 
 <div class="col-md-6 col-sm-12">
-<label>New Logo</label>
+<label>New Image</label>
 <div class="upload-box">
 <div class="hold">
 <input type="file" name="logofile"  required>
@@ -140,7 +139,7 @@ foreach($results as $result)
 </div>
 
 
-<?php 
+<?php
 }}
 ?>
 
@@ -156,41 +155,34 @@ foreach($results as $result)
 
           </div>
 
-    
+
 
       </div>
 
     </section>
     </form>
-    <!--RESUME FORM END--> 
+    <!--RESUME FORM END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
-
-  <!--FOOTER START-->
-
-  <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
 
 </div>
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/editor.js"></script> 
-<script src="../js/jquery.accordion.js"></script> 
-<script src="../js/jquery.noconflict.js"></script> 
-<script src="../js/theme-scripts.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/editor.js"></script>
+<script src="../js/jquery.accordion.js"></script>
+<script src="../js/jquery.noconflict.js"></script>
+<script src="../js/theme-scripts.js"></script>
 <script src="../js/custom.js"></script>
 </body>
 </html>
 <?php }
 ?>
-

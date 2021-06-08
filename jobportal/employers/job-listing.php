@@ -20,7 +20,7 @@ else{
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Employer | Job listing</title>
+<title>Domestic Worker | Job listing</title>
 
 <!--CUSTOM CSS-->
 
@@ -52,7 +52,7 @@ else{
 
     <div class="container">
 
-      <h1>Employer | Jobs listing</h1>
+      <h1>Domestic Worker | Jobs listing</h1>
 
     </div>
 
@@ -70,26 +70,6 @@ else{
 
   <div id="main">
 
-    <!--SEARCH BAR SECTION START-->
-
-    <section class="candidates-search-bar">
-      <div class="container">
-        <form method="post" action="job-search.php">
-          <div class="row">
-            <div class="col-md-10">
-              <input type="text" placeholder="Enter Job Title" name="jobtitle" required>
-            </div>
-
-            <div class="col-md-2">
-              <button type="submit" name="search"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!--SEARCH BAR SECTION END-->
-
     <!--RECENT JOB SECTION START-->
 
     <section class="recent-row padd-tb">
@@ -102,9 +82,6 @@ else{
 
 
             <div id="content-area">
-
-              <h2>Latest Jobs</h2>
-
               <ul id="myList">
 
 <?php
@@ -152,18 +129,18 @@ foreach($results as $result)
 <div class="hold" style="width:100%">
 
  <!-- Job Title -->
-<h4><a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" title='View Details'><?php echo htmlentities($result->jobTitle);?></a> --------- <em><a href="edit-job.php?jobid=<?php echo htmlentities($result->jobId);?>" title='Edit Job Details'>(Edit this job)</a></em></h4>
+<h4><a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" title='View Details'><?php echo htmlentities($result->jobCategory);?></a> <em><a href="edit-job.php?jobid=<?php echo htmlentities($result->jobId);?>" title='Edit Job Details'>(Edit this job)</a></em></h4>
 
 <!-- Job Title limit 250 chars-->
 <p> <?php echo substr($result->jobDescription,0,300);?></p>
 
 <!-- Job Location -->
-<a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'><i class="fa fa-map-marker"></i>
+<a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'>
 
   <?php echo htmlentities($result->jobLocation);?></a>
 
 <!-- Job Posting date -->
-<a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'><i class="fa fa-calendar"></i>
+<a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'>
 <?php echo htmlentities($result->postinDate); ?>
  </a>
 
@@ -171,56 +148,8 @@ foreach($results as $result)
 </div>
 
 <!-- Job Package -->
-<strong class="price"><i class="fa fa-money"></i>
-  $<?php echo htmlentities($result->salaryPackage); ?></strong> <br />
-
-
-
-<!-- Job Type-->
-<!--Full Time -->
-<?php if($result->jobType=='Full Time'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Part Time -->
-<?php if($result->jobType=='Part Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Half Time -->
-<?php if($result->jobType=='Half Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Freelance -->
-<?php if($result->jobType=='Freelance'):?>
-<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Contract -->
-<?php if($result->jobType=='Contract'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Internship -->
-<?php if($result->jobType=='Internship'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-
-<!--Temporary -->
-<?php if($result->jobType=='Temporary'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-
+<strong class="price">
+  LKR <?php echo htmlentities($result->salaryPackage); ?></strong> <br />
 
 </div>
 
@@ -229,79 +158,6 @@ foreach($results as $result)
    <?php }} ?>
 
               </ul>
-
-                        <div align="left">
-    <ul class="pagination">
-
-<li <?php if($page_no <= 1){ echo "class='disabled'"; } ?>>
-<a <?php if($page_no > 1){ echo "href='?page_no=$previous_page'"; } ?>>Previous</a>
-</li>
-
-<?php
-if ($total_no_of_pages <= 10){
-for ($counter = 1; $counter <= $total_no_of_pages; $counter++){
-if ($counter == $page_no) {
-echo "<li class='active'><a>$counter</a></li>";
-}else{
-echo "<li><a href='?page_no=$counter'>$counter</a></li>";
-}
-}
-}
-elseif($total_no_of_pages > 10){
-
-if($page_no <= 4) {
-for ($counter = 1; $counter < 8; $counter++){
-if ($counter == $page_no) {
-echo "<li class='active'><a>$counter</a></li>";
-}else{
-echo "<li><a href='?page_no=$counter'>$counter</a></li>";
-}
-}
-echo "<li><a>...</a></li>";
-echo "<li><a href='?page_no=$second_last'>$second_last</a></li>";
-echo "<li><a href='?page_no=$total_no_of_pages'>$total_no_of_pages</a></li>";
-}
-
-elseif($page_no > 4 && $page_no < $total_no_of_pages - 4) {
-echo "<li><a href='?page_no=1'>1</a></li>";
-echo "<li><a href='?page_no=2'>2</a></li>";
-echo "<li><a>...</a></li>";
-for ($counter = $page_no - $adjacents; $counter <= $page_no + $adjacents; $counter++) {
-if ($counter == $page_no) {
-echo "<li class='active'><a>$counter</a></li>";
-}else{
-echo "<li><a href='?page_no=$counter'>$counter</a></li>";
-}
-}
-echo "<li><a>...</a></li>";
-echo "<li><a href='?page_no=$second_last'>$second_last</a></li>";
-echo "<li><a href='?page_no=$total_no_of_pages'>$total_no_of_pages</a></li>";
-}
-
-else {
-echo "<li><a href='?page_no=1'>1</a></li>";
-echo "<li><a href='?page_no=2'>2</a></li>";
-echo "<li><a>...</a></li>";
-
-for ($counter = $total_no_of_pages - 6; $counter <= $total_no_of_pages; $counter++) {
-if ($counter == $page_no) {
-echo "<li class='active'><a>$counter</a></li>";
-}else{
-echo "<li><a href='?page_no=$counter'>$counter</a></li>";
-}
-}
-}
-}
-?>
-
-<li <?php if($page_no >= $total_no_of_pages){ echo "class='disabled'"; } ?>>
-<a <?php if($page_no < $total_no_of_pages) { echo "href='?page_no=$next_page'"; } ?>>Next</a>
-</li>
-<?php if($page_no < $total_no_of_pages){
-echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
-} ?>
-</ul>
-</div>
 
             </div>
 

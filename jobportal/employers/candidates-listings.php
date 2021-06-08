@@ -80,45 +80,13 @@ else{?>
 
     <div class="container">
 
-      <h1>Requests</h1>
+      <h1>Job Seekers Seeking Your Work</h1>
 
     </div>
 
   </section>
 
   <!--INNER BANNER END-->
-  <!--SEARCH BAR SECTION START-->
-
-  <section class="candidates-search-bar">
-
-    <div class="container">
-
-      <form action="candidates-search.php" method="post">
-
-        <div class="row">
-
-          <div class="col-md-10">
-
-            <input type="text" placeholder="Enter Job Title" name="jobtitle">
-
-          </div>
-          <div class="col-md-2">
-
-            <button type="submit" name="search"><i class="fa fa-search"></i></button>
-
-          </div>
-
-        </div>
-
-      </form>
-
-    </div>
-
-  </section>
-
-  <!--SEARCH BAR SECTION END-->
-
-
 
   <!--MAIN START-->
 
@@ -135,8 +103,6 @@ else{?>
           <div class="col-md-12 col-sm-8">
 
             <div class="resumes-content">
-              <h2>Showing Applied Job Seekers</h2>
-
               <div class="box">
 <?php
 $eid=$_SESSION['emplogin'];
@@ -179,10 +145,9 @@ foreach($results as $row)
 
 
                   <h4>Applied Date: <?php echo htmlentities($row->Applydate);?></h4>
-<h4><a href="#">Applied For Job: <?php echo htmlentities($row->jobTitle);?>(<?php echo htmlentities($row->jobType);?>)</a></h4>
-                  <div class="clearfix"> <strong><i class="fa fa-phone"></i><?php echo htmlentities($row->ContactNumber);?></strong> <strong><i class="fa fa-envelope"></i><a href="#"><?php echo htmlentities($row->EmailId);?></a></strong> </div>
+<div class="clearfix"> <strong>Mobile : <?php echo htmlentities($row->ContactNumber);?></strong> </br><strong>Email : <a href="#"><?php echo htmlentities($row->EmailId);?></a></strong> </div>
 
-                  <div class="tags"> <a href="#"><i class="fa fa-tags"></i><?php
+                  <div class="tags"> <a href="#"><?php
 if($row->Status=="")
 {
   echo "Not Responded Yet";

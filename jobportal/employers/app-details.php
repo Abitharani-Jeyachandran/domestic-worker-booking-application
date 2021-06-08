@@ -5,27 +5,27 @@ include('includes/config.php');
 error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:logout.php');
 }
-else{ 
+else{
 if(isset($_POST['submit']))
   {
-    
-    
+
+
     $jobid=$_GET['jobid'];
     $jsid=$_GET['jsid'];
     $status=$_POST['status'];
  $msg=$_POST['message'];
-  
+
 
     $sql="insert into tblmessage(JobID,UserID,Message,Status) value(:jobid,:jsid,:msg,:status)";
 
     $query=$dbh->prepare($sql);
-$query->bindParam(':jobid',$jobid,PDO::PARAM_STR); 
-$query->bindParam(':jsid',$jsid,PDO::PARAM_STR); 
-    $query->bindParam(':msg',$msg,PDO::PARAM_STR); 
-    $query->bindParam(':status',$status,PDO::PARAM_STR); 
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':jsid',$jsid,PDO::PARAM_STR);
+    $query->bindParam(':msg',$msg,PDO::PARAM_STR);
+    $query->bindParam(':status',$status,PDO::PARAM_STR);
        $query->execute();
       $sql1= "update tblapplyjob set Status=:status where JobId=:jobid";
 
@@ -104,15 +104,15 @@ $query1->bindParam(':status',$status,PDO::PARAM_STR);
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
 
  <?php include('includes/header.php');?>
 
-  <!--HEADER END--> 
+  <!--HEADER END-->
 
-  
+
 
   <!--INNER BANNER START-->
 
@@ -120,19 +120,19 @@ $query1->bindParam(':status',$status,PDO::PARAM_STR);
 
     <div class="container">
 
-      <h1><?php echo htmlentities($_GET['name']);?>'s Application</h1>
+      <h1><?php echo htmlentities($_GET['name']);?>'s Request</h1>
 
     </div>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--RECENT JOB SECTION START-->
 
@@ -160,43 +160,22 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 foreach($results as $result)
 {
  ?>
-              
 
-            
+
+
 
 
      <div class="text-box">
 
-                  <h2 style="color: red">Jobs Details</h2>
-
-
                   <table class="table table-bordered table-hover data-tables">
-    <tr>
-  <th>Job Title</th>
-  <td><?php  echo $result->jobTitle;?></td>
-  <th>Salary Package</th>
-  <td>$<?php  echo $result->salaryPackage;?></td>
-  </tr>
-   <tr>
-  <th>Job Descriptions</th>
-  <td colspan="3"><?php  echo $result->jobDescription;?></td>
-  </tr>
-  <tr>
-  <th>Job Location</th>
-  <td><?php  echo $result->jobLocation;?></td>
-  <th>Skills Required</th>
-  <td><?php  echo $result->skillsRequired;?></td>
-  </tr>
   <tr>
   <th>Apply Date</th>
   <td><?php  echo $result->Applydate;?></td>
-  <th>Last Date</th>
-  <td><?php  echo $result->JobExpdate;?></td>
   </tr>
-  
-  
+
+
     <th>Status</th>
-    <td colspan="3"> <?php  
+    <td colspan="3"> <?php
 if($result->Status=="")
 {
   echo "Not Responded Yet";
@@ -227,39 +206,39 @@ $results=$query1->fetchAll(PDO::FETCH_OBJ);
                 <h4>Message History</h4>
 
                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
- 
+
   <tr>
     <th>#</th>
 <th>Message</th>
 <th>Status</th>
 <th>Time</th>
 </tr>
-<?php  
+<?php
 foreach($results as $row1)
 {
   ?>
 <tr>
   <td><?php echo $cnt;?></td>
- <td><?php  echo $row1->Message;?></td> 
-  <td><?php  echo $row1->Status;?></td> 
-   <td><?php  echo $row1->ResponseDate;?></td> 
+ <td><?php  echo $row1->Message;?></td>
+  <td><?php  echo $row1->Status;?></td>
+   <td><?php  echo $row1->ResponseDate;?></td>
 </tr>
 <?php $cnt=$cnt+1;} ?>
 
 </table>
 <?php  }  if($result->Status=="")
 {
-?> 
-               
+?>
+
 
               </div>
 
               <div class="summary-box">
 
 
-                
-<p align="center">                            
- <button class="btn btn-primary waves-effect waves-light w-lg" data-toggle="modal" data-target="#myModal">Take Action</button></p>  
+
+<p align="center">
+ <button class="btn btn-primary waves-effect waves-light w-lg" data-toggle="modal" data-target="#myModal">Take Action</button></p>
 
 <?php } } ?>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -275,12 +254,12 @@ foreach($results as $row1)
 <table class="table table-bordered table-hover data-tables">
 
  <form method="post" name="submit">
-                              
+
 <tr>
 <th>Message :</th>
 <td>
 <textarea name="message" placeholder="Message" rows="12" cols="14" class="form-control wd-450" required="true"></textarea></td>
-  </tr>                           
+  </tr>
 
   <tr>
     <th>Status :</th>
@@ -296,11 +275,11 @@ foreach($results as $row1)
  <div class="modal-footer">
  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 <button type="submit" name="submit" class="btn btn-primary">Update</button>
-  
+
   </form>
               </div>
 
-         
+
 
             </div>
 
@@ -314,35 +293,34 @@ foreach($results as $row1)
 
     </section>
 
-    <!--RECENT JOB SECTION END--> 
+    <!--RECENT JOB SECTION END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
  <?php include('includes/footer.php');?>
 
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
-<!--WRAPPER END--> 
+<!--WRAPPER END-->
 
 
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/form.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/form.js"></script>
 <script src="../js/custom.js"></script>
 </body>
 </html>
 <?php } ?>
-

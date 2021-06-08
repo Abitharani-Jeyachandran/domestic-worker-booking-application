@@ -17,7 +17,7 @@ if(isset($_GET['ajid']))
   $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
-echo "<script>alert('Already Applied for this job');</script>";
+echo "<script>alert('Already Applied');</script>";
 echo "<script>window.location.href ='index.php'</script>";
 }
 else
@@ -29,7 +29,7 @@ else
   $query1->execute();
   $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
-    echo '<script>alert("Jobs has been applied.")</script>';
+    echo '<script>alert("Job has been applied.")</script>';
 echo "<script>window.location.href ='index.php'</script>";
   }
   else
@@ -118,7 +118,7 @@ echo "<script>window.location.href ='index.php'</script>";
 
     <div class="container">
 
-      <h1>Job Details</h1>
+      <h1>Domestic Worker Job Details</h1>
 
     </div>
 
@@ -140,7 +140,7 @@ echo "<script>window.location.href ='index.php'</script>";
 
         <div class="row">
 
-          <div class="col-md-9 col-sm-8">
+          <div class="col-md-12 col-sm-8">
 
             <div id="content-area">
 
@@ -162,17 +162,17 @@ foreach($results as $row)
 
                 <div class="text-col">
 
-                  <h2><a href="#"><?php  echo htmlentities($row->jobTitle);?></a></h2>
+                  <h2><a href="#"><?php  echo htmlentities($row->jobCategory);?></a></h2>
 
-                  <p><?php  echo htmlentities($row->CompnayName);?> <em><a href="index.php">(View All Jobs)</a></em></p>
+                  <p><?php  echo htmlentities($row->ConcernPerson);?> <em><a href="index.php">(View All Jobs)</a></em></p>
 
-                  <a href="#" class="text"><i class="fa fa-map-marker"></i><?php  echo htmlentities($row->jobLocation);?></a> <a href="#" class="text"><i class="fa fa-calendar"></i><?php  echo htmlentities($row->postinDate);?> </a> <strong class="price"><i class="fa fa-money"></i>$<?php  echo htmlentities($row->salaryPackage);?></strong>
+                  <a href="#" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
 
-                  <div class="clearfix"> <a href="#" class="btn-freelance"><?php  echo htmlentities($row->jobType);?></a>
+                  <div class="clearfix">
                     <?php if($_SESSION['jsid']==""){?>
-                    <a href="sign-up.php" class="btn-style-1">Apply for this Job</a>
+                    <a href="sign-up.php" class="btn-style-1">Apply</a>
  <?php } else { ?>
-     <a href="jobs-details.php?ajid=<?php echo ($row->jobId);?>" class="btn-style-1">Apply for this Job</a>
+     <a href="jobs-details.php?ajid=<?php echo ($row->jobId);?>" class="btn-style-1">Apply</a>
 
       <?php } ?>
 
@@ -183,105 +183,27 @@ foreach($results as $row)
 
                 <div class="clearfix">
 
-                  <h4>Overview</h4>
+                  <h4>About</h4>
 
-                  <p><?php  echo ($row->CompnayDescription);?>.</p>
+                  <p><?php  echo ($row->jobDescription);?>.</p>
 
-                  <h4>Required Exp</h4>
+                  <h4>Experience</h4>
 
                   <p><?php  echo ($row->experience);?> yrs</p>
-                  <h4>Skill Required</h4>
-                  <p><?php  echo ($row->skillsRequired);?></p>
-<h4>Job Location</h4>
+
+<h4>Location</h4>
 
                   <p> <?php  echo ($row->jobLocation);?></p>
-                  <h4>Salary Package</h4>
+                  <h4>Payment</h4>
 
-                  <p>$ <?php  echo ($row->salaryPackage);?></p>
-                  <h4>Date of Job Posting</h4>
+                  <p>LKR <?php  echo ($row->salaryPackage);?></p>
 
-                  <p> <?php  echo ($row->postinDate);?></p>
-<?php if($_SESSION['jsid']==""){?>
-                  <a href="sign-up.php" class="btn-style-1 style-big">Apply for this Job Now</a>
-<?php } else { ?>
-  <a href="jobs-details.php?ajid=<?php echo ($row->jobId);?>" class="btn-style-1 style-big">Apply for this Job Now</a>
-  <?php } ?>
+
                 </div>
 
               </div>
 <?php $cnt=$cnt+1;}} ?>
             </div>
-
-          </div>
-
-          <div class="col-md-3 col-sm-4">
-
-            <aside>
-
-              <div class="sidebar">
-
-              <h2>Company Details</h2>
-
-              <div class="box">
-<?php
-$jid=$_GET['jid'];
-$sql="SELECT tbljobs.*,tblemployers.* from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId where tbljobs.jobId=:jid";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':jid',$jid,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
-                  <div class="thumb"> <img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100">
-
-                  </div>
-
-                  <div class="text-box">
-
-                    <h4 style="color: blue;"><?php  echo htmlentities($row->CompnayName);?></h4>
-
-                    <p><?php  echo substr($row->CompnayDescription,40);?>
-
-
-</p>
-
-<strong>Industry</strong>
-
-<p><?php  echo htmlentities($row->industry);?></p>
-
-
-
-<strong>Type of Business Entity</strong>
-
-<p><?php  echo htmlentities($row->typeBusinessEntity);?></p>
-
-
-
-<strong>Established In</strong>
-
-<p><?php  echo htmlentities($row->establishedIn);?></p>
-
-
-
-<strong>No. of Employees</strong>
-
-<p><?php  echo htmlentities($row->noOfEmployee);?></p>
-
-
-
-<strong>Location</strong>
-
-<p><?php  echo htmlentities($row->lcation);?> </p></div>
-
-                </div>
-                <?php $cnt=$cnt+1;}} ?>
-              </div>
-
-            </aside>
 
           </div>
 

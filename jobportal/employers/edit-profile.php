@@ -5,40 +5,23 @@ include('includes/config.php');
 //error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{
 if(isset($_POST['update']))
 {
 //Getting Post Values
-$conrnper=$_POST['concernperson'];  
-$emaill=$_POST['emailid']; 
-$cmpnyname=$_POST['companyname']; 
-$tagline=$_POST['tagline'];
-$description=$_POST['description'];
-$website=$_POST['website'];
-$nemp=$_POST['noofempl'];
-$industry=$_POST['industry'];
-$bentity=$_POST['typebusinessentity'];
-$location=$_POST['location'];
-$estin=$_POST['estin'];
+$conrnper=$_POST['concernperson'];
+$emaill=$_POST['emailid'];
+
 //Getting Employer Id
 $empid=$_SESSION['emplogin'];
 
-$sql="update  tblemployers set ConcernPerson=:conrnper,CompnayName=:cmpnyname,CompanyTagline=:tagline,CompnayDescription=:description,CompanyUrl=:website,noOfEmployee=:nemp,industry=:industry,typeBusinessEntity=:bentity,lcation=:location,establishedIn=:estin where id=:eid";
+$sql="update tblemployers set ConcernPerson=:conrnper where id=:eid";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':conrnper',$conrnper,PDO::PARAM_STR);
-$query->bindParam(':cmpnyname',$cmpnyname,PDO::PARAM_STR);
-$query->bindParam(':tagline',$tagline,PDO::PARAM_STR);
-$query->bindParam(':description',$description,PDO::PARAM_STR);
-$query->bindParam(':website',$website,PDO::PARAM_STR);
-$query->bindParam(':nemp',$nemp,PDO::PARAM_STR);
-$query->bindParam(':industry',$industry,PDO::PARAM_STR);
-$query->bindParam(':bentity',$bentity,PDO::PARAM_STR);
-$query->bindParam(':location',$location,PDO::PARAM_STR);
-$query->bindParam(':estin',$estin,PDO::PARAM_STR);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
 $query->execute();
 
@@ -52,7 +35,7 @@ $msg="Account details updated Successfully";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Employers | Update Account Details</title>
+<title>Domestic Workers | Update Account Details</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/color.css" rel="stylesheet" type="text/css">
@@ -67,26 +50,26 @@ $msg="Account details updated Successfully";
 </head>
 
 <body class="theme-style-1">
-<div id="wrapper"> 
+<div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>
-<!--HEADER END--> 
+<!--HEADER END-->
 
-  
+
   <!--INNER BANNER START-->
   <section id="inner-banner">
 
     <div class="container">
 
-      <h1>Employers Account Details</h1>
+      <h1>Domestic Workers Account Details</h1>
 
     </div>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
@@ -124,77 +107,25 @@ foreach($results as $result)
 
 
 <div class="col-md-6 col-sm-6">
-<label>Concern Person Name *</label>
-<input type="text" name="concernperson" placeholder="Concern Person Name" required autocomplete="off" value="<?php echo htmlentities($result->ConcernPerson)?>" />
+<label>Name *</label>
+<input type="text" name="concernperson" placeholder="Name" required autocomplete="off" value="<?php echo htmlentities($result->ConcernPerson)?>" />
 </div>
 
 <div class="col-md-6 col-sm-6">
-<label>Your Email *</label>
-<input type="email" name="emailid" readonly  autocomplete="off" value="<?php echo htmlentities($result->EmpEmail)?>">
-</div>
-          
-<div class="col-md-6 col-sm-6">
-<label>Company Name</label>
-<input type="text" name="companyname" placeholder="Enter the Name of your Company" autocomplete="off" value="<?php echo htmlentities($result->CompnayName)?>" required>
+<label>Nic No *</label>
+<input type="text" name="emailid" readonly  autocomplete="off" value="<?php echo htmlentities($result->EmpEmail)?>">
 </div>
 
 <div class="col-md-6 col-sm-6">
-<label>Tagline</label>
-<input type="text" name="tagline" placeholder="Briefly Describe about your Company" autocomplete="off" value="<?php echo htmlentities($result->CompanyTagline)?>" required>
-</div>
-
- <div class="col-md-12">
-<h4>Description</h4>
-<div class="text-editor-box">
-<textarea  name="description" autocomplete="off"  required><?php echo $result->CompnayDescription; ?></textarea>
-</div>
-</div>
-
-         
-
-<div class="col-md-6 col-sm-6">
-<label>Website</label>
- <input type="url" name="website" placeholder="e.g. http://www.jobsalert.com" autocomplete="off" value="<?php echo htmlentities($result->CompanyUrl)?>" >
-</div>
-
-          
-<div class="col-md-6 col-sm-6">
-<label>No. of Employees</label>
- <input type="text" name="noofempl" placeholder="e.g. 105" autocomplete="off" value="<?php echo htmlentities($result->noOfEmployee)?>" >
-</div>
-
-<div class="col-md-6 col-sm-6">
-<label>Industry</label>
- <input type="text" name="industry" placeholder="e.g. Insurance, E-commerce, Automobile" autocomplete="off" value="<?php echo htmlentities($result->industry)?>">
-</div>
-
-          
-<div class="col-md-6 col-sm-6">
-<label>Type of Business Entity</label>
- <input type="text" name="typebusinessentity" placeholder="e.g. Sole Proprietorship, Pvt Ltd, LLP" autocomplete="off" value="<?php echo htmlentities($result->typeBusinessEntity)?>">
-</div>
-
-<div class="col-md-6 col-sm-6">
-<label>Location</label>
- <input type="text" name="location" placeholder="e.g. New York, New Delhi, London" autocomplete="off" value="<?php echo htmlentities($result->lcation)?>">
-</div>
-
-<div class="col-md-6 col-sm-6">
-<label>Established In</label>
- <input type="text" name="estin" placeholder="e.g. 14 Sept 2018, London" autocomplete="off" value="<?php echo htmlentities($result->establishedIn)?>">
-</div>
-
-
-<div class="col-md-6 col-sm-6">
-<label>Company Logo</label>
+<label>Image</label>
 <img src="employerslogo/<?php echo htmlentities($result->CompnayLogo)?>" width="200"><br />
-<a href="change-logo.php">Change Logo</a>
+<a href="change-logo.php">Change Image</a>
 </div>
 
 </div>
 
 
-<?php 
+<?php
 }}
 ?>
 
@@ -210,41 +141,33 @@ foreach($results as $result)
 
           </div>
 
-    
+
 
       </div>
 
     </section>
     </form>
-    <!--RESUME FORM END--> 
+    <!--RESUME FORM END-->
 
   </div>
 
-  <!--MAIN END--> 
-
-  
-
-  <!--FOOTER START-->
-
-  <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--MAIN END-->
 
 </div>
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/editor.js"></script> 
-<script src="../js/jquery.accordion.js"></script> 
-<script src="../js/jquery.noconflict.js"></script> 
-<script src="../js/theme-scripts.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/editor.js"></script>
+<script src="../js/jquery.accordion.js"></script>
+<script src="../js/jquery.noconflict.js"></script>
+<script src="../js/theme-scripts.js"></script>
 <script src="../js/custom.js"></script>
 </body>
 </html>
 <?php }
 ?>
-

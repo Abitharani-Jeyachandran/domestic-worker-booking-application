@@ -5,7 +5,7 @@ include('includes/config.php');
 //error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{
@@ -16,7 +16,7 @@ $empid=$_SESSION['emplogin'];
 // Getting Post Values
 $currentpassword=$_POST['currentpassword'];
 $newpassword=$_POST['newpassword'];
-//new password hasing 
+//new password hasing
 $options = ['cost' => 12];
 $hashednewpass=password_hash($newpassword, PASSWORD_BCRYPT, $options);
 
@@ -42,7 +42,7 @@ $query->execute();
 $msg='Pasword change successfully';
 
 } else {
-  $error="Current password is wrong"; 
+  $error="Current password is wrong";
 }
 }
 
@@ -55,7 +55,7 @@ $msg='Pasword change successfully';
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Employers | Change Password</title>
+<title>Domestic Workers | Change Password</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/color.css" rel="stylesheet" type="text/css">
@@ -81,26 +81,26 @@ return true;
 </head>
 
 <body class="theme-style-1">
-<div id="wrapper"> 
+<div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>
-<!--HEADER END--> 
+<!--HEADER END-->
 
-  
+
   <!--INNER BANNER START-->
   <section id="inner-banner">
 
     <div class="container">
 
-      <h1>Employers | Change Password</h1>
+      <h1>Domestic Workers | Change Password</h1>
 
     </div>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
@@ -159,41 +159,40 @@ return true;
 
           </div>
 
-    
+
 
       </div>
 
     </section>
     </form>
-    <!--RESUME FORM END--> 
+    <!--RESUME FORM END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
 
   <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/editor.js"></script> 
-<script src="../js/jquery.accordion.js"></script> 
-<script src="../js/jquery.noconflict.js"></script> 
-<script src="../js/theme-scripts.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/editor.js"></script>
+<script src="../js/jquery.accordion.js"></script>
+<script src="../js/jquery.noconflict.js"></script>
+<script src="../js/theme-scripts.js"></script>
 <script src="../js/custom.js"></script>
 
 </body>
 </html>
 <?php } ?>
-

@@ -129,16 +129,7 @@ CREATE TABLE `tblemployers` (
   `ConcernPerson` varchar(150) DEFAULT NULL,
   `EmpEmail` varchar(250) DEFAULT NULL,
   `EmpPassword` varchar(250) DEFAULT NULL,
-  `CompnayName` varchar(255) DEFAULT NULL,
-  `CompanyTagline` mediumtext DEFAULT NULL,
-  `CompnayDescription` mediumtext DEFAULT NULL,
-  `CompanyUrl` varchar(255) DEFAULT NULL,
   `CompnayLogo` varchar(200) DEFAULT NULL,
-  `noOfEmployee` char(10) DEFAULT NULL,
-  `industry` varchar(255) DEFAULT NULL,
-  `typeBusinessEntity` varchar(255) DEFAULT NULL,
-  `lcation` varchar(255) DEFAULT NULL,
-  `establishedIn` char(200) DEFAULT NULL,
   `RegDtae` timestamp NULL DEFAULT current_timestamp(),
   `LastUpdationDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Is_Active` int(1) DEFAULT NULL
@@ -148,8 +139,8 @@ CREATE TABLE `tblemployers` (
 -- Dumping data for table `tblemployers`
 --
 
-INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `CompnayName`, `CompanyTagline`, `CompnayDescription`, `CompanyUrl`, `CompnayLogo`, `noOfEmployee`, `industry`, `typeBusinessEntity`, `lcation`, `establishedIn`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
-(3, 'Anuj Kumar', 'tcs@test.com', '$2y$12$BIu47aSN0S16.Jar1A2oKuOFy6pV4t8WJD3XC1h0ZXEQy4msRJbci', 'TCS', 'Information Technology', 'Tata Consultancy Services', 'http://tcs.com', 'd657a1ed79a3a39a0cff0628959bee52.png', '10000', 'IT', 'Pvt Ltd', 'New Delhi India', '2000', '2020-09-01 18:30:00', '2020-09-03 02:18:18', 1);
+INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `CompnayLogo`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
+(3, 'Anuj Kumar', 'tcs@test.com', '$2y$12$BIu47aSN0S16.Jar1A2oKuOFy6pV4t8WJD3XC1h0ZXEQy4msRJbci', 'd657a1ed79a3a39a0cff0628959bee52.png', '2020-09-01 18:30:00', '2020-09-03 02:18:18', 1);
 
 -- --------------------------------------------------------
 
@@ -192,17 +183,13 @@ CREATE TABLE `tbljobs` (
   `jobId` int(11) NOT NULL,
   `employerId` int(11) NOT NULL,
   `jobCategory` varchar(255) DEFAULT NULL,
-  `jobTitle` varchar(255) DEFAULT NULL,
-  `jobType` varchar(255) DEFAULT NULL,
   `salaryPackage` char(200) DEFAULT NULL,
-  `skillsRequired` varchar(255) DEFAULT NULL,
   `experience` varchar(50) DEFAULT NULL,
   `jobLocation` varchar(255) DEFAULT NULL,
   `jobDescription` mediumtext DEFAULT NULL,
   `JobExpdate` date DEFAULT NULL,
   `postinDate` timestamp NULL DEFAULT current_timestamp(),
-  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
-  `isActive` int(1) NOT NULL
+  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

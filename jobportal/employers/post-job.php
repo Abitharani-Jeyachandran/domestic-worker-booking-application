@@ -25,10 +25,7 @@ if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
 $empid=$_SESSION['emplogin'];
 //Getting Post Values
 $category=$_POST['category'];
-$jontitle=$_POST['jobtitle'];
-$jobtype=$_POST['jobtype'];
 $salpackg=$_POST['salarypackage'];
-$skills=$_POST['skills'];
 $exprnce=$_POST['experience'];
 $joblocation=$_POST['joblocation'];
 $jobdesc=$_POST['description'];
@@ -37,15 +34,12 @@ $isactive=1;
 
 
 
-$sql="INSERT INTO tbljobs(employerId,jobCategory,jobTitle,jobType,salaryPackage,skillsRequired,experience,jobLocation,jobDescription,JobExpdate,isActive) VALUES(:empid,:category,:jontitle,:jobtype,:salpackg,:skills,:exprnce,:joblocation,:jobdesc,:jed,:isactive)";
+$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription,JobExpdate,isActive) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc,:jed,:isactive)";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':empid',$empid,PDO::PARAM_STR);
 $query->bindParam(':category',$category,PDO::PARAM_STR);
-$query->bindParam(':jontitle',$jontitle,PDO::PARAM_STR);
-$query->bindParam(':jobtype',$jobtype,PDO::PARAM_STR);
 $query->bindParam(':salpackg',$salpackg,PDO::PARAM_STR);
-$query->bindParam(':skills',$skills,PDO::PARAM_STR);
 $query->bindParam(':exprnce',$exprnce,PDO::PARAM_STR);
 $query->bindParam(':joblocation',$joblocation,PDO::PARAM_STR);
 $query->bindParam(':jobdesc',$jobdesc,PDO::PARAM_STR);
@@ -73,7 +67,7 @@ $error="Something went wrong.Please try again";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Employers | Job Posting</title>
+<title>Domestic Worker | Job Posting</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/color.css" rel="stylesheet" type="text/css">
@@ -97,7 +91,7 @@ $error="Something went wrong.Please try again";
 
     <div class="container">
 
-      <h1>Employers | Post a Job</h1>
+      <h1>Domestic Worker | Post a Job</h1>
 
     </div>
 
@@ -127,7 +121,7 @@ $error="Something went wrong.Please try again";
 
 <div class="row">
 <div class="col-md-6 col-sm-6" >
-<label>Category*</label>
+<label>Category</label>
   <div class="selector">
        <select name='category' class="full-width">
   <?php
@@ -147,65 +141,30 @@ foreach($results as $result)
 </div>
 </div>
 
-<div class="col-md-6 col-sm-6">
-<label>Job Title*</label>
-<input type="text" name="jobtitle" required placeholder="e.g. Full Stack Developer" autocomplete="off">
-</div>
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-sm-6">
- <label>Job Type</label>
-
-              <div class="selector">
-
-                <select class="full-width" name="jobtype">
-                  <option value="Full Time">Full Time</option>
-                  <option value="Part Time">Part Time</option>
-                  <option value="Half Time">Half Time</option>
-                  <option value="Freelance">Freelance</option>
-                  <option value="Contract">Contract</option>
-                  <option value="Internship">Internship</option>
-                  <option value="Temporary">Temporary</option>
-                </select>
-
-              </div>
-
-            </div>
 
           <div class="col-md-6 col-sm-6">
 
               <label>Salary Package</label>
-<input type="text" placeholder="e.g. $7000 - 9000" name="salarypackage" required>
+<input type="text" placeholder="Minimum Salary" name="salarypackage" required>
 
             </div>
             </div>
 
 
 <div class="row">
-
-<div class="col-md-6 col-sm-6">
-<label>Skill Required</label>
-<input type="text" placeholder="e.g. PHP, MySQL, HTML, CSS" name="skills" required>
-</div>
 
 <div class="col-md-6 col-sm-6">
 <label>Experience</label>
-<input type="text" placeholder="e.g. 0-5" name="experience" required>
+<input type="text" placeholder="Experience in years" name="experience" required>
 </div>
-
-</div>
-
-
-<div class="row">
 
 <div class="col-md-6 col-sm-6">
-<label>Job Location</label>
-<input type="text" placeholder="e.g. New Delhi, New York, London" name="joblocation" required>
-
+<label>Address</label>
+<input type="text" placeholder="Address" name="joblocation" required>
 </div>
+
 <div class="col-md-6 col-sm-6">
-<label>Job Expiration Date</label>
+<label>Registered Date</label>
 <input type="date" placeholder="e.g. 0-5" name="jed" required class="form-control">
 </div>
 </div>
@@ -215,7 +174,7 @@ foreach($results as $result)
  <div class="col-md-12">
 <h4>Job Description</h4>
 <div class="text-editor-box">
-<textarea  name="description" required></textarea>
+<textarea  name="description"></textarea>
 </div>
 </div>
 </div>

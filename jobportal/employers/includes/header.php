@@ -17,7 +17,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
 
-            <h2><strong class="logo" style="color:purple;padding-top:8%">Job Portal</strong></h2> </div>
+            <h2><strong class="logo" style="color:purple;padding-top:8%">Find Us</strong></h2> </div>
 
 
 

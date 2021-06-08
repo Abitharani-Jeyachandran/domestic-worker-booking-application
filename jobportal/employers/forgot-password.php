@@ -46,7 +46,7 @@ echo "<script>alert('Invalid details. Please try again');</script>";
 <html>
 
 <head>
-<title>Employer Reset Your Account Password | Find Us</title>
+<title>Domestic Worker Reset Your Account Password | Find Us</title>
 
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">

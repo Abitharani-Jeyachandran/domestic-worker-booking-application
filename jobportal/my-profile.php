@@ -141,8 +141,8 @@ foreach($results as $result)
 
                   <h4>Reg Date: <?php echo htmlentities($result->RegDate);?></h4>
 
-                  <div class="clearfix"> <strong><i class="fa fa-envelope"></i><?php echo htmlentities($result->EmailId);?></strong> <strong>
-                    <i class="fa fa-phone"></i><a href="#"><?php echo htmlentities($result->ContactNumber);?></a></strong> </div>
+                  <div class="clearfix"> <strong>Email : <?php echo htmlentities($result->EmailId);?></strong></br> <strong>
+                    Mobile : <a href="#"><?php echo htmlentities($result->ContactNumber);?></a></strong> </div>
 
                   <div class="btn-row"><a href="profile.php" class="login">Edit Profile</a></div>
 

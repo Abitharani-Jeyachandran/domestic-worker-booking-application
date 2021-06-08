@@ -5,14 +5,14 @@ include('includes/config.php');
 //error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{?>
 <!doctype html>
 <html>
 <head>
-<title>Job Details | Employers</title>
+<title>Job Details | Domestic Worker</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/color.css" rel="stylesheet" type="text/css">
@@ -29,11 +29,11 @@ else{?>
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
   <?php include('includes/header.php');?>
-  <!--HEADER END--> 
+  <!--HEADER END-->
   <!--INNER BANNER START-->
 
   <section id="inner-banner">
@@ -46,13 +46,13 @@ else{?>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--RECENT JOB SECTION START-->
 
@@ -90,55 +90,55 @@ foreach($results as $result)
 <h2><?php echo htmlentities($result->jobTitle);?></h2>
   <p>Required Exp : <?php echo htmlentities($result->experience);?></p>
 
-<a class="text"><i class="fa fa-map-marker"></i><?php echo htmlentities($result->jobLocation);?></a> 
+<a class="text"><i class="fa fa-map-marker"></i><?php echo htmlentities($result->jobLocation);?></a>
 
-<a class="text"><i class="fa fa-calendar"></i><?php echo htmlentities($result->postinDate); ?></a> 
+<a class="text"><i class="fa fa-calendar"></i><?php echo htmlentities($result->postinDate); ?></a>
 
 <strong class="price"><i class="fa fa-money"></i>$<?php echo htmlentities($result->salaryPackage); ?></strong>
 
-<div class="clearfix"> 
+<div class="clearfix">
   <!--Full Time -->
 <?php if($result->jobType=='Full Time'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Part Time -->
 <?php if($result->jobType=='Part Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Half Time -->
 <?php if($result->jobType=='Half Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Freelance -->
 <?php if($result->jobType=='Freelance'):?>
-<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Contract -->
 <?php if($result->jobType=='Contract'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 <!--Internship -->
 <?php if($result->jobType=='Internship'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
+<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
 <?php endif;?>
 
 
 <!--Temporary -->
 <?php if($result->jobType=='Temporary'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?> 
-</a> 
-<?php endif;?></a> 
+<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
+</a>
+<?php endif;?></a>
 </div>
 
 </div>
@@ -166,22 +166,22 @@ foreach($results as $result)
     </section>
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
   <?php include('includes/footer.php');?>
 
 </div>
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
-<script src="../js/bootstrap.min.js"></script> 
-<script src="../js/owl.carousel.min.js"></script> 
-<script src="../js/jquery.velocity.min.js"></script> 
-<script src="../js/jquery.kenburnsy.js"></script> 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script src="../js/form.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.velocity.min.js"></script>
+<script src="../js/jquery.kenburnsy.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/form.js"></script>
 <script src="../js/custom.js"></script>
 
 </body>
