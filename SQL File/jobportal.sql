@@ -62,8 +62,6 @@ CREATE TABLE `tblapplyjob` (
 --
 
 INSERT INTO `tblapplyjob` (`ID`, `UserId`, `JobId`, `Applydate`, `Status`, `ResponseDate`) VALUES
-(1, 1, 2, '2020-06-11 13:54:07', 'Sorted', '2020-06-11 13:54:07'),
-(2, 1, 3, '2020-06-04 11:54:10', 'Sorted', '2020-06-04 11:54:10'),
 (3, 3, 7, '2020-09-02 18:16:54', 'Sorted', '2020-09-02 18:16:54');
 
 -- --------------------------------------------------------
@@ -85,38 +83,7 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`id`, `CategoryName`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
-(2, 'Development - IT', '2018-09-03 06:32:34', '2020-06-05 11:53:56', 1),
-(6, 'Admin', 'Adiminstrator', '2020-09-02 18:18:44', NULL, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbleducation`
---
-
-CREATE TABLE `tbleducation` (
-  `ID` int(10) NOT NULL,
-  `UserID` int(5) DEFAULT NULL,
-  `Qualification` varchar(200) DEFAULT NULL,
-  `ClgorschName` varchar(200) DEFAULT NULL,
-  `PassingYear` varchar(200) DEFAULT NULL,
-  `Stream` varchar(200) DEFAULT NULL,
-  `CGPA` decimal(2,0) DEFAULT NULL,
-  `Percentage` decimal(4,0) DEFAULT NULL,
-  `CreationDate` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tbleducation`
---
-
-INSERT INTO `tbleducation` (`ID`, `UserID`, `Qualification`, `ClgorschName`, `PassingYear`, `Stream`, `CGPA`, `Percentage`, `CreationDate`) VALUES
-(1, 1, '10th std', 'Tulsi Vidya Niketan', '2010', 'Science', '7', '79', '2020-06-03 11:27:01'),
-(2, 1, '12th std', 'Tulsi Vidya Niketan', '2012', 'PCM', '6', '67', '2020-06-03 11:29:10'),
-(3, 1, 'Graduation', 'IIMT Merrut', '2016', 'B.Tech', '7', '79', '2020-06-03 11:33:09'),
-(4, 3, '10th std', 'Sunrise Public School', '2005', '', '9', '75', '2020-09-02 18:12:33'),
-(5, 3, '12th std', 'Nihar Meera Public School', '2007', 'PCM', '9', '78', '2020-09-02 18:13:42'),
-(6, 3, 'Graduation', 'LPU', '2012', 'IT', '7', '65', '2020-09-02 18:14:14');
+(2, 'Development - IT', '2018-09-03 06:32:34', '2020-06-05 11:53:56', 1);
 
 -- --------------------------------------------------------
 
@@ -145,37 +112,6 @@ INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `C
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblexperience`
---
-
-CREATE TABLE `tblexperience` (
-  `ID` int(10) NOT NULL,
-  `UserID` int(10) DEFAULT NULL,
-  `EmployerName` varchar(200) DEFAULT NULL,
-  `EmployementType` varchar(200) DEFAULT NULL,
-  `Designation` varchar(200) DEFAULT NULL,
-  `Ctc` decimal(10,0) DEFAULT NULL,
-  `FromDate` varchar(200) DEFAULT NULL,
-  `ToDate` varchar(200) DEFAULT NULL,
-  `Skills` varchar(200) NOT NULL,
-  `CreationDate` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tblexperience`
---
-
-INSERT INTO `tblexperience` (`ID`, `UserID`, `EmployerName`, `EmployementType`, `Designation`, `Ctc`, `FromDate`, `ToDate`, `Skills`, `CreationDate`) VALUES
-(1, 1, 'ABC PVT LTD', 'Full Time', 'Software Developer', '50000', '2012-06-05', '2014-09-07', 'PHP,PDO', '2020-06-03 11:12:01'),
-(2, 1, 'PAL pvt ltd', 'Full Time', 'Software Developer', '60000', '2014-09-08', '2018-06-09', 'PHP,PDO', '2020-06-03 11:14:41'),
-(3, 1, 'FALT pvt ltd', 'Full Time', 'Software Developer', '75000', '2019-09-08', '', 'PHP, PDO', '2020-06-03 11:17:54'),
-(4, 1, 'HMT Pvt ltd', 'fulltime', 'Software Developer', '75000', '2020-01-09', '', 'PHP, PDO, HTML, Excel', '2020-06-03 12:12:40'),
-(5, 3, 'ABC', 'Fulltimw', 'Software Developer', '25000', '2019-07-02', '2020-02-29', '', '2020-09-02 18:15:05'),
-(6, 3, 'XYZ', 'Fulltime', 'Software Developer', '40000', '2020-03-01', '2020-09-02', '', '2020-09-02 18:15:43');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbljobs`
 --
 
@@ -196,11 +132,8 @@ CREATE TABLE `tbljobs` (
 -- Dumping data for table `tbljobs`
 --
 
-INSERT INTO `tbljobs` (`jobId`, `employerId`, `jobCategory`, `jobTitle`, `jobType`, `salaryPackage`, `skillsRequired`, `experience`, `jobLocation`, `jobDescription`, `JobExpdate`, `postinDate`, `updationDate`, `isActive`) VALUES
-(2, 1, 'Development - IT', 'PHP Developer', 'Full Time', '4000-10000', 'PHP, MYSQl, HTML, CI', '1-2', 'New York, California', 'Desired Candidate Profile\r\n-<div>Expertise in Core PHP and MVC Frameworks like Codeigniter and Laravel&nbsp;</div><div>-CMS Experience (WordPress, Magento, Joomla) is preferred. \r\n-Experience with SOAP, REST or JSON is preferred&nbsp;</div><div>-Experience with Git and Ubuntu is preferred.</div>', '2020-06-19', '2018-09-29 07:01:21', '2020-06-03 14:37:38', 1),
-(3, 1, 'HR', 'HR Executive', 'Contract', '1000-5000', 'Executive Training, Induction, Employee Relations', '1-2', 'Hyderabad', 'Plan,develop&amp; implement strategy for employee life cycle\r\nPerformance Management.&nbsp;<div>Learning &amp; development for New Joiner\r\nSuccession planning.&nbsp;</div><div>Employee Engagement.&nbsp;</div><div>Implementing HR Performance Matrices across different process\r\nBuilding the Employer Brand</div>', '2020-07-05', '2018-09-29 07:17:54', '2020-06-03 14:38:28', 1),
-(4, 1, 'Development - IT', 'Java Developer', 'Full Time', '5000-10000', 'Core Java, SQL, HTML', '2-4', 'New Delhi, Banglore', '<span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">In depth knowledge and application of Java, J2EE, JSP, Servlets, JDBC, Spring Framework, Struts framework, EJB and JavaScript</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Proficient understanding of web mark-up, including HTML5 and CSS3</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Experience in developing AJAX interfaces with AJAX libraries and frameworks (e.g. JQuery, AngularJS, etc.)</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Understanding of web services technologies such as REST, SOAP, HTTP, JSON</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Thorough understanding of usage of the fundamental concepts like Exception Handling, Static block/variables/classes, OOPS concepts, Collections, Multi-Threading, http sessions, session handling, Servlets/JSP life cycle, JDBC, actions, events, implicit objects, custom tags, context</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Exposure to an industry-standard database (Oracle or Sybase) on a UNIX platform with awareness of database design and SQL scripting knowledge and performance tuning</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Awareness of application servers /webservers (Weblogic , JBoss and iPlanet)</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Work experience in testing frameworks like Junit, TestNG</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Work experience on the transactional applications for low latency, high availability uses is a plus</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Ability to work in a fast-paced and agile development environment and to learn new frameworks/stacks</span><br style=\"padding: 0px; margin: 0px; font-family: Roboto, sans-serif; color: rgb(102, 102, 102); text-align: justify;\"><span style=\"color: rgb(102, 102, 102); font-family: Roboto, sans-serif; text-align: justify;\">Swings/.Net/C# knowledge is a plus</span>', '2020-08-09', '2018-09-29 13:03:37', '2020-06-03 14:38:57', 1),
-(7, 3, 'Development - IT', 'Software Application Developer', 'Full Time', '80000-100000', 'PHP, MySQL, HTML, Bootstrap', '3-7', 'Noida', 'Software Application Developer', '2020-09-30', '2020-09-02 18:08:39', '2020-09-02 18:09:17', 1);
+INSERT INTO `tbljobs` (`jobId`, `employerId`, `jobCategory`, `salaryPackage`, `experience`, `jobLocation`, `jobDescription`, `JobExpdate`, `postinDate`, `updationDate`) VALUES
+(2, 1, 'Development - IT', '4000-10000', '1-2', 'New York, California', 'Desired Candidate Profile\r\n-<div>Expertise in Core PHP and MVC Frameworks like Codeigniter and Laravel&nbsp;</div><div>-CMS Experience (WordPress, Magento, Joomla) is preferred. \r\n-Experience with SOAP, REST or JSON is preferred&nbsp;</div><div>-Experience with Git and Ubuntu is preferred.</div>', '2020-06-19', '2018-09-29 07:01:21', '2020-06-03 14:37:38');
 
 -- --------------------------------------------------------
 
