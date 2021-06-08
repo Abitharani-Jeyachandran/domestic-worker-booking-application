@@ -232,23 +232,10 @@ ALTER TABLE `tblcategory`
   ADD KEY `CategoryName` (`CategoryName`);
 
 --
--- Indexes for table `tbleducation`
---
-ALTER TABLE `tbleducation`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Indexes for table `tblemployers`
 --
 ALTER TABLE `tblemployers`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tblexperience`
---
-ALTER TABLE `tblexperience`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `UserID` (`UserID`);
 
 --
 -- Indexes for table `tbljobs`
