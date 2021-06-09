@@ -25,16 +25,13 @@ if (strlen($_SESSION['jpaid']==0)) {
 
            <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
 
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Domestic Worker Between Dates Report</h2>
-
-
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
@@ -48,14 +45,13 @@ if (strlen($_SESSION['jpaid']==0)) {
  $tdate=$_POST['todate'];
 
 ?>
-<h5 align="center" style="color:blue">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
+<h5 align="center" style="color:#A020F0">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
                             <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
                                 <thead>
                                      <tr>
                                         <th class="text-center"></th>
-                                        <th>Company Name</th>
-                                       <th>Concern Person</th>
-                                       <th>Email</th>
+                                       <th>Name</th>
+                                       <th>Nic</th>
                                         <th>Status</th>
                                         <th class="d-none d-sm-table-cell">Registration Date</th>
                                         <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
@@ -75,7 +71,6 @@ foreach($results as $row)
 {               ?>
                                     <tr>
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->CompnayName);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->ConcernPerson);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->EmpEmail);?></td>
                                         <?php if($row->Is_Active=='1'){ ?>
@@ -113,7 +108,7 @@ $cnt=$cnt+1;
             </main>
             <!-- END Main Container -->
 
-           <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

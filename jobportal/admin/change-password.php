@@ -58,7 +58,7 @@ return true;
 
              <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
             <!-- Main Container -->
             <main id="main-container">
@@ -114,7 +114,7 @@ return true;
             </main>
             <!-- END Main Container -->
 
-          <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

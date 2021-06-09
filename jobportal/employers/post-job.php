@@ -34,7 +34,7 @@ $isactive=1;
 
 
 
-$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription,JobExpdate,isActive) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc,:jed,:isactive)";
+$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription,JobExpdate) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc,:jed)";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':empid',$empid,PDO::PARAM_STR);
@@ -44,7 +44,6 @@ $query->bindParam(':exprnce',$exprnce,PDO::PARAM_STR);
 $query->bindParam(':joblocation',$joblocation,PDO::PARAM_STR);
 $query->bindParam(':jobdesc',$jobdesc,PDO::PARAM_STR);
 $query->bindParam(':jed',$jed,PDO::PARAM_STR);
-$query->bindParam(':isactive',$isactive,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)

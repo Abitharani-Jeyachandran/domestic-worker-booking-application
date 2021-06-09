@@ -17,7 +17,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 
          <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+          
 
 
             <!-- Main Container -->
@@ -106,7 +106,7 @@ $totaljobs=$query4->rowCount();
             </main>
             <!-- END Main Container -->
 
-             <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

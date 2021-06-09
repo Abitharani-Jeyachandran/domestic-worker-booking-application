@@ -35,7 +35,7 @@ $query->execute();
 
            <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
 
             <!-- Main Container -->
@@ -79,7 +79,7 @@ foreach($results as $row)
                                         <td class="font-w600"><?php  echo htmlentities($row->CategoryName);?></td>
                                         <td class="d-none d-sm-table-cell">$<?php  echo htmlentities($row->PostingDate);?></td>
 
-                                         <td class="d-none d-sm-table-cell"><a href="manage-services.php?delid=<?php echo ($row->ID);?>" onclick="return confirm('Do you really want to Delete ?');"><i class="fa fa-trash fa-delete" aria-hidden="true"></i></a> || <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
+                                         <td class="d-none d-sm-table-cell"><a href="manage-services.php?delid=<?php echo ($row->ID);?>" onclick="return confirm('Do you really want to Delete ?');">Delete</a> || <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>">Edit</a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?>
 
@@ -97,7 +97,7 @@ foreach($results as $row)
             </main>
             <!-- END Main Container -->
 
-           <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

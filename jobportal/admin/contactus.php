@@ -39,7 +39,7 @@ echo '<script>alert("Contact us has been updated")</script>';
 
              <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
             <!-- Main Container -->
             <main id="main-container">
@@ -115,7 +115,7 @@ foreach($results as $row)
             </main>
             <!-- END Main Container -->
 
-          <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

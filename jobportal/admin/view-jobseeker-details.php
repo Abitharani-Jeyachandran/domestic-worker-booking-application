@@ -21,15 +21,13 @@ if (strlen($_SESSION['jpaid']==0)) {
 
              <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
 
-                    <!-- Register Forms -->
-                    <h2 class="content-heading">View Jobseeker Details</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
@@ -58,6 +56,8 @@ foreach($results as $row)
                                             <tr>
     <th>Full Name</th>
     <td><?php  echo $row->FullName;?></td>
+    </tr>
+    <tr>
     <th>Email ID</th>
     <td><?php  echo $row->EmailId;?></td>
   </tr>
@@ -66,21 +66,12 @@ foreach($results as $row)
   <tr>
     <th>Contact Number</th>
     <td><?php  echo $row->ContactNumber;?></td>
-   <th>Resume</th>
-    <td><a href="../Jobseekersresumes/<?php echo htmlentities($row->Resume);?>" width="100" height="100" target="_blank">Resume</a></td>
 
   </tr>
   <tr>
-    <th colspan="6" style="text-align: center;color: blue">About Job Seeker</th></tr>
-    <tr>
-    <td colspan="6"><?php  echo $row->AboutMe;?></td>
-  </tr>
    <tr>
     <th>Profile Pic</th>
     <td><img src="../images/<?php echo $row->ProfilePic;?>" width="100" height="100"></td>
-    <th>Skills</th>
-    <td><?php  echo $row->Skills;?></td>
-
   </tr>
 
 <?php $cnt=$cnt+1;}} ?>
@@ -99,7 +90,7 @@ foreach($results as $row)
             </main>
             <!-- END Main Container -->
 
-          <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

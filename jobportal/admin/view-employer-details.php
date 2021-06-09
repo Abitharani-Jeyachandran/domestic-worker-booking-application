@@ -20,7 +20,6 @@ if (strlen($_SESSION['jpaid']==0)) {
 
              <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
 
             <!-- Main Container -->
             <main id="main-container">
@@ -28,7 +27,6 @@ if (strlen($_SESSION['jpaid']==0)) {
                 <div class="content">
 
                     <!-- Register Forms -->
-                    <h2 class="content-heading">View Domestic Worker Details</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
@@ -54,47 +52,19 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
                             <table border="1" class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
-                                            <tr>
-    <th>Name of Company</th>
-    <td><?php  echo $row->CompnayName;?></td>
-    <th>Company Logo</th>
+  <tr>
+
+    <th>Image</th>
     <td><img src="../employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></td>
-    <th>Company Tag Line</th>
-    <td><?php  echo $row->CompanyTagline;?></td>
   </tr>
-
-
   <tr>
-    <th>Concern Person</th>
+    <th>Name</th>
     <td><?php  echo $row->ConcernPerson;?></td>
-   <th>Email</th>
-    <td><?php  echo $row->EmpEmail;?></td>
-    <th>Company Tagline</th>
-    <td><?php  echo $row->CompanyTagline;?></td>
-  </tr>
-  <tr>
-    <th colspan="6" style="text-align: center;color: blue">Company Description</th></tr>
+    </tr>
     <tr>
-    <td colspan="6"><?php  echo $row->CompnayDescription;?></td>
-  </tr>
-   <tr>
-    <th>Industry</th>
-    <td><?php  echo $row->industry;?></td>
-    <th>Business Entity</th>
-    <td><?php  echo $row->typeBusinessEntity;?></td>
-    <th>Location</th>
-    <td><?php  echo $row->lcation;?></td>
-  </tr>
-  <tr>
-    <th>Company URL</th>
-    <td><?php  echo $row->CompanyUrl;?></td>
-    <th>Number of Employee</th>
-    <td><?php  echo $row->noOfEmployee;?></td>
-    <th>Established Date</th>
-    <td><?php  echo $row->establishedIn;?></td>
-
-
-  </tr>
+   <th>NIC No</th>
+    <td><?php  echo $row->EmpEmail;?></td>
+    </tr>
 
 
 <?php $cnt=$cnt+1;}} ?>
@@ -113,7 +83,6 @@ foreach($results as $row)
             </main>
             <!-- END Main Container -->
 
-          <?php include_once('includes/footer.php');?>
         </div>
         <!-- END Page Container -->
 

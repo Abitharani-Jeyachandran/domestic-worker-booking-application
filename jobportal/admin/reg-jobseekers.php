@@ -23,16 +23,13 @@ if (strlen($_SESSION['jpaid']==0)) {
 
            <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
 
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Jobseeker Lists</h2>
-
-
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
@@ -42,7 +39,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                                 </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
-                            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                            <table class="table table-bordered table-striped table-vcenter">
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
@@ -79,7 +76,7 @@ foreach($results as $row)
 
                                         <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDate);?></td>
 
-                                         <td class="d-none d-sm-table-cell"><a href="view-jobseeker-details.php?viewid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                         <td class="d-none d-sm-table-cell"><a href="view-jobseeker-details.php?viewid=<?php echo htmlentities ($row->id);?>">View</a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?>
 
@@ -97,7 +94,7 @@ foreach($results as $row)
             </main>
             <!-- END Main Container -->
 
-           <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

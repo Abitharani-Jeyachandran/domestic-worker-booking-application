@@ -46,7 +46,7 @@ echo "<script>window.location.href ='add-category.php'</script>";
 
              <?php include_once('includes/sidebar.php');?>
 
-          <?php include_once('includes/header.php');?>
+
 
             <!-- Main Container -->
             <main id="main-container">
@@ -93,7 +93,7 @@ echo "<script>window.location.href ='add-category.php'</script>";
             </main>
             <!-- END Main Container -->
 
-          <?php include_once('includes/footer.php');?>
+
         </div>
         <!-- END Page Container -->
 

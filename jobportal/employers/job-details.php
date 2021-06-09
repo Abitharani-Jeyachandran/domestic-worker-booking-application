@@ -87,67 +87,16 @@ foreach($results as $result)
           <img src="employerslogo/<?php echo htmlentities($result->CompnayLogo);?>" alt="img" width="165" height="165"></a></div>
                 <div class="text-col">
 
-<h2><?php echo htmlentities($result->jobTitle);?></h2>
-  <p>Required Exp : <?php echo htmlentities($result->experience);?></p>
+<h2><?php echo htmlentities($result->jobCategory);?></h2>
 
-<a class="text"><i class="fa fa-map-marker"></i><?php echo htmlentities($result->jobLocation);?></a>
+<a class="text">Address : <?php echo htmlentities($result->jobLocation);?></a>
+</br>
+<a class="text">Registered Date : <?php echo htmlentities($result->postinDate); ?></a>
 
-<a class="text"><i class="fa fa-calendar"></i><?php echo htmlentities($result->postinDate); ?></a>
-
-<strong class="price"><i class="fa fa-money"></i>$<?php echo htmlentities($result->salaryPackage); ?></strong>
-
-<div class="clearfix">
-  <!--Full Time -->
-<?php if($result->jobType=='Full Time'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Part Time -->
-<?php if($result->jobType=='Part Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Half Time -->
-<?php if($result->jobType=='Half Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Freelance -->
-<?php if($result->jobType=='Freelance'):?>
-<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Contract -->
-<?php if($result->jobType=='Contract'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Internship -->
-<?php if($result->jobType=='Internship'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-
-<!--Temporary -->
-<?php if($result->jobType=='Temporary'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?></a>
-</div>
-
-</div>
+<strong class="price">Amount : $<?php echo htmlentities($result->salaryPackage); ?></strong>
 
 <div class="clearfix">
-
-<h4>Skills Required</h4>
-
-<p><?php echo htmlentities($result->skillsRequired); ?> </p>
+  <p>Experience :  <?php echo htmlentities($result->experience);?></p>
 
 <h4>Description</h4>
 
@@ -167,11 +116,6 @@ foreach($results as $result)
   </div>
 
   <!--MAIN END-->
-
-
-
-  <!--FOOTER START-->
-  <?php include('includes/footer.php');?>
 
 </div>
 
