@@ -93,7 +93,7 @@ foreach($results as $result)
 </br>
 <a class="text">Registered Date : <?php echo htmlentities($result->postinDate); ?></a>
 
-<strong class="price">Amount : $<?php echo htmlentities($result->salaryPackage); ?></strong>
+<strong class="price">Amount : LKR <?php echo htmlentities($result->salaryPackage); ?></strong>
 
 <div class="clearfix">
   <p>Experience :  <?php echo htmlentities($result->experience);?></p>

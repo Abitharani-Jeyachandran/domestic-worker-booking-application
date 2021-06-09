@@ -78,7 +78,7 @@ $vid=$_GET['viewid'];
   <!--MAIN START-->
 
   <div id="main">
-    
+
     <form action="job-search.php" method="post">
 
       <div class="container">
@@ -295,29 +295,6 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
 
     <!--RECENT JOB SECTION END-->
 
-
-
-    <!--CALL TO ACTION SECTION START-->
-
-    <section class="call-action-section">
-
-      <div class="container">
-
-        <div class="text-box">
-
-          <h2>Better Results with Standardized Hiring Process</h2>
-
-          <p>Your quality of hire increases when you treat everyone fairly and equally. Having multiple recruiters
-
-            working on your hiring is beneficial.</p>
-
-        </div>
-
-        <a href="#" class="btn-get">Get Registered &amp; Try Now</a> </div>
-
-    </section>
-
-    <!--CALL TO ACTION SECTION END-->
   </div>
 
   <!--MAIN END-->

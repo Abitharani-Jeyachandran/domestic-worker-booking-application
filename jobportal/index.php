@@ -188,7 +188,7 @@ $results1=$query1->fetchAll(PDO::FETCH_OBJ);
 $total_rows=$query1->rowCount();
 $total_no_of_pages = ceil($total_rows / $no_of_records_per_page);
   $second_last = $total_no_of_pages - 1; // total page minus 1
-$sql="SELECT tbljobs.*,tblemployers.CompnayLogo,tblemployers.CompnayName from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId LIMIT $offset, $no_of_records_per_page";
+$sql="SELECT tbljobs.*,tblemployers.CompnayLogo,tblemployers.ConcernPerson from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId LIMIT $offset, $no_of_records_per_page";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
