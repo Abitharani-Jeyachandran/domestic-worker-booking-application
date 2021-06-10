@@ -108,6 +108,10 @@
                                     </ul>
                                 </li>
                                 <li>
+                                    <a href="manage-subscribers.php"><span class="sidebar-mini-hide">Manage Subscribers</span></a>
+
+                                </li>
+                                <li>
                                     <a href="logout.php"><span class="sidebar-mini-hide">LOGOUT</span></a>
 
                                 </li>
