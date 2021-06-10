@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2020 at 05:54 PM
--- Server version: 10.3.15-MariaDB
--- PHP Version: 7.2.19
+-- Generation Time: Jun 10, 2021 at 09:14 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,17 +52,11 @@ CREATE TABLE `tblapplyjob` (
   `ID` int(10) NOT NULL,
   `UserId` int(5) DEFAULT NULL,
   `JobId` int(5) DEFAULT NULL,
+  `Date` varchar(120) DEFAULT NULL,
   `Applydate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Status` varchar(200) DEFAULT NULL,
   `ResponseDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tblapplyjob`
---
-
-INSERT INTO `tblapplyjob` (`ID`, `UserId`, `JobId`, `Applydate`, `Status`, `ResponseDate`) VALUES
-(3, 3, 7, '2020-09-02 18:16:54', 'Sorted', '2020-09-02 18:16:54');
 
 -- --------------------------------------------------------
 
@@ -83,7 +77,7 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`id`, `CategoryName`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
-(2, 'Development - IT', '2018-09-03 06:32:34', '2020-06-05 11:53:56', 1);
+(1, 'Carpenter', '2021-06-09 12:50:48', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -107,7 +101,7 @@ CREATE TABLE `tblemployers` (
 --
 
 INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `CompnayLogo`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
-(3, 'Anuj Kumar', 'tcs@test.com', '$2y$12$BIu47aSN0S16.Jar1A2oKuOFy6pV4t8WJD3XC1h0ZXEQy4msRJbci', 'd657a1ed79a3a39a0cff0628959bee52.png', '2020-09-01 18:30:00', '2020-09-03 02:18:18', 1);
+(1, 'Abitharani', '986180397V', '$2y$12$WvhfHfssvlofPb6D0HoROuofNQuwykr2X.7VxOFitzJYfM3VVSGkC', '67007225fb90bcfd70c837d4b809fe23jpeg', '2021-06-09 12:42:34', '2021-06-09 12:42:34', 1);
 
 -- --------------------------------------------------------
 
@@ -133,7 +127,7 @@ CREATE TABLE `tbljobs` (
 --
 
 INSERT INTO `tbljobs` (`jobId`, `employerId`, `jobCategory`, `salaryPackage`, `experience`, `jobLocation`, `jobDescription`, `JobExpdate`, `postinDate`, `updationDate`) VALUES
-(2, 1, 'Development - IT', '4000-10000', '1-2', 'New York, California', 'Desired Candidate Profile\r\n-<div>Expertise in Core PHP and MVC Frameworks like Codeigniter and Laravel&nbsp;</div><div>-CMS Experience (WordPress, Magento, Joomla) is preferred. \r\n-Experience with SOAP, REST or JSON is preferred&nbsp;</div><div>-Experience with Git and Ubuntu is preferred.</div>', '2020-06-19', '2018-09-29 07:01:21', '2020-06-03 14:37:38');
+(1, 1, 'Carpenter', '500', '5', 'Jaffna', '<div style=\"text-align: left;\">Experienced Worker</div>', '2021-06-15', '2021-06-09 14:00:48', '2021-06-09 16:08:16');
 
 -- --------------------------------------------------------
 
@@ -158,7 +152,7 @@ CREATE TABLE `tbljobseekers` (
 --
 
 INSERT INTO `tbljobseekers` (`id`, `FullName`, `EmailId`, `ContactNumber`, `Password`, `ProfilePic`, `RegDate`, `LastUpdationDate`, `IsActive`) VALUES
-(1, 'Test', 'test@gmail.com', 1234567890, '$2y$12$3TLhf0ZbaRVduNapypRm1e7Ej848kgO.oJrQMwSpnvNZ/CWp4i0fe', 'e76de47f621d84adbab3266e3239baee1591629612.png', '2020-03-26 10:39:35', '2020-08-19 01:18:28', 1);
+(1, 'Joyna', 'joyna98@gmail.com', 772233445, '$2y$12$5c2gDWVBGM1EpXRsUQi1t.WVyvkGv5FjjC2DJqGeZb72m7IpFnMaC', '90f2222de1c20b436e7e169ab5dcd4881623242407.jpg', '2021-06-09 12:39:22', '2021-06-09 12:40:07', 1);
 
 -- --------------------------------------------------------
 
@@ -174,15 +168,6 @@ CREATE TABLE `tblmessage` (
   `Status` varchar(200) DEFAULT NULL,
   `ResponseDate` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tblmessage`
---
-
-INSERT INTO `tblmessage` (`ID`, `JobID`, `UserID`, `Message`, `Status`, `ResponseDate`) VALUES
-(1, 3, 1, 'Your resume has been sort listed. Kindly comes with original documents at a time.', 'Sorted', '2020-06-11 13:54:25'),
-(2, 2, 1, 'You are sort listed comes with your original document', 'Sorted', '2020-08-31 18:30:00'),
-(3, 7, 3, 'Sort listed', 'Sorted', '2020-09-01 18:30:00');
 
 -- --------------------------------------------------------
 
@@ -200,13 +185,28 @@ CREATE TABLE `tblpages` (
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `tblpages`
+-- Table structure for table `tblsubscribers`
 --
 
-INSERT INTO `tblpages` (`ID`, `PageType`, `PageTitle`, `PageDescription`, `Email`, `MobileNumber`, `UpdationDate`) VALUES
-(1, 'aboutus', 'About us', '<div class=\"iw-heading  style1 vc_custom_1511523196571 border-color-theme\" style=\"outline: none; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-left: auto; color: rgb(119, 119, 119); font-family: &quot;Open Sans&quot;; font-size: 13px; width: 670px; margin-bottom: 35px !important;\"><div class=\"iwh-description\" style=\"outline: none; box-sizing: border-box; color: rgb(51, 51, 51); font-size: 16px; line-height: 28px; font-weight: 600;\">Our job portal creates an opportunity for both job seekers and organizations to embrace an easy employment process. Users can register for free on this job portal and they can receive different job posting and updates that is related to their career search or their specific field.</div></div><div class=\"iw-heading  style1 vc_custom_1511523484678 border-color-theme\" style=\"outline: none; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-left: auto; color: rgb(119, 119, 119); font-family: &quot;Open Sans&quot;; font-size: 13px; width: 670px; margin-bottom: 30px !important;\"><div class=\"iwh-description\" style=\"outline: none; box-sizing: border-box; color: rgb(51, 51, 51); font-size: 16px; line-height: 28px;\">As an organization, you can make use of our job portal to post different job openings as well as use them for searching for the most deserving candidates for vacancies. This helps to save time and help streamline the right candidate for a particular job.<br style=\"outline: none; box-sizing: border-box;\">Who can use our online job portal?<br style=\"outline: none; box-sizing: border-box;\">Our job portal can be used by both organization to post job openings and job seekers to find the job of their choice. Our job portal creates a platform for people seeking for job opportunities as well as corporations seeking best candidates for job openings, to come together.<br style=\"outline: none; box-sizing: border-box;\">At www.job-here.com, we are one of the best job sites and we also have provisions that make it possible for them to collect the required knowledge and background of each company or candidate. All the jobs are categorically organized in groups related to each field and industry. Job portals, also known as Career portals have aided numerous job seekers get suitable work and given a boost to their career growth.<br style=\"outline: none; box-sizing: border-box;\">So do not hesitate to explore your career opportunities with our job portal and give your career the elevation that you have always been waiting for.</div></div>', '2020-06-05 12:18:06', 0, '2020-06-05 11:00:55'),
-(2, 'contactus', 'Contact Us', 'D-204, Hole Town South West,Delhi-110096,India', 'info@gmail.com', 1234567890, '2020-09-02 18:19:49');
+CREATE TABLE `tblsubscribers` (
+  `id` int(11) NOT NULL,
+  `SubscriberEmail` varchar(120) NOT NULL,
+  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblsubscribers`
+--
+
+INSERT INTO `tblsubscribers` (`id`, `SubscriberEmail`, `PostingDate`) VALUES
+(0, 'abijeya009@gmail.com', '2021-06-10 18:28:21'),
+(0, 'joyna989@gmail.com', '2021-06-10 18:31:57'),
+(0, 'joyna968@gmail.com', '2021-06-10 18:33:45'),
+(0, 'abijeya00@gmail.com', '2021-06-10 18:34:38'),
+(0, 'abitharani0409@gmail.com', '2021-06-10 18:35:28');
 
 --
 -- Indexes for dumped tables
@@ -276,43 +276,43 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblapplyjob`
 --
 ALTER TABLE `tblapplyjob`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblemployers`
 --
 ALTER TABLE `tblemployers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbljobs`
 --
 ALTER TABLE `tbljobs`
-  MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbljobseekers`
 --
 ALTER TABLE `tbljobseekers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tblmessage`
 --
 ALTER TABLE `tblmessage`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tblpages`
 --
 ALTER TABLE `tblpages`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
