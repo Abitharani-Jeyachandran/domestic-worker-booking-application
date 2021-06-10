@@ -107,7 +107,10 @@
 
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="logout.php"><span class="sidebar-mini-hide">LOGOUT</span></a>
 
+                                </li>
 
                             </ul>
                         </div>

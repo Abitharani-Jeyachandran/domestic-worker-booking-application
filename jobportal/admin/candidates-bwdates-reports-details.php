@@ -30,14 +30,13 @@ if (strlen($_SESSION['jpaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Candidates Between Dates Report</h2>
 
 
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                       <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">Candidates Between Dates Report</h3>
+                                    <h3 class="block-title">Job Seeker Report</h3>
 
                                 </div>
                         <div class="block-content block-content-full">
@@ -48,8 +47,8 @@ $fdate=$_POST['fromdate'];
 $tdate=$_POST['todate'];
 
 ?>
-<h5 align="center" style="color:blue">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
-                            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+<h5 align="center" style="color:#A020F0">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
+                            <table class="table table-bordered table-striped table-vcenter">
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
@@ -86,7 +85,7 @@ foreach($results as $row)
 
                                         <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDate);?></td>
 
-                                         <td class="d-none d-sm-table-cell"><a href="view-jobseeker-details.php?viewid=<?php echo htmlentities ($row->id);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                         <td class="d-none d-sm-table-cell"><a href="view-jobseeker-details.php?viewid=<?php echo htmlentities ($row->id);?>">View</a></td>
                                     </tr>
 
 

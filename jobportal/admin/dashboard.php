@@ -17,7 +17,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 
          <?php include_once('includes/sidebar.php');?>
 
-          
+
 
 
             <!-- Main Container -->
@@ -55,7 +55,7 @@ $query2->execute();
 $results=$query2->fetchAll(PDO::FETCH_OBJ);
 $totemp=$query2->rowCount();
 ?>
-                            <a class="block text-center" href="/employer-list.php">
+                            <a class="block text-center" href="employer-list.php">
                                 <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left bg-gd-dusk">
 
                                     <div class="text-white"><?php echo htmlentities($totemp);?></div>
@@ -79,24 +79,7 @@ $totcan=$query3->rowCount();
                                 </div>
                             </a>
                         </div>
-                        <div class="col-6 col-md-4 col-xl-3">
-                             <?php
-$sql4 ="SELECT jobId from tbljobs";
-$query4 = $dbh -> prepare($sql4);
-$query4->execute();
-$results=$query4->fetchAll(PDO::FETCH_OBJ);
-$totaljobs=$query4->rowCount();
-?>
-                            <a class="block text-center" href="#">
-                                <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left bg-gd-sea">
-
-                                    <div class="text-white"><?php echo htmlentities($totaljobs);?></div>
-                                    <p class="font-w600 text-white">Total Jobs</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- END Row #1 -->
+                     <!-- END Row #1 -->
                     </div>
 
 

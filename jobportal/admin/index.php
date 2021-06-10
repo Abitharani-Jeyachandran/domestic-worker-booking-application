@@ -44,71 +44,68 @@ echo "<script>alert('Invalid Details');</script>";
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
         <title>Admin - Login Page</title>
-        <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
-    </head>
+        <link href="../css/custom.css" rel="stylesheet" type="text/css">
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="../css/color.css" rel="stylesheet" type="text/css">
+        <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="../css/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
+</head>
     <body>
-
-        <div id="page-container" class="main-content-boxed">
-            <!-- Main Container -->
-            <main id="main-container">
-                <!-- Page Content -->
-                <div class="bg-image" >
-                    <div class="row mx-0 bg-black-op">
-
-                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white visible">
-                            <div class="content content-full">
-                                <!-- Header -->
-                                <div class="px-30 py-10">
-                                    <h1 class="h3 font-w700 mt-30 mb-10">Welcome to Admin Dashboard</h1>
-                                    <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
-                                </div>
-
-                                <form class="col-12 js-validation-signin px-30" method="post">
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control"  required="true" name="username" value="<?php if(isset($_COOKIE["user_login"])) { echo $_COOKIE["user_login"]; } ?>">
-                                                <label for="login-username">Username</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" name="password" required="true" value="<?php if(isset($_COOKIE["userpassword"])) { echo $_COOKIE["userpassword"]; } ?>">
-                                                <label for="login-password">Password</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="checkbox checkbox-primary">
-                <input type="checkbox" id="remember" name="remember" <?php if(isset($_COOKIE["user_login"])) { ?> checked <?php } ?> />
-                <label for="keep_me_logged_in">Keep me signed in</label>
-            </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-primary" name="login">
-                                             Sign In
-                                        </button>
-                                        <div class="mt-30">
-
-                                            <a class="mr-10 mb-5 d-inline-block" href="forgot-password.php">
-                                                Forgot Password
-                                            </a>
-                                            <a href="../index.php">Back Home!!</a>
-                                        </div>
-                                    </div>
-                                </form>
-                                <!-- END Sign In Form -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Page Content -->
-            </main>
-            <!-- END Main Container -->
+      <section id="inner-banner">
+        <div class="container">
+          <h1>Admin Login</h1>
         </div>
-        <!-- END Page Container -->
+      </section>
+
+
+        <section class="signup-section">
+
+          <div class="container">
+
+            <div class="holder">
+
+              <form class="js-validation-signin" method="post" name="emplsignin">
+
+                <div class="input-box">
+
+    <input type="text" placeholder="UserName" name="username"  autocomplete="off" value="<?php if(isset($_COOKIE["user_login"])) { echo $_COOKIE["user_login"]; } ?>" required>
+
+                </div>
+
+                <div class="input-box">
+    <input type="password" class="form-control" name="password" required placeholder="Password" value="<?php if(isset($_COOKIE["userpassword"])) { echo $_COOKIE["userpassword"]; } ?>">
+
+                </div>
+
+
+    <div class="input-box">
+           <input type="submit" value="Sign in" name="login">
+
+    </div>
+
+                <a href="forgot-password.php" class="login">Forgot your Password</a>
+
+
+
+                <div class="login-social">
+<a href="../index.php" class="login">Back To Home</a>
+              </form>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!--SIGNUP SECTION END-->
+
+
+
+      </div>
+
+      <!--MAIN END-->
 
         <!-- Codebase Core JS -->
         <script src="assets/js/core/jquery.min.js"></script>

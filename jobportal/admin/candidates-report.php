@@ -29,7 +29,6 @@ if (strlen($_SESSION['jpaid']==0)) {
                 <div class="content">
 
                     <!-- Register Forms -->
-                    <h2 class="content-heading">Candidates Between Dates Report</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
@@ -58,7 +57,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                                         <div class="form-group row">
                                             <div class="col-12">
                                                 <button type="submit" class="btn btn-alt-success" name="submit">
-                                                    <i class="fa fa-plus mr-5"></i> Submit
+                                                    Submit
                                                 </button>
                                             </div>
                                         </div>
