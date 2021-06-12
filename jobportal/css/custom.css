@@ -144,26 +144,6 @@ strong.logo a {
 	color: #666;
 	padding: 0 20px 0 0;
 }
-#nav li a:hover:before, #nav li a:hover:after {
-	width: 100%;
-}
-#nav li a:before, #nav li a:after {
-	content: '';
-	position: absolute;
-	width: 0%;
-	border-top: 2px solid;
-	transition: all 0.5s ease-in;
-}
-#nav li a:before {
-	left: 0;
-	top: 0;
-}
-#nav li a:after {
-	right: 0;
-	bottom: 0;
-}
-#nav li:hover > a {
-}
 #nav li ul li a:hover, #nav li ul li:hover > a {
 	text-decoration: none;
 	color: #666;
