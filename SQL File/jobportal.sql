@@ -52,11 +52,11 @@ CREATE TABLE `tblapplyjob` (
   `ID` int(10) NOT NULL,
   `UserId` int(5) DEFAULT NULL,
   `JobId` int(5) DEFAULT NULL,
-  `Date` varchar(100) DEFAULT NULL,
-  `Time` varchar(100) DEFAULT NULL,
+  `EDate` varchar(100) DEFAULT NULL,
+  `ETime` varchar(100) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
   `Applydate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Status` varchar(200) DEFAULT NULL,
-  `CancelledBy` varchar(5) DEFAULT NULL,
   `ResponseDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

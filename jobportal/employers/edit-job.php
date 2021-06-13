@@ -23,7 +23,7 @@ if (!empty($_POST['csrftoken2'])) {
 if (hash_equals($_SESSION['token2'], $_POST['csrftoken2'])) {
 
 //Getting Jobid
-$jid=intval($_GET['jobid']);
+$jobid=intval($_GET['jobid']);
 //Geeting Employer Id
 $empid=$_SESSION['emplogin'];
 //Getting Post Values
@@ -36,7 +36,7 @@ $jed=$_POST['jed'];
 
 
 
-$sql="Update tbljobs set jobCategory=:category,salaryPackage=:salpackg,experience=:exprnce,jobLocation=:joblocation,jobDescription=:jobdesc,JobExpdate=:jed where employerId=:eid and jobId=:jid";
+$sql="Update tbljobs set jobCategory=:category,salaryPackage=:salpackg,experience=:exprnce,jobLocation=:joblocation,jobDescription=:jobdesc,JobExpdate=:jed where employerId=:eid and jobId=:jobid";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':category',$category,PDO::PARAM_STR);
@@ -45,7 +45,7 @@ $query->bindParam(':exprnce',$exprnce,PDO::PARAM_STR);
 $query->bindParam(':joblocation',$joblocation,PDO::PARAM_STR);
 $query->bindParam(':jobdesc',$jobdesc,PDO::PARAM_STR);
 $query->bindParam(':jed',$jed,PDO::PARAM_STR);
-$query->bindParam(':jid',$jid,PDO::PARAM_STR);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
 $query->bindParam(':eid',$empid,PDO::PARAM_STR);
 $query->execute();
 
@@ -89,14 +89,14 @@ unset( $_SESSION['token2']);
 
 <?php
 //Getting Jobid
-$jid=intval($_GET['jobid']);
+$jobid=intval($_GET['jobid']);
 //Geeting Employer Id
 $empid=$_SESSION['emplogin'];
 // Fetching jobs
-$sql = "SELECT tbljobs.*,tblemployers.CompnayLogo from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where tbljobs.employerId=:eid and tbljobs.jobId=:jid";
+$sql = "SELECT tbljobs.*,tblemployers.CompnayLogo from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where tbljobs.employerId=:eid and tbljobs.jobId=:jobid";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
-$query-> bindParam(':jid', $jid, PDO::PARAM_STR);
+$query-> bindParam(':jobid', $jobid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)

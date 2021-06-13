@@ -122,9 +122,9 @@ else{ ?>
 //Getting User Id
 $jsid=$_SESSION['jsid'];
 // Fetching User Details
-$sql = "SELECT * from  tbljobseekers  where id=:jid";
+$sql = "SELECT * from  tbljobseekers  where id=:jobid";
 $query = $dbh -> prepare($sql);
-$query-> bindParam(':jid', $jsid, PDO::PARAM_STR);
+$query-> bindParam(':jobid', $jsid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 foreach($results as $result)

@@ -172,15 +172,15 @@ foreach($results as $row)
 
                   <div class="box">
 
-                    <div class="thumb"><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
+                    <div class="thumb"><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
 
                     <div class="text-col">
 
-                      <h4><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobCategory);?></a></h4>
+                      <h4><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobCategory);?></a></h4>
 
                       <p><?php  echo htmlentities($row->ConcernPerson);?></p>
 
-                      <a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="text">Location: <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Calender: <?php  echo htmlentities($row->postinDate);?> </a> </div>
+                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Location: <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Calender: <?php  echo htmlentities($row->postinDate);?> </a> </div>
 
                     <strong class="price">Amount: LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
                      </div>

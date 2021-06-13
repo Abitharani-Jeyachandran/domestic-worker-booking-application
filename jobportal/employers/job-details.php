@@ -64,14 +64,14 @@ else{?>
 
 <?php
 //Getting Jobid
-$jid=intval($_GET['jobid']);
+$jobid=intval($_GET['jobid']);
 //Geeting Employer Id
 $empid=$_SESSION['emplogin'];
 // Fetching jobs
-$sql = "SELECT tbljobs.*,tblemployers.CompnayLogo from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where tbljobs.employerId=:eid and tbljobs.jobId=:jid";
+$sql = "SELECT tbljobs.*,tblemployers.CompnayLogo from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where tbljobs.employerId=:eid and tbljobs.jobId=:jobid";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
-$query-> bindParam(':jid', $jid, PDO::PARAM_STR);
+$query-> bindParam(':jobid', $jobid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)

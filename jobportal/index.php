@@ -200,19 +200,19 @@ foreach($results as $row)
 {               ?>
                   <div class="box">
 
-                    <div class="thumb"><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
+                    <div class="thumb"><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
 
                     <div class="text-col">
 
-                      <h4><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobCategory);?></a></h4>
+                      <h4><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobCategory);?></a></h4>
 
                       <p><?php  echo htmlentities($row->ConcernPerson);?></p>
 
-                      <a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> </div>
+                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> </div>
 
                     <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
+                  <strong>Share via</br></br><a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://localhost/php_test/share.php', 'Facebook Share', 'width=620, height=420'); return false;">Facebook</a></br></br><a href="#" onclick="window.open('https://twitter.com/share?url=http://localhost/php_test/share.php&via=sitename&text=Loremipsum', 'Twitter Share', 'width=620, height=420'); return false;">Twitter</a></strong>
 
-                     </div>
 
                 </li>
 

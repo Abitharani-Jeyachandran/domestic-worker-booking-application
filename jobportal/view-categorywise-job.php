@@ -137,24 +137,24 @@ foreach($results as $row)
 
                   <div class="box">
 
-                    <div class="thumb"><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
+                    <div class="thumb"><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
 
                     <div class="text-col">
 
-                      <h4><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobTitle);?></a></h4>
+                      <h4><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobTitle);?></a></h4>
 
                       <p><?php  echo htmlentities($row->CompnayName);?></p>
 
-                      <a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="text"><i class="fa fa-map-marker"></i><?php  echo htmlentities($row->jobLocation);?></a> <a href="#" class="text"><i class="fa fa-calendar"></i><?php  echo htmlentities($row->postinDate);?> </a> </div>
+                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text"><i class="fa fa-map-marker"></i><?php  echo htmlentities($row->jobLocation);?></a> <a href="#" class="text"><i class="fa fa-calendar"></i><?php  echo htmlentities($row->postinDate);?> </a> </div>
 
                     <strong class="price"><i class="fa fa-money"></i>$<?php  echo htmlentities($row->salaryPackage);?></strong>
-                    <?php if($row->jobType=="Full Time"){ ?><a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-2 ripple"><?php  echo htmlentities($row->jobType);?></a>
+                    <?php if($row->jobType=="Full Time"){ ?><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-2 ripple"><?php  echo htmlentities($row->jobType);?></a>
 <?php } if($row->jobType=="Contract") { ?>
-<a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-4 ripple"><?php  echo htmlentities($row->jobType);?></a>
+<a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-4 ripple"><?php  echo htmlentities($row->jobType);?></a>
 <?php } if($row->jobType=="Freelance") { ?>
-<a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-3 ripple"><?php  echo htmlentities($row->jobType);?></a>
+<a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-3 ripple"><?php  echo htmlentities($row->jobType);?></a>
 <?php } if($row->jobType=="Part Time") { ?>
-<a href="jobs-details.php?jid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-1 ripple"><?php  echo htmlentities($row->jobType);?></a>
+<a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="btn-1 btn-color-1 ripple"><?php  echo htmlentities($row->jobType);?></a>
 
 <?php } ?>
                      </div>

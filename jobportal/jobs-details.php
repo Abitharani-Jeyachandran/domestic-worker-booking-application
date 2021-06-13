@@ -1,43 +1,31 @@
 <?php
 session_start();
 error_reporting(0);
-
 include('includes/config.php');
-
-
-if(isset($_GET['ajid']))
+if(isset($_POST['book']))
 {
-  $jobid=$_GET['ajid'];
-  $userid= $_SESSION['jsid'];
-  $query = "select ID from tblapplyjob where UserId=:uid && JobId=:jobid";
-  $query = $dbh -> prepare($query);
-  $query-> bindParam(':uid', $userid, PDO::PARAM_STR);
-  $query-> bindParam(':jobid', $jobid, PDO::PARAM_STR);
-  $query->execute();
-  $results=$query->fetchAll(PDO::FETCH_OBJ);
-if($query->rowCount() > 0)
+$jobid=intval($_GET['jobid']);
+$userid=$_SESSION['jsid'];
+$edate=$_POST['edate'];
+$est=$_POST['est'];
+$address=$_POST['address'];
+
+$sql="INSERT INTO tblapplyjob(JobId,UserId,EDate,ETime,Address) VALUES(:jobid,:userid,:edate,:est,:address)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':userid',$userid,PDO::PARAM_STR);
+$query->bindParam(':edate',$edate,PDO::PARAM_STR);
+$query->bindParam(':est',$est,PDO::PARAM_STR);
+$query->bindParam(':address',$address,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
 {
-echo "<script>alert('Already Applied');</script>";
-echo "<script>window.location.href ='index.php'</script>";
+$msg="Booked Successfully";
 }
 else
 {
- $query1="INSERT INTO tblapplyjob(UserId,JobId) VALUES(:uid,:jobid)";
- $query1 = $dbh -> prepare($query1);
-  $query1-> bindParam(':uid', $userid, PDO::PARAM_STR);
-  $query1-> bindParam(':jobid', $jobid, PDO::PARAM_STR);
-  $query1->execute();
-  $LastInsertId=$dbh->lastInsertId();
-   if ($LastInsertId>0) {
-    echo '<script>alert("Job has been applied.")</script>';
-echo "<script>window.location.href ='index.php'</script>";
-  }
-  else
-    {
-         echo '<script>alert("Something Went Wrong. Please try again")</script>';
-    }
-
-
+$error="Something went wrong. Please try again";
 }
 }
 ?>
@@ -146,10 +134,10 @@ echo "<script>window.location.href ='index.php'</script>";
 
               <div class="box">
 <?php
-$jid=$_GET['jid'];
-$sql="SELECT tbljobs.*,tblemployers.* from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId where tbljobs.jobId=:jid";
+$jobid=$_GET['jobid'];
+$sql="SELECT tbljobs.*,tblemployers.* from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId where tbljobs.jobId=:jobid";
 $query = $dbh -> prepare($sql);
-$query->bindParam(':jid',$jid,PDO::PARAM_STR);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
@@ -158,6 +146,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
+  <form name="book" method="post">
                 <div class="thumb"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100" alt="img"></div>
 
                 <div class="text-col">
@@ -168,19 +157,48 @@ foreach($results as $row)
 
                   <a href="#" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
 
-                  <div class="clearfix">
-                    <?php if($_SESSION['jsid']==""){?>
-                    <a href="sign-up.php" class="btn-style-1">Apply</a>
- <?php } else { ?>
-     <a href="jobs-details.php?ajid=<?php echo ($row->jobId);?>" class="btn-style-1">Apply</a>
+   <div class="col-md-6 col-sm-6">
+   <label>Date:<span style="color:red">*</span></label>
+   <input type="date" class="form-control" name="edate" required autocomplete="off" />
+   </div>
 
-      <?php } ?>
+<div class="col-md-6 col-sm-6">
+<label>Time:<span style="color:red">*</span></label>
+<Select type="text" class="form-control" name="est" required autocomplete="off" />
+<option value="">Select Time</option>
+<option value="7 a.m">7 a.m</option>
+<option value="8 a.m">8 a.m</option>
+<option value="9 a.m">9 a.m</option>
+<option value="10 a.m">10 a.m</option>
+<option value="11 a.m">11 a.m</option>
+<option value="12 p.m">12 a.m</option>
+<option value="1 p.m">1 p.m</option>
+<option value="2 p.m">2 p.m</option>
+<option value="3 p.m">3 p.m</option>
+<option value="4 p.m">4 p.m</option>
+<option value="5 p.m">5 p.m</option>
+<option value="6 p.m">6 p.m</option>
+<option value="7 p.m">7 p.m</option>
+</select></li>
+</div>
 
-    </div>
+<div class="col-md-6 col-sm-6">
+<label>Address:<span style="color:red">*</span></label>
+<input type="text" class="form-control" name="address" required autocomplete="off" />
+</div>
 
+<?php if($_SESSION['jsid'])
+					{?>
+						<li class="spe" align="center">
+					<button type="submit" name="book" class="btn-primary btn">Book</button>
+						</li>
+						<?php } else {?>
+							<li class="sigi" align="center" style="margin-top: 1%">
+							<a href="#" class="btn-primary btn" > Book</a></li>
+							<?php } ?>
 
                 </div>
-
+              </form>
                 <div class="clearfix">
 
                   <h4>About</h4>

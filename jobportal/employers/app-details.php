@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     $jobid=$_GET['jobid'];
     $jsid=$_GET['jsid'];
     $status=$_POST['status'];
- $msg=$_POST['message'];
+    $msg=$_POST['message'];
 
 
     $sql="insert into tblmessage(JobID,UserID,Message,Status) value(:jobid,:jsid,:msg,:status)";
@@ -168,6 +168,18 @@ foreach($results as $result)
      <div class="text-box">
 
                   <table class="table table-bordered table-hover data-tables">
+                    <tr>
+                    <th>Address</th>
+                    <td><?php  echo $result->Address;?></td>
+                    </tr>
+                    <tr>
+                    <th>Date</th>
+                    <td><?php  echo $result->EDate;?></td>
+                    </tr>
+                    <tr>
+                    <th>Time</th>
+                    <td><?php  echo $result->ETime;?></td>
+                    </tr>
   <tr>
   <th>Apply Date</th>
   <td><?php  echo $result->Applydate;?></td>
