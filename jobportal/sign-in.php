@@ -92,7 +92,7 @@ echo "<script>alert('User not registered with us');</script>";
 
             <div class="input-box">
 
-<input type="text" placeholder="Email-Id or Registered Mobile Number" name="emailmbile"  autocomplete="off" required>
+<input type="text" placeholder="Email-Id" name="emailmbile"  autocomplete="off" required>
 
             </div>
 
