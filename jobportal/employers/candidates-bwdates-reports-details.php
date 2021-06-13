@@ -5,7 +5,7 @@ include('includes/config.php');
 error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{?>
@@ -19,7 +19,7 @@ else{?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Jobportal-Candidates Profiles</title>
+<title>Find Us- Domestic worker</title>
 
 <!--CUSTOM CSS-->
 
@@ -64,15 +64,15 @@ else{?>
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
 
  <?php include('includes/header.php');?>
 
-  <!--HEADER END--> 
+  <!--HEADER END-->
 
-  
+
 
   <!--INNER BANNER START-->
 
@@ -80,19 +80,19 @@ else{?>
 
     <div class="container">
 
-      <h1>Between Dates Report of Candidates</h1>
+      <h1>Report of Applied Job seekers</h1>
 
     </div>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
-  
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--RECENT JOB SECTION START-->
 
@@ -105,7 +105,7 @@ else{?>
           <div class="col-md-12 col-sm-8">
 
             <div class="resumes-content">
-              
+
 
               <div class="box">
                 <?php
@@ -113,7 +113,7 @@ $fdate=$_POST['fromdate'];
 $tdate=$_POST['todate'];
 
 ?>
-<h2 align="center" style="color:blue">Report from <?php echo $fdate?> to <?php echo $tdate?></h2>
+<h2 align="center" style="color:#A020F0">Report from <?php echo $fdate?> to <?php echo $tdate?></h2>
 <?php
 $eid=$_SESSION['emplogin'];
                                      if (isset($_GET['page_no']) && $_GET['page_no']!="") {
@@ -126,7 +126,7 @@ $eid=$_SESSION['emplogin'];
         $offset = ($page_no-1) * $no_of_records_per_page;
         $previous_page = $page_no - 1;
   $next_page = $page_no + 1;
-  $adjacents = "2"; 
+  $adjacents = "2";
 $ret = "SELECT jobId FROM tbljobs";
 $query1 = $dbh -> prepare($ret);
 $query1->execute();
@@ -154,10 +154,10 @@ foreach($results as $row)
 
 
                   <h4>Applied Date: <?php echo htmlentities($row->Applydate);?></h4>
-<h4><a href="#">Applied For Job: <?php echo htmlentities($row->jobTitle);?>(<?php echo htmlentities($row->jobType);?>)</a></h4>
-                  <div class="clearfix"> <strong><i class="fa fa-phone"></i><?php echo htmlentities($row->ContactNumber);?></strong> <strong><i class="fa fa-envelope"></i><a href="#"><?php echo htmlentities($row->EmailId);?></a></strong> </div>
+<h4><a href="#">Applied For Job: <?php echo htmlentities($row->jobCategory);?></a></h4>
+                  <div class="clearfix"> <strong>Mobile: <?php echo htmlentities($row->ContactNumber);?></strong> </br><strong>Email: <a href="#"><?php echo htmlentities($row->EmailId);?></a></strong> </div>
 
-                  <div class="tags"> <a href="#"><i class="fa fa-tags"></i><?php  
+                  <div class="tags"> <a href="#"><?php
 if($row->Status=="")
 {
   echo "Not Responded Yet";
@@ -170,15 +170,15 @@ else
      ;?></a>  </div>
 
 
-                  <div class="btn-row"> <a href="../Jobseekersresumes/<?php echo htmlentities($row->Resume);?>" class="resume"><i class="fa fa-file-text-o"></i>Resume</a> <a href="candidates-details.php?canid=<?php echo ($row->id);?>" class="contact">View Detail</a> <a href="app-details.php?jobid=<?php echo ($row->JobId);?> && name=<?php echo htmlentities ($row->FullName);?>" class="login">Application Details</a></div>
+                  <div class="btn-row"> <a href="candidates-details.php?canid=<?php echo ($row->id);?>" class="contact">View Detail</a> <a href="app-details.php?jobid=<?php echo ($row->JobId);?> && name=<?php echo htmlentities ($row->FullName);?>" class="login">Application Details</a></div>
 
                 </div>
                 <hr />
-<?php 
+<?php
 $cnt=$cnt+1;
 } } else { ?>
-<h4 align="center" style="color:blue">No record found</h4>
- 
+<h4 align="center" style="color:#A020F0">No record found</h4>
+
   <?php } ?>
               </div>
          <div align="left">
@@ -263,54 +263,54 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
 
     </section>
 
-    <!--RECENT JOB SECTION END--> 
+    <!--RECENT JOB SECTION END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
 
   <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
-<!--WRAPPER END--> 
+<!--WRAPPER END-->
 
 
 
-<!--jQuery START--> 
+<!--jQuery START-->
 
-<!--JQUERY MIN JS--> 
+<!--JQUERY MIN JS-->
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
 
-<!--BOOTSTRAP JS--> 
+<!--BOOTSTRAP JS-->
 
-<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script>
 
-<!--OWL CAROUSEL JS--> 
+<!--OWL CAROUSEL JS-->
 
-<script src="../js/owl.carousel.min.js"></script> 
+<script src="../js/owl.carousel.min.js"></script>
 
-<!--BANNER ZOOM OUT IN--> 
+<!--BANNER ZOOM OUT IN-->
 
-<script src="../js/jquery.velocity.min.js"></script> 
+<script src="../js/jquery.velocity.min.js"></script>
 
-<script src="../js/jquery.kenburnsy.js"></script> 
+<script src="../js/jquery.kenburnsy.js"></script>
 
-<!--SCROLL FOR SIDEBAR NAVIGATION--> 
+<!--SCROLL FOR SIDEBAR NAVIGATION-->
 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<!--FOR CHECKBOX--> 
+<!--FOR CHECKBOX-->
 
-<script src="../js/form.js"></script> 
+<script src="../js/form.js"></script>
 
-<!--CUSTOM JS--> 
+<!--CUSTOM JS-->
 
 <script src="../js/custom.js"></script>
 
