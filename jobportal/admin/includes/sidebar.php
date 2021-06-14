@@ -112,6 +112,9 @@
 
                                 </li>
                                 <li>
+                                    <a href="../Chat/index.php"><span class="sidebar-mini-hide">Chat</span></a>
+                                </li>
+                                <li>
                                     <a href="logout.php"><span class="sidebar-mini-hide">LOGOUT</span></a>
 
                                 </li>

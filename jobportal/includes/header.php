@@ -39,7 +39,7 @@
                   <li><a href="applied-jobs.php">History of Applied Jobs</a></li>
 <?php } ?>
               </li>
-
+            <li><a href="Chat/index.php" target="_blank">Chat</a></li>
             </ul>
 
           </div>
@@ -70,6 +70,8 @@
             <li><a href="employers/emp-login.php">Domestic Helpers</a></li>
 
             <li><a href="admin/index.php">Admin</a></li>
+
+            <li><a href="chat/index.php">Chat</a></li>
 
 
 

@@ -150,7 +150,7 @@ else
 
      ;?></a>  </div>
 
-     <div class="btn-row"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>" class="contact">View Detail</a></div>
+     <div class="btn-row"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>" class="contact">View Detail</a> <a href="cancel.php" class="contact">Cancel</a></div>
 
                 </div>
 
