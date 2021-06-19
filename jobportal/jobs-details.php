@@ -2,6 +2,28 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
+if(isset($_POST['comment']))
+{
+$jobid=intval($_GET['jobid']);
+$userid=$_SESSION['jsid'];
+$content=$_POST['content'];
+
+$sql="INSERT INTO comment (user_id,Jobid,content) VALUES(:userid,:jobid,:content)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':userid',$userid,PDO::PARAM_STR);
+$query->bindParam(':content',$content,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+$msg="Successfully Commented";
+}
+else
+{
+$error="Something went wrong. Please try again";
+}
+}
 if(isset($_POST['book']))
 {
 $jobid=intval($_GET['jobid']);
@@ -227,6 +249,42 @@ foreach($results as $row)
 
         </div>
 
+
+        <form name="comment" method="post">
+                <div class="input-group">
+                  <textarea class="form-control" placeholder="comment" type="text" name="content"></textarea>
+                  <?php if($_SESSION['jsid'])
+                  					{?>
+                  <button type="submit" value ="comment" name="comment" class="btn btn-primary btn-hover-green" >Post Your Comment</button>
+                  <?php } else {?>
+                  <a href="job-details.php" class="btn-primary btn" >Comment</a></li>
+                  <?php } ?>
+                </div>
+        </form>
+
+<h4>Comments:</h4>
+        <?php
+        $jobid=$_GET['jobid'];
+        $sql="SELECT comment.*,tbljobseekers.* from tbljobseekers join comment on tbljobseekers.id=comment.user_id where comment.Jobid=:jobid";
+        $query = $dbh -> prepare($sql);
+        $query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+        $query->execute();
+        $results=$query->fetchAll(PDO::FETCH_OBJ);
+
+        $cnt=1;
+        if($query->rowCount() > 0)
+        {
+        foreach($results as $row)
+        {               ?>
+        <div class="clearfix">
+
+
+
+          <p>Comment: <?php  echo ($row->content);?></br>Comment by: <?php  echo ($row->FullName);?></p>
+
+        </div>
+
+<?php $cnt=$cnt+1;}} ?>
       </div>
 
     </section>
