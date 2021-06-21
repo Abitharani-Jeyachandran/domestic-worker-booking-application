@@ -41,7 +41,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
                             <table class="table table-bordered table-striped table-vcenter">
                                 <thead>
-                                    <tr>
+                                    <tr style="color:#000;">
                                         <th class="text-center"></th>
                                         <th>Full Name</th>
                                        <th>Contact Number</th>
@@ -63,7 +63,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                                    <tr>
+                                    <tr style="color:#000;">
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->FullName);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->ContactNumber);?></td>

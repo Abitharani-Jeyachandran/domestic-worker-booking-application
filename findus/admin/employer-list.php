@@ -40,12 +40,12 @@ if (strlen($_SESSION['jpaid']==0)) {
                             <table class="table table-bordered table-striped table-vcenter">
                                 <thead>
                                     <tr>
-                                        <th class="text-center"></th>
-                                        <th>Worker Name</th>
-                                       <th>Nic No</th>
-                                        <th>Status</th>
-                                        <th class="d-none d-sm-table-cell">Registration Date</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
+                                        <th class="text-center" style="color:#000;"></th>
+                                        <th style="color:#000;">Worker Name</th>
+                                       <th style="color:#000;">Nic No</th>
+                                        <th style="color:#000;">Status</th>
+                                        <th class="d-none d-sm-table-cell" style="color:#000;">Registration Date</th>
+                                        <th class="d-none d-sm-table-cell" style="width: 15%;color:#000;">Action</th>
                                        </tr>
                                 </thead>
                                 <tbody>
@@ -61,18 +61,18 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
                                     <tr>
-                                        <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->ConcernPerson);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->EmpEmail);?></td>
+                                        <td class="text-center" style="color:#000;"><?php echo htmlentities($cnt);?></td>
+                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->ConcernPerson);?></td>
+                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->EmpEmail);?></td>
                                         <?php if($row->Is_Active=='1'){ ?>
-                                        <td class="font-w600"><?php echo "Active"; ?></td>
+                                        <td class="font-w600" style="color:#000;"><?php echo "Active"; ?></td>
                                         <?php } else { ?>
 
-                                            <td class="font-w600"><?php echo "Inactive"; ?></td><?php } ?>
+                                            <td class="font-w600" style="color:#000;"><?php echo "Inactive"; ?></td><?php } ?>
 
-                                        <td class="d-none d-sm-table-cell"><?php  echo htmlentities($row->RegDtae);?></td>
+                                        <td class="d-none d-sm-table-cell" style="color:#000;"><?php  echo htmlentities($row->RegDtae);?></td>
 
-                                         <td class="d-none d-sm-table-cell"><a href="view-employer-details.php?viewid=<?php echo htmlentities ($row->id);?>">View</a></td>
+                                         <td class="d-none d-sm-table-cell" style="color:#000;"><a href="view-employer-details.php?viewid=<?php echo htmlentities ($row->id);?>">View</a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?>
 
@@ -90,7 +90,7 @@ foreach($results as $row)
             </main>
             <!-- END Main Container -->
 
-           
+
         </div>
         <!-- END Page Container -->
 

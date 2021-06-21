@@ -39,8 +39,8 @@ if (strlen($_SESSION['jpaid']==0)) {
                     <thead>
                         <tr>
                             <th class="text-center"></th>
-                            <th>Email Id</th>
-                           <th>Subscription Date</th>
+                            <th style="color:#000;">Email Id</th>
+                           <th style="color:#000;">Subscription Date</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,9 +54,9 @@ if (strlen($_SESSION['jpaid']==0)) {
     foreach($results as $result)
     {				?>
                         <tr>
-                            <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                            <td class="font-w600"><?php echo htmlentities($result->SubscriberEmail);?></td>
-                            <td class="font-w600"><?php echo htmlentities($result->PostingDate);?></td>
+                            <td class="text-center" style="color:#000;"><?php echo htmlentities($cnt);?></td>
+                            <td class="font-w600" style="color:#000;"><?php echo htmlentities($result->SubscriberEmail);?></td>
+                            <td class="font-w600" style="color:#000;"><?php echo htmlentities($result->PostingDate);?></td>
                         </tr>
                         <?php $cnt=$cnt+1;}} ?>
 

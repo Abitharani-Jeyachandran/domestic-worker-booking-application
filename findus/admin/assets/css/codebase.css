@@ -9979,11 +9979,11 @@ a.block.block-themed .btn-block-option:focus, .active > a.block.block-themed .bt
 }
 
 .nav-main a:hover, .nav-main a:focus, .nav-main a.active {
-  color: #fff;
+  color: #000;
 }
 
 .sidebar-inverse #sidebar .nav-main a:hover, .sidebar-inverse #sidebar .nav-main a:focus, .sidebar-inverse #sidebar .nav-main a.active {
-  color: #fff;
+  color: #000;
 }
 
 .nav-main a:hover > i, .nav-main a:focus > i, .nav-main a.active > i {
@@ -12730,7 +12730,7 @@ a.text-dual-primary-dark:focus, a.text-dual-primary-dark:hover {
 .page-header-inverse #page-header a.text-dual-primary-dark:focus, .page-header-inverse #page-header a.text-dual-primary-dark:hover,
 .sidebar-inverse #sidebar a.text-dual-primary-dark:focus,
 .sidebar-inverse #sidebar a.text-dual-primary-dark:hover {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .align-parent {
@@ -20303,7 +20303,7 @@ a.bg-earth-lighter:focus, a.bg-earth-lighter:hover {
 }
 
 .dropzone:hover {
-  background-color: #fff;
+  background-color: #000;
   border-color: #A020F0;
 }
 

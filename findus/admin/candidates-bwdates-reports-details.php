@@ -50,7 +50,7 @@ $tdate=$_POST['todate'];
 <h5 align="center" style="color:#A020F0">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
                             <table class="table table-bordered table-striped table-vcenter">
                                 <thead>
-                                    <tr>
+                                    <tr style="color:#000;">
                                         <th class="text-center"></th>
                                         <th>Full Name</th>
                                        <th>Contact Number</th>
@@ -72,7 +72,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                                    <tr>
+                                    <tr style="color:#000;">
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->FullName);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->ContactNumber);?></td>

@@ -48,7 +48,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <h5 align="center" style="color:#A020F0">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
                             <table class="table table-bordered table-striped table-vcenter">
                                 <thead>
-                                     <tr>
+                                     <tr style="color:#000;">
                                         <th class="text-center"></th>
                                        <th>Name</th>
                                        <th>Nic</th>
@@ -69,7 +69,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                                    <tr>
+                                    <tr style="color:#000;">
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->ConcernPerson);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->EmpEmail);?></td>

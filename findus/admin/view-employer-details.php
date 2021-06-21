@@ -54,14 +54,14 @@ foreach($results as $row)
                             <table border="1" class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
   <tr>
 
-    <th>Image</th>
-    <td><img src="../employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></td>
+    <th style="color:#000;">Image</th>
+    <td style="color:#000;"><img src="../employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></td>
   </tr>
-  <tr>
-    <th>Name</th>
+  <tr style="color:#000;">
+    <th style="color:#000;">Name</th>
     <td><?php  echo $row->ConcernPerson;?></td>
     </tr>
-    <tr>
+    <tr style="color:#000;">
    <th>NIC No</th>
     <td><?php  echo $row->EmpEmail;?></td>
     </tr>

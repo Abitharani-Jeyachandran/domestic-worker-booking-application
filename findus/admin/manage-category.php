@@ -56,10 +56,10 @@ $query->execute();
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
-                                        <th>Category Name</th>
+                                        <th style="color:#000;">Category Name</th>
 
-                                        <th class="d-none d-sm-table-cell">Creation Date</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
+                                        <th class="d-none d-sm-table-cell" style="color:#000;">Creation Date</th>
+                                        <th class="d-none d-sm-table-cell" style="width: 15%;color:#000;">Action</th>
                                        </tr>
                                 </thead>
                                 <tbody>
@@ -75,11 +75,11 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
                                     <tr>
-                                        <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->CategoryName);?></td>
-                                        <td class="d-none d-sm-table-cell">$<?php  echo htmlentities($row->PostingDate);?></td>
+                                        <td class="text-center" style="color:#000;"><?php echo htmlentities($cnt);?></td>
+                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->CategoryName);?></td>
+                                        <td class="d-none d-sm-table-cell" style="color:#000;"><?php  echo htmlentities($row->PostingDate);?></td>
 
-                                         <td class="d-none d-sm-table-cell"><a href="manage-services.php?delid=<?php echo ($row->ID);?>" onclick="return confirm('Do you really want to Delete ?');">Delete</a> || <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>">Edit</a></td>
+                                         <td class="d-none d-sm-table-cell" style="color:#000;"> <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>">Edit</a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?>
 

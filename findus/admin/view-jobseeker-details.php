@@ -53,23 +53,23 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
                             <table border="1" class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
-                                            <tr>
+                                            <tr style="color:#000;">
     <th>Full Name</th>
     <td><?php  echo $row->FullName;?></td>
     </tr>
-    <tr>
+    <tr style="color:#000;">
     <th>Email ID</th>
     <td><?php  echo $row->EmailId;?></td>
   </tr>
 
 
-  <tr>
+  <tr style="color:#000;">
     <th>Contact Number</th>
     <td><?php  echo $row->ContactNumber;?></td>
 
   </tr>
   <tr>
-   <tr>
+   <tr style="color:#000;">
     <th>Profile Pic</th>
     <td><img src="../images/<?php echo $row->ProfilePic;?>" width="100" height="100"></td>
   </tr>
