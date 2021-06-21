@@ -17,11 +17,11 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Successfully Commented";
+echo "<script>alert('Commented Successfully');</script>";
 }
 else
 {
-$error="Something went wrong. Please try again";
+echo "<script>alert('Commented Successfully');</script>";
 }
 }
 if(isset($_POST['book']))
@@ -43,11 +43,11 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Booked Successfully";
-}
-else
-{
-$error="Something went wrong. Please try again";
+  echo "<script>alert('Booked Successfully');</script>";
+  }
+  else
+  {
+  echo "<script>alert('Sign In First');</script>";
 }
 }
 ?>
@@ -216,7 +216,7 @@ foreach($results as $row)
 						</li>
 						<?php } else {?>
 							<li class="sigi" align="center" style="margin-top: 1%">
-							<a href="#" class="btn-primary btn" > Book</a></li>
+							<a href="sign-in.php" class="btn-primary btn" > Book</a></li>
 							<?php } ?>
 
                 </div>

@@ -7,16 +7,16 @@ error_reporting(0);
 $sql = "DELETE FROM `tblapplyjob` WHERE `ID`=:id";
 $query = $dbh -> prepare($sql);
 $query -> bindParam(':id', $id, PDO::PARAM_INT);
-$id = 7;
+$id = 11;
 
 $query -> execute();
 if($query -> rowCount() > 0)
 {
 $count = $query -> rowCount();
-echo $count . "Cancelled";
+echo "<script>alert('Cancelled Successfully');</script>";
 }
 else
 {
-echo "Try again";
+echo "<script>alert('Try Again');</script>";
 }
 ?>

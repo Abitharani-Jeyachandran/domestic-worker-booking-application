@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2021 at 03:31 PM
+-- Generation Time: Jun 21, 2021 at 07:00 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -41,7 +41,14 @@ CREATE TABLE `comment` (
 
 INSERT INTO `comment` (`ID`, `content`, `Jobid`, `user_id`) VALUES
 (0, 'Great work!', 1, 2),
-(0, 'Great Work!', 2, 3);
+(0, 'Great Work!', 2, 3),
+(0, 'Hi', 2, 3),
+(0, 'Good Work', 3, 5),
+(0, 'Good Work', 3, 5),
+(0, 'Great', 3, 5),
+(0, 'Great', 3, 5),
+(0, 'Great Work', 4, 5),
+(0, 'Good', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -86,7 +93,8 @@ CREATE TABLE `tblapplyjob` (
 --
 
 INSERT INTO `tblapplyjob` (`ID`, `UserId`, `JobId`, `EDate`, `ETime`, `Address`, `Applydate`, `Status`, `ResponseDate`) VALUES
-(8, 3, 2, '2021-06-22', '9 a.m', 'Jaffna', '2021-06-20 13:52:25', 'Rejected', '2021-06-20 13:52:25');
+(11, 5, 3, '2021-06-22', '1 p.m', 'Batticaloa', '2021-06-21 16:24:16', NULL, NULL),
+(12, 5, 3, '2021-06-24', '9 a.m', 'Kallady, Batticaloa', '2021-06-21 16:25:06', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -109,7 +117,8 @@ CREATE TABLE `tblcategory` (
 INSERT INTO `tblcategory` (`id`, `CategoryName`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
 (1, 'Carpenter', '2021-06-09 12:50:48', NULL, 0),
 (2, 'Beautician', '2021-06-20 13:48:21', NULL, 0),
-(3, 'Plumber', '2021-06-21 06:43:43', NULL, 0);
+(3, 'Plumber', '2021-06-21 06:43:43', NULL, 0),
+(4, 'House keeper', '2021-06-21 14:15:12', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -133,7 +142,8 @@ CREATE TABLE `tblemployers` (
 --
 
 INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `CompnayLogo`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
-(2, 'abi', '986180397V', '$2y$12$piZrA.t1Hzndfu3ewTcuBOSD1K7G90A9rpqYoNrEEVZ04BC4Fyxmi', '599cbb0975e62f88b8377082034e509f.jpg', '2021-06-20 13:42:05', '2021-06-21 12:32:10', 1);
+(3, 'Abi', '986180397V', '$2y$12$JMwDc9HZZ.iVJSNc6pVANOqPoqAHbrOIPOCg/VKAVNTFZIn/9NFyW', '0f95d9086b7fccee99fd5547221085bf.jpg', '2021-06-21 16:15:22', '2021-06-21 16:15:22', 1),
+(4, 'Nusha', '975502767V', '$2y$12$bymnBHGUNwkl.w53DA9L1ufi0dTmnxRtiVqI3NSSiDwS/PvRJe5om', '46391433815b13a4033de2f32b694741.jpg', '2021-06-21 16:35:53', '2021-06-21 16:35:53', 1);
 
 -- --------------------------------------------------------
 
@@ -159,7 +169,8 @@ CREATE TABLE `tbljobs` (
 --
 
 INSERT INTO `tbljobs` (`jobId`, `employerId`, `jobCategory`, `salaryPackage`, `experience`, `jobLocation`, `jobDescription`, `JobExpdate`, `postinDate`, `updationDate`) VALUES
-(2, 2, 'Carpenter', '500', '4', 'Jaffna', 'Experienced worker', '2021-06-20', '2021-06-20 13:43:08', NULL);
+(3, 3, 'Beautician', '1000', '5', 'Kallady, Batticaloa', 'Experienced Worker', '2021-06-21', '2021-06-21 16:16:47', NULL),
+(4, 4, 'Plumber', '1000/Day', '7+', 'Kattankudy, Batticaloa', 'Worked over 1000 projects', '2021-06-21', '2021-06-21 16:38:33', NULL);
 
 -- --------------------------------------------------------
 
@@ -184,7 +195,8 @@ CREATE TABLE `tbljobseekers` (
 --
 
 INSERT INTO `tbljobseekers` (`id`, `FullName`, `EmailId`, `ContactNumber`, `Password`, `ProfilePic`, `RegDate`, `LastUpdationDate`, `IsActive`) VALUES
-(3, 'Abi', 'abitharani009@gmail.com', 774286778, '$2y$12$3jWfIAuEzUx0KAJarW6sVuFPVBbFKTE2qYXc908eKzbG55l2nXmdK', '599cbb0975e62f88b8377082034e509f1624196421.jpg', '2021-06-20 13:36:50', '2021-06-21 12:26:33', 1);
+(4, 'Arjun', 'test1@gmail.com', 774637777, '$2y$12$Z//kUcOveiHcEd/v1wHFN.2y4q78D8TeUSUHvE3dEFJUujXrjkt5.', NULL, '2021-06-21 16:12:47', NULL, 1),
+(5, 'Joy', 'test2@gmail.com', 774689543, '$2y$12$9ue5ALaKM7JUE35/13MGnOxl8q3YgJGQQscwsvjte6LU2hn9odREm', '8659add0632749f79e747b7259c26cd21624292408.png', '2021-06-21 16:19:18', '2021-06-21 16:20:08', 1);
 
 -- --------------------------------------------------------
 
@@ -206,7 +218,10 @@ CREATE TABLE `tblmessage` (
 --
 
 INSERT INTO `tblmessage` (`ID`, `JobID`, `UserID`, `Message`, `Status`, `ResponseDate`) VALUES
-(11, 2, 3, 'Work Accepted', 'Rejected', '2021-06-20 13:52:25');
+(12, NULL, NULL, 'Accepted', 'Sorted', '2021-06-21 16:49:38'),
+(13, NULL, NULL, 'Accept', 'Sorted', '2021-06-21 16:55:16'),
+(14, 4, 4, 'Accept', 'Sorted', '2021-06-21 16:57:24'),
+(15, 4, 5, 'ghj', 'Sorted', '2021-06-21 16:58:23');
 
 -- --------------------------------------------------------
 
@@ -246,7 +261,8 @@ INSERT INTO `tblsubscribers` (`id`, `SubscriberEmail`, `PostingDate`) VALUES
 (0, 'joyna968@gmail.com', '2021-06-10 18:33:45'),
 (0, 'abijeya00@gmail.com', '2021-06-10 18:34:38'),
 (0, 'abitharani0409@gmail.com', '2021-06-10 18:35:28'),
-(0, 'admin@gmail.com', '2021-06-20 13:50:11');
+(0, 'admin@gmail.com', '2021-06-20 13:50:11'),
+(0, 'abitharani0097@gmail.com', '2021-06-21 14:16:56');
 
 --
 -- Indexes for dumped tables
@@ -316,37 +332,37 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblapplyjob`
 --
 ALTER TABLE `tblapplyjob`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tblemployers`
 --
 ALTER TABLE `tblemployers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbljobs`
 --
 ALTER TABLE `tbljobs`
-  MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbljobseekers`
 --
 ALTER TABLE `tbljobseekers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tblmessage`
 --
 ALTER TABLE `tblmessage`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tblpages`

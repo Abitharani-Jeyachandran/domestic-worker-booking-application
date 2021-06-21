@@ -31,7 +31,7 @@
               <li><a href="sign-up.php">Jobseekers</a>
               </li>
 
-              <li><a href="employers/emp-login.php">Domestic Helpers</a></li>
+              <li><a href="employers/emp-login.php">Domestic Workers</a></li>
 <li><a href="admin/index.php">Admin</a></li><?php } ?>
 
 
