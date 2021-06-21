@@ -7,27 +7,24 @@ if(isset($_POST['submit']))
   {
 
     // Getting post values
-    $email=$_POST['emailid'];
-    $companyname=$_POST['companyname'];
+    $uname=$_POST['email'];
     $password=$_POST['password'];
     //new password hasing
 $options = ['cost' => 12];
 $hashednewpass=password_hash($password, PASSWORD_BCRYPT, $options);
     // Fetch data from database on the basis of email and mobile
-    $sql ="SELECT id FROM tblemployers WHERE (EmpEmail=:email and CompnayName=:companyname)";
+    $sql ="SELECT id FROM tblemployers WHERE EmpEmail=:usname";
     $query= $dbh -> prepare($sql);
-    $query-> bindParam(':email', $email, PDO::PARAM_STR);
-    $query-> bindParam(':companyname', $companyname, PDO::PARAM_STR);
+    $query-> bindParam(':usname', $uname, PDO::PARAM_STR);
     $query-> execute();
     $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
-$sql="update  tblemployers set EmpPassword=:hashednewpass WHERE (EmpEmail=:email and CompnayName=:companyname)";
+$sql="update  tblemployers set EmpPassword=:hashednewpass WHERE EmpEmail=:usname";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':hashednewpass',$hashednewpass,PDO::PARAM_STR);
-$query-> bindParam(':email', $email, PDO::PARAM_STR);
-    $query-> bindParam(':companyname', $companyname, PDO::PARAM_STR);
+$query-> bindParam(':usname', $uname, PDO::PARAM_STR);
 $query->execute();
 echo "<script>alert('Password chnaged successfully');</script>";
 echo "<script type='text/javascript'> document.location ='emp-login.php'; </script>";
@@ -107,13 +104,7 @@ return true;
 
             <div class="input-box">
 
-<input type="text" placeholder="Registered Email id" name="emailid"  autocomplete="off" required>
-
-            </div>
-
- <div class="input-box">
-
-<input type="text" placeholder="Company Registered Name" name="companyname"  autocomplete="off" required>
+<input type="text" placeholder="Nic No" name="email"  autocomplete="off" required>
 
             </div>
 
