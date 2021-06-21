@@ -103,28 +103,26 @@ return true;
 
         <div class="holder">
 
-          <div class="thumb"><img src="images/account.png" alt="img"></div>
-
           <form method="post" name="changepassword" onsubmit="return checkpass();">
 
-            <div class="input-box"> <i class="fa fa-envelope-square"></i>
+            <div class="input-box">
 
 <input type="text" placeholder="Registered Email id" name="emailid"  autocomplete="off" required>
 
             </div>
 
- <div class="input-box"> <i class="fa fa-phone"></i>
+ <div class="input-box">
 
 <input type="text" placeholder="Registered mobile number" name="mobileno"  autocomplete="off" required>
 
             </div>
 
-            <div class="input-box"> <i class="fa fa-unlock"></i>
+            <div class="input-box">
 <input type="password" class="form-control" name="password" id="newpassword" required placeholder="New Password">
 
             </div>
 
-   <div class="input-box"> <i class="fa fa-unlock"></i>
+   <div class="input-box">
 <input type="password" class="form-control" name="password" id="confirmpassword" required placeholder="Confirm Password">
 
             </div>
@@ -133,13 +131,11 @@ return true;
        <input type="submit" value="Sign in" name="signin">
      </div>
 
-            <b>OR</b>
-
             <div class="login-social">
               <em>If already have an Account? <a href="sign-in.php">SIGN IN NOW</a></em> </div>
 
           </form>
-<a href="index.php"><i class="fa fa-home" aria-hidden="true" style="font-size: 30px;padding-top: 10px"></i>  Back Home!!!</a>
+<a href="index.php">Back Home</a>
         </div>
 
       </div>

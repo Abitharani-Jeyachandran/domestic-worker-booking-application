@@ -70,9 +70,6 @@
                                         <li>
                                             <a href="aboutus.php">About Us</a>
                                         </li>
-                                        <li>
-                                            <a href="contactus.php">Contact Us</a>
-                                        </li>
 
                                     </ul>
                                 </li>
@@ -92,20 +89,6 @@
 
                                     </ul>
 
-                                </li>
-                                <li>
-                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><span class="sidebar-mini-hide">Search</span></a>
-                                    <ul>
-
-
-                                        <li>
-                                            <a href="employer-search.php">Domestic Worker Search</a>
-                                        </li>
-                                        <li>
-                                            <a href="candidates-search.php">Candidates Search</a>
-                                        </li>
-
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="manage-subscribers.php"><span class="sidebar-mini-hide">Manage Subscribers</span></a>

@@ -178,7 +178,7 @@ foreach($results as $row)
                   <p><?php  echo htmlentities($row->ConcernPerson);?> <em><a href="index.php">(View All Jobs)</a></em></p>
 
                   <a href="#" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
-
+</br></br></br></br></br>
    <div class="col-md-6 col-sm-6">
    <label>Date:<span style="color:red">*</span></label>
    <input type="date" class="form-control" name="edate" required autocomplete="off" />
@@ -257,7 +257,7 @@ foreach($results as $row)
                   					{?>
                   <button type="submit" value ="comment" name="comment" class="btn btn-primary btn-hover-green" >Post Your Comment</button>
                   <?php } else {?>
-                  <a href="job-details.php" class="btn-primary btn" >Comment</a></li>
+                  <a href="sign-in.php" class="btn-primary btn" >Comment</a>
                   <?php } ?>
                 </div>
         </form>

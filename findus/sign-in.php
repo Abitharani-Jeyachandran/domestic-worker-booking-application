@@ -112,8 +112,9 @@ echo "<script>alert('User not registered with us');</script>";
               <em>You Don't have an Account? <a href="sign-up.php">SIGN UP NOW</a></em> </div>
 
           </form>
-</div>
 
+</div>
+<a href="index.php">Back Home</a>
       </div>
 
     </section>

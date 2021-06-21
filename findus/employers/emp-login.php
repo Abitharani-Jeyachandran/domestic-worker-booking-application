@@ -112,7 +112,7 @@ echo "<script>alert('User not registered with us');</script>";
 
           </form>
         </div>
-
+<a href="../index.php">Back Home</a>
       </div>
 
     </section>

@@ -86,10 +86,6 @@ echo "<script>alert('Invalid Details');</script>";
 
     </div>
 
-                <a href="forgot-password.php" class="login">Forgot your Password</a>
-
-
-
                 <div class="login-social">
 <a href="../index.php" class="login">Back To Home</a>
               </form>

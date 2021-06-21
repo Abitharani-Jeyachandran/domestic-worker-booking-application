@@ -9302,12 +9302,12 @@ textarea.form-control.form-control-lg, .input-group-lg > textarea.form-control,
 
 #page-container.sidebar-inverse #sidebar {
   color: #A020F0;
-  background-color: #A020F0;
+  background-color: #fff;
   box-shadow: none;
 }
 
 #page-container.sidebar-inverse #sidebar .content-side-user {
-  background-color: #2d3238;
+  background-color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -9966,7 +9966,7 @@ a.block.block-themed .btn-block-option:focus, .active > a.block.block-themed .bt
 }
 
 .sidebar-inverse #sidebar .nav-main a {
-  color: rgba(234, 236, 238, 0.6);
+  color: #fff;
 }
 
 .nav-main a > i {
@@ -10105,7 +10105,7 @@ a.block.block-themed .btn-block-option:focus, .active > a.block.block-themed .bt
 }
 
 .sidebar-inverse #sidebar .nav-main li.open > ul {
-  background-color: #2d3238;
+  background-color: #fff;
 }
 
 .nav-main li.open > ul > li {
