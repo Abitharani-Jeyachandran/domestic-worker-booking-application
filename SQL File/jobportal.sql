@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2021 at 09:14 PM
+-- Generation Time: Jun 21, 2021 at 03:31 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `jobportal`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `ID` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `Jobid` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`ID`, `content`, `Jobid`, `user_id`) VALUES
+(0, 'Great work!', 1, 2),
+(0, 'Great Work!', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -60,6 +81,13 @@ CREATE TABLE `tblapplyjob` (
   `ResponseDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tblapplyjob`
+--
+
+INSERT INTO `tblapplyjob` (`ID`, `UserId`, `JobId`, `EDate`, `ETime`, `Address`, `Applydate`, `Status`, `ResponseDate`) VALUES
+(8, 3, 2, '2021-06-22', '9 a.m', 'Jaffna', '2021-06-20 13:52:25', 'Rejected', '2021-06-20 13:52:25');
+
 -- --------------------------------------------------------
 
 --
@@ -79,7 +107,9 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`id`, `CategoryName`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
-(1, 'Carpenter', '2021-06-09 12:50:48', NULL, 0);
+(1, 'Carpenter', '2021-06-09 12:50:48', NULL, 0),
+(2, 'Beautician', '2021-06-20 13:48:21', NULL, 0),
+(3, 'Plumber', '2021-06-21 06:43:43', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -103,7 +133,7 @@ CREATE TABLE `tblemployers` (
 --
 
 INSERT INTO `tblemployers` (`id`, `ConcernPerson`, `EmpEmail`, `EmpPassword`, `CompnayLogo`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
-(1, 'Abitharani', '986180397V', '$2y$12$WvhfHfssvlofPb6D0HoROuofNQuwykr2X.7VxOFitzJYfM3VVSGkC', '67007225fb90bcfd70c837d4b809fe23jpeg', '2021-06-09 12:42:34', '2021-06-09 12:42:34', 1);
+(2, 'abi', '986180397V', '$2y$12$piZrA.t1Hzndfu3ewTcuBOSD1K7G90A9rpqYoNrEEVZ04BC4Fyxmi', '599cbb0975e62f88b8377082034e509f.jpg', '2021-06-20 13:42:05', '2021-06-21 12:32:10', 1);
 
 -- --------------------------------------------------------
 
@@ -129,7 +159,7 @@ CREATE TABLE `tbljobs` (
 --
 
 INSERT INTO `tbljobs` (`jobId`, `employerId`, `jobCategory`, `salaryPackage`, `experience`, `jobLocation`, `jobDescription`, `JobExpdate`, `postinDate`, `updationDate`) VALUES
-(1, 1, 'Carpenter', '500', '5', 'Jaffna', '<div style=\"text-align: left;\">Experienced Worker</div>', '2021-06-15', '2021-06-09 14:00:48', '2021-06-09 16:08:16');
+(2, 2, 'Carpenter', '500', '4', 'Jaffna', 'Experienced worker', '2021-06-20', '2021-06-20 13:43:08', NULL);
 
 -- --------------------------------------------------------
 
@@ -154,7 +184,7 @@ CREATE TABLE `tbljobseekers` (
 --
 
 INSERT INTO `tbljobseekers` (`id`, `FullName`, `EmailId`, `ContactNumber`, `Password`, `ProfilePic`, `RegDate`, `LastUpdationDate`, `IsActive`) VALUES
-(1, 'Joyna', 'joyna98@gmail.com', 772233445, '$2y$12$5c2gDWVBGM1EpXRsUQi1t.WVyvkGv5FjjC2DJqGeZb72m7IpFnMaC', '90f2222de1c20b436e7e169ab5dcd4881623242407.jpg', '2021-06-09 12:39:22', '2021-06-09 12:40:07', 1);
+(3, 'Abi', 'abitharani009@gmail.com', 774286778, '$2y$12$3jWfIAuEzUx0KAJarW6sVuFPVBbFKTE2qYXc908eKzbG55l2nXmdK', '599cbb0975e62f88b8377082034e509f1624196421.jpg', '2021-06-20 13:36:50', '2021-06-21 12:26:33', 1);
 
 -- --------------------------------------------------------
 
@@ -170,6 +200,13 @@ CREATE TABLE `tblmessage` (
   `Status` varchar(200) DEFAULT NULL,
   `ResponseDate` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblmessage`
+--
+
+INSERT INTO `tblmessage` (`ID`, `JobID`, `UserID`, `Message`, `Status`, `ResponseDate`) VALUES
+(11, 2, 3, 'Work Accepted', 'Rejected', '2021-06-20 13:52:25');
 
 -- --------------------------------------------------------
 
@@ -208,7 +245,8 @@ INSERT INTO `tblsubscribers` (`id`, `SubscriberEmail`, `PostingDate`) VALUES
 (0, 'joyna989@gmail.com', '2021-06-10 18:31:57'),
 (0, 'joyna968@gmail.com', '2021-06-10 18:33:45'),
 (0, 'abijeya00@gmail.com', '2021-06-10 18:34:38'),
-(0, 'abitharani0409@gmail.com', '2021-06-10 18:35:28');
+(0, 'abitharani0409@gmail.com', '2021-06-10 18:35:28'),
+(0, 'admin@gmail.com', '2021-06-20 13:50:11');
 
 --
 -- Indexes for dumped tables
@@ -278,37 +316,37 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblapplyjob`
 --
 ALTER TABLE `tblapplyjob`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tblemployers`
 --
 ALTER TABLE `tblemployers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbljobs`
 --
 ALTER TABLE `tbljobs`
-  MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbljobseekers`
 --
 ALTER TABLE `tbljobseekers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tblmessage`
 --
 ALTER TABLE `tblmessage`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tblpages`
