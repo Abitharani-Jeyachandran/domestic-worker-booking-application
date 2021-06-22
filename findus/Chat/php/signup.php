@@ -5,7 +5,7 @@
     if(!empty($email)){
         $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
             if(mysqli_num_rows($sql) > 0){
-                echo "$email - This email already exist!";
+                echo "$email - This username already exist!";
             }else{
                 $ran_id = rand(time(), 100000000);
                                 $status = "Active now";

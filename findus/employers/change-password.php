@@ -171,13 +171,6 @@ return true;
 
   <!--MAIN END-->
 
-
-
-  <!--FOOTER START-->
-
-  <?php include('includes/footer.php');?>
-  <!--FOOTER END-->
-
 </div>
 
 

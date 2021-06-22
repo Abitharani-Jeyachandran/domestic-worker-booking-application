@@ -7,57 +7,57 @@
 
                         <!-- Side Navigation -->
                         <div>
-                            <ul class="nav-main">
-                                <li class="open">
-                                    <a href="dashboard.php"><span class="sidebar-mini-hide">Dashboards</span></a>
+                            <ul class="nav-main" style="color:#fff;">
+                                <li class="open" style="color:#fff;">
+                                    <a href="dashboard.php"><span class="sidebar-mini-hide" style="color:#fff;">Dashboards</span></a>
 
                                 </li>
 
                                 <li>
-                                    <a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide"></span>Job Category</a>
+                                    <a class="nav-submenu" style="color:#fff;" data-toggle="nav-submenu"><span class="sidebar-mini-hide" style="color:#fff;"></span>Job Category</a>
                                     <ul>
                                         <li>
-                                            <a href="add-category.php">Add Category</a>
+                                            <a href="add-category.php" style="color:#fff;">Add Category</a>
                                         </li>
                                         <li>
-                                            <a href="manage-category.php">Manage Category</a>
+                                            <a href="manage-category.php" style="color:#fff;">Manage Category</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="employer-list.php"><span class="sidebar-mini-hide">List of Domestic Workers</span></a>
+                                    <a href="employer-list.php"><span class="sidebar-mini-hide" style="color:#fff;">List of Domestic Workers</span></a>
 
                                 </li>
                                  <li>
-                                    <a href="reg-jobseekers.php"><span class="sidebar-mini-hide">List of Jobseekers</span></a>
+                                    <a href="reg-jobseekers.php"><span class="sidebar-mini-hide" style="color:#fff;">List of Jobseekers</span></a>
 
                                 </li>
 
 
                                 <li>
-                                    <a  class="nav-submenu" data-toggle="nav-submenu" href="#"><span class="sidebar-mini-hide">Report</span></a>
+                                    <a  class="nav-submenu" data-toggle="nav-submenu" href="#"><span class="sidebar-mini-hide" style="color:#fff;">Report</span></a>
                                     <ul>
 
 
                                         <li>
-                                            <a href="employer-report.php">Domestic Worker Report</a>
+                                            <a href="employer-report.php" style="color:#fff;">Domestic Worker Report</a>
                                         </li>
                                         <li>
-                                            <a href="candidates-report.php">Jobseeker Report</a>
+                                            <a href="candidates-report.php" style="color:#fff;">Jobseeker Report</a>
                                         </li>
 
                                     </ul>
 
                                 </li>
                                 <li>
-                                    <a href="manage-subscribers.php"><span class="sidebar-mini-hide">Manage Subscribers</span></a>
+                                    <a href="manage-subscribers.php"><span class="sidebar-mini-hide" style="color:#fff;">Manage Subscribers</span></a>
 
                                 </li>
                                 <li>
-                                    <a href="../Chat/index.php"><span class="sidebar-mini-hide">Chat</span></a>
+                                    <a target="_blank" href="../Chat/index.php"><span class="sidebar-mini-hide" style="color:#fff;">Chat</span></a>
                                 </li>
                                 <li>
-                                    <a href="logout.php"><span class="sidebar-mini-hide">LOGOUT</span></a>
+                                    <a href="logout.php"><span class="sidebar-mini-hide" style="color:#fff;">LOGOUT</span></a>
 
                                 </li>
 
