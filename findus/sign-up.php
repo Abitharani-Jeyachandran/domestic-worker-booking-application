@@ -152,7 +152,7 @@ error:function (){}
 
  <div class="col-md-6 col-sm-6">
  <label>Password<span style="color:red">*</span></label>
-<input type="password" name="jspassword" placeholder="e.g. “Pass@20178”" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+<input type="password" name="jspassword" placeholder="e.g. “Abc9986”" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
 </div>
 
 
