@@ -92,7 +92,7 @@ $vid=$_GET['viewid'];
           </div>
           <div class="col-md-5 col-sm-5">
 
-            <input type="text" placeholder="Enter Company" name="company">
+            <input type="text" placeholder="Enter Name" name="company">
 
           </div>
 
