@@ -5,7 +5,7 @@ include('includes/config.php');
 error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{?>
@@ -60,19 +60,19 @@ else{?>
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
 
  <?php include('includes/header.php');?>
 
-  <!--HEADER END--> 
+  <!--HEADER END-->
 
-  
+
 
   <!--INNER BANNER START-->
 
@@ -86,14 +86,14 @@ else{?>
 
   </section>
 
-  <!--INNER BANNER END--> 
+  <!--INNER BANNER END-->
 
 
-  
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--RECENT JOB SECTION START-->
 
@@ -106,7 +106,7 @@ else{?>
           <div class="col-md-12 col-sm-8">
 
             <div class="resumes-content">
-              
+
 
               <div class="box">
                 <h2>Between dates Report of Applied Candidates</h2>
@@ -115,7 +115,7 @@ else{?>
 
 <div class="col-md-9 col-sm-9">
 <label>From Date:</label>
-<input type="date" name="fromdate" id="fromdate" value="" required="true" 
+<input type="date" name="fromdate" id="fromdate" value="" required="true"
                                  class="form-control" />
 </div>
 </div>
@@ -133,11 +133,11 @@ else{?>
                         </div>
                         </div>
                                </div>
-                                
-                         
+
+
                        </form>
               </div>
-    
+
             </div>
 
           </div>
@@ -148,54 +148,54 @@ else{?>
 
     </section>
 
-    <!--RECENT JOB SECTION END--> 
+    <!--RECENT JOB SECTION END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
 
   <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
-<!--WRAPPER END--> 
+<!--WRAPPER END-->
 
 
 
-<!--jQuery START--> 
+<!--jQuery START-->
 
-<!--JQUERY MIN JS--> 
+<!--JQUERY MIN JS-->
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
 
-<!--BOOTSTRAP JS--> 
+<!--BOOTSTRAP JS-->
 
-<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script>
 
-<!--OWL CAROUSEL JS--> 
+<!--OWL CAROUSEL JS-->
 
-<script src="../js/owl.carousel.min.js"></script> 
+<script src="../js/owl.carousel.min.js"></script>
 
-<!--BANNER ZOOM OUT IN--> 
+<!--BANNER ZOOM OUT IN-->
 
-<script src="../js/jquery.velocity.min.js"></script> 
+<script src="../js/jquery.velocity.min.js"></script>
 
-<script src="../js/jquery.kenburnsy.js"></script> 
+<script src="../js/jquery.kenburnsy.js"></script>
 
-<!--SCROLL FOR SIDEBAR NAVIGATION--> 
+<!--SCROLL FOR SIDEBAR NAVIGATION-->
 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<!--FOR CHECKBOX--> 
+<!--FOR CHECKBOX-->
 
-<script src="../js/form.js"></script> 
+<script src="../js/form.js"></script>
 
-<!--CUSTOM JS--> 
+<!--CUSTOM JS-->
 
 <script src="../js/custom.js"></script>
 

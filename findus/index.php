@@ -24,14 +24,11 @@ include('includes/config.php');
 
 </head>
 
-
-
 <body class="index">
 
 <div id="wrapper">
 
 <?php include_once('includes/header.php');?>
-
 
   <div class="banner-outer">
 

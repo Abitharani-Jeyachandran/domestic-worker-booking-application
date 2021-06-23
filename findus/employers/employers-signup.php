@@ -91,7 +91,7 @@ $error="Nic Already Exist";
 
 </head>
 
-<body class="theme-style-1">
+<body class="index">
 <div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>
@@ -163,16 +163,15 @@ $error="Nic Already Exist";
               <div class="btn-col">
 
                 <input type="submit" name="signup" id="submit" value="Sign up">
-                <p>Already have account?</p><a href="emp-login.php" class="btn-style-1">Sign in Now</a> </div>
-
 
               </div>
-
+              <div class="col-md-2">
+                          <p>Already Have account?</p>
+                          <button class="btn-row"><a href="emp-login.php">Sign in Now</a></button>
+              </div>
             </div>
 
           </div>
-
-
 
       </div>
 

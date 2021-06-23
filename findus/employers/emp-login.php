@@ -56,7 +56,7 @@ echo "<script>alert('User not registered with us');</script>";
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
@@ -108,11 +108,12 @@ echo "<script>alert('User not registered with us');</script>";
             <a href="forgot-password.php" class="login">Forgot your Password</a>
 
             <div class="login-social">
-              <em>You Don’t have an Account? <a href="employers-signup.php">SIGN UP NOW</a></em> </div>
-
+              <p>You Don’t have an Account? <a href="employers-signup.php">SIGN UP NOW</a></p>
+            </div>
+<a href="../index.php" class="login">Back Home</a>
           </form>
         </div>
-<a href="../index.php">Back Home</a>
+
       </div>
 
     </section>

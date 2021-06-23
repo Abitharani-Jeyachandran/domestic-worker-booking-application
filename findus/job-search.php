@@ -77,7 +77,7 @@ $vid=$_GET['viewid'];
 
   <!--MAIN START-->
 
-  <div id="main">
+  <div id="wrapper" class="job-search">
 
     <form action="job-search.php" method="post">
 
@@ -98,7 +98,7 @@ $vid=$_GET['viewid'];
 
           <div class="col-md-2 col-sm-2">
 
-            <button type="submit" name="search">Search</button>
+            <button class="btn-row" type="submit" name="search">Search</button>
 
           </div>
 
@@ -129,7 +129,7 @@ $vid=$_GET['viewid'];
             <div id="content-area">
 
 
-              <h2 style="color: red">Job search against <?php  echo htmlentities($_POST['jobtitle']);?></h2>
+              <h2 style="color: red">Worker search <?php  echo htmlentities($_POST['jobtitle']);?></h2>
 
               <ul id="myList">
 

@@ -5,7 +5,7 @@ include('includes/config.php');
 error_reporting(0);
 //verifying Session
 if(strlen($_SESSION['emplogin'])==0)
-  { 
+  {
 header('location:emp-login.php');
 }
 else{?>
@@ -60,19 +60,19 @@ else{?>
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
-<div id="wrapper"> 
+<div id="wrapper">
 
   <!--HEADER START-->
 
  <?php include('includes/header.php');?>
 
-  <!--HEADER END--> 
+  <!--HEADER END-->
 
-  
+
 
   <!--INNER BANNER START-->
 
@@ -86,13 +86,13 @@ else{?>
 
   </section>
 
-  <!--INNER BANNER END--> 
- 
-  
+  <!--INNER BANNER END-->
+
+
 
   <!--MAIN START-->
 
-  <div id="main"> 
+  <div id="main">
 
     <!--RECENT JOB SECTION START-->
 
@@ -105,7 +105,7 @@ else{?>
           <div class="col-md-12 col-sm-8">
 
             <div class="resumes-content">
-               <h2 style="color: red">Candidates search against <?php  echo htmlentities($_POST['jobtitle']);?></h2> 
+               <h2 style="color: red">Candidates search against <?php  echo htmlentities($_POST['jobtitle']);?></h2>
 
               <div class="box">
 <?php
@@ -121,7 +121,7 @@ $eid=$_SESSION['emplogin'];
         $offset = ($page_no-1) * $no_of_records_per_page;
         $previous_page = $page_no - 1;
   $next_page = $page_no + 1;
-  $adjacents = "2"; 
+  $adjacents = "2";
 $ret = "SELECT jobId FROM tbljobs";
 $query1 = $dbh -> prepare($ret);
 $query1->execute();
@@ -153,7 +153,7 @@ foreach($results as $row)
 <h4><a href="#">Applied For Job: <?php echo htmlentities($row->jobTitle);?>(<?php echo htmlentities($row->jobType);?>)</a></h4>
                   <div class="clearfix"> <strong><i class="fa fa-phone"></i><?php echo htmlentities($row->ContactNumber);?></strong> <strong><i class="fa fa-envelope"></i><a href="#"><?php echo htmlentities($row->EmailId);?></a></strong> </div>
 
-                  <div class="tags"> <a href="#"><i class="fa fa-tags"></i><?php  
+                  <div class="tags"> <a href="#"><i class="fa fa-tags"></i><?php
 if($row->Status=="")
 {
   echo "Not Responded Yet";
@@ -170,11 +170,11 @@ else
 
                 </div>
                 <hr />
-<?php 
+<?php
 $cnt=$cnt+1;
 } } else { ?>
 <h4 align="center" style="color:blue">No record found against this search</h4>
- 
+
   <?php } ?>
               </div>
           <div align="left">
@@ -259,54 +259,54 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
 
     </section>
 
-    <!--RECENT JOB SECTION END--> 
+    <!--RECENT JOB SECTION END-->
 
   </div>
 
-  <!--MAIN END--> 
+  <!--MAIN END-->
 
-  
+
 
   <!--FOOTER START-->
 
   <?php include('includes/footer.php');?>
-  <!--FOOTER END--> 
+  <!--FOOTER END-->
 
 </div>
 
-<!--WRAPPER END--> 
+<!--WRAPPER END-->
 
 
 
-<!--jQuery START--> 
+<!--jQuery START-->
 
-<!--JQUERY MIN JS--> 
+<!--JQUERY MIN JS-->
 
-<script src="../js/jquery-1.11.3.min.js"></script> 
+<script src="../js/jquery-1.11.3.min.js"></script>
 
-<!--BOOTSTRAP JS--> 
+<!--BOOTSTRAP JS-->
 
-<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script>
 
-<!--OWL CAROUSEL JS--> 
+<!--OWL CAROUSEL JS-->
 
-<script src="../js/owl.carousel.min.js"></script> 
+<script src="../js/owl.carousel.min.js"></script>
 
-<!--BANNER ZOOM OUT IN--> 
+<!--BANNER ZOOM OUT IN-->
 
-<script src="../js/jquery.velocity.min.js"></script> 
+<script src="../js/jquery.velocity.min.js"></script>
 
-<script src="../js/jquery.kenburnsy.js"></script> 
+<script src="../js/jquery.kenburnsy.js"></script>
 
-<!--SCROLL FOR SIDEBAR NAVIGATION--> 
+<!--SCROLL FOR SIDEBAR NAVIGATION-->
 
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<!--FOR CHECKBOX--> 
+<!--FOR CHECKBOX-->
 
-<script src="../js/form.js"></script> 
+<script src="../js/form.js"></script>
 
-<!--CUSTOM JS--> 
+<!--CUSTOM JS-->
 
 <script src="../js/custom.js"></script>
 

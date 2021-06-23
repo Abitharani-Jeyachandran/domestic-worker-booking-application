@@ -46,7 +46,7 @@ $error="Something went wrong.Please try again";
 }
  else
 {
-$error="Email-id or Contact Number  already exist. Please try again";
+$error="Email-id already exist. Please try again";
 }
 }
 ?>
@@ -82,15 +82,13 @@ error:function (){}
 </script>
 </head>
 
-<body class="theme-style-1">
+<body class="index">
 <div id="wrapper">
-<!--HEADER START-->
- <?php include('includes/header.php');?>
-<!--HEADER END-->
+
+<?php include('includes/header.php');?>
 
 
-  <!--INNER BANNER START-->
-  <section id="inner-banner">
+<section id="inner-banner">
 
     <div class="container">
 
@@ -100,18 +98,8 @@ error:function (){}
 
   </section>
 
-  <!--INNER BANNER END-->
-
-
-
-  <!--MAIN START-->
 
   <div id="main">
-
-
-
-    <!--ACCOUNT OPTION SECTION END-->
-
 
 
 
@@ -161,16 +149,13 @@ error:function (){}
 
             <div class="col-md-12">
 
-              <div class="btn-col">
-
                 <input type="submit" name="signup" id="submit" value="Sign up">
 
-                <p>Already Have account?</p><a href="sign-in.php" class="btn-style-1" id="submit">Sign in Now</a>
-
-              </div>
-
             </div>
-
+<div class="col-md-2">
+            <p>Already Have account?</p>
+            <button class="btn-row"><a href="sign-in.php">Sign in Now</a></button>
+</div>
           </div>
 
 

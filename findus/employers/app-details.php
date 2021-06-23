@@ -100,7 +100,7 @@ $query1->bindParam(':status',$status,PDO::PARAM_STR);
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 

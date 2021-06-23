@@ -58,7 +58,7 @@ echo "<script>alert('User not registered with us');</script>";
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
@@ -75,12 +75,7 @@ echo "<script>alert('User not registered with us');</script>";
 
 
 
-
-
-  <!--MAIN START-->
-
   <div id="main">
-    <!--SIGNUP SECTION START-->
 
     <section class="signup-section">
 
@@ -109,12 +104,14 @@ echo "<script>alert('User not registered with us');</script>";
             <a href="forgot-password.php" class="login">Forgot your Password</a>
 
             <div class="login-social">
-              <em>You Don't have an Account? <a href="sign-up.php">SIGN UP NOW</a></em> </div>
+              <p>Don't you have an Account? <a href="sign-up.php">SIGN UP NOW</a></p>
+            </div>
+            <a href="index.php" class="login">Back Home</a>
 
           </form>
 
 </div>
-<a href="index.php">Back Home</a>
+
       </div>
 
     </section>
@@ -124,14 +121,6 @@ echo "<script>alert('User not registered with us');</script>";
 
 
   </div>
-
-  <!--MAIN END-->
-
-
-
-  <!--FOOTER START-->
-  <?php include('includes/footer.php');?>
-  <!--FOOTER END-->
 
 </div>
 

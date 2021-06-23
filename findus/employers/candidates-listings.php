@@ -60,7 +60,7 @@ else{?>
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 

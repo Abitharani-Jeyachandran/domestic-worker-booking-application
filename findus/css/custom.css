@@ -78,7 +78,7 @@ body {
 	color: #888;
 	margin: 0 0 20px 0;
 }
-/************************************************************HEADER START************************************************************/
+/*HEADER START*/
 
 #header {
 	float: left;
@@ -86,13 +86,7 @@ body {
 	padding: 18px 0 0 0;
 	background-color: #fff;
 }
-strong.logo {
-	float: left;
-	margin: 0 0 0 20px;
-}
-strong.logo a {
-	display: block;
-}
+
 /******************NAVIGATION CSS START******************/
 
 .navigation-col {
@@ -498,114 +492,17 @@ strong.logo a {
 /************************************************************HEADER END************************************************************/
 
 
+.job-search .row{
+padding: 50px 0;
+}
 
-/************************************************************HEADER 2 START************************************************************/
+.job-search input{
+padding: 10px 0;
+}
 
-#header.header-2 {
-	position: absolute;
-	z-index: 9999;
-	padding: 23px 0 0 0;
+.job-search button{
+padding: 10px 0;
 }
-#header.header-2 .cp_side-menu {
-	margin: 12px 0 0 50px;
-}
-#header.header-2 .navigation-col {
-	float: none;
-	display: block;
-}
-#header.header-2 .navigation-col .navbar-collapse {
-	float: none;
-	text-align: center;
-}
-#header.header-2 #nav {
-	float: none;
-	display: block;
-	text-align: center;
-	border-bottom: 1px solid rgba(245,245,245,0.5);
-}
-#header.header-2 #nav li {
-	float: none;
-	display: inline-block;
-	padding: 0 18px 16px 18px;
-}
-#header.header-2 #nav li a {
-	color: #fff;
-}
-#header.header-2 #nav li ul {
-	top: 47px;
-}
-#header.header-2 #nav li ul li a {
-	color: #666;
-}
-#header.header-2 #nav li ul li {
-	padding: 0;
-	display: block;
-}
-#header.header-2 #nav li ul li > ul {
-	top: 0;
-}
-#header.header-2 .btn-default {
-	background-color: transparent;
-}
-.banner-2.banner-outer .caption {
-	top: 120px;
-}
-/**********************************************************HEADER 2 END************************************************************/
-
-
-
-/**********************************************************HEADER 3 START************************************************************/
-
-.header-4 .cp_side-menu {
-	margin: 12px 50px 0 50px;
-}
-.header-4 .navigation-col {
-	float: left;
-	display: block;
-}
-.header-4 .navigation-col .navbar-collapse {
-	float: none;
-	text-align: center;
-}
-.header-4 #nav {
-	float: none;
-	display: block;
-	text-align: center;
-}
-.header-4 #nav li {
-	display: inline-block;
-	float: none;
-	padding: 0 18px 25px 18px;
-}
-.header-4 #nav li a {
-	color: #fff;
-}
-.header-4 #nav li ul li {
-	display: block;
-	padding: 0;
-}
-.header-4 #nav li ul li a {
-	color: #666;
-}
-.header-4 #nav li:hover > a {
-	color: #fff;
-}
-.header-4 #nav li ul li a:hover, .header-4 #nav li ul li:hover > a {
-	color: #666;
-}
-.header-4 #nav li a:before, .header-4 #nav li a:after {
-	border-color: #fff;
-}
-.header-4 .btn-default:active, .header-4 .btn-default.active, .header-4 .open > .dropdown-toggle.btn-default {
-	background: none;
-	border: 0;
-}
-.header-4 .btn-default {
-	background-color: transparent;
-}
-/**********************************************************HEADER 3 END************************************************************/
-
-
 
 /*POPULAR JOB CATEGORIES*/
 
@@ -2150,7 +2047,7 @@ strong.logo a {
 .signup-section {
 	float: left;
 	width: 100%;
-	padding: 100px 0 60px 0;
+	padding: 10px 0 60px 0;
 	text-align: center;
 }
 .signup-section .holder {
@@ -2160,34 +2057,10 @@ strong.logo a {
 	padding: 79px 30px 30px 30px;
 	position: relative;
 }
-.signup-section .holder .thumb {
-	width: 87px;
-	height: 87px;
-	margin: auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: -48px;
-	border: 5px solid #fff;
-	border-radius: 100px;
-	box-shadow: 0 0 5px rgba(0,0,0,0.15);
-}
-.signup-section .holder .thumb img {
-	display: block;
-	width: 100%;
-	border-radius: 100%;
-}
 .input-box {
 	float: left;
 	width: 100%;
 	position: relative;
-}
-.input-box .fa {
-	position: absolute;
-	left: 20px;
-	top: 16px;
-	border-right: 1px solid #ccc;
-	padding: 3px 10px 0 0;
 }
 .signup-section .holder input[type="text"] {
 	float: left;
@@ -2197,9 +2070,6 @@ strong.logo a {
 	font: 400 14px/14px 'Roboto', sans-serif;
 	color: #666;
 	padding: 0 10px 0 55px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	margin: 0 0 20px 0;
 	border-radius: 3px;
 }
@@ -2212,13 +2082,9 @@ strong.logo a {
 	font: 400 14px/14px 'Roboto', sans-serif;
 	color: #666;
 	padding: 0 10px 0 55px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	margin: 0 0 20px 0;
 	border-radius: 3px;
 }
- .
  .signup-section .holder input::-webkit-input-placeholder {
  color:#666;
  opacity:1;
@@ -2287,15 +2153,6 @@ select option {
 	white-space: nowrap;
 	width: 100%;
 }
-.selector span.custom-select:after {
-	border-left: 5px solid rgba(0, 0, 0, 0);
-	border-right: 5px solid rgba(0, 0, 0, 0);
-	border-top: 5px solid #666;
-	content: "";
-	position: absolute;
-	right: 9px;
-	top: 15px;
-}
 .outtaHere {
 	position: absolute;
 	left: -3000px;
@@ -2339,9 +2196,7 @@ select option {
 	border-radius: 3px;
 	cursor: pointer;
 }
-.upload-box .btn-file:hover {
-	background: #A020F0;
-}
+
 .upload-box .btn-file input[type=file] {
 	position: absolute;
 	top: 0;
@@ -2352,7 +2207,7 @@ select option {
 	text-align: right;
 	opacity: 0;
 	outline: none;
-	background: white;
+	background: #fff;
 	cursor: inherit;
 	display: block;
 }
@@ -2378,11 +2233,8 @@ select option {
 .signup-section .holder em a {
 	text-decoration: none;
 }
-.signup-section .holder em a:hover {
-	color: #A020F0;
-}
 .signup-section .holder a.login {
-	font: italic 400 14px/14px 'Roboto', sans-serif;
+	font: 400 14px/14px 'Roboto', sans-serif;
 	float: right;
 	padding: 20px 0;
 }
@@ -3360,9 +3212,54 @@ TRANSITION-FOR-IMAGES {
 	background-color: #A020F0;
 }
 .newsletter-form{
-	padding: 20px 0;
+	padding: 20px 300px;
 }
 
 .newsletter-form .form-group{
 	padding: 10px 30px;
 }
+
+/*************************************BACKGROUND COLOR START*************************************/
+
+#banner, .banner-outer .caption .holder form button[type="submit"]:hover, .browse-job-section, .user-option-col a.login-round, .user-option-col .dropdown-menu > li > a:hover, .user-option-col .dropdown-menu > li > a:focus, .user-option-col a.btn-login, .btn-color-2, .sidebar .box .text-box a.btn-apply, .call-action-section, .price-table .box strong.amount:before, .price-table .box strong.amount:after, #footer form input[type="submit"], #cp_side-menu, .banner-2, #wrapper .header-2.cp_sticky, .process-section .icon-box, .btn-bg-color-1, .header-4, #inner-banner, .pagination-box .pager li > a:hover, .pagination-box .pager li > a:focus, .pagination-box .pager li.active a, .post-box .owl-next:hover, .post-box .owl-prev:hover, .post-section .comment-form form input[type="submit"], .signup-section .holder input[type="submit"], .upload-box .btn-file, .signup-section .holder b, .contact-form input[type="Submit"], .address-box address .fa, .candidates-search-bar form, .btn-row a.login, .summary-box  .col:before, .progress-box .progress-bar span, .alphabets-row .col span, .alphabets-row .col:before, .icon-colo-1, .resum-form .accordion_cp, .resum-form input[type="submit"], .navbar-toggle {
+
+	background-color:#A020F0;
+
+}
+
+
+
+/*************************************BACKGROUND COLOR END*************************************/
+
+
+
+
+
+
+
+/*************************************TEXT COLOR START*************************************/
+
+#nav li:hover > a, .banner-outer .caption .holder form button[type="submit"], .banner-outer .caption .holder .btn-row a .fa, .cp_side-menu a .fa, .user-option-col a .fa, .sidebar .box .text-box h4 a, .sidebar .box .text-box a.text .fa, .sidebar .box .text-box strong.price .fa, .price-table .box h4, .price-table .box strong.amount sub, .testimonials-section .owl-prev:hover:before, .testimonials-section .owl-next:hover:before, .post-box .text-box strong.date .fa, .post-box .text-box strong.name, .post-box .text-box:hover h4 a, #footer .box ul li a, .bottom-row strong.copyrights a:hover, #popular-job-slider .owl-next:before, #popular-job-slider .owl-prev:before, .sidebar-jobs ul li a, .sidebar-jobs ul li span .fa, .pagination-box .pager li > a, .pagination-box .pager li > span, .sidebar .box .recent-post .text-box a .fa, .sidebar .box .recent-post .text-area a .fa, .sidebar .box .recent-post ul li:hover strong a, .sidebar .box .archives-box ul li a:hover, .post-box blockquote p, .testimonials-style-3 .box p, .testimonials-style-3 .col p, .input-box .fa, .check-box strong a:hover, .signup-section .holder em, .signup-section .holder em a, .signup-section .holder a.login, .candidates-search-bar form button[type="submit"], .resumes-section .box .text-box h4, .resumes-content .box .text-box strong .fa, .resumes-content .box .text-box span.price .fa, .tags a, .resumes-section a.load-more .fa, .related-people .text-box strong.name a, .related-people .text-box span .fa, .summary-box strong.title, .popular-companies .owl-next:before, .popular-companies .owl-prev:before, .alphabets-row a:hover, .alphabets a:hover, .job-detail ul li .fa{
+
+	color:#A020F0;
+
+}
+
+/*************************************TEXT COLOR END*************************************/
+
+
+
+
+.signup-section .holder span:before{
+
+	border-color: #A020F0 transparent transparent transparent;
+
+}
+
+.progress-box .progress-bar span:before{
+
+	border-color: transparent #A020F0 transparent transparent;
+
+}
+
+/*************************************BORDER COLOR END*************************************/
