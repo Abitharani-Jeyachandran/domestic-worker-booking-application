@@ -16,8 +16,7 @@ $sql="update tblcategory set CategoryName=:category where id=:editid";
 $query=$dbh->prepare($sql);
 $query->bindParam(':category',$category,PDO::PARAM_STR);
 $query->bindParam(':editid',$editid,PDO::PARAM_STR);
-
- $query->execute();
+$query->execute();
 
 
     echo '<script>alert(""Category Updated successfully .")</script>';

@@ -12,77 +12,37 @@ include('includes/config.php');
 
 <meta charset="utf-8">
 <title>FIND US || Home Page</title>
-
-<!--CUSTOM CSS-->
-
 <link href="css/custom.css" rel="stylesheet" type="text/css">
-
-<!--BOOTSTRAP CSS-->
-
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-
-<!--COLOR CSS-->
-
 <link href="css/color.css" rel="stylesheet" type="text/css">
-
-<!--RESPONSIVE CSS-->
-
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
-
-<!--OWL CAROUSEL CSS-->
-
 <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
-
-<!--FONTAWESOME CSS-->
-
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-<!--SCROLL FOR SIDEBAR NAVIGATION-->
-
 <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
-
-
-
-
-
-<!--GOOGLE FONTS-->
-
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
 
-<!--[if lt IE 9]>
-
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
-    <![endif]-->
 
 </head>
 
 
 
-<body class="theme-style-1">
-
-<!--WRAPPER START-->
+<body class="index">
 
 <div id="wrapper">
 
-  <!--HEADER START-->
 <?php include_once('includes/header.php');?>
-  <!--HEADER END-->
 
-
-
-  <!--BANNER START-->
 
   <div class="banner-outer">
 
     <div class="caption">
 
       <div class="holder">
+<div class="col-lg-12 justify-content-center">
+  <h1>PLATFORM TO CONNECT DOMESTIC WORKERS AND CLIENTS</h1>
+</div>
 
-
-        <div class="btn-row"> <a href="job-search.php">Search Here</a> </div>
+        <div class="btn-row"> </br></br></br><a href="job-search.php">Search Here</a> </div>
 
 
 <?php if (strlen($_SESSION['jsid']==0)) {?>
@@ -104,8 +64,6 @@ include('includes/config.php');
 
   <div id="main">
 
-    <!--POPULAR JOB CATEGORIES START-->
-
     <section class="popular-categories">
 
       <div class="container">
@@ -114,7 +72,7 @@ include('includes/config.php');
 
           <h2>Popular Domestic Work Categories</h2>
 
-          <a href="#" class="btn-style-1">Explore All Works</a> </div>
+        </div>
 
         <div class="row">
 <?php
@@ -133,14 +91,10 @@ foreach($results as $row)
 
               <strong><?php  echo htmlentities($row->totaljobs);?></strong>
 
-
-
             </div>
 
           </div>
  <?php } ?>
-
-
 
         </div>
 
@@ -160,7 +114,7 @@ foreach($results as $row)
 
         <div class="row">
 
-          <div class="col-md-12 col-sm-8">
+          <div class="col-md-12 col-sm-12">
 
             <div id="content-area">
 
@@ -200,7 +154,9 @@ foreach($results as $row)
 {               ?>
                   <div class="box">
 
-                    <div class="thumb"><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
+                    <div class="thumb">
+                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a>
+                    </div>
 
                     <div class="text-col">
 
@@ -208,11 +164,12 @@ foreach($results as $row)
 
                       <p><?php  echo htmlentities($row->ConcernPerson);?></p>
 
-                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> </div>
+                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a>
+                     </div>
 
                     <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
-                  <strong>Share via</br></br><a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://localhost/php_test/share.php', 'Facebook Share', 'width=620, height=420'); return false;">Facebook</a></br></br><a href="#" onclick="window.open('https://twitter.com/share?url=http://localhost/php_test/share.php&via=sitename&text=Loremipsum', 'Twitter Share', 'width=620, height=420'); return false;">Twitter</a></strong>
-
+                  <p class="price1">Share via</br></br><a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://localhost/php_test/share.php', 'Facebook Share', 'width=620, height=420'); return false;">Facebook</a></br></br><a href="#" onclick="window.open('https://twitter.com/share?url=http://localhost/php_test/share.php&via=sitename&text=Loremipsum', 'Twitter Share', 'width=620, height=420'); return false;">Twitter</a></p>
+                </div>
 
                 </li>
 
@@ -297,8 +254,6 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
             </div>
 
           </div>
-
-
 
         </div>
 

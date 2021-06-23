@@ -10,30 +10,30 @@ body {
 	width: 100%;
 	position: relative;
 }
-.theme-style-1 h1 {
+.index h1 {
 	font: 300 36px/36px 'Roboto', sans-serif;
 	color: #fff;
 	margin: 0;
 }
-.theme-style-1 h2 {
+.index h2 {
 	font: 500 30px/30px 'Roboto', sans-serif;
 	color: #222;
 	margin: 0 0 25px 0;
 }
-.theme-style-1 h2 a {
+.index h2 a {
 	text-decoration: none;
 	color: #222;
 }
-.theme-style-1 h4 {
+.index h4 {
 	font: 500 18px/18px 'Roboto', sans-serif;
 	color: #222;
 	margin: 0;
 }
-.theme-style-1 h4 a {
+.index h4 a {
 	text-decoration: none;
 	color: #222;
 }
-.theme-style-1 a.btn-style-1 {
+.index a.btn-style-1 {
 	padding: 11px 25px;
 	float: left;
 	font: 900 14px/14px 'Roboto', sans-serif;
@@ -49,16 +49,16 @@ body {
 	-moz-transition: all 0.3s ease-in;
 	overflow: hidden;
 }
-.theme-style-1 a.btn-style-1:hover {
+.index a.btn-style-1:hover {
 	color: #000;
 }
-.theme-style-1 a.btn-style-1:hover:before {
+.index a.btn-style-1:hover:before {
 	opacity: 1;
 	width: 100%;
 	left: 0;
 	transform: rotate(0) scaleY(7);
 }
-.theme-style-1 a.btn-style-1:before {
+.index a.btn-style-1:before {
 	content: '';
 	position: absolute;
 	left: -12px;
@@ -73,7 +73,7 @@ body {
 	-moz-transition: all 0.3s ease-in;
 	opacity: 0;
 }
-.theme-style-1 p {
+.index p {
 	font: 400 14px/22px 'Roboto', sans-serif;
 	color: #888;
 	margin: 0 0 20px 0;
@@ -84,6 +84,7 @@ body {
 	float: left;
 	width: 100%;
 	padding: 18px 0 0 0;
+	background-color: #fff;
 }
 strong.logo {
 	float: left;
@@ -102,7 +103,7 @@ strong.logo a {
 	padding: 0;
 	float: right;
 }
-.theme-style-1 #header.header-3 .navigation-col {
+.index #header.header-3 .navigation-col {
 	width: 100%;
 	float: left;
 }
@@ -349,428 +350,6 @@ strong.logo a {
 	overflow: hidden;
 	color: purple;
 }
-.banner-outer .caption .holder .btn-row a:hover {
-	color: #000;
-}
-.banner-outer .caption .holder .btn-row a:hover:before {
-	opacity: 1;
-	width: 100%;
-	left: 0;
-}
-.banner-outer .caption .holder .btn-row a:before {
-	content: '';
-	position: absolute;
-	left: -12px;
-	top: -3px;
-	width: 35%;
-	height: 100%;
-	z-index: -1;
-	opacity: 0;
-}
-.banner-outer .caption .holder .btn-row a:hover .fa {
-	color: #fff;
-}
-.banner-outer .caption .holder .btn-row a .fa {
-	padding: 0 10px 0 0;
-	font-size: 16px;
-}
-.browse-job-section {
-	float: left;
-	width: 100%;
-	position: relative;
-	padding: 12px 0;
-}
-.browse-job-section:before {
-	content: '';
-	background-color: rgba(0,0,0,0.2);
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-}
-.browse-job-section .holder {
-	width: 850px;
-	margin: 0 auto;
-	position: relative;
-}
-.browse-job-section a.btn-brows {
-	float: right;
-	background: #A020F0;
-	padding: 10px 25px;
-	border-radius: 3px;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #000;
-	text-decoration: none;
-	margin: 0 0 0 30px;
-	position: relative;
-	z-index: 11;
-	text-decoration: none;
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	overflow: hidden;
-}
-.browse-job-section strong.title {
-	float: right;
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	padding: 10px 0 0 0;
-}
-.browse-job-section a.btn-brows:hover {
-	color: #000;
-}
-.browse-job-section a.btn-brows:hover:before {
-	opacity: 1;
-	width: 100%;
-	left: 0;
-	transform: rotate(0) scaleY(7);
-}
-.browse-job-section a.btn-brows:before {
-	content: '';
-	position: absolute;
-	left: -12px;
-	top: -3px;
-	width: 35%;
-	height: 100%;
-	background-color: #fff;
-	z-index: -1;
-	transform: rotate(-33deg) scaleY(1);
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	opacity: 0;
-}
-/****************************BANNER Style 2 CSS START****************************/
-
-.banner-2 {
-	float: left;
-	width: 100%;
-	position: relative;
-	padding: 55px 0;
-}
-.banner-2:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/parrten-bg.png) repeat;
-}
-.banner-2 .caption .holder {
-	width: 100%;
-}
-.banner-2 .caption .holder form {
-	box-shadow: none;
-	background: none;
-}
-.banner-2 .caption .holder h1 {
-	font: 400 48px/48px 'Roboto', sans-serif;
-	color: #fff;
-	display: block;
-	text-align: center;
-	text-shadow: 0 7px 5px rgba(0,0,0,0.15);
-	-moz-text-shadow: 0 7px 5px rgba(0,0,0,0.15);
-	-webkit-text-shadow: 0 7px 5px rgba(0,0,0,0.15);
-	margin: 0 0 23px 0;
-}
-.banner-2 .caption .holder strong {
-	font: 300 36px/36px 'Roboto', sans-serif;
-	color: #fff;
-	display: block;
-	text-align: center;
-	text-shadow: 0 7px 5px rgba(0,0,0,0.15);
-	-moz-text-shadow: 0 7px 5px rgba(0,0,0,0.15);
-	-webkit-text-shadow: 0 7px 5px rgba(0,0,0,0.15);
-}
-.banner-2 img {
-	display: block;
-	width: 100%;
-}
-/****************************BANNER Style 2 CSS END****************************/
-
-
-
-/****************************BANNER Style 3 CSS START****************************/
-
-.banner-2.banner-3.banner-outer .caption {
-	top: 160px;
-}
-.banner-2.banner-3 .caption .holder form {
-	padding: 90px 0 0 0;
-}
-.banner-2.banner-3 {
-	background: rgba(8,23,43,0.9);
-}
-.banner-2.banner-3:before {
-	content: '';
-	display: none;
-	background: none;
-}
-/****************************BANNER Style 3 CSS END****************************/
-
-
-
-/*****************************SIDEBAR MENU START*****************************/
-
-.sidebar-menu-box {
-	float: left;
-	padding: 8px 0 0 70px;
-}
-.sidebar-menu-box span {
-	font-size: 25px;
-	color: #212121;
-}
-.cp-top-bar {
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid #48a6ff;
-	padding: 20px 0 20px 0;
-}
-.cp-top-bar h4 {
-	color: #fff;
-	text-align: center;
-	border-bottom: 1px solid #48a6ff;
-	padding: 0 0 20px 0;
-	margin: 0 0 20px 0;
-}
-.cp-top-bar .login-section {
-	float: left;
-	padding: 0;
-	width: 100%;
-	text-align: center;
-}
-.cp-top-bar .login-section a.btn-login {
-	padding: 12px 30px;
-	display: inline-block;
-	font: 900 13px/13px 'Roboto', sans-serif;
-	color: #222;
-	border-radius: 3px;
-	text-transform: uppercase;
-	text-decoration: none;
-	background: #fff;
-	margin: 0 10px;
-	position: relative;
-	z-index: 11;
-	text-decoration: none;
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	overflow: hidden;
-}
-.cp-top-bar .login-section a.btn-login:hover {
-	color: #000;
-}
-.cp-top-bar .login-section a.btn-login:hover:before {
-	opacity: 1;
-	width: 100%;
-	left: 0;
-	transform: rotate(0) scaleY(7);
-}
-.cp-top-bar .login-section a.btn-login:before {
-	content: '';
-	position: absolute;
-	left: -12px;
-	top: -3px;
-	width: 35%;
-	height: 100%;
-	background-color: #A020F0;
-	z-index: -1;
-	transform: rotate(-33deg) scaleY(1);
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	opacity: 0;
-}
-#cp_side-menu > a.crose {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-	text-align: center;
-	color: #222;
-	line-height: 20px;
-	font-size: 12px;
-}
-#cp_side-menu {
-	color: #fff;
-	height: 100%;
-	margin-left: -410px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 375px;
-	z-index: 999999;
-	padding: 0 40px;
-}
-#cp_side-menu-btn a:hover {
-	text-decoration: none;
-}
-strong.logo-2 {
-	display: block;
-	padding: 20px 0;
-	text-align: center;
-	clear: both;
-}
-.cp_side-navigation {
-	float: left;
-	width: 100%;
-}
-.cp_side-navigation .navbar-nav {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.cp_side-navigation li {
-	float: left;
-	width: 100%;
-}
-.cp_side-navigation li:first-child a {
-	padding: 13px 0;
-}
-.cp_side-navigation li a {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #fff;
-	display: block;
-	padding: 34px 0;
-}
-.cp_side-navigation .navbar-nav > li > a {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #fff;
-	display: block;
-	padding: 16px 0;
-}
-.cp_side-navigation .navbar-nav > li > a .caret {
-	float: right;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px dashed;
-	margin: 8px 15px 0 10px;
-}
-.cp_side-navigation li a:hover, .cp_side-navigation li a:focus {
-	text-decoration: none;
-	padding-left: 20px;
-	background: #48a6ff;
-}
-.cp_side-navigation li:hover a {
-	text-decoration: none;
-}
-.cp_side-navigation .dropdown-menu {
-	position: static;
-	width: 100%;
-	background: none;
-	border: 0;
-	padding: 0;
-	box-shadow: none;
-}
-.cp_side-navigation .dropdown-menu .dropdown .caret {
-	float: right;
-	margin-left: 10px;
-	border-left: 6px solid;
-	border-right: 6px solid;
-}
-.cp_side-navigation .dropdown-menu > li > a {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	padding: 10px 0 10px 40px;
-	color: #fff;
-}
-.cp_side-navigation .dropdown-menu > li > a:hover, .cp_side-navigation .dropdown-menu > li > a:focus {
-	text-decoration: none;
-	padding-left: 20px;
-	background: #48a6ff;
-}
-.sidebar-menu-box span.caret {
-	color: #888;
-}
-.cp_side-navigation .dropdown-menu > li:hover a {
-	color: #fff;
-	padding-left: 10px;
-}
-.cp-sidebar-social {
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid #48a6ff;
-	padding: 0 0 30px 0;
-	margin: 55px 0 20px 0;
-}
-.cp-sidebar-social strong.title {
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #444;
-	display: block;
-	padding: 0 0 10px 0;
-}
-.cp-sidebar-social ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	display: block;
-	text-align: center;
-}
-.cp-sidebar-social ul li {
-	display: inline-block;
-	padding: 0 5px;
-}
-.cp-sidebar-social ul li a {
-	text-decoration: none;
-	display: block;
-	width: 30px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	color: #999;
-	font-size: 16px;
-	text-align: center;
-	background: #fff;
-	border-radius: 100%;
-}
-.cp-sidebar-social ul li a:hover {
-}
-#cp_side-menu strong.copy {
-	font: 500 12px/12px 'Roboto', sans-serif;
-	color: #fff;
-	display: block;
-	text-align: center;
-}
-/*SCROLL CSS START*/
-
-#cp_side-menu .mCustomScrollbar {
-	float: left;
-	width: 100%;
-}
-#cp_side-menu #content-1 {
-	overflow: hidden;
-	height: 423px;
-	padding: 0;
-	width: 100%;
-}
-#cp_side-menu #content-1 .content {
-	width: 100%;
-	height: 434px;
-	padding: 20px;
-	overflow: auto;
-	border-radius: 0;
-	float: left;
-	margin-right: 0;
-}
-#cp_side-menu .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-	width: 5px;
-}
-#cp_side-menu .mCSB_scrollTools .mCSB_draggerRail {
-	width: 5px;
-}
-.cp_side-menu {
-	float: left;
-	margin: 23px 0 0 22px;
-}
-.cp_side-menu a .fa {
-	font-size: 28px;
-}
-/*SCROLL CSS END*/
-
-/*****************************SIDEBAR MENU END*****************************/
 
 .user-option-col {
 	position: static;
@@ -1028,7 +607,7 @@ strong.logo-2 {
 
 
 
-/****************************************************POPULAR JOB CATEGORIES START****************************************************/
+/*POPULAR JOB CATEGORIES*/
 
 .popular-categories {
 	float: left;
@@ -1055,41 +634,24 @@ strong.logo-2 {
 .clearfix {
 	padding-bottom: 19px;
 }
-.popular-categories .box img {
-	text-align: center;
-	margin: 0 auto 20px;
-	display: block;
-}
 .popular-categories .box h4 {
 	margin: 0 0 20px 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+.popular-categories .box:hover a {
+	color:#A020F0;
 }
 .popular-categories .box strong {
 	display: block;
-	font: 900 14px/14px 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
 	padding: 0 0 10px 0;
+	color: #000;
 }
-.popular-categories p {
-	font: 400 14px/14px 'Roboto', sans-serif;
-}
-.popular-categories .box:hover {
-	color: #fff;
-}
-.popular-categories .box:hover h4 a {
-	color: #fff;
-}
-.popular-categories .box:hover img {
-	transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-}
-.popular-categories .box:hover p {
-	color: #fff;
-}
-/****************************************************POPULAR JOB CATEGORIES END****************************************************/
 
 
-
-/********************************************************RECENT JOB SECTION START********************************************************/
+/*RECENT JOB SECTION START*/
 
 .recent-row {
 	float: left;
@@ -1099,6 +661,7 @@ strong.logo-2 {
 #content-area {
 	float: left;
 	width: 100%;
+	font-family: 'Roboto', sans-serif;
 }
 #content-area .box {
 	float: left;
@@ -1108,7 +671,11 @@ strong.logo-2 {
 	padding: 20px;
 	margin: 0 0 8px 0;
 }
-#content-area .box:hover h4 a {
+#content-area .box h4{
+	font-size: 20px;
+}
+#content-area .box:hover h4 a{
+	color: #A020F0;
 }
 #content-area .box .thumb {
 	float: left;
@@ -1130,16 +697,16 @@ strong.logo-2 {
 	margin: 0 0 10px 0;
 }
 #content-area .box .text-col p {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #666;
+	font: 400 16px/16px 'Roboto', sans-serif;
+	color: #000;
 }
 #content-area .box .text-col p em {
 	font-weight: 400;
 	padding: 0 0 0 7px;
 }
 #content-area .box .text-col a.text {
-	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
+	font: 400 15px/15px 'Roboto', sans-serif;
+	color: #333;
 	text-decoration: none;
 	float: left;
 	padding: 0 20px 0 0;
@@ -1151,13 +718,26 @@ strong.logo-2 {
 	font: 700 18px/18px 'Roboto', sans-serif;
 	color: #222;
 	float: left;
-	padding: 24px 0 0 50px;
+	padding: 24px 0 0 0;
 }
 .job-detail #content-area .box strong.price {
 	padding: 10px 0 0 0;
 	display: block;
 	clear: both;
 }
+
+#content-area .box strong.price1 {
+	font: 700 18px/18px 'Roboto', sans-serif;
+	color: #222;
+	float: left;
+	padding: 24px 0 0 0;
+}
+.job-detail #content-area .box strong.price1 {
+	padding: 10px 0 0 0;
+	display: block;
+	clear: both;
+}
+
 .job-detail .btn-freelance {
 	float: left;
 	padding: 10px 20px;
@@ -1185,7 +765,7 @@ strong.logo-2 {
 .job-detail h4 {
 	margin: 40px 0 10px 0;
 }
-.theme-style-1 .job-detail #content-area ul {
+.index .job-detail #content-area ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -1675,20 +1255,20 @@ strong.logo-2 {
 	padding: 0 0 40px 0;
 	position: relative;
 }
-.theme-style-1 .price-table .box-colo-2 strong.amount:before, .theme-style-1 .price-table .box-colo-2 strong.amount:after {
+.index .price-table .box-colo-2 strong.amount:before, .index .price-table .box-colo-2 strong.amount:after {
 	background: #f44336;
 }
-.theme-style-1 .price-table .box-colo-3 strong.amount:before, .theme-style-1 .price-table .box-colo-3 strong.amount:after {
+.index .price-table .box-colo-3 strong.amount:before, .index .price-table .box-colo-3 strong.amount:after {
 	background: #00796b;
 }
-.theme-style-1 .price-table .box-colo-2 {
+.index .price-table .box-colo-2 {
 	transform: scale(1.1);
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	position: relative;
 	z-index: 9;
 }
-.theme-style-1 .price-table .box-colo-2 {
+.index .price-table .box-colo-2 {
 	border-radius: 0px 0 3px 3px;
 }
 .price-table .box strong.amount:before {
@@ -1731,10 +1311,10 @@ strong.logo-2 {
 .price-table .box ul li:first-child {
 	padding: 0;
 }
-.theme-style-1 .price-table .box-colo-2 a.btn-choose {
+.index .price-table .box-colo-2 a.btn-choose {
 	background: #f44336;
 }
-.theme-style-1 .price-table .box-colo-3 a.btn-choose {
+.index .price-table .box-colo-3 a.btn-choose {
 	background: #00796b;
 }
 .price-table .box a.btn-choose {
@@ -2471,96 +2051,6 @@ strong.logo-2 {
 /********************************************************MAP BANNER END********************************************************/
 
 
-
-/*********************************************************VIDEO SECTION START*********************************************************/
-
-.video-section {
-	float: left;
-	width: 100%;
-	background: #f5f5f5;
-}
-.video-section .text-box {
-	float: left;
-	background: #fff;
-	box-shadow: 0 0 5px 3px rgba(0,0,0,0.15);
-	border-radius: 3px;
-	width: 100%;
-	padding: 40px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.video-section .text-box p em {
-	font-weight: 900;
-	color: #222;
-}
-.video-section .text-box a.btn-style-1 {
-	padding: 22px 42px;
-}
-.video-section .video-frame {
-	background: url(../images/video-frame.png) no-repeat left top/100%;
-	width: 100%;
-	height: 300px;
-	margin: -22px 0 0 -102px;
-	position: relative;
-}
-.video-section .video-frame a.play {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	background: url(../images/play-icon.png) no-repeat left top;
-	width: 68px;
-	height: 68px;
-	bottom: 88px;
-	top: 0;
-	outline: none;
-}
-.video-section .video-frame .modal-dialog {
-	margin: 30px auto;
-	width: 100%;
-	padding: 0 20px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.video-section .video-frame .modal-content {
-	background-color: #fff;
-	border: 0;
-	border-radius: 0;
-	box-shadow: none;
-}
-.video-section .video-frame .modal-header {
-	border-bottom: 0;
-	padding: 0;
-}
-.video-section .video-frame .modal-footer {
-	border-top: 0;
-	padding: 0;
-	display: none;
-}
-.video-section .video-frame .modal-body {
-	padding: 0;
-}
-.video-section .video-frame .close {
-	color: #000;
-	float: right;
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 1;
-	opacity: 1;
-	text-shadow: none;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-}
-.video-section .video-frame .modal-header .close {
-	margin-top: -20px;
-}
-/*********************************************************VIDEO SECTION END*********************************************************/
-
-
-
 /**************************************************INNER BANNER START**************************************************/
 
 #inner-banner {
@@ -2653,94 +2143,6 @@ strong.logo-2 {
 	padding: 0;
 }
 /**************************************************PAGINATION SECTION END**************************************************/
-
-
-
-/***************************************************TESTIMONIALS SECTION START****************************************************/
-
-.testimonials {
-	float: left;
-	width: 100%;
-	background: #f5f5f5;
-}
-.testimonials .inner-col {
-	margin: 0 auto;
-	display: block;
-	padding: 20px 0 20px 30px;
-	width: 1200px;
-	background: #fff;
-	border-radius: 3px;
-}
-.testimonials-style-3 {
-	float: left;
-	width: 100%;
-}
-.testimonials-style-3 .col {
-	float: left;
-	width: 100%;
-	background: #fff;
-	padding: 30px;
-	text-align: center;
-	position: relative;
-	margin: 0 0 24px 0;
-}
-.testimonials-style-3 .col:after {
-	background: #fff none repeat scroll 0 0;
-	bottom: -7px;
-	box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-	content: "";
-	height: 15px;
-	left: 45%;
-	position: absolute;
-	transform: rotate(45deg);
-	width: 15px;
-	z-index: 4;
-}
-.testimonials-style-3 .col .fa {
-	display: block;
-	color: #A020F0;
-	font-size: 48px;
-	padding: 0 0 20px 0;
-}
-.testimonials-style-3 .col p {
-	font: 300 20px/28px 'Roboto', sans-serif;
-	margin: 0;
-}
-#testimonials-style-3 .item {
-	margin: 0 15px;
-}
-#testimonials-style-3 .item img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-.testimonials .owl-carousel .owl-wrapper {
-	padding-bottom: 0;
-}
-.testimonials-style-3 .thumb {
-	width: 80px;
-	height: 80px;
-	border: 1px solid #ccc;
-	padding: 4px;
-	display: block;
-	margin: 0 auto 15px;
-	clear: both;
-}
-.testimonials-style-3 strong.name {
-	font: 500 18px/18px 'Roboto', sans-serif;
-	display: block;
-	color: #222;
-	text-align: center;
-	padding: 0 0 5px 0;
-}
-.testimonials-style-3 em {
-	font: italic 300 15px/15px 'Roboto', sans-serif;
-	color: #666;
-	text-align: center;
-	display: block;
-}
-/***************************************************TESTIMONIALS SECTION END****************************************************/
-
 
 
 /*************************************************SIGNUP SECTION START*************************************************/
@@ -2894,34 +2296,9 @@ select option {
 	right: 9px;
 	top: 15px;
 }
-.check-box {
-	float: left;
-	padding: 8px 0 40px 0;
-}
 .outtaHere {
 	position: absolute;
 	left: -3000px;
-}
-/*Checkboxes*/
-
-.checkboxArea, .checkboxAreaChecked {
-	float: left;
-	width: 18px;
-	height: 18px;
-	margin: 0 10px 0 0;
-	overflow: hidden;
-	background: url(../images/checkbox.gif) no-repeat;
-}
-.checkboxAreaChecked {
-	background-position: 0 -18px;
-}
-.check-box strong {
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
-}
-.check-box strong a {
-	text-decoration: none;
-	color: #666;
 }
 .signup-section .holder input[type="submit"] {
 	float: right;
@@ -3095,122 +2472,6 @@ select option {
 	text-decoration: none;
 }
 /*************************************************SIGNUP SECTION END*************************************************/
-
-
-
-/*****************************************************CONTACT US START*****************************************************/
-
-.contact-section {
-	float: left;
-	width: 100%;
-}
-.contact-section .map-box {
-	float: left;
-	width: 100%;
-}
-.contact-section .map-box .map_canvas {
-	height: 450px;
-	width: 100%;
-}
-.contact-form {
-	float: left;
-	width: 100%;
-	background: #f5f5f5;
-}
-.contact-form input[type="text"] {
-	float: left;
-	width: 100%;
-	height: 43px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background: #fff;
-	padding: 0 10px;
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
-	margin: 0 0 30px 0;
-}
-.contact-form textarea {
-	float: left;
-	width: 100%;
-	height: 193px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background: #fff;
-	padding: 15px 10px;
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
-	margin: 0 0 30px 0;
-	resize: none;
-}
-.contact-form input[type="Submit"] {
-	padding: 12px 30px;
-	border: 0;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	border: 0;
-	float: right;
-}
-
-.address-box {
-	float: left;
-	width: 100%;
-}
-.address-box address {
-	float: left;
-	margin: 0;
-	width: 100%;
-	padding: 20px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	background: #fff;
-}
-.address-box address .fa {
-	float: left;
-	width: 50px;
-	height: 50px;
-	border-radius: 100%;
-	text-align: center;
-	line-height: 50px;
-	font-size: 24px;
-	color: #fff;
-	margin: 0 15px 0 0;
-}
-.address-box address ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.address-box address ul li {
-	padding: 20px 0 0 0;
-	overflow: hidden;
-	display: block;
-}
-.address-box address ul li:first-child {
-	padding: 0;
-}
-.address-box address strong {
-	font: 500 13px/22px 'Roboto', sans-serif;
-	color: #222;
-	display: block;
-}
-.address-box address a {
-	font: 500 14px/18px 'Roboto', sans-serif;
-	color: #222;
-	display: block;
-	text-decoration: none;
-	padding: 12px 0 0 0;
-}
-.address-box address a:hover {
-	color: #A020F0;
-}
-.accordion-style-1 {
-	float: left;
-	width: 100%;
-}
-/*****************************************************CONTACT US END*****************************************************/
-
 
 
 /************************************CANDIDATES LISTINGS SECTION START************************************/
@@ -3825,7 +3086,7 @@ select option {
 	color: #fff;
 	margin: 0;
 }
-.theme-style-1 .account-option a.btn-style-1 {
+.index .account-option a.btn-style-1 {
 	float: right;
 	background: #fff;
 	padding: 20px 42px;
@@ -3833,7 +3094,7 @@ select option {
 	color: #222;
 	margin: 3px 0 0 0;
 }
-.theme-style-1 .account-option a.btn-style-1 .fa {
+.index .account-option a.btn-style-1 .fa {
 	padding: 0 10px 0 0;
 }
 /*********************************************************ACCOUNT OPTION SECTION END*********************************************************/
@@ -4095,3 +3356,13 @@ TRANSITION-FOR-IMAGES {
 
 
 /****************************************************TRANSITION CSS END****************************************************/
+.footer-top{
+	background-color: #A020F0;
+}
+.newsletter-form{
+	padding: 20px 0;
+}
+
+.newsletter-form .form-group{
+	padding: 10px 30px;
+}

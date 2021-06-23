@@ -34,14 +34,15 @@ echo "<script>alert('Subscribed successfully.');</script>";
   <div class="footer-top">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-12 col-sm-12">
           <div class="newsletter-form">
             <form method="post">
               <div class="form-group">
                 <input type="email" name="subscriberemail" class="form-control newsletter-input" required placeholder="Enter Email Address" />
-              </div>
-              <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
-            </form>
+
+              <button type="submit" name="emailsubscibe" class="btn-row">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+            </div>
+          </form>
           </div>
         </div>
       </div>

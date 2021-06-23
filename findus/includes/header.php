@@ -53,63 +53,6 @@
     </div>
 
 
-
-    <!--USER OPTION COLUMN START-->
-
-    <div class="user-option-col">
-
-      <div class="thumb">
-
-        <div class="dropdown">
-          <?php if (strlen($_SESSION['jsid']==0)) {?>
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">USER</button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-            <li><a href="my-profile.php">Job Seeker</a></li>
-
-            <li><a href="employers/emp-login.php">Domestic Helpers</a></li>
-
-            <li><a href="admin/index.php">Admin</a></li>
-
-            <li><a href="chat/index.php">Chat</a></li>
-
-
-
-          </ul><?php } ?>
-<?php if (strlen($_SESSION['jsid']!=0)) {?>
-
-   <?php
-         $uid= $_SESSION['jsid'];
-$sql="SELECT * from tbljobseekers where id='$uid'";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="images/<?php echo $row->ProfilePic;?>" width="40" height="40" ></button>
-<?php $cnt=$cnt+1;}} ?>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-            <li><a href="my-profile.php">My Profile</a></li>
-
-            <li><a href="change-password.php">Change Password</a></li>
-
-            <li><a href="profile.php">Edit Profile</a></li>
-
-            <li><a href="logout.php">Log Out</a></li>
-
-          </ul>
-<?php } ?>
-        </div>
-
-      </div>
-
-
-
     </div>
 
     <!--USER OPTION COLUMN END-->
