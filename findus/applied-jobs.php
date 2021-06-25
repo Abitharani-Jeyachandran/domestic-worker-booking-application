@@ -31,7 +31,7 @@ if (strlen($_SESSION['jsid']==0)) {
 
 <!--COLOR CSS-->
 
-<link href="css/color.css" rel="stylesheet" type="text/css">
+
 
 <!--RESPONSIVE CSS-->
 

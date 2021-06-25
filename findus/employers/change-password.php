@@ -58,7 +58,7 @@ $msg='Pasword change successfully';
 <title>Domestic Workers | Change Password</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="../css/color.css" rel="stylesheet" type="text/css">
+
 <link href="../css/responsive.css" rel="stylesheet" type="text/css">
 <link href="../css/owl.carousel.css" rel="stylesheet" type="text/css">
 <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">

@@ -14,7 +14,7 @@ include('includes/config.php');
 <title>FIND US || Home Page</title>
 <link href="css/custom.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="css/color.css" rel="stylesheet" type="text/css">
+
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
 <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">

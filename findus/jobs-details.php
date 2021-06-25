@@ -73,7 +73,7 @@ if($lastInsertId)
 
 <!--COLOR CSS-->
 
-<link href="css/color.css" rel="stylesheet" type="text/css">
+
 
 <!--RESPONSIVE CSS-->
 

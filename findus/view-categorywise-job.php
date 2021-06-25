@@ -25,10 +25,6 @@ $vid=$_GET['viewid'];
 
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
-<!--COLOR CSS-->
-
-<link href="css/color.css" rel="stylesheet" type="text/css">
-
 <!--RESPONSIVE CSS-->
 
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
