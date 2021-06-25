@@ -3,8 +3,6 @@ body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 }
-/*************************************************************WRAPPER START*************************************************************/
-
 #wrapper {
 	float: left;
 	width: 100%;
@@ -33,62 +31,17 @@ body {
 	text-decoration: none;
 	color: #222;
 }
-.index a.btn-style-1 {
-	padding: 11px 25px;
-	float: left;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	text-decoration: none;
-	border-radius: 3px;
-	position: relative;
-	z-index: 11;
-	text-decoration: none;
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	overflow: hidden;
-}
-.index a.btn-style-1:hover {
-	color: #000;
-}
-.index a.btn-style-1:hover:before {
-	opacity: 1;
-	width: 100%;
-	left: 0;
-	transform: rotate(0) scaleY(7);
-}
-.index a.btn-style-1:before {
-	content: '';
-	position: absolute;
-	left: -12px;
-	top: -3px;
-	width: 35%;
-	height: 100%;
-	background-color: #A020F0;
-	z-index: -1;
-	transform: rotate(-33deg) scaleY(1);
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	opacity: 0;
-}
 .index p {
 	font: 400 14px/22px 'Roboto', sans-serif;
 	color: #888;
 	margin: 0 0 20px 0;
 }
-/*HEADER START*/
-
 #header {
 	float: left;
 	width: 100%;
 	padding: 18px 0 0 0;
 	background-color: #fff;
 }
-
-/******************NAVIGATION CSS START******************/
-
 .navigation-col {
 	float: left;
 	width: 100%;
@@ -185,43 +138,12 @@ body {
 }
 /* Menu CSS End */
 
-
-
-/******************NAVIGATION CSS END******************/
-
-
-
-/****************************BANNER CSS START****************************/
-
 .banner-outer {
 	position: relative;
 	float: left;
 	width: 100%;
 	height: 100vh;
 	background: #A020F0;
-}
-#banner {
-	float: left;
-	width: 100%;
-	position: relative;
-}
-#banner img {
-	display: block;
-	width: 100%;
-}
-.kenburnsy {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	height: 400px;
-}
-.kenburnsy .slide {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-position: center center;
 }
 .banner-outer .caption {
 	position: absolute;
@@ -284,45 +206,6 @@ body {
 }
 .banner-outer .caption .holder form button[type="submit"]:hover {
 	color: #fff;
-}
-/****************************BANNER CSS END****************************/
-
-.banner-menu {
-	float: left;
-	width: 100%;
-	margin: 0 0 30px 0;
-}
-.banner-menu ul {
-	padding: 0;
-	margin: 0;
-	display: block;
-	text-align: center;
-	list-style: none;
-}
-.banner-menu ul li {
-	padding: 0 16px;
-	display: inline-block;
-	position: relative;
-}
-.banner-menu ul li:before {
-	content: '|';
-	font-size: 15px;
-	position: absolute;
-	left: -2px;
-	color: #fff;
-	width: 1px;
-	height: 5px;
-}
-.banner-menu ul li:first-child:before {
-	display: none;
-}
-.banner-menu ul li a {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #fff;
-	text-decoration: none;
-}
-.banner-menu ul li a:hover {
-	color: #222;
 }
 .banner-outer .caption .holder .btn-row {
 	float: left;
@@ -410,102 +293,18 @@ body {
 	background: #f0f0f0;
 	color: #000;
 }
-.dropdown-box .dropup, .dropdown-box .dropdown {
-	float: left;
-	margin: 20px 0 0 0;
-}
-.dropdown-box .btn {
-	border: 0;
-	border-radius: 0;
-	font-size: inherit;
-	line-height: inherit;
-	padding: 0;
-}
-.dropdown-box .btn-default:hover {
-	background-color: transparent;
-	border-color: transparent;
-	color: inherit;
-}
-.dropdown-box .btn-default:focus, .dropdown-box .btn-default.focus {
-	background-color: transparent;
-	border-color: transparent;
-	color: inherit;
-}
-.dropdown-box .btn-default:active:hover, .dropdown-box .btn-default.active:hover, .dropdown-box .open > .dropdown-toggle.btn-default:hover, .dropdown-box .btn-default:active:focus, .dropdown-box .btn-default.active:focus, .dropdown-box .open > .dropdown-toggle.btn-default:focus, .dropdown-box .btn-default.focus:active, .dropdown-box .btn-default.active.focus, .dropdown-box .open > .dropdown-toggle.btn-default.focus {
-	background-color: transparent;
-	border-color: transparent;
-	color: inherit;
-}
-.dropdown-box .dropdown-menu {
-	border: 0;
-	border-radius: 0;
-	font-size: inherit;
-	left: 0;
-	right: 0;
-	list-style: outside none none;
-	margin: 0;
-	min-width: 250px;
-	padding: 0;
-	top: 50px;
-	z-index: 1000;
-	text-align: center;
-}
-.dropdown-box .dropdown-menu li {
-	padding: 20px 0;
-	display: block;
-	overflow: hidden;
-}
-.dropdown-box a.login-round {
-	width: 60px;
-	height: 60px;
-	border-radius: 100%;
-	margin: 0 auto 10px;
-	display: block;
-	text-align: center;
-	line-height: 60px;
-	font-size: 26px;
-	color: #fff;
-	padding: 0;
-}
-.dropdown-box a.login-round .fa {
-	color: #fff;
-}
-.dropdown-box a.btn-login {
-	padding: 11px 23px;
-	display: inline-block;
-	text-align: center;
-	margin: 0 auto;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	border-radius: 3px;
-}
-.dropdown-box a.btn-login:hover {
-	color: #fff;
-}
-.dropdown-box .dropdown-menu li:hover {
-	background: #f0f0f0;
-}
-.dropdown-box {
-	float: left;
-}
-/************************************************************HEADER END************************************************************/
+/*HEADER END*/
 
 
 .job-search .row{
 padding: 50px 0;
 }
-
 .job-search input{
 padding: 10px 0;
 }
-
 .job-search button{
 padding: 10px 0;
 }
-
-/*POPULAR JOB CATEGORIES*/
-
 .popular-categories {
 	float: left;
 	width: 100%;
@@ -515,9 +314,6 @@ padding: 10px 0;
 .popular-categories h2 {
 	float: left;
 	margin: 0;
-}
-.popular-categories a.btn-style-1 {
-	float: right;
 }
 .popular-categories .box {
 	float: left;
@@ -539,16 +335,6 @@ padding: 10px 0;
 .popular-categories .box:hover a {
 	color:#A020F0;
 }
-.popular-categories .box strong {
-	display: block;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	padding: 0 0 10px 0;
-	color: #000;
-}
-
-
-/*RECENT JOB SECTION START*/
 
 .recent-row {
 	float: left;
@@ -951,7 +737,6 @@ select option {
 	color: #fff;
 	text-decoration: none;
 }
-/*************************************************SIGNUP SECTION END*************************************************/
 
 .resumes-section {
 	float: left;
@@ -1076,408 +861,7 @@ select option {
 	width: 100%;
 	margin-bottom: 30px;
 }
-.summary-box {
-	float: left;
-	width: 100%;
-	padding: 30px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	background: #fff;
-	border-radius: 3px;
-	margin: 0 0 10px 0;
-}
-.summary-box h4 {
-	margin: 0 0 15px 0;
-}
-.summary-box strong.title {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	display: block;
-	padding: 0 0 20px 0;
-}
-.summary-box strong.title b {
-	font-weight: 400;
-	color: #000;
-}
-.summary-box .col {
-	float: left;
-	width: 100%;
-	border-left: 1px solid;
-	padding: 0 0 0 22px;
-	position: relative;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.summary-box .col:before {
-	content: '';
-	position: absolute;
-	left: -3px;
-	top: 0;
-	width: 5px;
-	height: 5px;
-}
-.summary-box span {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	display: block;
-	color: #000;
-	padding: 0 0 20px 0;
-}
-.summary-box .col p {
-	margin: 0;
-}
-.outer {
-	float: left;
-	width: 100%;
-	padding-bottom: 30px;
-}
-.padd-none {
-	padding: 0;
-}
-.skills-box {
-	float: left;
-	width: 100%;
-	padding: 30px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	background: #fff;
-	border-radius: 3px;
-	margin: 0 0 10px 0;
-}
-.progress-box {
-	float: left;
-	width: 100%;
-}
-.skills-box h4 {
-	margin: 0 0 15px 0;
-}
-.progress-box strong.title {
-	float: left;
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #000;
-	width: 22%;
-}
-.progress-box .progress {
-	background-color: #e1e1e1;
-	border-radius: 0;
-	box-shadow: none;
-	height: 10px;
-	margin-bottom: 32px;
-	overflow: inherit;
-	float: left;
-	width: 78%;
-}
-.progress-box .progress-bar {
-	background-color: #A020F0;
-	box-shadow: none;
-	color: #fff;
-	float: left;
-	font: 400 15px/15px 'Roboto', sans-serif;
-	height: 100%;
-	line-height: 20px;
-	text-align: right;
-	transition: width 0.6s ease 0s;
-	-moz-transition: width 0.6s ease 0s;
-	-webkit-transition: width 0.6s ease 0s;
-	width: 0;
-}
-.progress-box .progress-bar span {
-	width: 42px;
-	height: 32px;
-	float: right;
-	line-height: 32px;
-	text-align: center;
-	border-radius: 2px;
-	margin: -12px -32px 0 0;
-	position: relative;
-}
-.progress-box .progress-bar span:before {
-	content: '';
-	position: absolute;
-	left: -6px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 5px 6px 5px 0;
-	border-color: transparent #A020F0 transparent transparent;
-}
-.popular-companies {
-	float: left;
-	width: 100%;
-}
-.popular-companies .owl-next {
-	font-size: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-.popular-companies .owl-next::before {
-	content: "";
-	font-family: FontAwesome;
-	font-size: 14px;
-	position: absolute;
-	right: 0;
-	top: -33px;
-}
-.popular-companies .owl-next::after {
-	background: #000 none repeat scroll 0 0;
-	content: "";
-	height: 19px;
-	left: -14px;
-	position: absolute;
-	top: -33px;
-	width: 1px;
-}
-.popular-companies .owl-prev {
-	position: absolute;
-	right: 0;
-	top: -33px;
-	font-size: 0;
-}
-.popular-companies .owl-prev:before {
-	content: "\f053";
-	position: absolute;
-	right: 17px;
-	top: 0;
-	font-size: 14px;
-	font-family: FontAwesome;
-}
-.alphabets {
-	float: left;
-	margin: 0 0 60px 0;
-	width: 100%;
-}
-.alphabets a {
-	float: left;
-	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #000;
-	text-transform: uppercase;
-	padding: 0 0 10px 21px;
-}
-.alphabets a:hover {
-	text-decoration: none;
-}
-.alphabets a:first-child {
-	padding: 0 0 0 21px;
-}
-.alphabets-row {
-	float: left;
-	width: 100%;
-}
-.alphabets-row .col {
-	float: left;
-	width: 100%;
-	position: relative;
-}
-.alphabets-row .col:hover span {
-	background: #A020F0;
-}
-.alphabets-row .col:hover:before {
-	background: #A020F0;
-}
-.alphabets-row .col:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 34px;
-	width: 100%;
-	height: 1px;
-}
-.alphabets-row .col span {
-	float: left;
-	width: 35px;
-	height: 35px;
-	font: 500 18px/35px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 0 0 20px 0;
-}
-.alphabets-row .col ul li:first-child {
-	padding: 0;
-}
-.alphabets-row a {
-	text-decoration: none;
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #000;
-	text-decoration: none;
-	display: block;
-	padding: 14px 0;
-}
-.alphabets-row a:hover {
-	text-decoration: none;
-}
-.alphabets-row .col .list-col {
-	float: left;
-	width: 100%;
-}
-#blog-masonrywrap {
-	float: left;
-	list-style: outside none none;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-}
-#blog-masonrywrap .loop-entry {
-	float: left;
-}
-/************************************CANDIDATES LISTINGS SECTION END************************************/
-
-
-
-/*******************************************RESUME PROCESS SECTION START*******************************************/
-
-.resume-process {
-	float: left;
-	width: 100%;
-	background: #fff;
-	border-bottom: 1px solid #000;
-}
-.resume-process h2 {
-	font-weight: 300;
-	text-align: center;
-}
-.resume-process strong {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #000;
-	display: block;
-	text-align: center;
-	padding: 0 0 50px 0;
-}
-.resume-process .option-box {
-	float: left;
-	width: 100%;
-	text-align: center;
-}
-.resume-process .option-box .icon-box {
-	width: 85px;
-	height: 85px;
-	margin: 0 auto 20px;
-	display: block;
-	border: 5px solid #fff;
-	border-radius: 100%;
-	position: relative;
-	font-size: 30px;
-	line-height: 75px;
-	color: #fff;
-}
-.resume-process .option-box .icon-colo-1:before {
-	content: '';
-	position: absolute;
-	left: -8px;
-	bottom: -8px;
-	width: 90px;
-	height: 90px;
-	border: 1px solid;
-	border-radius: 100%;
-}
-.resume-process .option-box h4 {
-	text-align: center;
-	margin: 0 0 15px 0;
-}
-.resume-process .option-box .icon-box p {
-	text-align: center;
-}
-.icon-colo-1 {
-	position: relative;
-}
-.icon-colo-2 {
-	background: #f44336;
-	position: relative;
-}
-.resume-process .option-box .icon-colo-2:before {
-	content: '';
-	position: absolute;
-	left: -8px;
-	bottom: -8px;
-	width: 90px;
-	height: 90px;
-	border: 1px solid #f44336;
-	border-radius: 100%;
-}
-.icon-colo-3 {
-	background: #00796b;
-	position: relative;
-}
-.resume-process .option-box .icon-colo-3:before {
-	content: '';
-	position: absolute;
-	left: -8px;
-	bottom: -8px;
-	width: 90px;
-	height: 90px;
-	border: 1px solid #00796b;
-	border-radius: 100%;
-}
-.icon-colo-4 {
-	background: #8bc34a;
-	position: relative;
-}
-.resume-process .option-box .icon-colo-4:before {
-	content: '';
-	position: absolute;
-	left: -8px;
-	bottom: -8px;
-	width: 90px;
-	height: 90px;
-	border: 1px solid #8bc34a;
-	border-radius: 100%;
-}
-/*******************************************RESUME PROCESS SECTION END*******************************************/
-
-
-
-/*********************************************************ACCOUNT OPTION SECTION START*********************************************************/
-
-.account-option {
-	float: left;
-	width: 100%;
-	background: #f5f5f5;
-	padding: 30px 0;
-}
-.account-option .inner-box {
-	background: #00796b;
-	width: 945px;
-	margin: 0 auto;
-	overflow: hidden;
-	display: block;
-	padding: 30px;
-	border-radius: 3px;
-}
-.account-option .inner-box .text-box {
-	float: left;
-	width: 585px;
-}
-.account-option .inner-box .text-box h4 {
-	color: #fff;
-	margin: 0 0 10px 0;
-}
-.account-option .inner-box .text-box p {
-	color: #fff;
-	margin: 0;
-}
-.index .account-option a.btn-style-1 {
-	float: right;
-	background: #fff;
-	padding: 20px 42px;
-	border: 1px solid #000;
-	color: #222;
-	margin: 3px 0 0 0;
-}
-.index .account-option a.btn-style-1 .fa {
-	padding: 0 10px 0 0;
-}
-/*********************************************************ACCOUNT OPTION SECTION END*********************************************************/
-
-
-
-/*******************************************************************RESUME FORM START*******************************************************************/
-
+/*RESUME FORM START*/
 .resum-form {
 	float: left;
 	width: 100%;
@@ -1571,13 +955,6 @@ select option {
 .resum-form .selector {
 	margin: 0 0 28px 0;
 }
-/*******************************************************************RESUME FORM END*******************************************************************/
-
-
-
-
-
-/*************************************************************WRAPPER End*************************************************************/
 
 .FONTS {
 	font-family: 'Roboto', sans-serif;
@@ -1591,61 +968,30 @@ select option {
 .padd-btm {
 	padding: 0 0 60px 0;
 }
-
-
-/****************************************************TRANSITION CSS END****************************************************/
 .footer-top{
 	background-color: #A020F0;
 }
 .newsletter-form{
 	padding: 20px 300px;
 }
-
 .newsletter-form .form-group{
 	padding: 10px 30px;
 }
-
 /*************************************BACKGROUND COLOR START*************************************/
 
 #banner, .banner-outer .caption .holder form button[type="submit"]:hover, .browse-job-section, .user-option-col a.login-round, .user-option-col .dropdown-menu > li > a:hover, .user-option-col .dropdown-menu > li > a:focus, .user-option-col a.btn-login, .btn-color-2, .sidebar .box .text-box a.btn-apply, .call-action-section, .price-table .box strong.amount:before, .price-table .box strong.amount:after, #footer form input[type="submit"], #cp_side-menu, .banner-2, #wrapper .header-2.cp_sticky, .process-section .icon-box, .btn-bg-color-1, .header-4, #inner-banner, .pagination-box .pager li > a:hover, .pagination-box .pager li > a:focus, .pagination-box .pager li.active a, .post-box .owl-next:hover, .post-box .owl-prev:hover, .post-section .comment-form form input[type="submit"], .signup-section .holder input[type="submit"], .upload-box .btn-file, .signup-section .holder b, .contact-form input[type="Submit"], .address-box address .fa, .candidates-search-bar form, .btn-row a.login, .summary-box  .col:before, .progress-box .progress-bar span, .alphabets-row .col span, .alphabets-row .col:before, .icon-colo-1, .resum-form .accordion_cp, .resum-form input[type="submit"], .navbar-toggle {
-
 	background-color:#A020F0;
-
 }
-
-
-
-/*************************************BACKGROUND COLOR END*************************************/
-
-
-
-
-
-
 
 /*************************************TEXT COLOR START*************************************/
 
 #nav li:hover > a, .banner-outer .caption .holder form button[type="submit"], .banner-outer .caption .holder .btn-row a .fa, .cp_side-menu a .fa, .user-option-col a .fa, .sidebar .box .text-box h4 a, .sidebar .box .text-box a.text .fa, .sidebar .box .text-box strong.price .fa, .price-table .box h4, .price-table .box strong.amount sub, .testimonials-section .owl-prev:hover:before, .testimonials-section .owl-next:hover:before, .post-box .text-box strong.date .fa, .post-box .text-box strong.name, .post-box .text-box:hover h4 a, #footer .box ul li a, .bottom-row strong.copyrights a:hover, #popular-job-slider .owl-next:before, #popular-job-slider .owl-prev:before, .sidebar-jobs ul li a, .sidebar-jobs ul li span .fa, .pagination-box .pager li > a, .pagination-box .pager li > span, .sidebar .box .recent-post .text-box a .fa, .sidebar .box .recent-post .text-area a .fa, .sidebar .box .recent-post ul li:hover strong a, .sidebar .box .archives-box ul li a:hover, .post-box blockquote p, .testimonials-style-3 .box p, .testimonials-style-3 .col p, .input-box .fa, .check-box strong a:hover, .signup-section .holder em, .signup-section .holder em a, .signup-section .holder a.login, .candidates-search-bar form button[type="submit"], .resumes-content .box .text-box strong .fa, .resumes-content .box .text-box span.price .fa, .tags a, .related-people .text-box strong.name a, .related-people .text-box span .fa, .summary-box strong.title, .popular-companies .owl-next:before, .popular-companies .owl-prev:before, .alphabets-row a:hover, .alphabets a:hover, .job-detail ul li .fa{
-
 	color:#A020F0;
-
 }
-
-/*************************************TEXT COLOR END*************************************/
-
-
-
 
 .signup-section .holder span:before{
-
 	border-color: #A020F0 transparent transparent transparent;
-
 }
-
 .progress-box .progress-bar span:before{
-
 	border-color: transparent #A020F0 transparent transparent;
-
 }
-
-/*************************************BORDER COLOR END*************************************/
