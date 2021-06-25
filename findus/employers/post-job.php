@@ -78,7 +78,7 @@ $error="Something went wrong.Please try again";
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
 
 
-<body class="theme-style-1">
+<body class="index">
 <div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>

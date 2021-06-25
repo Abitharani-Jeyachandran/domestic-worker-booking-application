@@ -37,7 +37,7 @@ else{
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
@@ -157,52 +157,6 @@ foreach($results as $result)
 <!-- Job Package -->
 <strong class="price"><i class="fa fa-money"></i>
   $<?php echo htmlentities($result->salaryPackage); ?></strong> <br />
-
-
-
-<!-- Job Type-->
-<!--Full Time -->
-<?php if($result->jobType=='Full Time'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Part Time -->
-<?php if($result->jobType=='Part Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Half Time -->
-<?php if($result->jobType=='Half Time'):?>
-<a class="btn-1 btn-color-1 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Freelance -->
-<?php if($result->jobType=='Freelance'):?>
-<a class="btn-1 btn-color-3 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Contract -->
-<?php if($result->jobType=='Contract'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-<!--Internship -->
-<?php if($result->jobType=='Internship'):?>
-<a class="btn-1 btn-color-2 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
-
-
-<!--Temporary -->
-<?php if($result->jobType=='Temporary'):?>
-<a class="btn-1 btn-color-4 ripple"><?php echo htmlentities($result->jobType); ?>
-</a>
-<?php endif;?>
 
 
 

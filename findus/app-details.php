@@ -66,7 +66,7 @@ if (strlen($_SESSION['jsid']==0)) {
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 

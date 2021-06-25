@@ -25,7 +25,7 @@ else{?>
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
@@ -101,8 +101,6 @@ foreach($results as $result)
 <h4>Description</h4>
 
 <p><?php echo $result->jobDescription; ?></p>
-
-<a href="#" class="btn-style-1 style-big">List of Canditates apllied for this job</a> </div>
 
               </div>
 <?php }} ?>

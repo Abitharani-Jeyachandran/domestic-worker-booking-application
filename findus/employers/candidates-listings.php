@@ -80,7 +80,7 @@ else{?>
 
     <div class="container">
 
-      <h1>Job Seekers Seeking Your Work</h1>
+      <h1>Clients applied for your work</h1>
 
     </div>
 
@@ -160,7 +160,7 @@ else
      ;?></a>  </div>
 
 
-                  <div class="btn-row"> <a href="candidates-details.php?canid=<?php echo ($row->id);?>" class="contact">View Detail</a> <a href="app-details.php?jobid=<?php echo ($row->JobId);?> && name=<?php echo htmlentities ($row->FullName);?>&& jsid=<?php echo htmlentities ($row->id);?>" class="login">Application Details</a></div>
+                  <div class="btn-row"> <a href="candidates-details.php?canid=<?php echo ($row->id);?>" class="contact">View Detail</a> <a href="app-details.php?jobid=<?php echo ($row->JobId);?> && name=<?php echo htmlentities ($row->FullName);?>&& jsid=<?php echo htmlentities ($row->id);?>" class="login">Request Details</a></div>
 
                 </div>
                 <hr />

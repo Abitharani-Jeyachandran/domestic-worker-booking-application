@@ -29,8 +29,7 @@
                 </ul>
               </li>
 
- <li><a href="candidates-listings.php">Candidates List</a></li>
- <li><a href="candidates-reports.php">Reports</a></li>
+ <li><a href="candidates-listings.php">Clients List</a></li>
             </ul>
 
           </div>

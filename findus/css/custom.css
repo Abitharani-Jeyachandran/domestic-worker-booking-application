@@ -136,12 +136,12 @@ body {
 }
 #nav li a .fa {
 	float: right;
-	color: #666;
+	color: #000;
 	padding: 0 20px 0 0;
 }
 #nav li ul li a:hover, #nav li ul li:hover > a {
 	text-decoration: none;
-	color: #666;
+	color: #000;
 	background: #f0f0f0;
 }
 #nav li ul {
@@ -175,7 +175,7 @@ body {
 #nav li ul li a {
 	background: none;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	text-align: left;
 	padding: 15px 0 15px 20px;
 	display: block;
@@ -403,12 +403,12 @@ body {
 }
 .user-option-col .thumb .dropdown-menu > li > a {
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	padding: 13px 0 13px 20px;
 }
 .user-option-col .thumb .dropdown-menu > li > a:hover {
 	background: #f0f0f0;
-	color: #666;
+	color: #000;
 }
 .dropdown-box .dropup, .dropdown-box .dropdown {
 	float: left;
@@ -523,7 +523,7 @@ padding: 10px 0;
 	float: left;
 	width: 100%;
 	background: #fff;
-	color: #666;
+	color: #000;
 	padding: 30px 0;
 	margin: 0 0 30px 0;
 	text-align: center;
@@ -587,7 +587,7 @@ padding: 10px 0;
 	width: 375px;
 }
 #content-area .box .text-col .hold p {
-	color: #888;
+	color: #222;
 	line-height: 22px;
 }
 #content-area .box .text-col h4 {
@@ -603,7 +603,7 @@ padding: 10px 0;
 }
 #content-area .box .text-col a.text {
 	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #333;
+	color: #000;
 	text-decoration: none;
 	float: left;
 	padding: 0 20px 0 0;
@@ -635,29 +635,10 @@ padding: 10px 0;
 	clear: both;
 }
 
-.job-detail .btn-freelance {
-	float: left;
-	padding: 10px 20px;
-	background: #8bc34a;
-	border-radius: 3px;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	margin: 0 15px 0 0;
-}
 .job-detail .clearfix {
 	float: left;
 	width: 100%;
 	padding: 15px 0 0 0;
-}
-.job-detail a.btn-style-1 {
-	padding: 10px 25px;
-}
-.job-detail a.style-big {
-	padding: 20px 40px;
-	float: none;
-	display: table;
-	margin: 0 auto 10px;
 }
 .job-detail h4 {
 	margin: 40px 0 10px 0;
@@ -667,1286 +648,21 @@ padding: 10px 0;
 	margin: 0;
 	list-style: none;
 }
-.job-detail .sidebar-jobs ul li span .fa {
-	position: inherit;
-}
 .job-detail ul li {
 	padding: 0 0 30px 20px;
 	overflow: hidden;
 	display: block;
 	font: 400 14px/18px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	position: relative;
-}
-.job-detail ul li .fa {
-	position: absolute;
-	left: 0;
-	top: 4px;
 }
 #content-area .box strong.price .fa {
 	padding: 0 8px 0 0;
 	font-size: 16px;
 }
-#content-area .box a.btn-1 {
-	float: right;
-	padding: 11px 20px;
-	border-radius: 3px;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	text-decoration: none;
-	margin: 16px 0 0 0;
-	overflow: hidden;
-	position: relative;
-}
-.btn-color-1 {
-	background-color: #f44336;
-}
-.btn-color-3 {
-	background-color: #8bc34a;
-}
-.btn-color-4 {
-	background-color: #00796b;
-}
-
-#content-area a.load-more {
-	display: inline-block;
-	padding: 20px 60px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #222;
-	text-transform: uppercase;
-	text-align: center;
-	text-decoration: none;
-	background: #fff;
-	position: relative;
-	z-index: 11;
-	text-decoration: none;
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	overflow: hidden;
-}
-#content-area a.load-more:hover {
-	color: #000;
-}
-#content-area a.load-more:hover:before {
-	opacity: 1;
-	width: 100%;
-	left: 0;
-	transform: rotate(0) scaleY(7);
-}
-#content-area a.load-more:before {
-	content: '';
-	position: absolute;
-	left: -12px;
-	top: -3px;
-	width: 35%;
-	height: 100%;
-	background-color: #A020F0;
-	z-index: -1;
-	transform: rotate(-33deg) scaleY(1);
-	transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-moz-transition: all 0.3s ease-in;
-	opacity: 0;
-}
-#content-area a.load-more .fa {
-	padding: 0 8px 0 0;
-	font-size: 16px;
-}
-#content-area ul {
-	padding: 0 0 40px 0;
-	margin: 0;
-	list-style: none;
-	overflow: hidden;
-}
-#loadMore {
-	display: block;
-	text-align: center;
-}
 #myList li {
 	display: none;
 }
-.ink {
-	display: block;
-	position: absolute;
-	background: #000;
-	border-radius: 100%;
-	transform: scale(0);
-	-moz-transform: scale(0);
-	-webkit-transform: scale(0);
-}
-/*animation effect*/
-
-.ink.animate {
-	animation: ripple 0.65s linear;
-}
- @keyframes ripple {
- 100% {
- opacity: 0;
- transform: scale(2.5);
- -moz-transform: scale(2.5);
- -webkit-transform: scale(2.5);
-}
-}
-/********************************************************RECENT JOB SECTION END********************************************************/
-
-
-
-/************************************************************SIDEBAR START************************************************************/
-
-.sidebar {
-	float: left;
-	width: 100%;
-}
-.sidebar h4 {
-	margin: 0 0 15px 0;
-}
-.sidebar .box {
-	float: left;
-	width: 100%;
-	background: #fff;
-	margin: 0 0 40px 0;
-}
-.sidebar .box .thumb {
-	float: left;
-	width: 100%;
-	overflow: hidden;
-	background: #000;
-	position: relative;
-	border-radius: 3px;
-}
-.sidebar .box .thumb img {
-	display: block;
-	width: 100%;
-}
-.sidebar .box .thumb:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0.4;
-	background: #000;
-}
-.sidebar .box .frame {
-	float: left;
-	width: 100%;
-	border-radius: 3px 3px 0 0;
-	overflow: hidden;
-	background: #000;
-}
-.sidebar .box .frame img {
-	display: block;
-	width: 100%;
-}
-.sidebar .box .thumb .caption {
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	height: 35px;
-	width: 100%;
-}
-.sidebar .box .thumb .caption img {
-	width: auto;
-	text-align: center;
-	margin: 0 auto;
-}
-.sidebar .box .text-box {
-	float: left;
-	width: 100%;
-	padding: 32px 0 0 20px;
-}
-.sidebar .box .text-col {
-	float: left;
-	width: 100%;
-	padding: 17px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.sidebar .box .text-col p {
-	margin: 0;
-}
-.sidebar .box .text-box h4 {
-	margin: 0 0 12px 0;
-}
-.sidebar .box .text-box a.btn-time {
-	float: right;
-	padding: 11px 20px;
-	background: #f44336;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	border-radius: 3px;
-	text-transform: uppercase;
-	margin: -50px 20px 0 0;
-	position: relative;
-	text-decoration: none;
-}
-.sidebar .box .text-box a.text {
-	display: block;
-	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
-	padding: 0 0 12px 0
-}
-.sidebar .box .text-box a.text .fa {
-	padding: 0 6px 0 0;
-}
-.sidebar .box .text-box strong.price {
-	font: 700 18px/18px 'Roboto', sans-serif;
-	color: #222;
-	display: block;
-	padding: 3px 0 25px 0;
-}
-.sidebar .box .text-box strong.price .fa {
-	font-size: 16px;
-	padding: 0 8px 0 0;
-}
-.sidebar .box .text-box a.btn-apply {
-	display: table;
-	margin: 0 auto -18px;
-	padding: 12px 30px;
-	font: 900 13px/13px 'Roboto', sans-serif;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	border-radius: 3px;
-}
-.sidebar-jobs {
-	float: left;
-	width: 100%;
-	background: #fff;
-}
-.sidebar-jobs ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.sidebar-jobs ul li {
-	display: block;
-	overflow: hidden;
-	padding: 15px 0;
-	margin: 0 20px;
-	border-top: 1px solid #ccc;
-}
-.sidebar-jobs ul li:first-child {
-	border: 0;
-}
-.sidebar-jobs ul li a {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	text-decoration: none;
-	display: block;
-	padding: 0 0 10px 0;
-}
-.sidebar-jobs ul li span {
-	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
-	display: block;
-	padding: 0 0 10px 0;
-}
-.sidebar-jobs ul li span .fa {
-	padding: 0 6px 0 0;
-}
-.sidebar .box .recent-post {
-	float: left;
-	width: 100%;
-	padding: 20px 20px 5px 20px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.sidebar .box .recent-post ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.sidebar .box .recent-post ul li {
-	padding: 15px 0;
-	display: block;
-	overflow: hidden;
-	border-top: 1px solid #ccc;
-}
-.sidebar .box .recent-post ul li:first-child {
-	border: 0;
-	padding: 0 0 15px 0;
-}
-.sidebar .box .recent-post strong {
-	font: 400 15px/22px 'Roboto', sans-serif;
-	color: #333;
-	display: block;
-	padding: 0 0 10px 0;
-}
-.sidebar .box .recent-post strong a {
-	color: #333;
-	text-decoration: none;
-}
-.sidebar .box .recent-post .img-frame {
-	float: left;
-	margin: 0 15px 0 0;
-	background: #000;
-}
-.sidebar .box .recent-post .text-area {
-	overflow: hidden;
-	padding: 10px 0 0 0;
-}
-.sidebar .box .recent-post .text-area a {
-	display: block;
-	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
-	padding: 0 0 10px 0;
-	text-decoration: none;
-}
-.sidebar .box .recent-post .text-area a .fa {
-	padding: 0 6px 0 0;
-	font-size: 12px;
-}
-.sidebar .box .recent-post ul li:hover .img-frame img {
-	opacity: 0.6;
-}
-.sidebar .box .archives-box {
-	float: left;
-	width: 100%;
-	padding: 10px 0;
-}
-.sidebar .box .archives-box ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.sidebar .box .archives-box ul li {
-	padding: 0 5px;
-	display: block;
-	overflow: hidden;
-}
-.sidebar .box .archives-box ul li a {
-	text-decoration: none;
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #333;
-	padding: 10px 14px;
-	display: block;
-}
-.sidebar .box .archives-box ul li a span {
-	float: right;
-}
-.sidebar .box .archives-box ul li a:hover {
-	background: #f5f5f5;
-}
-.related-people {
-	float: left;
-	width: 100%;
-	background: #fff;
-	padding: 5px 20px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.related-people ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.related-people ul li {
-	padding: 15px 0;
-	border-top: 1px solid #ccc;
-	overflow: hidden;
-	display: block;
-}
-.related-people ul li:first-child {
-	border: 0;
-}
-.related-people .frame {
-	float: left;
-	margin: 0 15px 0 0;
-	overflow: hidden;
-	background: #000;
-}
-.related-people .text-box {
-	overflow: hidden;
-}
-.related-people .text-box strong.name {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	display: block;
-	padding: 0 0 10px 0;
-}
-.related-people ul li:hover strong.name a {
-	text-decoration: none;
-	color: #A020F0;
-}
-.related-people .text-box span {
-	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
-	display: block;
-	padding: 0 0 6px 0;
-}
-.related-people .text-box span .fa {
-	padding: 0 4px 0 0;
-	font-size: 12px;
-}
-.related-people ul li:hover img {
-	opacity: 0.6;
-	transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-}
-/************************************************************SIDEBAR END************************************************************/
-
-
-
-/*****************************************************PRICE TABLE STYLE 1 START*****************************************************/
-
-.price-table {
-	float: left;
-	width: 100%;
-	background-image: url(../images/price-style-1-img-1.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-size: cover;
-	background-attachment: fixed;
-	background-color: #000;
-	position: relative;
-	padding: 60px 0 82px 0;
-}
-.price-table h2 {
-	text-align: center;
-	color: #fff;
-	position: relative;
-	margin: 0 0 80px 0;
-	padding: 0 0 28px 0;
-}
-.price-table .box .head {
-	float: left;
-	background: #f44336;
-	width: 100%;
-	padding: 15px 0;
-	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #fff;
-	margin: -69px 0 0 0;
-	border-radius: 3px 3px 0 0;
-}
-.price-table .box {
-	float: left;
-	width: 312px;
-	background: #fff;
-	border-radius: 3px;
-	padding: 20px 0 30px 0;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	text-align: center;
-}
-.price-table .box h4 {
-	text-align: center;
-	margin: 0 0 20px 0;
-}
-.price-table .box strong.amount {
-	font: 700 46px/46px 'Roboto', sans-serif;
-	color: #222;
-	display: block;
-	text-align: center;
-	padding: 0 0 40px 0;
-	position: relative;
-}
-.index .price-table .box-colo-2 strong.amount:before, .index .price-table .box-colo-2 strong.amount:after {
-	background: #f44336;
-}
-.index .price-table .box-colo-3 strong.amount:before, .index .price-table .box-colo-3 strong.amount:after {
-	background: #00796b;
-}
-.index .price-table .box-colo-2 {
-	transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	position: relative;
-	z-index: 9;
-}
-.index .price-table .box-colo-2 {
-	border-radius: 0px 0 3px 3px;
-}
-.price-table .box strong.amount:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 5px;
-	height: 42px;
-}
-.price-table .box strong.amount:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 5px;
-	height: 42px;
-}
-.price-table .box strong.amount span {
-	font-weight: 300;
-}
-.price-table .box strong.amount sub {
-	font-size: 18px;
-	font-weight: 500;
-	bottom: 0em;
-}
-.price-table .box ul {
-	padding: 0 0 30px 0;
-	margin: 0;
-	list-style: none;
-}
-.price-table .box ul li {
-	display: block;
-	padding: 20px 0 0 0;
-	overflow: hidden;
-	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #666;
-	text-align: center;
-}
-.price-table .box ul li:first-child {
-	padding: 0;
-}
-.index .price-table .box-colo-2 a.btn-choose {
-	background: #f44336;
-}
-.index .price-table .box-colo-3 a.btn-choose {
-	background: #00796b;
-}
-.price-table .box a.btn-choose {
-	display: inline-block;
-	padding: 11px 30px;
-	border-radius: 3px;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-/*****************************************************PRICE TABLE STYLE 1 END*****************************************************/
-
-
-
-/*****************************************************PRICE TABLE STYLE 2 START*****************************************************/
-
-.price-table-2 {
-	float: left;
-	width: 100%;
-	background: #f5f5f5;
-}
-.price-table-2 h2 {
-	color: #222;
-}
-/*****************************************************PRICE TABLE STYLE 2 END*****************************************************/
-
-
-
-/***************************************************TESTIOMONIALS SECTION START***************************************************/
-
-.testimonials-section {
-	float: left;
-	width: 100%;
-	padding: 80px 0 0 0;
-	background-image: url(../images/testimonials-bg.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-size: cover;
-	background-color: #000;
-}
-.testimonials-section .holder {
-	float: left;
-	width: 100%;
-	padding: 0 0 0 180px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.testimonials-section .holder .thumb {
-	float: left;
-	border: 1px solid #fff;
-	padding: 4px;
-	position: relative;
-	margin: 0 45px 0 0;
-}
-.testimonials-section .holder .thumb:before {
-	content: '‘‘';
-	position: absolute;
-	left: -81px;
-	top: 35px;
-	width: 81px;
-	height: 82px;
-	border: 1px solid #fff;
-	border-right: 0;
-	color: #fff;
-	font: 700 120px/117px "Times New Roman", Times, serif;
-	display: block;
-	background: rgba(255,255,255,0.10);
-}
-.testimonials-section .holder .text-box {
-	float: left;
-	max-width: 640px;
-}
-.testimonials-section .holder .text-box em {
-	font: italic 300 20px/28px 'Roboto', sans-serif;
-	color: #fff;
-	padding: 0 0 22px 0;
-	display: block;
-	margin: -5px 0 0 0;
-}
-.testimonials-section .holder .text-box strong.name {
-	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #f7a51e;
-	display: block;
-	padding: 0 0 8px 0;
-}
-.testimonials-section .holder .text-box span.post {
-	display: block;
-	font: italic 300 15px/15px 'Roboto', sans-serif;
-	color: #fff;
-}
-.testimonials-rating {
-	float: right;
-	padding: 23px 0 0 0;
-	margin: 0;
-	list-style: none;
-}
-.testimonials-rating li {
-	float: left;
-	padding: 0 0 0 4px;
-}
-.testimonials-rating li a {
-	color: #f7a51e;
-	text-decoration: none;
-	font-size: 15px;
-}
-.testimonials-section .owl-next {
-	position: absolute;
-	right: 0;
-	top: 40%;
-	z-index: 99;
-	font-size: 0;
-	text-decoration: none;
-}
-.testimonials-section .owl-next:before {
-	content: "\f105";
-	font-size: 42px;
-	color: #fff;
-	font-family: FontAwesome;
-	border-left: 1px solid #fff;
-	height: 43px;
-	padding: 0 0 0 15px;
-}
-.testimonials-section .owl-prev {
-	position: absolute;
-	left: 0;
-	top: 40%;
-	z-index: 99;
-	font-size: 0;
-	text-decoration: none;
-}
-.testimonials-section .owl-prev:before {
-	content: "\f104";
-	font-size: 42px;
-	color: #fff;
-	font-family: FontAwesome;
-	border-left: 1px solid #fff;
-	height: 43px;
-	padding: 0 0 0 15px;
-}
-/***************************************************TESTIOMONIALS SECTION END***************************************************/
-
-
-
-/************************************************CLIENTS SECTION START************************************************/
-
-.client-logo-row {
-	float: left;
-	width: 100%;
-	margin: 75px 0 0 0;
-}
-.client-logo-row ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.client-logo-row ul li {
-	float: left;
-	padding: 0;
-	width: 169px;
-}
-.client-logo-row .holder {
-	width: 100%;
-	margin: 0 auto;
-	display: block;
-	overflow: hidden;
-	background-color: rgba(255,255,255,0.15);
-	padding: 20px 0 20px 10px;
-	border-radius: 3px;
-	float: none;
-}
-/************************************************CLIENTS SECTION END************************************************/
-
-
-
-/****************************************************POST AREA START****************************************************/
-
-.post-section {
-	float: left;
-	width: 100%;
-	background-color: #f5f5f5;
-}
-.post-box {
-	float: left;
-	width: 100%;
-	border-radius: 3px;
-	overflow: hidden;
-	background: #fff;
-}
-.post-box .frame {
-	float: left;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-}
-.post-box .frame img {
-	display: block;
-	width: 100%;
-}
-.post-box .text-box {
-	float: left;
-	width: 100%;
-	padding: 20px 23px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.post-box .text-box strong.date {
-	float: left;
-	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
-	padding: 0 30px 15px 0;
-}
-.post-box .clearfix {
-	padding: 0;
-}
-.post-box blockquote {
-	border-left: 0;
-	font-size: 24px;
-	padding: 0;
-	margin: 0 74px 28px 165px;
-	position: relative;
-	font: 300 24px/36px 'Roboto', sans-serif;
-}
-.post-box blockquote:before {
-	content: "\f10d";
-	font-family: FontAwesome;
-	font-size: 36px;
-	color: #A020F0;
-	position: absolute;
-	left: -60px;
-	top: 0;
-}
-.post-box blockquote p {
-	font: 300 24px/36px 'Roboto', sans-serif;
-	margin: 0;
-}
-.post-box .text-box strong.date .fa {
-	padding: 0 6px 0 0;
-}
-.post-box .text-box h4 {
-	line-height: 26px;
-	clear: both;
-	margin: 0 0 18px 0;
-}
-.post-box .text-box .thumb {
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	overflow: hidden;
-	margin: 0 12px 0 0;
-	float: left;
-}
-.post-box .text-box .thumb img {
-	display: block;
-	width: 100%;
-}
-.post-box .text-box strong.name {
-	font: 400 15px/15px 'Roboto', sans-serif;
-	float: left;
-	padding: 14px 0 0;
-}
-.post-box .text-box strong.name span {
-	color: #222;
-}
-.post-box .frame:hover:before {
-	transform: scaleX(1);
-	-webkit-transform: scaleX(1);
-	-moz-transform: scaleX(1);
-	opacity: 1;
-}
-.post-box .frame:hover:after {
-	opacity: 1;
-	transform: scaleY(1);
-	-webkit-transform: scaleY(1);
-	-moz-transform: scaleY(1);
-}
-.post-box .frame:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.4);
-	opacity: 0;
-	transform: scaleX(0);
-	-webkit-transform: scaleX(0);
-	-moz-transform: scaleX(0);
-	transition: all 0.5s ease-in;
-}
-.post-box .frame:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.4);
-	opacity: 0;
-	transform: scaleY(0);
-	-webkit-transform: scaleY(0);
-	-moz-transform: scaleY(0);
-	transition: all 0.5s ease-in;
-}
-.post-box a.btn-style-1 {
-	float: right;
-}
-.post-box .owl-next {
-	position: absolute;
-	right: 20px;
-	top: 43%;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	font-size: 0;
-}
-.post-box .owl-next:before {
-	content: "\f054";
-	text-align: center;
-	display: block;
-	line-height: 30px;
-	font-size: 13px;
-	color: #000;
-	font-family: FontAwesome;
-	text-indent: 3px;
-}
-.post-box .owl-next:hover:before {
-	color: #fff;
-}
-.post-box .owl-prev {
-	position: absolute;
-	left: 20px;
-	top: 43%;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	font-size: 0;
-}
-.post-box .owl-prev:before {
-	content: "\f053";
-	text-align: center;
-	display: block;
-	line-height: 31px;
-	font-size: 13px;
-	color: #000;
-	font-family: FontAwesome;
-}
-.post-box .owl-prev:hover:before {
-	color: #fff;
-}
-.blog-medium {
-	float: left;
-	width: 100%;
-}
-.blog-medium .post-box .frame {
-	width: auto;
-	margin: 0 30px 0 0;
-}
-.blog-medium .post-box .text-box {
-	float: none;
-	overflow: hidden;
-	width: auto;
-	padding: 30px 16px 21px 0;
-}
-.post-section .comment-form {
-	float: left;
-	width: 100%;
-	margin: 0 0 30px 0;
-}
-.post-section .comment-form form input[type="text"] {
-	float: left;
-	width: 100%;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background: #fff;
-	padding: 0 15px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
-	margin: 0 0 30px 0;
-	height: 43px;
-}
- .post-section .comment-form form input::-webkit-input-placeholder {
- color:#666;
- opacity:1;
-}
- .post-section .comment-form form input:-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .post-section .comment-form form input::-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .post-section .comment-form form input:-ms-input-placeholder {
- color:#666;
- opacity:1;
-}
-.post-section .comment-form form textarea {
-	float: left;
-	width: 100%;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background: #fff;
-	padding: 17px 15px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
-	margin: 0 0 30px 0;
-	height: 190px;
-	resize: none;
-}
- .post-section .comment-form form textarea::-webkit-input-placeholder {
- color:#666;
- opacity:1;
-}
- .post-section .comment-form form textarea:-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .post-section .comment-form form textarea::-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .post-section .comment-form form textarea:-ms-input-placeholder {
- color:#666;
- opacity:1;
-}
-.post-section .comment-form form input[type="submit"] {
-	float: right;
-	padding: 12px 30px;
-	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	margin: 0;
-	border: 0;
-}
-
-/****************************************************POST AREA END****************************************************/
-
-/**************************************POPULAR JOB CATEGPRIES START**************************************/
-
-.popular-job-caregries {
-	float: left;
-	width: 100%;
-	padding: 0;
-	background: #f5f5f5;
-	position: relative;
-}
-.popular-job-caregries .holder {
-	display: block;
-	width: 100%;
-	background: #fff;
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
-	padding: 16px 0 0 0;
-	margin: -50px auto 0;
-}
-.popular-job-caregries .holder h4 {
-	border-bottom: 1px solid #ccc;
-	padding: 0 0 15px 0;
-}
-.popular-job-caregries .box {
-	box-shadow: none;
-	padding: 0;
-	margin: 30px 0;
-	border-right: 1px solid #ccc;
-}
-.popular-job-caregries .last-child {
-	border: 0;
-}
-.popular-job-caregries.popular-categories .box h4 {
-	padding: 0;
-	margin: 0 0 20px 0;
-	border: 0;
-}
-.popular-hob-slider .item {
-	margin: 0;
-}
-.popular-job-slider .item img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-#popular-job-slider .col-md-3 {
-	width: 100%;
-}
-#popular-job-slider .owl-next {
-	position: absolute;
-	right: 0;
-	top: 0;
-	font-size: 0;
-}
-#popular-job-slider .owl-next:before {
-	content: "\f054";
-	position: absolute;
-	right: 0;
-	top: -33px;
-	font-size: 14px;
-	font-family: FontAwesome;
-}
-#popular-job-slider .owl-next:after {
-	content: '';
-	position: absolute;
-	left: -14px;
-	top: -33px;
-	height: 19px;
-	width: 1px;
-	background: #ccc;
-}
-#popular-job-slider .owl-prev {
-	position: absolute;
-	right: 0;
-	top: -33px;
-	font-size: 0;
-}
-#popular-job-slider .owl-prev:before {
-	content: "\f053";
-	position: absolute;
-	right: 17px;
-	top: 0;
-	font-size: 14px;
-	font-family: FontAwesome;
-}
-#wrapper .header-2.cp_sticky {
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: 9999;
-	padding: 15px 0;
-}
-#wrapper .header-2.cp_sticky #nav {
-	padding: 11px 0 0 0;
-	border: 0;
-}
-/**************************************POPULAR JOB CATEGPRIES END**************************************/
-
-
-
-/******************************************PROECCSS SECTION START******************************************/
-
-.process-section {
-	float: left;
-	width: 100%;
-	background: #fff;
-	border-bottom: 1px solid #ccc;
-	padding: 50px 0;
-}
-.process-section .icon-box {
-	float: left;
-	width: 68px;
-	height: 68px;
-	margin: 0 15px 0 0;
-	border-radius: 100%;
-	text-align: center;
-	line-height: 68px;
-	font-size: 30px;
-	color: #fff;
-}
-.process-section .text-box {
-	overflow: hidden;
-}
-.process-section .text-box h4 {
-	margin: 0 0 12px 0;
-}
-.process-section .text-box p {
-	margin: 0;
-}
-.process-section .icon-box.p-color-2 {
-	background: #8bc34a;
-}
-.process-section .icon-box.p-color-3 {
-	background: #f44336;
-}
-/******************************************PROECCSS SECTION END******************************************/
-
-
-
-/*******************************************************FACT AND FIGURES SECTION START*******************************************************/
-
-.facts-box {
-	float: left;
-	width: 100%;
-	background-image: url(../images/facts-bg.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-size: cover;
-	background-attachment: fixed;
-	background-color: #000;
-	padding: 50px 0;
-}
-.facts-box .round-icon {
-	border: 2px solid #fff;
-	border-radius: 100%;
-	width: 97px;
-	height: 97px;
-	background: rgba(255,255,255,0.10);
-	font-size: 42px;
-	line-height: 97px;
-	color: #fff;
-	display: block;
-	text-align: center;
-	margin: 0 auto 10px;
-}
-.facts-box strong.number {
-	display: block;
-	text-align: center;
-	font: 300 60px 'Roboto', sans-serif;
-	color: #fff;
-	padding: 0 0 35px 0;
-}
-.facts-box a.facts-btn {
-	float: left;
-	width: 100%;
-	padding: 14px 0;
-	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #fff;
-	text-align: center;
-	border-radius: 3px;
-	text-decoration: none;
-}
-.btn-bg-color-1 {
-	position: relative;
-}
-.btn-bg-color-1:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: -7px;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 7px 7px 7px;
-}
-.btn-bg-color-2 {
-	position: relative;
-	background: #f44336;
-}
-.btn-bg-color-2:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: -7px;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 7px 7px 7px;
-	border-color: transparent transparent #f44336 transparent;
-}
-.btn-bg-color-3 {
-	position: relative;
-	background: #f7a51e;
-}
-.btn-bg-color-3:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: -7px;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 7px 7px 7px;
-	border-color: transparent transparent #f7a51e transparent;
-}
-.btn-bg-color-4 {
-	position: relative;
-	background: #8bc34a;
-}
-.btn-bg-color-4:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: -7px;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 7px 7px 7px;
-	border-color: transparent transparent #8bc34a transparent;
-}
-.home-3-testimonials {
-	padding: 80px 0;
-}
-/*******************************************************FACT AND FIGURES SECTION END*******************************************************/
-
-
-
-/*************************************************COMPANIES SECTION START*************************************************/
-
-.companies-section {
-	float: left;
-	width: 100%;
-}
-.companies-section ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.companies-section ul li {
-	float: left;
-	padding: 0;
-}
-/*************************************************COMPANIES SECTION END*************************************************/
-
-
-
-/********************************************************MAP BANNER START********************************************************/
-
-.map-banner {
-	float: left;
-	width: 100%;
-}
-.map-banner .caption .holder form {
-	width: 100%;
-	background: none;
-	box-shadow: none;
-}
-.map-banner .caption {
-	top: inherit;
-	bottom: 0;
-}
-/********************************************************MAP BANNER END********************************************************/
-
 
 /**************************************************INNER BANNER START**************************************************/
 
@@ -1956,91 +672,6 @@ padding: 10px 0;
 	padding: 37px 0;
 	text-align: center;
 }
-/**************************************************INNER BANNER END**************************************************/
-
-
-
-.blog-post {
-	padding: 60px 0 30px 0;
-}
-.blog-post .post-box {
-	margin-bottom: 30px;
-}
-/**************************************************PAGINATION SECTION START**************************************************/
-
-.pagination-box {
-	float: left;
-	width: 100%;
-}
-.pagination-box .pager {
-	margin: 10px 0 30px 0;
-}
-.pagination-box .pager li {
-	margin: 0 1px;
-}
-.pagination-box .pager li > a, .pagination-box .pager li > span {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 15px;
-	display: inline-block;
-	padding: 9px 13px;
-	border-radius: 3px;
-	font: 400 14px/14px 'Roboto', sans-serif;
-}
-.pagination-box .pager li a.prv, .pagination-box .pager li a.next {
-	border: 0;
-	background: none;
-	border: 1px solid rgba(0,0,0,0);
-}
-.pagination-box .pager li > a:hover, .pagination-box .pager li > a:focus {
-	text-decoration: none;
-	border: 1px solid rgba(0,0,0,0);
-	color: #fff;
-}
-.pagination-box .pager li.active a {
-	color: #fff;
-	border: 1px solid rgba(0,0,0,0);
-}
-.error-page {
-	float: left;
-	width: 100%;
-	text-align: center;
-	padding: 60px 0;
-}
-.error-page h2 {
-	font: 700 36px/36px 'Roboto', sans-serif;
-	color: #222;
-	margin: 0 0 20px 0;
-}
-.error-page p {
-	font: 500 16px/16px 'Roboto', sans-serif;
-	color: #222;
-	margin: 0;
-}
-.privacy-policy .post-box .text-box h4 {
-	margin: 0;
-}
-.privacy-policy ul {
-	padding: 0 0 20px 20px;
-	margin: 0;
-	list-style: none;
-}
-.privacy-policy span {
-	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #888;
-}
-.privacy-policy ul li {
-	padding: 0;
-	display: block;
-	overflow: hidden;
-	font: 400 14px/22px 'Roboto', sans-serif;
-	color: #888;
-}
-.terms ul {
-	padding: 0;
-}
-/**************************************************PAGINATION SECTION END**************************************************/
-
 
 /*************************************************SIGNUP SECTION START*************************************************/
 
@@ -2066,39 +697,38 @@ padding: 10px 0;
 	float: left;
 	width: 100%;
 	height: 45px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	padding: 0 10px 0 55px;
 	margin: 0 0 20px 0;
 	border-radius: 3px;
 }
-
 .signup-section .holder input[type="password"] {
 	float: left;
 	width: 100%;
 	height: 45px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	padding: 0 10px 0 55px;
 	margin: 0 0 20px 0;
 	border-radius: 3px;
 }
  .signup-section .holder input::-webkit-input-placeholder {
- color:#666;
+ color:#000;
  opacity:1;
 }
  .signup-section .holder input:-moz-placeholder {
- color:#666;
+ color:#000;
  opacity:1;
 }
  .signup-section .holder input::-moz-placeholder {
- color:#666;
+ color:#000;
  opacity:1;
 }
  .signup-section .holder input:-ms-input-placeholder {
- color:#666;
+ color:#000;
  opacity:1;
 }
 .select-box {
@@ -2109,11 +739,11 @@ padding: 10px 0;
 .selector {
 	min-width: 60px;
 	position: relative;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	border-radius: 3px;
 	height: 45px;
 	font: 400 14px/40px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	padding: 5px 0 0 0;
 }
 .selector select {
@@ -2122,9 +752,9 @@ padding: 10px 0;
 	position: absolute;
 	width: 100%;
 	z-index: 1;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	font: 400 14px/40px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	height: 45px;
 	padding: 0;
 }
@@ -2133,9 +763,9 @@ select {
 	padding: 8px 0 8px 8px;
 }
 input.input-text, select, textarea, span.custom-select {
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	font: 400 14px/40px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	border: medium none;
 	line-height: normal;
 	height: 45px;
@@ -2165,7 +795,6 @@ select option {
 	text-transform: uppercase;
 	border: 0;
 }
-
 .upload-box {
 	float: left;
 	width: 100%;
@@ -2175,13 +804,13 @@ select option {
 	float: left;
 	width: 100%;
 	position: relative;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	border-radius: 3px;
 	padding: 4px;
 }
 .upload-box .hold a {
 	font: 400 14px/36px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	text-decoration: none;
 }
 .upload-box .btn-file {
@@ -2196,7 +825,6 @@ select option {
 	border-radius: 3px;
 	cursor: pointer;
 }
-
 .upload-box .btn-file input[type=file] {
 	position: absolute;
 	top: 0;
@@ -2221,7 +849,7 @@ select option {
 .upload-row strong {
 	display: block;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	padding: 0 0 0 63px;
 }
 .signup-section .holder em {
@@ -2325,56 +953,10 @@ select option {
 }
 /*************************************************SIGNUP SECTION END*************************************************/
 
-
-/************************************CANDIDATES LISTINGS SECTION START************************************/
-
-.candidates-listing {
-	float: left;
-	width: 100%;
-	padding: 30px 0;
-}
-.candidates-listing .holder {
-	margin: 0 auto;
-}
-.candidates-search-bar {
-	float: left;
-	width: 100%;
-	background: #fff;
-	padding: 30px 0;
-}
-.candidates-search-bar form {
-	margin: 0 auto;
-	width: 100%;
-	border-radius: 3px;
-	padding: 30px;
-}
-.candidates-search-bar form input[type="text"] {
-	background: #fff;
-	border: 0 none;
-	border-radius: 3px;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-	box-sizing: border-box;
-	color: #777;
-	float: left;
-	font: 400 14px "Roboto", sans-serif;
-	height: 45px;
-	padding: 0 20px;
-	width: 100%;
-}
-.candidates-search-bar form button[type="submit"] {
-	background: #fff;
-	border: 0 none;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-	float: left;
-	font-size: 18px;
-	height: 45px;
-	width: 100%;
-}
-
 .resumes-section {
 	float: left;
 	width: 100%;
-	background: #f5f5f5;
+	background: #fff;
 }
 .resumes-content {
 	float: left;
@@ -2392,48 +974,6 @@ select option {
 	margin: 0 0 10px 0;
 	background: #fff;
 }
-.resumes-section a.load-more {
-	background: #fff none repeat scroll 0 0;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	box-shadow: 1px 5px 7px 0 rgba(0, 0, 0, 0.15);
-	color: #222;
-	display: inline-block;
-	font: 900 14px/14px "Roboto", sans-serif;
-	overflow: hidden;
-	padding: 20px 60px;
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	transition: all 0.3s ease-in 0s;
-	z-index: 11;
-}
-.resumes-section a.load-more .fa {
-	padding: 0 6px 0 0;
-}
-.resumes-section a.load-more::before {
-	background-color: #A020F0;
-	content: "";
-	height: 100%;
-	left: -12px;
-	opacity: 0;
-	position: absolute;
-	top: -3px;
-	transform: rotate(-33deg) scaleY(1);
-	transition: all 0.3s ease-in 0s;
-	width: 35%;
-	z-index: -1;
-}
-.resumes-section a.load-more:hover {
-	color: #000;
-}
-.resumes-section a.load-more:hover::before {
-	left: 0;
-	opacity: 1;
-	transform: rotate(0deg) scaleY(7);
-	width: 100%;
-}
 .resumes-content .box .frame {
 	float: left;
 	margin: 0 30px 0 0;
@@ -2450,14 +990,14 @@ select option {
 .resumes-content .box .text-box strong {
 	float: left;
 	font: 400 13px/13px 'Roboto', sans-serif;
-	color: #888;
+	color: #000;
 	padding: 0 20px 0 0;
 }
 .resumes-content .box .text-box strong .fa {
 	padding: 0 6px 0 0;
 }
 .resumes-content .box .text-box strong a {
-	color: #888;
+	color: #000;
 }
 .resumes-content .box .text-box strong a:hover {
 	color: #A020F0;
@@ -2466,7 +1006,7 @@ select option {
 .resumes-content .box .text-box span.price {
 	display: block;
 	font: 700 18px/18px 'Roboto', sans-serif;
-	color: #222;
+	color: #000;
 	padding: 0 0 15px 0;
 }
 .resumes-content .box .text-box .clearfix {
@@ -2536,23 +1076,6 @@ select option {
 	width: 100%;
 	margin-bottom: 30px;
 }
-.check-filter ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.check-filter ul li {
-	float: left;
-	padding: 0 0 0 13px;
-}
-.check-filter ul li:first-child {
-	padding: 0;
-}
-.check-filter label {
-	font: 900 14px/16px 'Roboto', sans-serif;
-	color: #222;
-	float: left;
-}
 .summary-box {
 	float: left;
 	width: 100%;
@@ -2574,7 +1097,7 @@ select option {
 }
 .summary-box strong.title b {
 	font-weight: 400;
-	color: #333;
+	color: #000;
 }
 .summary-box .col {
 	float: left;
@@ -2597,7 +1120,7 @@ select option {
 .summary-box span {
 	font: 400 15px/15px 'Roboto', sans-serif;
 	display: block;
-	color: #333;
+	color: #000;
 	padding: 0 0 20px 0;
 }
 .summary-box .col p {
@@ -2632,7 +1155,7 @@ select option {
 .progress-box strong.title {
 	float: left;
 	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #333;
+	color: #000;
 	width: 22%;
 }
 .progress-box .progress {
@@ -2701,7 +1224,7 @@ select option {
 	top: -33px;
 }
 .popular-companies .owl-next::after {
-	background: #ccc none repeat scroll 0 0;
+	background: #000 none repeat scroll 0 0;
 	content: "";
 	height: 19px;
 	left: -14px;
@@ -2731,7 +1254,7 @@ select option {
 .alphabets a {
 	float: left;
 	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #333;
+	color: #000;
 	text-transform: uppercase;
 	padding: 0 0 10px 21px;
 }
@@ -2780,7 +1303,7 @@ select option {
 .alphabets-row a {
 	text-decoration: none;
 	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	text-decoration: none;
 	display: block;
 	padding: 14px 0;
@@ -2813,7 +1336,7 @@ select option {
 	float: left;
 	width: 100%;
 	background: #fff;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #000;
 }
 .resume-process h2 {
 	font-weight: 300;
@@ -2821,7 +1344,7 @@ select option {
 }
 .resume-process strong {
 	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 	display: block;
 	text-align: center;
 	padding: 0 0 50px 0;
@@ -2942,7 +1465,7 @@ select option {
 	float: right;
 	background: #fff;
 	padding: 20px 42px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	color: #222;
 	margin: 3px 0 0 0;
 }
@@ -2962,7 +1485,7 @@ select option {
 }
 .resum-form label {
 	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #333;
+	color: #000;
 	display: block;
 	margin: 0 0 10px 0;
 }
@@ -2976,37 +1499,37 @@ select option {
 	padding: 0 20px;
 	margin: 0 0 28px 0;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 }
 .resum-form input[type="email"] {
 	float: left;
 	width: 100%;
 	height: 43px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	padding: 0 20px;
 	margin: 0 0 28px 0;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 }
 .resum-form input[type="password"] {
 	float: left;
 	width: 100%;
 	height: 43px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	padding: 0 20px;
 	margin: 0 0 28px 0;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 }
 .resum-form input[type="url"] {
 	float: left;
 	width: 100%;
 	height: 43px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	padding: 0 20px;
 	margin: 0 0 28px 0;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
+	color: #000;
 }
 .resum-form .upload-box .btn-file {
 	float: right;
@@ -3015,56 +1538,21 @@ select option {
 .resum-form .upload-box .hold a {
 	padding: 0 0 0 20px;
 }
- .resum-form input::-webkit-input-placeholder {
- color:#666;
- opacity:1;
-}
- .resum-form input:-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .resum-form input::-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .resum-form input:-ms-input-placeholder {
- color:#666;
- opacity:1;
-}
 .resum-form textarea {
 	float: left;
 	width: 100%;
 	height: 113px;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	padding: 15px 20px;
 	box-sizing: border-box;
 	margin: 0 0 28px 0;
 	resize: none;
 	font: 400 14px/14px 'Roboto', sans-serif;
-	color: #666;
-}
- .resum-form textarea::-webkit-input-placeholder {
- color:#666;
- opacity:1;
-}
- .resum-form textarea:-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .resum-form textarea::-moz-placeholder {
- color:#666;
- opacity:1;
-}
- .resum-form form textarea:-ms-input-placeholder {
- color:#666;
- opacity:1;
+	color: #000;
 }
 .resum-form .btn-col {
 	float: left;
 	width: 100%;
-	margin: 30px 0 0 0;
-	padding: 30px 0 0 0;
-	border-top: 1px solid #ccc;
 }
 .resum-form input[type="submit"] {
 	float: left;
@@ -3080,61 +1568,6 @@ select option {
 	width: 100%;
 	margin: 0 0 28px 0;
 }
-.accordion-open span {
-	color: #fff;
-	padding: 0 10px 0 0;
-}
-.accordion-close span .fa {
-	color: #fff;
-}
-.accordion-open span .fa {
-	color: #fff;
-}
-.accordion-close span {
-	color: #fff;
-	padding: 0 10px 0 0;
-}
-div.contain_cp_accor {
-	float: left;
-	width: 100%;
-	background: #f5f5f5;
-}
-div.content_cp_accor {
-	background: #f5f5f5;
-	padding: 20px;
-}
-div.content_cp_accor ul {
-	padding: 0;
-	margin: 0;
-	float: left;
-	width: 100%;
-	list-style: none;
-}
-div.content_cp_accor ul li {
-	float: left;
-	padding: 0;
-	width: 100%;
-}
-.accordion_cp.accordion-open {
-	border: 0 none;
-}
-.accordion-open span i::before {
-	content: "";
-}
-.accordion-close span i::before {
-	content: "";
-}
-.resum-form .accordion_cp {
-	float: left;
-	width: 100%;
-	height: 45px;
-	font: 900 14px/45px 'Roboto', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	cursor: pointer;
-	margin: 0 0 10px 0;
-}
 .resum-form .selector {
 	margin: 0 0 28px 0;
 }
@@ -3146,20 +1579,11 @@ div.content_cp_accor ul li {
 
 /*************************************************************WRAPPER End*************************************************************/
 
-
-
-/****************************************************TRANSITION CSS START****************************************************/
-
-TRANSITION-FOR-IMAGES {
-	transition: all 0.5s linear 0s;
-	-moz-transition: all 0.5s linear 0s;
-	-webkit-transition: all 0.5s linear 0s;
-}
 .FONTS {
 	font-family: 'Roboto', sans-serif;
 }
 .padd-tb {
-	padding: 60px 0;
+	padding: 30px 0;
 }
 .padd-top {
 	padding: 60px 0 0 0;
@@ -3167,44 +1591,6 @@ TRANSITION-FOR-IMAGES {
 .padd-btm {
 	padding: 0 0 60px 0;
 }
-.company-small {
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
-}
-.job-detail .company-small li {
-	width: 33%;
-	float: left;
-	display: inline-block;
-	padding: 0 0 10px;
-}
-.job-detail .company-small li strong {
-	display: block;
-}
-.job-detail .company-social {
-	margin-left: 20px;
-	float: left;
-}
-.job-detail .company-social li {
-	display: inline-block;
-	padding: 0px;
-}
-.job-detail .company-social li .fa {
-	position: inherit;
-	color: #666
-}
-.job-detail .company-social li a {
-	background: #e1e1e1;
-	width: 30px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	font-size: 14px;
-	border-radius: 100%;
-	display: block;
-	color: #fff;
-}
-
 
 
 /****************************************************TRANSITION CSS END****************************************************/
@@ -3239,7 +1625,7 @@ TRANSITION-FOR-IMAGES {
 
 /*************************************TEXT COLOR START*************************************/
 
-#nav li:hover > a, .banner-outer .caption .holder form button[type="submit"], .banner-outer .caption .holder .btn-row a .fa, .cp_side-menu a .fa, .user-option-col a .fa, .sidebar .box .text-box h4 a, .sidebar .box .text-box a.text .fa, .sidebar .box .text-box strong.price .fa, .price-table .box h4, .price-table .box strong.amount sub, .testimonials-section .owl-prev:hover:before, .testimonials-section .owl-next:hover:before, .post-box .text-box strong.date .fa, .post-box .text-box strong.name, .post-box .text-box:hover h4 a, #footer .box ul li a, .bottom-row strong.copyrights a:hover, #popular-job-slider .owl-next:before, #popular-job-slider .owl-prev:before, .sidebar-jobs ul li a, .sidebar-jobs ul li span .fa, .pagination-box .pager li > a, .pagination-box .pager li > span, .sidebar .box .recent-post .text-box a .fa, .sidebar .box .recent-post .text-area a .fa, .sidebar .box .recent-post ul li:hover strong a, .sidebar .box .archives-box ul li a:hover, .post-box blockquote p, .testimonials-style-3 .box p, .testimonials-style-3 .col p, .input-box .fa, .check-box strong a:hover, .signup-section .holder em, .signup-section .holder em a, .signup-section .holder a.login, .candidates-search-bar form button[type="submit"], .resumes-section .box .text-box h4, .resumes-content .box .text-box strong .fa, .resumes-content .box .text-box span.price .fa, .tags a, .resumes-section a.load-more .fa, .related-people .text-box strong.name a, .related-people .text-box span .fa, .summary-box strong.title, .popular-companies .owl-next:before, .popular-companies .owl-prev:before, .alphabets-row a:hover, .alphabets a:hover, .job-detail ul li .fa{
+#nav li:hover > a, .banner-outer .caption .holder form button[type="submit"], .banner-outer .caption .holder .btn-row a .fa, .cp_side-menu a .fa, .user-option-col a .fa, .sidebar .box .text-box h4 a, .sidebar .box .text-box a.text .fa, .sidebar .box .text-box strong.price .fa, .price-table .box h4, .price-table .box strong.amount sub, .testimonials-section .owl-prev:hover:before, .testimonials-section .owl-next:hover:before, .post-box .text-box strong.date .fa, .post-box .text-box strong.name, .post-box .text-box:hover h4 a, #footer .box ul li a, .bottom-row strong.copyrights a:hover, #popular-job-slider .owl-next:before, #popular-job-slider .owl-prev:before, .sidebar-jobs ul li a, .sidebar-jobs ul li span .fa, .pagination-box .pager li > a, .pagination-box .pager li > span, .sidebar .box .recent-post .text-box a .fa, .sidebar .box .recent-post .text-area a .fa, .sidebar .box .recent-post ul li:hover strong a, .sidebar .box .archives-box ul li a:hover, .post-box blockquote p, .testimonials-style-3 .box p, .testimonials-style-3 .col p, .input-box .fa, .check-box strong a:hover, .signup-section .holder em, .signup-section .holder em a, .signup-section .holder a.login, .candidates-search-bar form button[type="submit"], .resumes-content .box .text-box strong .fa, .resumes-content .box .text-box span.price .fa, .tags a, .related-people .text-box strong.name a, .related-people .text-box span .fa, .summary-box strong.title, .popular-companies .owl-next:before, .popular-companies .owl-prev:before, .alphabets-row a:hover, .alphabets a:hover, .job-detail ul li .fa{
 
 	color:#A020F0;
 

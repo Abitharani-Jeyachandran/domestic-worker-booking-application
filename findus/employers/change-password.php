@@ -80,7 +80,7 @@ return true;
 
 </head>
 
-<body class="theme-style-1">
+<body class="index">
 <div id="wrapper">
 <!--HEADER START-->
  <?php include('includes/header.php');?>

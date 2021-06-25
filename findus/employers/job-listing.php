@@ -37,7 +37,7 @@ else{
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
@@ -129,27 +129,28 @@ foreach($results as $result)
 <div class="hold" style="width:100%">
 
  <!-- Job Title -->
-<h4><a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" title='View Details'><?php echo htmlentities($result->jobCategory);?></a> <em><a href="edit-job.php?jobid=<?php echo htmlentities($result->jobId);?>" title='Edit Job Details'>(Edit this job)</a></em></h4>
+<h4><a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" title='View Details'><?php echo htmlentities($result->jobCategory);?></a> <a href="edit-job.php?jobid=<?php echo htmlentities($result->jobId);?>" title='Edit Job Details'>(Edit this job)</a></h4>
 
 <!-- Job Title limit 250 chars-->
 <p> <?php echo substr($result->jobDescription,0,300);?></p>
+<p><b>Amount: LKR <?php echo htmlentities($result->salaryPackage); ?></b></p>
 
 <!-- Job Location -->
 <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'>
 
-  <?php echo htmlentities($result->jobLocation);?></a>
+  <?php echo htmlentities($result->jobLocation);?>
+</a>
 
-<!-- Job Posting date -->
+</br></br><!-- Job Posting date -->
 <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>" class="text" title='View Details'>
 <?php echo htmlentities($result->postinDate); ?>
  </a>
+
 
 </div>
 </div>
 
 <!-- Job Package -->
-<strong class="price">
-  LKR <?php echo htmlentities($result->salaryPackage); ?></strong> <br />
 
 </div>
 

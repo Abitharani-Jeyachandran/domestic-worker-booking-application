@@ -65,7 +65,7 @@ $vid=$_GET['viewid'];
 
 
 
-<body class="theme-style-1">
+<body class="index">
 
 <!--WRAPPER START-->
 
