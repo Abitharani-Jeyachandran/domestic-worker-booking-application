@@ -29,7 +29,7 @@
                 </ul>
               </li>
 
- <li><a href="candidates-listings.php">Clients List</a></li>
+ <li><a href="jobseeker-listings.php">Clients List</a></li>
             </ul>
 
           </div>

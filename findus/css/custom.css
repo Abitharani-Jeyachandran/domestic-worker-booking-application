@@ -239,7 +239,7 @@ body {
 	height: 44px;
 	border-radius: 100%;
 	float: right;
-	margin: 8px 0 0 20px;
+	margin: 0 0 0 20px;
 }
 .user-option-col .thumb .dropup, .user-option-col .thumb .dropdown {
 	float: left;
@@ -261,7 +261,14 @@ body {
 	border-color: transparent;
 	color: inherit;
 }
-.user-option-col .thumb .btn-default:active:hover, .user-option-col .thumb .btn-default.active:hover, .user-option-col .thumb .open > .dropdown-toggle.btn-default:hover, .user-option-col .thumb .btn-default:active:focus, .user-option-col .thumb .btn-default.active:focus, .user-option-col .thumb .open > .dropdown-toggle.btn-default:focus, .user-option-col .thumb .btn-default.focus:active, .user-option-col .thumb .btn-default.active.focus, .user-option-col .thumb .open > .dropdown-toggle.btn-default.focus {
+.user-option-col .thumb .btn-default:active:hover,
+.user-option-col .thumb .btn-default.active:hover, .user-option-col .thumb .open > .dropdown-toggle.btn-default:hover,
+.user-option-col .thumb .btn-default:active:focus,
+.user-option-col .thumb .btn-default.active:focus,
+.user-option-col .thumb .open > .dropdown-toggle.btn-default:focus,
+.user-option-col .thumb .btn-default.focus:active,
+.user-option-col .thumb .btn-default.active.focus,
+.user-option-col .thumb .open > .dropdown-toggle.btn.default.focus {
 	background-color: transparent;
 	border-color: transparent;
 	color: inherit;
@@ -276,9 +283,10 @@ body {
 	margin: 0;
 	min-width: 153px;
 	padding: 0;
-	top: 62px;
+	top: 72px;
 	z-index: 1000;
 }
+
 .user-option-col .thumb .dropdown-menu li {
 	padding: 0;
 	display: block;

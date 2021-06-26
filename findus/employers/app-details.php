@@ -35,7 +35,7 @@ $query1->bindParam(':status',$status,PDO::PARAM_STR);
 
  $query1->execute();
  echo '<script>alert("Status has been updated")</script>';
- echo "<script>window.location.href ='candidates-listings.php'</script>";
+ echo "<script>window.location.href ='jobseeker-listings.php'</script>";
 }
 
 

@@ -160,7 +160,7 @@ else
      ;?></a>  </div>
 
 
-                  <div class="btn-row"> <a href="candidates-details.php?canid=<?php echo ($row->id);?>" class="contact">View Detail</a> <a href="app-details.php?jobid=<?php echo ($row->JobId);?> && name=<?php echo htmlentities ($row->FullName);?>&& jsid=<?php echo htmlentities ($row->id);?>" class="login">Request Details</a></div>
+                  <div class="btn-row"> <a href="jobseeker-details.php?canid=<?php echo ($row->id);?>" class="contact">View Detail</a> <a href="app-details.php?jobid=<?php echo ($row->JobId);?> && name=<?php echo htmlentities ($row->FullName);?>&& jsid=<?php echo htmlentities ($row->id);?>" class="login">Request Details</a></div>
 
                 </div>
                 <hr />
