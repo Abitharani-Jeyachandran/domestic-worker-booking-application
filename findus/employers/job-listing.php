@@ -106,7 +106,7 @@ $total_rows=$query1->rowCount();
 $total_no_of_pages = ceil($total_rows / $no_of_records_per_page);
   $second_last = $total_no_of_pages - 1; // total page minus 1
 // Fetching jobs
-$sql = "SELECT tbljobs.*,tblemployers.CompnayLogo from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where employerId=:eid LIMIT $offset, $no_of_records_per_page";
+$sql = "SELECT tbljobs.*,tblemployers.Image from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where employerId=:eid LIMIT $offset, $no_of_records_per_page";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
 $query->execute();
@@ -123,7 +123,7 @@ foreach($results as $result)
 <div class="box">
 <div class="thumb">
  <!-- logo -->
-  <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>"><img src="employerslogo/<?php echo htmlentities($result->CompnayLogo);?>" alt="img" width="60" height="60"></a></div>
+  <a href="job-details.php?jobid=<?php echo htmlentities($result->jobId);?>"><img src="employerslogo/<?php echo htmlentities($result->Image);?>" alt="img" width="60" height="60"></a></div>
 
 <div class="text-col">
 <div class="hold" style="width:100%">

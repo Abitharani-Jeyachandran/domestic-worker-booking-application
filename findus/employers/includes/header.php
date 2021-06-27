@@ -56,7 +56,7 @@
 //Geeting Employer Id
 $empid=$_SESSION['emplogin'];
 // Fetching jobs
-$sql = "SELECT  CompnayLogo from tblemployers where id=:eid";
+$sql = "SELECT  Image from tblemployers where id=:eid";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
 $query->execute();
@@ -66,7 +66,7 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 { ?>
 
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="employerslogo/<?php echo htmlentities($result->CompnayLogo)?>" alt="Company Logo" width="44" height="44" style="border: solid 1px #000000;"></button>
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="employerslogo/<?php echo htmlentities($result->Image)?>" alt="Company Logo" width="44" height="44" style="border: solid 1px #000000;"></button>
 <?php }} ?>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 

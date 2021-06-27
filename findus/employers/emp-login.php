@@ -10,9 +10,9 @@ if(isset($_POST['signin']))
     $uname=$_POST['email'];
     $password=$_POST['password'];
     // Fetch data from database on the basis of username/email and password
-    $sql ="SELECT id,ConcernPerson,EmpEmail,EmpPassword FROM tblemployers WHERE (EmpEmail=:usname )";
+    $sql ="SELECT id,Name,NIC,EmpPassword FROM tblemployers WHERE (NIC=:usname )";
     $query= $dbh -> prepare($sql);
-    $query-> bindParam(':usname', $uname, PDO::PARAM_STR);
+    $query-> bindPName', $uname, PDO::PARAM_STR);
     $query-> execute();
     $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)

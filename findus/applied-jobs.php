@@ -129,13 +129,13 @@ foreach($results as $row)
   <hr />
               <div class="box"  style="padding-top: 20px">
 
-                <div class="thumb"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100" alt="img"></div>
+                <div class="thumb"><img src="employers/employerslogo/<?php echo $row->Image;?>" width="100" height="100" alt="img"></div>
 
                 <div class="text-col">
 
                   <h2><a href="#"><?php  echo htmlentities($row->jobCategory);?></a></h2>
 
-                  <p><?php  echo htmlentities($row->ConcernPerson);?> <em><a href="index.php">(View All Jobs)</a></em></p>
+                  <p><?php  echo htmlentities($row->Name);?> <em><a href="index.php">(View All Jobs)</a></em></p>
 
                   <a href="#" class="text">Location : <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
                   <div class="tags" style="padding-top: 10px"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>"><?php

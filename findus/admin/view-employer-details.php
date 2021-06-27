@@ -55,15 +55,15 @@ foreach($results as $row)
   <tr>
 
     <th style="color:#000;">Image</th>
-    <td style="color:#000;"><img src="../employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></td>
+    <td style="color:#000;"><img src="../employers/employerslogo/<?php echo $row->Image;?>" width="100" height="100"></td>
   </tr>
   <tr style="color:#000;">
     <th style="color:#000;">Name</th>
-    <td><?php  echo $row->ConcernPerson;?></td>
+    <td><?php  echo $row->Name;?></td>
     </tr>
     <tr style="color:#000;">
    <th>NIC No</th>
-    <td><?php  echo $row->EmpEmail;?></td>
+    <td><?php  echo $row->NIC;?></td>
     </tr>
 
 

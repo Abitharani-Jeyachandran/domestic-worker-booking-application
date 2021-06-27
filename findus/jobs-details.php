@@ -162,13 +162,13 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
   <form name="book" method="post">
-                <div class="thumb"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100" alt="img"></div>
+                <div class="thumb"><img src="employers/employerslogo/<?php echo $row->Image;?>" width="100" height="100" alt="img"></div>
 
                 <div class="text-col">
 
                   <h2><a href="#"><?php  echo htmlentities($row->jobCategory);?></a></h2>
 
-                  <p><?php  echo htmlentities($row->ConcernPerson);?></p>
+                  <p><?php  echo htmlentities($row->Name);?></p>
 
                   <a href="#" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
 </br></br></br></br></br>

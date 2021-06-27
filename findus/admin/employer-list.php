@@ -62,8 +62,8 @@ foreach($results as $row)
 {               ?>
                                     <tr>
                                         <td class="text-center" style="color:#000;"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->ConcernPerson);?></td>
-                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->EmpEmail);?></td>
+                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->Name);?></td>
+                                        <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->NIC);?></td>
                                         <?php if($row->Is_Active=='1'){ ?>
                                         <td class="font-w600" style="color:#000;"><?php echo "Active"; ?></td>
                                         <?php } else { ?>

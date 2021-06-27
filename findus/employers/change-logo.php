@@ -32,7 +32,7 @@ move_uploaded_file($_FILES["logofile"]["tmp_name"],"employerslogo/".$logoname);
 //Getting Employer Id
 $empid=$_SESSION['emplogin'];
 
-$sql="update  tblemployers set CompnayLogo=:logoname where id=:eid";
+$sql="update  tblemployers set Image=:logoname where id=:eid";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':logoname',$logoname,PDO::PARAM_STR);
@@ -107,7 +107,7 @@ $msg="Image updated Successfully";
 //Getting Employer Id
 $empid=$_SESSION['emplogin'];
 // Fetching jobs
-$sql = "SELECT CompnayLogo from  tblemployers  where id=:eid";
+$sql = "SELECT Image from  tblemployers  where id=:eid";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
 $query->execute();
@@ -125,7 +125,7 @@ foreach($results as $result)
 
 
 <div class="col-md-6 col-sm-6">
-<img src="employerslogo/<?php echo htmlentities($result->CompnayLogo)?>" width="200"><br />
+<img src="employerslogo/<?php echo htmlentities($result->Image)?>" width="200"><br />
 </div>
 
 

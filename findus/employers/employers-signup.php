@@ -31,7 +31,7 @@ $logoname=md5($logo).$extension;
 move_uploaded_file($_FILES["logofile"]["tmp_name"],"employerslogo/".$logoname);
 
 // Query for validation of  email-id
-$ret="SELECT * FROM  tblemployers where (EmpEmail=:uemail)";
+$ret="SELECT * FROM  tblemployers where (NIC=:uemail)";
 $queryt = $dbh -> prepare($ret);
 $queryt->bindParam(':uemail',$emaill,PDO::PARAM_STR);
 
@@ -41,7 +41,7 @@ if($queryt -> rowCount() == 0)
 {
 // Query for Insertion
 $isactive=1;
-$sql="INSERT INTO tblemployers(ConcernPerson,EmpEmail,EmpPassword,CompnayLogo,Is_Active) VALUES(:conrnper,:emaill,:hashedpass,:logoname,:isactive)";
+$sql="INSERT INTO tblemployers(Name,NIC,EmpPassword,Image,Is_Active) VALUES(:conrnper,:emaill,:hashedpass,:logoname,:isactive)";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':conrnper',$conrnper,PDO::PARAM_STR);

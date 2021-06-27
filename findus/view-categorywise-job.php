@@ -118,7 +118,7 @@ $total_rows=$query1->rowCount();
 $total_no_of_pages = ceil($total_rows / $no_of_records_per_page);
   $second_last = $total_no_of_pages - 1; // total page minus 1
   $vid=$_GET['viewid'];
-$sql="SELECT tbljobs.*,tblemployers.CompnayLogo,tblemployers.ConcernPerson from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId where tbljobs.jobCategory=:vid LIMIT $offset, $no_of_records_per_page";
+$sql="SELECT tbljobs.*,tblemployers.Image,tblemployers.Name from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId where tbljobs.jobCategory=:vid LIMIT $offset, $no_of_records_per_page";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':vid',$vid,PDO::PARAM_STR);
 $query->execute();
@@ -133,13 +133,13 @@ foreach($results as $row)
 
                   <div class="box">
 
-                    <div class="thumb"><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->CompnayLogo;?>" width="100" height="100"></a></div>
+                    <div class="thumb"><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><img src="employers/employerslogo/<?php echo $row->Image;?>" width="100" height="100"></a></div>
 
                     <div class="text-col">
 
                       <h4><a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>"><?php  echo htmlentities($row->jobCategory);?></a></h4>
 
-                      <p><?php  echo htmlentities($row->ConcernPerson);?></p>
+                      <p><?php  echo htmlentities($row->Name);?></p>
 
                       <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Location: <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Registered Date: <?php  echo htmlentities($row->postinDate);?> </a> </div>
 

@@ -13,14 +13,14 @@ if(isset($_POST['submit']))
 $options = ['cost' => 12];
 $hashednewpass=password_hash($password, PASSWORD_BCRYPT, $options);
     // Fetch data from database on the basis of email and mobile
-    $sql ="SELECT id FROM tblemployers WHERE EmpEmail=:usname";
+    $sql ="SELECT id FROM tblemployers WHERE NIC=:usname";
     $query= $dbh -> prepare($sql);
     $query-> bindParam(':usname', $uname, PDO::PARAM_STR);
     $query-> execute();
     $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
-$sql="update  tblemployers set EmpPassword=:hashednewpass WHERE EmpEmail=:usname";
+$sql="update  tblemployers set EmpPassword=:hashednewpass WHERE NIC=:usname";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':hashednewpass',$hashednewpass,PDO::PARAM_STR);

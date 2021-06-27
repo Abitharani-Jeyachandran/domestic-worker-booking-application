@@ -18,7 +18,7 @@ $emaill=$_POST['emailid'];
 //Getting Employer Id
 $empid=$_SESSION['emplogin'];
 
-$sql="update tblemployers set ConcernPerson=:conrnper where id=:eid";
+$sql="update tblemployers set Name=:conrnper where id=:eid";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':conrnper',$conrnper,PDO::PARAM_STR);
@@ -108,17 +108,17 @@ foreach($results as $result)
 
 <div class="col-md-6 col-sm-6">
 <label>Name *</label>
-<input type="text" name="concernperson" placeholder="Name" required autocomplete="off" value="<?php echo htmlentities($result->ConcernPerson)?>" />
+<input type="text" name="concernperson" placeholder="Name" required autocomplete="off" value="<?php echo htmlentities($result->Name)?>" />
 </div>
 
 <div class="col-md-6 col-sm-6">
 <label>Nic No *</label>
-<input type="text" name="emailid" readonly  autocomplete="off" value="<?php echo htmlentities($result->EmpEmail)?>">
+<input type="text" name="emailid" readonly  autocomplete="off" value="<?php echo htmlentities($result->NIC)?>">
 </div>
 
 <div class="col-md-6 col-sm-6">
 <label>Image</label>
-<img src="employerslogo/<?php echo htmlentities($result->CompnayLogo)?>" width="200"><br />
+<img src="employerslogo/<?php echo htmlentities($result->Image)?>" width="200"><br />
 <a href="change-logo.php">Change Image</a>
 </div>
 

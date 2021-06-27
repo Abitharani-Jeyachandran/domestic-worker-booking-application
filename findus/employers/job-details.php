@@ -68,7 +68,7 @@ $jobid=intval($_GET['jobid']);
 //Geeting Employer Id
 $empid=$_SESSION['emplogin'];
 // Fetching jobs
-$sql = "SELECT tbljobs.*,tblemployers.CompnayLogo from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where tbljobs.employerId=:eid and tbljobs.jobId=:jobid";
+$sql = "SELECT tbljobs.*,tblemployers.Image from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId  where tbljobs.employerId=:eid and tbljobs.jobId=:jobid";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':eid', $empid, PDO::PARAM_STR);
 $query-> bindParam(':jobid', $jobid, PDO::PARAM_STR);
@@ -84,7 +84,7 @@ foreach($results as $result)
                 <div class="thumb">
 
         <a href="#">
-          <img src="employerslogo/<?php echo htmlentities($result->CompnayLogo);?>" alt="img" width="165" height="165"></a></div>
+          <img src="employerslogo/<?php echo htmlentities($result->Image);?>" alt="img" width="165" height="165"></a></div>
                 <div class="text-col">
 
 <h2><?php echo htmlentities($result->jobCategory);?></h2>
