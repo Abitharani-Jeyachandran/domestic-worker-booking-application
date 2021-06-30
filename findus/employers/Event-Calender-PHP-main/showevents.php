@@ -58,12 +58,6 @@ session_start();
 								$ename = $row["name"];
 								$edate = $row["date"];
 								$etime = $row["time"];
-								if($etime>12){
-									$etime = ($etime - 12)." pm";   //convert 24 hr format to 12 hr human readable format
-								}
-								else{
-									$etime = $etime." am";
-								}
 								echo"
 									<tr>
 										<td>".$ename."</td>
