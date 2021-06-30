@@ -3,7 +3,7 @@ session_start();
 	$serverName = "localhost";
 	$userName = "root";
 	$passWord = "";
-	$dbName = "eventcalender";
+	$dbName = "findus";
 
 	function my_substr_function($str, $start, $end)    //function to return substring from start index upto end index
 	{
@@ -29,7 +29,7 @@ session_start();
 				$newTime += 12;
 			}
 
-			$sql= "INSERT INTO `event`(`name`, `date`, `time`) VALUES ('".$eventName."','".$eventDate."','".$newTime."')";
+			$sql= "INSERT INTO `calendar`(`name`, `date`, `time`) VALUES ('".$eventName."','".$eventDate."','".$newTime."')";
 
 			$conn->query($sql);
 }

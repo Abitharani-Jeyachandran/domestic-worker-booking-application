@@ -2,11 +2,11 @@
 	$serverName = "localhost";
 	$userName = "root";
 	$passWord = "";
-	$dbName = "eventcalender";
+	$dbName = "findus";
 
 	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
 
-	$sql = "SELECT DISTINCT `date` FROM `event`";   //fetch all unique dates from database
+	$sql = "SELECT DISTINCT `date` FROM `calendar`";   //fetch all unique dates from database
 
 	$result = $conn->query($sql);
 	$dates = array();

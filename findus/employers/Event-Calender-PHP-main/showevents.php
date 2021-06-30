@@ -7,7 +7,7 @@ session_start();
 	$serverName = "localhost";
 	$userName = "root";
 	$passWord = "";
-	$dbName = "eventcalender";
+	$dbName = "findus";
 
 	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
 
@@ -30,7 +30,7 @@ session_start();
 				<i class='far fa-arrow-alt-circle-left backArrow' style='font-size:52px;color:green' onclick="backClicked()"></i>
 					<h2>Add Event</h2><br>
 				  <input id="ename" name='ename' type="text" placeholder="Address"/>
-				  <input id="edate" name='edate' type="text" placeholder="Event Date"/>
+				  <input id="edate" name='edate' type="text" placeholder="Date"/>
 				  <input id="etime" name='etime' type="text" placeholder="Time"/>
 				  <button id="submitButton" name="submitButton" onclick="myFunction()">Save</button>
 				</div>
@@ -48,7 +48,7 @@ session_start();
 					<tbody>
 					<?php
 						$ename = ""; $edate = ""; $etime = "";
-						 $sql = "SELECT * FROM `event` WHERE date='".$date."/".$month."/".$year."' ORDER BY time ASC";  //fetch all events from database related to processing date
+						 $sql = "SELECT * FROM `calendar` WHERE date='".$date."/".$month."/".$year."' ORDER BY time ASC";  //fetch all events from database related to processing date
 																														//and show them in table format
 						 $result = $conn->query($sql);
 
