@@ -1,9 +1,5 @@
 <?php
-if(strlen($_SESSION['emplogin'])==0)
-  {
-header('location:emp-login.php');
-}
-else{
+session_start();
 	$serverName = "localhost";
 	$userName = "root";
 	$passWord = "";
@@ -16,6 +12,11 @@ else{
 
 	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
 
+	if(strlen($_SESSION['emplogin'])==0)
+	  {
+	header('location:../emp-login.php');
+	}
+	else{
 			$eventName = $_GET['ename'];
 			$eventDate = $_GET['edate'];
 			$eventTime = $_GET['etime'];
@@ -31,6 +32,6 @@ else{
 			$sql= "INSERT INTO `event`(`name`, `date`, `time`) VALUES ('".$eventName."','".$eventDate."','".$newTime."')";
 
 			$conn->query($sql);
-
 }
+
 ?>

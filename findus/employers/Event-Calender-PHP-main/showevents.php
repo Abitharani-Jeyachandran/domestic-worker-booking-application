@@ -1,4 +1,5 @@
 <?php
+session_start();
 	$date = $_GET["date"];
 	$month = $_GET["month"];
 	$year = $_GET["year"];
@@ -8,7 +9,12 @@
 	$passWord = "";
 	$dbName = "eventcalender";
 
-	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);  //connect to database
+	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
+
+	if(strlen($_SESSION['emplogin'])==0)
+		{
+	header('location:../emp-login.php');
+	}  //connect to database
 ?>
 
 <html>
