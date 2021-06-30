@@ -30,6 +30,7 @@
               </li>
 
  <li><a href="jobseeker-listings.php">Clients List</a></li>
+ <li><a href="calendar/index.php">Calendar</a></li>
             </ul>
 
           </div>
