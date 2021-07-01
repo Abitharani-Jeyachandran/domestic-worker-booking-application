@@ -1,12 +1,18 @@
 <?php
+session_start();
 	$serverName = "localhost";
 	$userName = "root";
 	$passWord = "";
 	$dbName = "findus";
 
 	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
-
-	$sql = "SELECT DISTINCT `date` FROM `calendar`";   //fetch all unique dates from database
+	if(strlen($_SESSION['emplogin'])==0)
+	  {
+	header('location:../emp-login.php');
+	}
+	else{
+		$empid=$_SESSION['emplogin'];
+	$sql = "SELECT DISTINCT `date` FROM `calendar` WHERE empid='".$empid."'";   //fetch all unique dates from database
 
 	$result = $conn->query($sql);
 	$dates = array();
@@ -14,9 +20,12 @@
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
 			$temp = $row["date"];
-			array_push($dates, $temp);				//store all unique dates in array
+
+			array_push($dates, $temp);
+				//store all unique dates in array
 		}
 	}
+}
 ?>
 
 <html>
@@ -138,6 +147,7 @@
 							cells += "<div class='passedEvent'  onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
 						}
 						else{
+
 							//else it is upcoming date with event then mark as blue
 							cells += "<div class='upcomingEvent' onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
 						}
@@ -176,6 +186,7 @@
 
 
     </script>
+
 </body>
 
 </html>

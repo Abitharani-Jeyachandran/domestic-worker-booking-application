@@ -2,54 +2,6 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-if(isset($_POST['comment']))
-{
-$jobid=intval($_GET['jobid']);
-$userid=$_SESSION['jsid'];
-$content=$_POST['content'];
-
-$sql="INSERT INTO comment (user_id,Jobid,content) VALUES(:userid,:jobid,:content)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
-$query->bindParam(':userid',$userid,PDO::PARAM_STR);
-$query->bindParam(':content',$content,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-echo "<script>alert('Commented Successfully');</script>";
-}
-else
-{
-echo "<script>alert('Commented Successfully');</script>";
-}
-}
-if(isset($_POST['book']))
-{
-$jobid=intval($_GET['jobid']);
-$userid=$_SESSION['jsid'];
-$edate=$_POST['edate'];
-$est=$_POST['est'];
-$address=$_POST['address'];
-
-$sql="INSERT INTO tblapplyjob(JobId,UserId,EDate,ETime,Address) VALUES(:jobid,:userid,:edate,:est,:address)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
-$query->bindParam(':userid',$userid,PDO::PARAM_STR);
-$query->bindParam(':edate',$edate,PDO::PARAM_STR);
-$query->bindParam(':est',$est,PDO::PARAM_STR);
-$query->bindParam(':address',$address,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-  echo "<script>alert('Booked Successfully');</script>";
-  }
-  else
-  {
-  echo "<script>alert('Sign In First');</script>";
-}
-}
 ?>
 <!doctype html>
 
@@ -149,10 +101,10 @@ if($lastInsertId)
 
               <div class="box">
 <?php
-$jobid=$_GET['jobid'];
-$sql="SELECT tbljobs.*,tblemployers.* from tbljobs join tblemployers on tblemployers.id=tbljobs.employerId where tbljobs.jobId=:jobid";
+$empid=$_GET['empid'];
+$sql="SELECT calendar.*,tblemployers.* from calendar join tblemployers on tblemployers.id=calendar.empid where calendar.empid=:empid";
 $query = $dbh -> prepare($sql);
-$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':empid',$empid,PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
@@ -246,44 +198,6 @@ foreach($results as $row)
           </div>
 
         </div>
-
-
-        <form name="comment" method="post">
-                <div class="input-group">
-                  <textarea class="form-control" placeholder="comment" type="text" name="content"></textarea>
-                  <?php if($_SESSION['jsid'])
-                  					{?>
-                  <button type="submit" value ="comment" name="comment" class="btn btn-primary btn-hover-green" >Post Your Comment</button>
-                  <?php } else {?>
-                  <a href="sign-in.php" class="btn-primary btn" >Comment</a>
-                  <?php } ?>
-                </div>
-        </form>
-
-<h4>Comments:</h4>
-        <?php
-        $jobid=$_GET['jobid'];
-        $sql="SELECT comment.*,tbljobseekers.* from tbljobseekers join comment on tbljobseekers.id=comment.user_id where comment.Jobid=:jobid";
-        $query = $dbh -> prepare($sql);
-        $query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
-        $query->execute();
-        $results=$query->fetchAll(PDO::FETCH_OBJ);
-
-        $cnt=1;
-        if($query->rowCount() > 0)
-        {
-        foreach($results as $row)
-        {               ?>
-        <div class="clearfix">
-
-
-
-          <p>Comment: <?php  echo ($row->content);?></br>Comment by: <?php  echo ($row->FullName);?></p>
-
-        </div>
-
-<?php $cnt=$cnt+1;}} ?>
-      </div>
 
     </section>
 
