@@ -6,12 +6,8 @@ session_start();
 	$dbName = "findus";
 
 	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
-	if(strlen($_SESSION['emplogin'])==0)
-	  {
-	header('location:../emp-login.php');
-	}
-	else{
-		$empid=$_SESSION['emplogin'];
+
+	$empid=$_SESSION['emplogin'];
 	$sql = "SELECT DISTINCT `date` FROM `calendar` WHERE empid='".$empid."'";   //fetch all unique dates from database
 
 	$result = $conn->query($sql);
@@ -25,7 +21,6 @@ session_start();
 				//store all unique dates in array
 		}
 	}
-}
 ?>
 
 <html>
