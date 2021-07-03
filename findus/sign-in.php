@@ -44,7 +44,7 @@ echo "<script>alert('User not registered with us');</script>";
 <html>
 
 <head>
-<title>JobSeeker SignIn | FIND US</title>
+<title>Needy SignIn | FIND US</title>
 
 <link href="css/custom.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">

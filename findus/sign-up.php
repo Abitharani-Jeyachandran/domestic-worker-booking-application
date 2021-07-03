@@ -56,7 +56,7 @@ $error="Email-id already exist. Please try again";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jobseeker | Signup</title>
+<title>Needy | Signup</title>
 <link href="css/custom.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -92,7 +92,7 @@ error:function (){}
 
     <div class="container">
 
-      <h1>Jobseeker Signup</h1>
+      <h1>Needy Signup</h1>
 
     </div>
 

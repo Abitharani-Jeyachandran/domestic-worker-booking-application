@@ -43,7 +43,7 @@ include('includes/config.php');
 
 
 <?php if (strlen($_SESSION['jsid']==0)) {?>
-        <div class="btn-row"> </br></br></br><a href="sign-up.php">Jobseeker</a> <a href="employers/emp-login.php">Domestic Worker</a> </div>
+        <div class="btn-row"> </br></br></br><a href="sign-up.php">Needy</a> <a href="employers/emp-login.php">Domestic Worker</a> </div>
 <?php } ?>
       </div>
 

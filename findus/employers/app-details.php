@@ -50,7 +50,7 @@ $query1->bindParam(':status',$status,PDO::PARAM_STR);
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Jobseekers |  Profile </title>
+<title>Needy |  Profile </title>
 
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">

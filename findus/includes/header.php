@@ -28,7 +28,7 @@
 
              </li>
 <?php if (strlen($_SESSION['jsid']==0)) {?>
-             <li><a href="sign-up.php">Jobseekers</a>
+             <li><a href="sign-up.php">Needy</a>
              </li>
 
              <li><a href="employers/emp-login.php">Domestic Workers</a></li>

@@ -43,7 +43,7 @@ echo "<script>alert('Invalid details. Please try again');</script>";
 <html>
 
 <head>
-<title>JobSeeker Reset Your Account Password | FIND US</title>
+<title>Needy Reset Your Account Password | FIND US</title>
 
 <link href="css/custom.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
