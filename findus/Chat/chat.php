@@ -21,7 +21,7 @@
         ?>
         <a href="users.php" class="back-icon">Go Back</a>
         <div class="details">
-          <span><?php echo $row['email']?></span>
+          <span><?php echo $row['username']?></span>
           <p><?php echo $row['status']; ?></p>
         </div>
       </header>

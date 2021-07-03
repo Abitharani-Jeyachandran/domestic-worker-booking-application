@@ -18,7 +18,7 @@
             }
           ?>
           <div class="details">
-            <span><?php echo $row['email'] ?></span>
+            <span><?php echo $row['username'] ?></span>
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>

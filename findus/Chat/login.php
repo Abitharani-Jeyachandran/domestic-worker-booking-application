@@ -14,7 +14,7 @@
         <div class="error-text"></div>
         <div class="field input">
           <label>Username</label>
-          <input type="text" name="email" placeholder="Username" required>
+          <input type="text" name="username" placeholder="Username" required>
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Continue to Chat">
