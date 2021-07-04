@@ -93,7 +93,7 @@ $vid=$_GET['viewid'];
             <div id="content-area">
 
 
-              <h2 style="color: red">Job belong's to category <?php  echo htmlentities($_GET['viewid']);?></h2>
+              <h2 style="color: #A020F0">Job belong's to category <?php  echo htmlentities($_GET['viewid']);?></h2>
 
               <ul id="myList">
 

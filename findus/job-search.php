@@ -129,7 +129,7 @@ $vid=$_GET['viewid'];
             <div id="content-area">
 
 
-              <h2 style="color: red">Worker search <?php  echo htmlentities($_POST['jobtitle']);?></h2>
+              <h2 style="color: #A020F0">Worker search <?php  echo htmlentities($_POST['jobtitle']);?></h2>
 
               <ul id="myList">
 
