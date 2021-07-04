@@ -40,7 +40,7 @@ echo "<script>alert('Invalid details. Please try again');</script>";
 
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
 <title>Needy Reset Your Account Password | FIND US</title>

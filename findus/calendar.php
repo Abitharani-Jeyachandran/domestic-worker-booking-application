@@ -49,7 +49,7 @@ session_start();
 
     <div class="wrapper">
 	<?php
-		for($x=0; $x<12; $x++){ 
+		for($x=0; $x<12; $x++){
 			echo "
 				<div class='calendar'>
 					<div class='month'>
@@ -86,7 +86,7 @@ session_start();
 
         function renderDate(year = dt.getFullYear()) {
 			prevYear = year                                           //store recieved year in prevYear for future use
-			document.getElementById("currentYear").innerHTML = year;
+			document.getElementById("currentYear").innerhtml lang="en-US" = year;
 
             var today = new Date();
 

@@ -7,7 +7,7 @@ $vid=$_GET['viewid'];
 ?>
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
 

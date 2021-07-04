@@ -11,7 +11,7 @@ if (strlen($_SESSION['jsid']==0)) {
   ?>
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 <head>
 

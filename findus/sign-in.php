@@ -41,7 +41,7 @@ echo "<script>alert('User not registered with us');</script>";
 
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
 <title>Needy SignIn | FIND US</title>

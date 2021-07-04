@@ -53,7 +53,7 @@ if($lastInsertId)
 ?>
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
 

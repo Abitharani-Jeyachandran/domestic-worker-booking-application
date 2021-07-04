@@ -11,7 +11,7 @@ header('location:logout.php');
 else{ ?>
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
 
