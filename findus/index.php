@@ -165,7 +165,7 @@ foreach($results as $row)
                      </div>
 
                     <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
-                  <p class="price1">Share via</br></br><a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://localhost/php_test/share.php', 'Facebook Share', 'width=620, height=420'); return false;">Facebook</a></br></br><a href="#" onclick="window.open('https://twitter.com/share?url=http://localhost/php_test/share.php&via=sitename&text=Loremipsum', 'Twitter Share', 'width=620, height=420'); return false;">Twitter</a></p>
+
                 </div>
 
                 </li>
