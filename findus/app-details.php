@@ -19,7 +19,7 @@ if (strlen($_SESSION['jsid']==0)) {
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>FIND US | View Applied Job History </title>
+<title>FIND US | View Applied Service History </title>
 
 <!--CUSTOM CSS-->
 
@@ -135,15 +135,15 @@ foreach($results as $result)
 
                   <table class="table table-bordered table-hover data-tables">
     <tr>
-      <th>Job Descriptions</th>
+      <th>Service Descriptions</th>
       <td colspan="3"><?php  echo $result->jobDescription;?></td>
   </tr>
    <tr>
-     <th>Salary Package</th>
+     <th>Salary</th>
      <td>LKR <?php  echo $result->salaryPackage;?></td>
   </tr>
   <tr>
-  <th>Job Location</th>
+  <th>Service Provider Location</th>
   <td><?php  echo $result->jobLocation;?></td>
   </tr>
   <tr>

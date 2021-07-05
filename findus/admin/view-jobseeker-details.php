@@ -11,7 +11,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Find Us - View Job Seeker</title>
+ <title>Find Us - View Service Seeker</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
@@ -33,7 +33,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                             <!-- Bootstrap Register -->
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">View Jobseeker Details</h3>
+                                    <h3 class="block-title">View Serviceseeker Details</h3>
 
                                 </div>
                                 <div class="block-content">

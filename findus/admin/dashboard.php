@@ -43,7 +43,7 @@ $totcat=$query1->rowCount();?>
 
 
                                     <div class="text-white"><?php echo htmlentities($totcat);?></div>
-                                    <p class="font-w600 text-white">Total Job Category</p>
+                                    <p class="font-w600 text-white">Total Service Category</p>
                                 </div>
                             </a>
                         </div>
@@ -59,7 +59,7 @@ $totemp=$query2->rowCount();
                                 <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left bg-gd-dusk">
 
                                     <div class="text-white"><?php echo htmlentities($totemp);?></div>
-                                    <p class="font-w600 text-white">Total Domestic Worker</p>
+                                    <p class="font-w600 text-white">Total Service Provider</p>
                                 </div>
                             </a>
                         </div>
@@ -75,7 +75,7 @@ $totcan=$query3->rowCount();
                                 <div class="block-content ribbon ribbon-bookmark ribbon-crystal ribbon-left bg-gd-sea">
 
                                     <div class="text-white"><?php echo htmlentities($totcan);?></div>
-                                    <p class="font-w600 text-white">Total Jobseeker</p>
+                                    <p class="font-w600 text-white">Total Service seeker</p>
                                 </div>
                             </a>
                         </div>

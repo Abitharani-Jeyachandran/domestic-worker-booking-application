@@ -12,7 +12,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Find Us- Domestic Worker Report</title>
+        <title>Find Us- Service Provider Report</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
@@ -36,7 +36,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                        <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title"> Domestic Worker Report</h3>
+                                    <h3 class="block-title"> Service Provider Report</h3>
 
                                 </div>
                         <div class="block-content block-content-full">

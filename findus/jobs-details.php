@@ -61,7 +61,7 @@ if($lastInsertId)
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>FIND US-Job Details</title>
+<title>FIND US-work Details</title>
 
 <!--CUSTOM CSS-->
 
@@ -121,7 +121,7 @@ if($lastInsertId)
 
     <div class="container">
 
-      <h1>Domestic Worker Job Details</h1>
+      <h1>Service Provider work Details</h1>
 
     </div>
 

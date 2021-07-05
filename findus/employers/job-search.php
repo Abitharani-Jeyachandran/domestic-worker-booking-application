@@ -20,7 +20,7 @@ else{
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Domestic Worker | Search Job</title>
+<title>Service Provider | Search Job</title>
 
 <!--CUSTOM CSS-->
 
@@ -52,7 +52,7 @@ else{
 
     <div class="container">
 
-      <h1>Domestic Worker | Search Jobs</h1>
+      <h1>Service Provider | Search Services</h1>
 
     </div>
 
@@ -84,7 +84,7 @@ else{
 
             <div id="content-area">
 
-              <h2 style="color: red">Job search against <?php  echo htmlentities($_POST['jobtitle']);?></h2>
+              <h2 style="color: red">Service search against <?php  echo htmlentities($_POST['jobtitle']);?></h2>
 
               <ul id="myList">
 

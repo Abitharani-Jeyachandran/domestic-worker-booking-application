@@ -14,7 +14,7 @@
                                 </li>
 
                                 <li>
-                                    <a class="nav-submenu" style="color:#fff;" data-toggle="nav-submenu"><span class="sidebar-mini-hide" style="color:#fff;"></span>Job Category</a>
+                                    <a class="nav-submenu" style="color:#fff;" data-toggle="nav-submenu"><span class="sidebar-mini-hide" style="color:#fff;"></span>Service Category</a>
                                     <ul>
                                         <li>
                                             <a href="add-category.php" style="color:#fff;">Add Category</a>
@@ -25,11 +25,11 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="employer-list.php"><span class="sidebar-mini-hide" style="color:#fff;">List of Domestic Workers</span></a>
+                                    <a href="employer-list.php"><span class="sidebar-mini-hide" style="color:#fff;">List of Service Providers</span></a>
 
                                 </li>
                                  <li>
-                                    <a href="reg-jobseekers.php"><span class="sidebar-mini-hide" style="color:#fff;">List of Jobseekers</span></a>
+                                    <a href="reg-jobseekers.php"><span class="sidebar-mini-hide" style="color:#fff;">List of Service seekers</span></a>
 
                                 </li>
 
@@ -40,10 +40,10 @@
 
 
                                         <li>
-                                            <a href="employer-report.php" style="color:#fff;">Domestic Worker Report</a>
+                                            <a href="employer-report.php" style="color:#fff;">Service Provider Report</a>
                                         </li>
                                         <li>
-                                            <a href="candidates-report.php" style="color:#fff;">Jobseeker Report</a>
+                                            <a href="candidates-report.php" style="color:#fff;">Serviceseeker Report</a>
                                         </li>
 
                                     </ul>

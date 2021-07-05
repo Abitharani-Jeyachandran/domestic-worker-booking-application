@@ -27,7 +27,7 @@ session_start();
 		<div id="myDiv">
 			<div class="form">
 				<div class="login-form">
-				<i class='far fa-arrow-alt-circle-left backArrow' style='font-size:52px;color:green' onclick="backClicked()"></i>
+				<i class='' onclick="backClicked()"></i>
 					<h2>Add Event</h2><br>
 				  <input id="ename" name='ename' type="text" placeholder="Address"/>
 				  <input id="edate" name='edate' type="text" placeholder="Date"/>
@@ -37,7 +37,7 @@ session_start();
 			</div>
 			<div class="header" >
 					<div class="dayEvents" >
-					<table class="table table-hover">
+					<table class="table">
 					<thead>
 					<tr>
 						<th>Address</th>

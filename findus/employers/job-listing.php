@@ -20,7 +20,7 @@ else{
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Domestic Worker | Job listing</title>
+<title>Service Provider | Service lisServiceg</title>
 
 <!--CUSTOM CSS-->
 
@@ -52,7 +52,7 @@ else{
 
     <div class="container">
 
-      <h1>Domestic Worker | Jobs listing</h1>
+      <h1>Service Provider | Services listing</h1>
 
     </div>
 

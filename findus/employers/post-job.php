@@ -48,7 +48,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Your job posted Successfully";
+$msg="Your Service posted Successfully";
 unset( $_SESSION['token']);
 }
 else
@@ -66,7 +66,7 @@ $error="Something went wrong.Please try again";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Worker | Job Posting</title>
+<title>Service Provider | Service Posting</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -90,7 +90,7 @@ $error="Something went wrong.Please try again";
 
     <div class="container">
 
-      <h1>Domestic Worker | Post a Job</h1>
+      <h1>Service Provider | Post a Service</h1>
 
     </div>
 
@@ -171,7 +171,7 @@ foreach($results as $result)
 
 <div class="row">
  <div class="col-md-12">
-<h4>Job Description</h4>
+<h4>Service Description</h4>
 <div class="text-editor-box">
 <textarea  name="description"></textarea>
 </div>

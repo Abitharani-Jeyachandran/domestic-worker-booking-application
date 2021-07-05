@@ -15,7 +15,7 @@ $vid=$_GET['viewid'];
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>FIND US || Categorywise Job</title>
+<title>FIND US || Categorywise Work</title>
 
 <!--CUSTOM CSS-->
 
@@ -60,27 +60,10 @@ $vid=$_GET['viewid'];
 
 <body class="theme-style-1">
 
-<!--WRAPPER START-->
-
 <div id="wrapper">
-
-  <!--HEADER START-->
 <?php include_once('includes/header.php');?>
-  <!--HEADER END-->
-
-  <!--MAIN START-->
 
   <div id="main">
-
-    <!--POPULAR JOB CATEGORIES START-->
-
-
-
-    <!--POPULAR JOB CATEGORIES END-->
-
-
-
-    <!--RECENT JOB SECTION START-->
 
     <section class="recent-row padd-tb">
 
@@ -93,7 +76,7 @@ $vid=$_GET['viewid'];
             <div id="content-area">
 
 
-              <h2 style="color: #A020F0">Job belong's to category <?php  echo htmlentities($_GET['viewid']);?></h2>
+              <h2 style="color: #A020F0">work belong's to category <?php  echo htmlentities($_GET['viewid']);?></h2>
 
               <ul id="myList">
 

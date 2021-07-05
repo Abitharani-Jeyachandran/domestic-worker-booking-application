@@ -44,7 +44,7 @@ echo "<script>alert('User not registered with us');</script>";
 <html lang="en">
 
 <head>
-<title>Needy SignIn | FIND US</title>
+<title>Service Seeker SignIn | FIND US</title>
 
 <link href="css/custom.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -69,7 +69,7 @@ echo "<script>alert('User not registered with us');</script>";
 
   <section id="inner-banner">
     <div class="container">
-      <h1>Needy Login</h1>
+      <h1>Service Seeker Login</h1>
     </div>
   </section>
 

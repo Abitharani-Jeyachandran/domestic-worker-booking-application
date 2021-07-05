@@ -36,14 +36,14 @@ include('includes/config.php');
 
       <div class="holder">
 <div class="col-lg-12 justify-content-center">
-  <h1>PLATFORM TO CONNECT DOMESTIC WORKERS AND CLIENTS</h1>
+  <h1>PLATFORM TO CONNECT Service ProviderS AND CLIENTS</h1>
 </div>
 
         <div class="btn-row"> </br></br></br><a href="job-search.php">Search Here</a> </div>
 
 
 <?php if (strlen($_SESSION['jsid']==0)) {?>
-        <div class="btn-row"> </br></br></br><a href="sign-up.php">Needy</a> <a href="employers/emp-login.php">Domestic Worker</a> </div>
+        <div class="btn-row"> </br></br></br><a href="sign-up.php">Are you seeking service?</a> <a href="employers/emp-login.php">Are you providing service?</a> </div>
 <?php } ?>
       </div>
 

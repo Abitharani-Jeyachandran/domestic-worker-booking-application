@@ -64,7 +64,7 @@ unset( $_SESSION['token2']);
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Workers | Job Posting</title>
+<title>Domestic Workers | Service Posting</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -172,7 +172,7 @@ foreach($results as $row)
 </div>
 
 <div class="col-md-6 col-sm-6">
-<label>Job Location</label>
+<label>Service Location</label>
 <input type="text" value="<?php echo htmlentities($result->jobLocation);?>" name="joblocation" required>
 </div>
 <div class="col-md-6 col-sm-6">
@@ -184,7 +184,7 @@ foreach($results as $row)
 
 <div class="row">
  <div class="col-md-12">
-<h4>Job Description</h4>
+<h4>Service Description</h4>
 <div class="text-editor-box">
 <textarea  name="description"  autocomplete="off" ><?php echo htmlentities($result->jobDescription);?></textarea>
 </div>

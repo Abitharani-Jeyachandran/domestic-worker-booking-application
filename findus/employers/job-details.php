@@ -12,7 +12,7 @@ else{?>
 <!doctype html>
 <html>
 <head>
-<title>Job Details | Domestic Worker</title>
+<title>Service Details | Service Provider</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -40,7 +40,7 @@ else{?>
 
     <div class="container">
 
-      <h1>Job Details</h1>
+      <h1>Service Details</h1>
 
     </div>
 

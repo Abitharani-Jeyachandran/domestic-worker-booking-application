@@ -87,7 +87,7 @@ $vid=$_GET['viewid'];
 
           <div class="col-md-5 col-sm-5">
 
-            <input type="text" placeholder="Enter Job Title" name="jobtitle">
+            <input type="text" placeholder="Enter Service Title" name="jobtitle">
 
           </div>
           <div class="col-md-5 col-sm-5">
@@ -107,16 +107,6 @@ $vid=$_GET['viewid'];
       </div>
 
     </form>
-
-    <!--POPULAR JOB CATEGORIES START-->
-
-
-
-    <!--POPULAR JOB CATEGORIES END-->
-
-
-
-    <!--RECENT JOB SECTION START-->
 
     <section class="recent-row padd-tb">
 

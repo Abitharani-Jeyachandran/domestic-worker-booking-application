@@ -19,7 +19,7 @@ else{ ?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Needy |  Profile </title>
+<title>Service Seeker |  Profile </title>
 
 <!--CUSTOM CSS-->
 

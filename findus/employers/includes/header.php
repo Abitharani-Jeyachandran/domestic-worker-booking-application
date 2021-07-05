@@ -22,14 +22,14 @@
 
 
             <ul class="nav navbar-nav" id="nav">
-              <li><a href="#">Jobs</a>
+              <li><a href="#">Services</a>
                 <ul>
-                  <li><a href="post-job.php">Post a Job</a></li>
-                  <li><a href="job-listing.php">Manage Jobs</a></li>
+                  <li><a href="post-job.php">Post a Service</a></li>
+                  <li><a href="job-listing.php">Manage Services</a></li>
                 </ul>
               </li>
 
- <li><a href="jobseeker-listings.php">Needy List</a></li>
+ <li><a href="jobseeker-listings.php">Service Seeker List</a></li>
  <li><a href="calendar/index.php">Calendar</a></li>
  <div id="google_translate_element"></div>
 

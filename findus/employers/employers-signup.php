@@ -73,7 +73,7 @@ $error="Nic Already Exist";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Workers | Signup</title>
+<title>Service Providers | Signup</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -103,7 +103,7 @@ $error="Nic Already Exist";
 
     <div class="container">
 
-      <h1>Domestic Workers</h1>
+      <h1>Service Providers</h1>
 
     </div>
 

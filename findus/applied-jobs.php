@@ -19,7 +19,7 @@ if (strlen($_SESSION['jsid']==0)) {
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>FIND US-History of Applied Jobs</title>
+<title>FIND US-History of Applied Services</title>
 
 <!--CUSTOM CSS-->
 
@@ -87,7 +87,7 @@ if (strlen($_SESSION['jsid']==0)) {
 
     <div class="container">
 
-      <h1>History of Applied Jobs</h1>
+      <h1>History of Applied Services</h1>
 
     </div>
 
@@ -135,7 +135,7 @@ foreach($results as $row)
 
                   <h2><a href="#"><?php  echo htmlentities($row->jobCategory);?></a></h2>
 
-                  <p><?php  echo htmlentities($row->Name);?> <em><a href="index.php">(View All Jobs)</a></em></p>
+                  <p><?php  echo htmlentities($row->Name);?> <em><a href="index.php">(View All Services)</a></em></p>
 
                   <a href="#" class="text">Location : <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a> <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
                   <div class="tags" style="padding-top: 10px"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>"><?php

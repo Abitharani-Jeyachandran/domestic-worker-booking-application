@@ -19,7 +19,7 @@ else{?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Find Us- Domestic worker</title>
+<title>Find Us- Service Provider</title>
 
 <!--CUSTOM CSS-->
 
@@ -80,7 +80,7 @@ else{?>
 
     <div class="container">
 
-      <h1>Report of Applied Job seekers</h1>
+      <h1>Report of Applied Service seekers</h1>
 
     </div>
 
@@ -154,7 +154,7 @@ foreach($results as $row)
 
 
                   <h4>Applied Date: <?php echo htmlentities($row->Applydate);?></h4>
-<h4><a href="#">Applied For Job: <?php echo htmlentities($row->jobCategory);?></a></h4>
+<h4><a href="#">Applied For Service: <?php echo htmlentities($row->jobCategory);?></a></h4>
                   <div class="clearfix"> <strong>Mobile: <?php echo htmlentities($row->ContactNumber);?></strong> </br><strong>Email: <a href="#"><?php echo htmlentities($row->EmailId);?></a></strong> </div>
 
                   <div class="tags"> <a href="#"><?php

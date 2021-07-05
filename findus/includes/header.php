@@ -28,15 +28,15 @@
 
              </li>
 <?php if (strlen($_SESSION['jsid']==0)) {?>
-             <li><a href="sign-up.php">Needy</a>
+             <li><a href="sign-up.php">Service Seeker</a>
              </li>
 
-             <li><a href="employers/emp-login.php">Domestic Workers</a></li>
+             <li><a href="employers/emp-login.php">Service Providers</a></li>
 <li><a href="admin/index.php">Admin</a></li><?php } ?>
 
 
 <?php if (strlen($_SESSION['jsid']!=0)) {?>
-                 <li><a href="applied-jobs.php">History of Applied Jobs</a></li>
+                 <li><a href="applied-jobs.php">History of Applied Services</a></li>
 <?php } ?>
              </li>
            <li><a href="Chat/index.php" target="_blank">Chat</a></li>
