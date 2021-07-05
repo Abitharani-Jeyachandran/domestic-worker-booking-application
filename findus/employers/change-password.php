@@ -55,7 +55,7 @@ $msg='Pasword change successfully';
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Workers | Change Password</title>
+<title>Service Providers | Change Password</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -92,7 +92,7 @@ return true;
 
     <div class="container">
 
-      <h1>Domestic Workers | Change Password</h1>
+      <h1>Service Providers | Change Password</h1>
 
     </div>
 

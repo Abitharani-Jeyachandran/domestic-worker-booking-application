@@ -51,7 +51,7 @@ $msg="Image updated Successfully";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Worker | Update Account Details</title>
+<title>Service Provider | Update Account Details</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 

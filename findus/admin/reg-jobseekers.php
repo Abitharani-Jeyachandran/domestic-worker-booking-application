@@ -10,7 +10,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Find Us - Serviceseeker Lists</title>
+        <title>Find Us - Service seeker Lists</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 

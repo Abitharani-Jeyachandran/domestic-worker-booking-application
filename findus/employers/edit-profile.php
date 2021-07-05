@@ -35,7 +35,7 @@ $msg="Account details updated Successfully";
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Workers | Update Account Details</title>
+<title>Service Providers | Update Account Details</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
@@ -61,7 +61,7 @@ $msg="Account details updated Successfully";
 
     <div class="container">
 
-      <h1>Domestic Workers Account Details</h1>
+      <h1>Service Providers Account Details</h1>
 
     </div>
 

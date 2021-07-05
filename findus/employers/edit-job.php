@@ -64,7 +64,7 @@ unset( $_SESSION['token2']);
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domestic Workers | Service Posting</title>
+<title>Service Providers | Service Posting</title>
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 

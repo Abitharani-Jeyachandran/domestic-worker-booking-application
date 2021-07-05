@@ -36,7 +36,7 @@ include('includes/config.php');
 
       <div class="holder">
 <div class="col-lg-12 justify-content-center">
-  <h1>PLATFORM TO CONNECT Service ProviderS AND CLIENTS</h1>
+  <h1>PLATFORM TO CONNECT SERVICE PROVIDERS AND SERVICE SEEKERS</h1>
 </div>
 
         <div class="btn-row"> </br></br></br><a href="job-search.php">Search Here</a> </div>

@@ -42,7 +42,7 @@ echo "<script>alert('User not registered with us');</script>";
 <html>
 
 <head>
-<title>Domestic Worker SignIn | Find Us</title>
+<title>Service Provider SignIn | Find Us</title>
 
 <link href="../css/custom.css" rel="stylesheet" type="text/css">
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -67,7 +67,7 @@ echo "<script>alert('User not registered with us');</script>";
 
   <section id="inner-banner">
     <div class="container">
-      <h1>Domestic Worker Login</h1>
+      <h1>Service Provider Login</h1>
     </div>
   </section>
 
