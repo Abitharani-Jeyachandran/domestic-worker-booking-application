@@ -53,7 +53,9 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="You have signup Successfully";
+echo "<script>alert('Signup Successfully');</script>";
+echo "<script type='text/javascript'> document.location ='emp-login.php'; </script>";
+
 }
 else
 {

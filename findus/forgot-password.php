@@ -26,7 +26,7 @@ $query = $dbh->prepare($sql);
 $query->bindParam(':hashednewpass',$hashednewpass,PDO::PARAM_STR);
 $query-> bindParam(':email', $email, PDO::PARAM_STR);
 $query->execute();
-echo "<script>alert('Password chnaged successfully');</script>";
+echo "<script>alert('Password changed successfully');</script>";
 echo "<script type='text/javascript'> document.location ='sign-in.php'; </script>";
 
 }
