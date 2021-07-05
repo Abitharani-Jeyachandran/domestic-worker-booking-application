@@ -94,7 +94,7 @@ return true;
   <div id="main">
     <!--SIGNUP SECTION START-->
 
-    <section class="signup-section">
+    <section class="signup-section" style="Background:#fff;">
 
       <div class="container">
 

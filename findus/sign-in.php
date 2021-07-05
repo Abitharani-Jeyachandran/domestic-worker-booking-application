@@ -69,7 +69,7 @@ echo "<script>alert('User not registered with us');</script>";
 
   <section id="inner-banner">
     <div class="container">
-      <h1>Job Seeker Login</h1>
+      <h1>Needy Login</h1>
     </div>
   </section>
 
