@@ -1,16 +1,13 @@
 <?php
 session_start();
-//Database Configuration File
 include('includes/config.php');
-//error_reporting(0);
-//verifying Session
+
 if(strlen($_SESSION['emplogin'])==0)
   {
 header('location:emp-login.php');
 }
 else{
 
-//Genrating CSRF Token
 if (empty($_SESSION['token'])) {
     $_SESSION['token'] = bin2hex(random_bytes(32));
 }
@@ -18,32 +15,29 @@ if (empty($_SESSION['token'])) {
 if(isset($_POST['submit']))
 {
 
-//Verifying CSRF Token
 if (!empty($_POST['csrftoken'])) {
 if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
 
 $empid=$_SESSION['emplogin'];
-//Getting Post Values
+
 $category=$_POST['category'];
 $salpackg=$_POST['salarypackage'];
 $exprnce=$_POST['experience'];
 $joblocation=$_POST['joblocation'];
 $jobdesc=$_POST['description'];
-$jed=$_POST['jed'];
 $isactive=1;
 
 
 
-$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription,JobExpdate) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc,:jed)";
+$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc)";
 $query = $dbh->prepare($sql);
-// Binding Post Values
+
 $query->bindParam(':empid',$empid,PDO::PARAM_STR);
 $query->bindParam(':category',$category,PDO::PARAM_STR);
 $query->bindParam(':salpackg',$salpackg,PDO::PARAM_STR);
 $query->bindParam(':exprnce',$exprnce,PDO::PARAM_STR);
 $query->bindParam(':joblocation',$joblocation,PDO::PARAM_STR);
 $query->bindParam(':jobdesc',$jobdesc,PDO::PARAM_STR);
-$query->bindParam(':jed',$jed,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
@@ -143,12 +137,12 @@ foreach($results as $result)
 
           <div class="col-md-6 col-sm-6">
 
-              <label>Salary Package</label>
+              <label>Amount</label>
 <input type="text" placeholder="Minimum Salary" name="salarypackage" required>
-
+<div class="col-md-3 col-sm-3"><input type="radio" value="day" name="salary"/><label>Per Day</label></div>
+<div class="col-md-3 col-sm-3"><input type="radio" value="hour" name="salary"/><label>Per Hour</label></div>
             </div>
             </div>
-
 
 <div class="row">
 
@@ -162,10 +156,6 @@ foreach($results as $result)
 <input type="text" placeholder="Address" name="joblocation" required>
 </div>
 
-<div class="col-md-6 col-sm-6">
-<label>Registered Date</label>
-<input type="date" placeholder="e.g. 0-5" name="jed" required class="form-control">
-</div>
 </div>
 
 

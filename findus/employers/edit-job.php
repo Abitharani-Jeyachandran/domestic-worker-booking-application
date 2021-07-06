@@ -32,11 +32,10 @@ $salpackg=$_POST['salarypackage'];
 $exprnce=$_POST['experience'];
 $joblocation=$_POST['joblocation'];
 $jobdesc=$_POST['description'];
-$jed=$_POST['jed'];
 
 
 
-$sql="Update tbljobs set jobCategory=:category,salaryPackage=:salpackg,experience=:exprnce,jobLocation=:joblocation,jobDescription=:jobdesc,JobExpdate=:jed where employerId=:eid and jobId=:jobid";
+$sql="Update tbljobs set jobCategory=:category,salaryPackage=:salpackg,experience=:exprnce,jobLocation=:joblocation,jobDescription=:jobdesc where employerId=:eid and jobId=:jobid";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':category',$category,PDO::PARAM_STR);
@@ -44,7 +43,6 @@ $query->bindParam(':salpackg',$salpackg,PDO::PARAM_STR);
 $query->bindParam(':exprnce',$exprnce,PDO::PARAM_STR);
 $query->bindParam(':joblocation',$joblocation,PDO::PARAM_STR);
 $query->bindParam(':jobdesc',$jobdesc,PDO::PARAM_STR);
-$query->bindParam(':jed',$jed,PDO::PARAM_STR);
 $query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
 $query->bindParam(':eid',$empid,PDO::PARAM_STR);
 $query->execute();
@@ -174,10 +172,6 @@ foreach($results as $row)
 <div class="col-md-6 col-sm-6">
 <label>Service Location</label>
 <input type="text" value="<?php echo htmlentities($result->jobLocation);?>" name="joblocation" required>
-</div>
-<div class="col-md-6 col-sm-6">
-<label>Registered Date</label>
-<input type="date" placeholder="e.g. 0-5" name="jed" value="<?php echo htmlentities($result->JobExpdate);?>" required class="form-control">
 </div>
 </div>
 
