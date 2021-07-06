@@ -53,8 +53,16 @@ include('includes/config.php');
 
   </div>
 
-  <!--BANNER END-->
+  <section class="about">
 
+    <div class="container">
+
+        <h2>About Us</h2>
+        <h3>This is a platform to connect <span>domestic service providers</span> and <span>service seekers</span></h3>
+
+    </div>
+
+  </section>
 
 
   <!--MAIN START-->
@@ -105,7 +113,7 @@ foreach($results as $row)
 
     <!--RECENT JOB SECTION START-->
 
-    <section class="recent-row padd-tb">
+    <section class="recent-row padd-tb" id="recent-row">
 
       <div class="container">
 
@@ -259,7 +267,49 @@ echo "<li><a href='?page_no=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
     </section>
 
     <!--RECENT JOB SECTION END-->
+    <section class="about">
 
+      <div class="container">
+
+          <h2>Contact Us</h2>
+
+          <div class="col-md-3 col-sm-6">
+
+            <div class="box">
+
+              <h4>Phone Number</h4>
+
+              <strong>+94771234567</strong>
+
+            </div>
+
+          </div>
+          <div class="col-md-3 col-sm-6">
+
+            <div class="box">
+
+              <h4>Email</h4>
+
+              <strong>test1@gmail.com</strong>
+
+            </div>
+
+          </div>
+          <div class="col-md-3 col-sm-6">
+
+            <div class="box">
+
+              <h4>Address</h4>
+
+              <strong>Badulla</strong>
+
+            </div>
+
+          </div>
+
+      </div>
+
+    </section>
 
   </div>
 
