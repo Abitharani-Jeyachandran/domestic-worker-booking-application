@@ -29,29 +29,27 @@ include('includes/config.php');
 <div id="wrapper">
 
 <?php include_once('includes/header.php');?>
+<section id="hero" class="d-flex align-items-center">
 
-  <div class="banner-outer">
-
-    <div class="caption">
-
-      <div class="holder">
-<div class="col-lg-12 justify-content-center">
-  <h1>PLATFORM TO CONNECT SERVICE PROVIDERS AND SERVICE SEEKERS</h1>
-</div>
-
-        <div class="btn-row"> </br></br></br><a href="job-search.php">Search Here</a> </div>
-
-
-<?php if (strlen($_SESSION['jsid']==0)) {?>
-        <div class="btn-row"> </br></br></br><a href="sign-up.php">Are you seeking service?</a> <a href="employers/emp-login.php">Are you providing service?</a> </div>
-<?php } ?>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 justify-content-center text-center">
+        <h1 style="color:#fff;">PLATFORM TO CONNECT SERVICE PROVIDERS AND SERVICE SEEKERS</h1>
       </div>
-
+      <div class="row">
+      <div class="col-lg-6 pt-4 d-flex flex-column justify-content-center">
+        <div class="btn-get-started"><a href="job-search.php">Search Here</a></div>
+      </br><?php if (strlen($_SESSION['jsid']==0)) {?>
+              <div class="btn-get-started"><a href="sign-up.php">Are you seeking service?</a></div> <div class="btn-get-started"><a href="employers/employers-signup.php">Are you providing service?</a> </div>
+      <?php } ?>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+        <img src="css/img.png" class="img-fluid" alt="">
+      </div>
     </div>
-
-
-
   </div>
+
+</section><!-- End Hero -->
 
   <section class="about">
 
