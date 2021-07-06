@@ -25,11 +25,12 @@ $salpackg=$_POST['salarypackage'];
 $exprnce=$_POST['experience'];
 $joblocation=$_POST['joblocation'];
 $jobdesc=$_POST['description'];
+$pay=$_POST['pay'];
 $isactive=1;
 
 
 
-$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc)";
+$sql="INSERT INTO tbljobs(employerId,jobCategory,salaryPackage,experience,jobLocation,jobDescription,Pay) VALUES(:empid,:category,:salpackg,:exprnce,:joblocation,:jobdesc,:pay)";
 $query = $dbh->prepare($sql);
 
 $query->bindParam(':empid',$empid,PDO::PARAM_STR);
@@ -38,6 +39,8 @@ $query->bindParam(':salpackg',$salpackg,PDO::PARAM_STR);
 $query->bindParam(':exprnce',$exprnce,PDO::PARAM_STR);
 $query->bindParam(':joblocation',$joblocation,PDO::PARAM_STR);
 $query->bindParam(':jobdesc',$jobdesc,PDO::PARAM_STR);
+$query->bindParam(':pay',$pay,PDO::PARAM_STR);
+
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
@@ -139,8 +142,8 @@ foreach($results as $result)
 
               <label>Amount</label>
 <input type="text" placeholder="Minimum Salary" name="salarypackage" required>
-<div class="col-md-3 col-sm-3"><input type="radio" value="day" name="salary"/><label>Per Day</label></div>
-<div class="col-md-3 col-sm-3"><input type="radio" value="hour" name="salary"/><label>Per Hour</label></div>
+<div class="col-md-3 col-sm-3"><input type="radio" value="per day" name="pay" required><label>Per Day</label></div>
+<div class="col-md-3 col-sm-3"><input type="radio" value="per hour" name="pay"/><label>Per Hour</label></div>
             </div>
             </div>
 
