@@ -8,6 +8,7 @@ if(isset($_POST['signup']))
 //Getting Post Values
 $conrnper=$_POST['concernperson'];
 $emaill=$_POST['email'];
+$nic=$_POST['nic'];
 //Password hashing
 $password=$_POST['empppassword'];
 $options = ['cost' => 12];
@@ -31,9 +32,10 @@ $logoname=md5($logo).$extension;
 move_uploaded_file($_FILES["logofile"]["tmp_name"],"employerslogo/".$logoname);
 
 // Query for validation of  email-id
-$ret="SELECT * FROM  tblemployers where (NIC=:uemail)";
+$ret="SELECT * FROM  tblemployers where (NIC=:uemail || Email=:nic)";
 $queryt = $dbh -> prepare($ret);
 $queryt->bindParam(':uemail',$emaill,PDO::PARAM_STR);
+$queryt->bindParam(':nic',$nic,PDO::PARAM_STR);
 
 $queryt -> execute();
 $results = $queryt -> fetchAll(PDO::FETCH_OBJ);
@@ -41,11 +43,12 @@ if($queryt -> rowCount() == 0)
 {
 // Query for Insertion
 $isactive=1;
-$sql="INSERT INTO tblemployers(Name,NIC,EmpPassword,Image,Is_Active) VALUES(:conrnper,:emaill,:hashedpass,:logoname,:isactive)";
+$sql="INSERT INTO tblemployers(Name,NIC,Email,EmpPassword,Image,Is_Active) VALUES(:conrnper,:emaill,:nic,:hashedpass,:logoname,:isactive)";
 $query = $dbh->prepare($sql);
 // Binding Post Values
 $query->bindParam(':conrnper',$conrnper,PDO::PARAM_STR);
 $query->bindParam(':emaill',$emaill,PDO::PARAM_STR);
+$query->bindParam(':nic',$nic,PDO::PARAM_STR);
 $query->bindParam(':hashedpass',$hashedpass,PDO::PARAM_STR);
 $query->bindParam(':logoname',$logoname,PDO::PARAM_STR);
 $query->bindParam(':isactive',$isactive,PDO::PARAM_STR);
@@ -64,7 +67,7 @@ $error="Something went wrong.Please try again";
 }
  else
 {
-$error="Nic Already Exist";
+$error="Nic or Email Already Exist";
 }
 }
 }
@@ -134,13 +137,19 @@ $error="Nic Already Exist";
           <div class="row">
 
 <div class="col-md-6 col-sm-6">
-<label>Name *</label>
+<label>Name</label>
 <input type="text" name="concernperson" placeholder="Name" required autocomplete="off" />
 </div>
 
 <div class="col-md-6 col-sm-6">
-<label>Nic No *</label>
-<input type="text" name="email" id="email" onBlur="userAvailability()"  placeholder="Nic Number Here..." autocomplete="off"  required>
+<label>Nic No</label>
+<input type="text" name="email" id="email" placeholder="Nic Number Here..." autocomplete="off"  required>
+ <span id="user-availability-status1" style="font-size:12px;"></span>
+</div>
+
+<div class="col-md-6 col-sm-6">
+<label>Email</label>
+<input type="email" name="nic" id="nic" onBlur="userAvailability()"  placeholder="Email Here..." autocomplete="off"  required>
  <span id="user-availability-status1" style="font-size:12px;"></span>
 </div>
 
@@ -211,7 +220,7 @@ function userAvailability() {
 $("#loaderIcon").show();
 jQuery.ajax({
 url: "check_emailavailability.php",
-data:'email='+$("#email").val(),
+data:'nic='+$("#nic").val(),
 type: "POST",
 success:function(data){
 $("#user-availability-status1").html(data);

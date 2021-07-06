@@ -181,6 +181,7 @@ CREATE TABLE `tblemployers` (
   `id` int(11) NOT NULL,
   `Name` varchar(150) DEFAULT NULL,
   `NIC` varchar(250) DEFAULT NULL,
+  `Email` varchar(250) DEFAULT NULL,
   `EmpPassword` varchar(250) DEFAULT NULL,
   `Image` varchar(200) DEFAULT NULL,
   `RegDtae` timestamp NULL DEFAULT current_timestamp(),
