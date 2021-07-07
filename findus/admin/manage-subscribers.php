@@ -30,7 +30,7 @@ if (strlen($_SESSION['jpaid']==0)) {
         <!-- Dynamic Table Full Pagination -->
         <div class="block">
             <div class="block-header bg-gd-emerald">
-                        <h3 class="block-title">Subscribers Lists</h3>
+                        <h3 class="block-title" style="color:#fff">Subscribers Lists</h3>
 
                     </div>
             <div class="block-content block-content-full">

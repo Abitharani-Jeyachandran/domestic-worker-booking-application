@@ -167,7 +167,7 @@ foreach($results as $row)
 
                       <p><?php  echo htmlentities($row->Name);?></p>
 
-                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a>
+                      <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a> </br> <a href="#" class="text">Posted Date : <?php  echo htmlentities($row->postinDate);?> </a>
                      </div>
 
                     <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>

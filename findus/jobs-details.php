@@ -70,13 +70,6 @@ if($lastInsertId)
 <!--BOOTSTRAP CSS-->
 
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-
-<!--COLOR CSS-->
-
-
-
-<!--RESPONSIVE CSS-->
-
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
 
 <!--OWL CAROUSEL CSS-->
@@ -110,12 +103,6 @@ if($lastInsertId)
   <!--HEADER START-->
 
   <?php include_once('includes/header.php');?>
-
-  <!--HEADER END-->
-
-
-
-  <!--INNER BANNER START-->
 
   <section id="inner-banner">
 
@@ -167,11 +154,11 @@ foreach($results as $row)
                 <div class="text-col">
 
                   <h2><a href="#"><?php  echo htmlentities($row->jobCategory);?></a></h2>
-
+</br></br>
                   <p><?php  echo htmlentities($row->Name);?></p>
 
                   <a href="#" class="text">Address : <?php  echo htmlentities($row->jobLocation);?></a>
-                </br> <a href="#" class="text">Registered Date : <?php  echo htmlentities($row->postinDate);?> </a>
+                </br> <a href="#" class="text">Posted Date : <?php  echo htmlentities($row->postinDate);?> </a>
                 <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
 
                 <strong class="price"><a href="calendar.php">Calendar</a></strong>

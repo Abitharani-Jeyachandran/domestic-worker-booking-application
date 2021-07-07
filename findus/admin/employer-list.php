@@ -6,6 +6,17 @@ if (strlen($_SESSION['jpaid']==0)) {
   header('location:logout.php');
   } else{
 
+    // Code for deleting product from cart
+    if(isset($_GET['delid']))
+    {
+    $rid=intval($_GET['delid']);
+    $sql="DELETE FROM tblemployers where id=:rid";
+    $query=$dbh->prepare($sql);
+    $query->bindParam(':rid',$rid,PDO::PARAM_STR);
+    $query->execute();
+    echo "<script>alert('Data deleted');</script>";
+    echo "<script>window.location.href = 'employer-list.php'</script>";
+    }
   ?>
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
@@ -32,7 +43,7 @@ if (strlen($_SESSION['jpaid']==0)) {
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">Service Provider List</h3>
+                                    <h1 class="block-title" style="color:#fff">Service Provider List</h1>
 
                                 </div>
                         <div class="block-content block-content-full">
@@ -72,7 +83,7 @@ foreach($results as $row)
 
                                         <td class="d-none d-sm-table-cell" style="color:#000;"><?php  echo htmlentities($row->RegDtae);?></td>
 
-                                         <td class="d-none d-sm-table-cell" style="color:#000;"><a href="view-employer-details.php?viewid=<?php echo htmlentities ($row->id);?>">View</a></td>
+                                         <td class="d-none d-sm-table-cell" style="color:#000;"><a href="view-employer-details.php?viewid=<?php echo htmlentities ($row->id);?>">View</a> || <a href="employer-list.php?delid=<?php echo htmlentities ($row->id);?>" onclick="return confirm('Do you really want to Delete ?');" aria-hidden="true">Delete</a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?>
 

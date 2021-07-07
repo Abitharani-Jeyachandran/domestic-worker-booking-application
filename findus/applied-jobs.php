@@ -5,8 +5,15 @@ include('includes/config.php');
 if (strlen($_SESSION['jsid']==0)) {
   header('location:logout.php');
   } else{
-
-
+    if(isset($_GET['delid']))
+    {
+    $id=intval($_GET['delid']);
+    $sql = "DELETE FROM tblapplyjob WHERE ID=:id";
+    $query = $dbh -> prepare($sql);
+    $query -> bindParam(':id', $id, PDO::PARAM_INT);
+    $query -> execute();
+    echo "<script>alert('Cancelled Successfully');</script>";
+    }
 
   ?>
 <!doctype html>
@@ -150,7 +157,7 @@ else
 
      ;?></a>  </div>
 
-     <div class="btn-row"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>" class="contact">View Detail</a> <a href="cancel.php" class="contact">Cancel</a></div>
+     <div class="btn-row"> <a href="app-details.php?jobid=<?php echo ($row->JobId);?>" class="contact">View Detail</a> <a href="applied-jobs.php?delid=<?php echo ($row->ID);?>" class="contact" onclick="return confirm('Do you really want to Delete ?');" aria-hidden="true">Cancel</a></div>
 
                 </div>
 

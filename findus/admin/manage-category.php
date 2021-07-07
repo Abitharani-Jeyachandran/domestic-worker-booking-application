@@ -10,7 +10,7 @@ if (strlen($_SESSION['jpaid']==0)) {
 if(isset($_GET['delid']))
 {
 $rid=intval($_GET['delid']);
-$sql="delete from tblcategory where id=:rid";
+$sql="DELETE FROM tblcategory where id=:rid";
 $query=$dbh->prepare($sql);
 $query->bindParam(':rid',$rid,PDO::PARAM_STR);
 $query->execute();
@@ -79,7 +79,7 @@ foreach($results as $row)
                                         <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->CategoryName);?></td>
                                         <td class="d-none d-sm-table-cell" style="color:#000;"><?php  echo htmlentities($row->PostingDate);?></td>
 
-                                         <td class="d-none d-sm-table-cell" style="color:#000;"> <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>">Edit</a></td>
+                                         <td class="d-none d-sm-table-cell" style="color:#000;"> <a href="edit-category.php?editid=<?php echo htmlentities ($row->id);?>">Edit</a> || <a href="manage-category.php?delid=<?php echo htmlentities ($row->id);?>" onclick="return confirm('Do you really want to Delete ?');" aria-hidden="true">Delete</a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?>
 
