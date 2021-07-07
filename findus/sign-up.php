@@ -47,7 +47,7 @@ $error="Something went wrong.Please try again";
 }
  else
 {
-$error="Email-id already exist. Please try again";
+$error="Email-id or Contact Number already exist. Please try again";
 }
 }
 ?>
@@ -67,7 +67,21 @@ $error="Email-id already exist. Please try again";
 <link href="css/editor.css" type="text/css" rel="stylesheet"/>
 <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
- <script>
+<script type="text/javascript">
+function checkpass()
+{
+if(document.empsignup.password.value!=document.empsignup.confirmpassword.value)
+{
+alert('Password and Confirm Password field does not match');
+document.empsignup.confirmpassword.focus();
+return false;
+}
+return true;
+}
+
+</script>
+
+<script>
 function useremailAvailability() {
 
 jQuery.ajax({
@@ -106,7 +120,7 @@ error:function (){}
 
 
     <!--Signup FORM START-->
-    <form name="empsignup" enctype="multipart/form-data" method="post">
+    <form name="empsignup" enctype="multipart/form-data" method="post" onsubmit="return checkpass();">
     <section class="resum-form padd-tb">
 
       <div class="container">
@@ -120,33 +134,31 @@ error:function (){}
           <div class="row">
 
 <div class="col-md-6 col-sm-6">
-<label>Full Name<span style="color:red">*</span></label>
+<label>Full Name</label>
 <input type="text" name="fullname" placeholder="Full Name" required autocomplete="off" />
 </div>
 
 <div class="col-md-6 col-sm-6">
-<label>Your Email<span style="color:red">*</span></label>
+<label>Password</label>
+<input type="password" name="jspassword" id="password" placeholder="e.g. “Abc9986”" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+</div>
+
+<div class="col-md-6 col-sm-6">
+<label>Your Email</label>
 <input type="email" name="emailid" id="emailid" onBlur="useremailAvailability()"  placeholder="you@domain.com" autocomplete="off"  required>
  <span id="user-emailavailability-status" style="font-size:12px;"></span>
 </div>
 
+<div class="col-md-6 col-sm-6">
+<label>Confirm Password</label>
+<input type="password" name="jspassword" id="confirmpassword" placeholder="e.g. “Abc9986”" autocomplete="off" required>
+</div>
 
 <div class="col-md-6 col-sm-6">
-<label>Contact Number<span style="color:red">*</span></label>
+<label>Contact Number</label>
 <input type="text" name="contactnumber" id="contactnumber" onBlur="usercontactnoAvailability()"  placeholder="e.g. 1234567890" autocomplete="off" pattern="[0-9]+" title="only numeric digit allowed" maxlength="10" required>
  <span id="user-availability-status1" style="font-size:12px;"></span>
 </div>
-
-
-
- <div class="col-md-6 col-sm-6">
- <label>Password<span style="color:red">*</span></label>
-<input type="password" name="jspassword" placeholder="e.g. “Abc9986”" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
-</div>
-
-
-
-
 
             <div class="col-md-12">
 

@@ -88,7 +88,19 @@ $error="Nic or Email Already Exist";
 <link href="../css/editor.css" type="text/css" rel="stylesheet"/>
 <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+function checkpass()
+{
+if(document.empsignup.password.value!=document.empsignup.confirmpassword.value)
+{
+alert('Password and Confirm Password field does not match');
+document.empsignup.confirmpassword.focus();
+return false;
+}
+return true;
+}
 
+</script>
 
 
 
@@ -123,7 +135,7 @@ $error="Nic or Email Already Exist";
   <div id="main">
 
     <!--Signup FORM START-->
-    <form name="empsignup" enctype="multipart/form-data" method="post">
+    <form name="empsignup" enctype="multipart/form-data" method="post" onsubmit="return checkpass();">
     <section class="resum-form padd-tb">
 
       <div class="container">
@@ -155,19 +167,22 @@ $error="Nic or Email Already Exist";
 
  <div class="col-md-6 col-sm-6">
  <label>Password</label>
-<input type="password" name="empppassword" placeholder="Password Here..." autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+<input type="password" name="empppassword" id="password" placeholder="Password Here..." autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
 </div>
 
-
-<div class="col-md-6 col-sm-12">
+<div class="col-md-6 col-sm-6">
 <label>Image</label>
 <div class="upload-box">
 <div class="hold">
 <input type="file" name="logofile"  required>
- </span> </div>
+</div>
+</div>
 </div>
 
-            </div>
+<div class="col-md-6 col-sm-6">
+<label>Confirm Password</label>
+<input type="password" name="empppassword" id="confirmpassword" placeholder="Password Here..." autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+</div>
 
             <div class="col-md-12">
 
