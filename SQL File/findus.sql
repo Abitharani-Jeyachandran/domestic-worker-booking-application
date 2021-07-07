@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2021 at 03:43 PM
+-- Generation Time: Jul 07, 2021 at 11:17 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -167,9 +167,7 @@ INSERT INTO `tblcategory` (`id`, `CategoryName`, `PostingDate`, `UpdationDate`, 
 (3, 'Plumber', '2021-06-21 06:43:43', NULL, 0),
 (4, 'House keeper', '2021-06-21 14:15:12', NULL, 0),
 (5, 'Mechanics', '2021-06-22 06:14:26', NULL, 0),
-(6, 'House cleaner', '2021-06-22 09:32:59', NULL, 0),
-(7, 'abc', '2021-06-22 11:47:04', NULL, 0),
-(8, 'abd\\cds', '2021-07-05 13:32:26', NULL, 0);
+(6, 'House cleaner', '2021-06-22 09:32:59', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -193,12 +191,18 @@ CREATE TABLE `tblemployers` (
 -- Dumping data for table `tblemployers`
 --
 
-INSERT INTO `tblemployers` (`id`, `Name`, `NIC`, `EmpPassword`, `Image`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
-(3, 'Abi', '986180397V', '$2y$12$1SQLN9UqxitrNKsGnMMkO.0MIGomRcQZi8CmyMH54mPp6uUX8v4he', '0f95d9086b7fccee99fd5547221085bf.jpg', '2021-06-21 16:15:22', '2021-07-05 17:46:42', 1),
-(4, 'Nusha', '975502767V', '$2y$12$bymnBHGUNwkl.w53DA9L1ufi0dTmnxRtiVqI3NSSiDwS/PvRJe5om', '46391433815b13a4033de2f32b694741.jpg', '2021-06-21 16:35:53', '2021-06-21 16:35:53', 1),
-(5, 'fghj', '986184963V', '$2y$12$H0XSSHDBguh4urfSvRI//e23XDSvOgfbJDkhkbkC0DXxVqgtb.5ua', 'c4ab99540e752cc460aa3484a4ccadb2.jpg', '2021-07-05 13:11:15', '2021-07-05 13:11:15', 1),
-(6, 'fghj', 'test4@gmail.com', '$2y$12$EtfIZ14CQuuIvDUiPhWmoOxRDCg0JCXibAmm4TM12Bwg2ptp47uRe', '4846906426ec480704358a082c049801.jpg', '2021-07-05 17:48:21', '2021-07-05 17:48:21', 1),
-(7, 'fghj', 'test6@gmail.com', '$2y$12$vJJHZvevRPHL2BhUD6xSgu.hZ8PSNcbKIq3OXFVi1m7i6hEfg2nbu', 'c048ad5f72e46062cd97776984ebac7e.png', '2021-07-05 17:49:12', '2021-07-05 17:49:12', 1);
+INSERT INTO `tblemployers` (`id`, `Name`, `NIC`, `Email`, `EmpPassword`, `Image`, `RegDtae`, `LastUpdationDate`, `Is_Active`) VALUES
+(4, 'Nusha', '975502767V', NULL, '$2y$12$bymnBHGUNwkl.w53DA9L1ufi0dTmnxRtiVqI3NSSiDwS/PvRJe5om', '46391433815b13a4033de2f32b694741.jpg', '2021-06-21 16:35:53', '2021-06-21 16:35:53', 1),
+(5, 'fghj', '986184963V', NULL, '$2y$12$H0XSSHDBguh4urfSvRI//e23XDSvOgfbJDkhkbkC0DXxVqgtb.5ua', 'c4ab99540e752cc460aa3484a4ccadb2.jpg', '2021-07-05 13:11:15', '2021-07-05 13:11:15', 1),
+(6, 'fghj', 'test4@gmail.com', NULL, '$2y$12$EtfIZ14CQuuIvDUiPhWmoOxRDCg0JCXibAmm4TM12Bwg2ptp47uRe', '4846906426ec480704358a082c049801.jpg', '2021-07-05 17:48:21', '2021-07-05 17:48:21', 1),
+(7, 'fghj', 'test6@gmail.com', NULL, '$2y$12$vJJHZvevRPHL2BhUD6xSgu.hZ8PSNcbKIq3OXFVi1m7i6hEfg2nbu', 'c048ad5f72e46062cd97776984ebac7e.png', '2021-07-05 17:49:12', '2021-07-05 17:49:12', 1),
+(8, 'abi', '98538473V', 'test1@gmail.com', '$2y$12$MrEitk1mf5omt1O.AYAYI.PiaWteQVEd6jPuq4T8Qnyqre6358S16', '6424ac648ede2183eeaf850cd2a9e7b5.png', '2021-07-06 18:32:04', '2021-07-06 18:32:04', 1),
+(9, 'anfj', '5678982', 'test2@gmail.com', '$2y$12$5BCRPAKPXYRIoMnXzLiWu.PusaR8YcTg6yzT5g8vqzmFadBycTOse', '7ee336060f1d87074454b0660d0b615d.jpg', '2021-07-06 18:35:06', '2021-07-06 18:35:06', 1),
+(10, 'bv', '65432223', 'test1@gmail.com', '$2y$12$HQ7Nr.JwipzU7pwnmq4wp.uq/a.Ku/uJjdJPiY0u7FiYh7jq28OCC', '2a4aae583898898be582ffee91254cdf.png', '2021-07-06 18:35:50', '2021-07-06 18:35:50', 1),
+(11, 'dfg', '4567', 'test1@gmail.com', '$2y$12$SYZ9yoA/6ji0p3Rkyi91zeSZYN7TNhZ861SoqdBkd74NzCsyt0rd6', 'e7ddb36b9bb94d31497ded08eef2a4be.png', '2021-07-06 18:38:30', '2021-07-06 18:38:30', 1),
+(12, 'fddf', '986180397V', 'test1@gmail.com', '$2y$12$Dv19SngYKWRlLfbUr/vPmeEcNgmvqLFfmdQHIf9NN9x1kN19fcp6u', '2a4aae583898898be582ffee91254cdf.png', '2021-07-06 18:41:05', '2021-07-06 18:41:05', 1),
+(13, 'aa', '986257', 'test1@gmail.com', '$2y$12$8DVQ.ezLwp5XqYLD.0NPBu9aOLFVe1isGYxFS7CiG5.2a7BCT8FK6', 'd2b5ca33bd970f64a6301fa75ae2eb22.png', '2021-07-06 18:46:28', '2021-07-06 18:46:28', 1),
+(15, 'abi', 'test98@gmail.com', 'test35@gmail.com', '$2y$12$Le2aPq429NFRsFcIkHvIUuKSQuF4RK0d/pyF5Zm1OhQdxwc3tEQea', 'a6e2201d465d3955b03df1140ac2fef6.jpg', '2021-07-07 13:45:04', '2021-07-07 13:45:04', 1);
 
 -- --------------------------------------------------------
 
@@ -224,12 +228,7 @@ CREATE TABLE `tbljobs` (
 --
 
 INSERT INTO `tbljobs` (`jobId`, `employerId`, `jobCategory`, `salaryPackage`, `experience`, `jobLocation`, `jobDescription`, `Pay`, `postinDate`, `updationDate`) VALUES
-(3, 3, 'Beautician', '1000', '7', 'Kallady, Batticaloa', 'Experienced Worker', '2021-06-24', '2021-06-21 16:16:47', '2021-06-24 06:47:09'),
-(4, 4, 'Plumber', '1000/Day', '5', 'Kattankudy, Batticaloa', 'Worked over 1000 projects', '2021-06-21', '2021-06-21 16:38:33', '2021-06-22 07:27:37'),
-(6, 3, 'Beautician', '100', '5', 'Batticaloa', 'dfghj', '2021-07-05', '2021-07-05 13:23:05', NULL),
-(7, 3, 'House keeper', '300', '2', 'Kallady', 'sdfg', '2021-07-05', '2021-07-05 13:24:28', NULL),
-(8, 3, 'Carpenter', '788', '4', 'Batticaloa', 'dfghj', NULL, '2021-07-06 13:30:27', NULL),
-(9, 3, 'Carpenter', '300', '2', 'abc', 'asdf', '0000-00-00', '2021-07-06 13:41:38', NULL);
+(4, 4, 'Plumber', '1000/Day', '5', 'Kattankudy, Batticaloa', 'Worked over 1000 projects', '2021-06-21', '2021-06-21 16:38:33', '2021-06-22 07:27:37');
 
 -- --------------------------------------------------------
 
@@ -243,6 +242,7 @@ CREATE TABLE `tbljobseekers` (
   `EmailId` varchar(150) DEFAULT NULL,
   `ContactNumber` bigint(15) DEFAULT NULL,
   `Password` varchar(150) DEFAULT NULL,
+  `reset_pass` varchar(150) DEFAULT NULL,
   `ProfilePic` varchar(200) DEFAULT NULL,
   `RegDate` timestamp NULL DEFAULT current_timestamp(),
   `LastUpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
@@ -256,7 +256,11 @@ CREATE TABLE `tbljobseekers` (
 INSERT INTO `tbljobseekers` (`id`, `FullName`, `EmailId`, `ContactNumber`, `Password`, `ProfilePic`, `RegDate`, `LastUpdationDate`, `IsActive`) VALUES
 (4, 'Arjun', 'test1@gmail.com', 774637777, '$2y$12$cAG7/aOyKV9JN7fiSkvc4u6RawhB1fh8ypAaalTKR7fKN.qFlobMq', '6c0cc1365ad028a31fac9167aa0bbf891625490135.jpg', '2021-06-21 16:12:47', '2021-07-05 13:08:30', 1),
 (5, 'Joy', 'test2@gmail.com', 774689543, '$2y$12$9ue5ALaKM7JUE35/13MGnOxl8q3YgJGQQscwsvjte6LU2hn9odREm', '8659add0632749f79e747b7259c26cd21624292408.png', '2021-06-21 16:19:18', '2021-06-21 16:20:08', 1),
-(6, 'fghj', 'test5@gmail.com', 653892013, '$2y$12$4oQS5I2lBumZi1UEZWKec.vMYNwboGp0TybIREtB/75xVIiUTH/7y', NULL, '2021-07-05 12:58:36', NULL, 1);
+(6, 'fghj', 'test5@gmail.com', 653892013, '$2y$12$4oQS5I2lBumZi1UEZWKec.vMYNwboGp0TybIREtB/75xVIiUTH/7y', NULL, '2021-07-05 12:58:36', NULL, 1),
+(7, 'abi', 'test9@gmail.com', 778246778, '$2y$12$AgsGRDZo153o/nN5MzhEqe9Kg0tl3vQzv7Gk7Dyf5C29ArbZ8YQNy', NULL, '2021-07-07 13:25:46', NULL, 1),
+(8, 'abui', 'abi@gmail.com', 75356789, '$2y$12$Jj4QduM7cZyXRSKf9q7Z3.pJUvk0PsEBMHyZHnaLjIyWr1XLVkhwm', NULL, '2021-07-07 13:31:12', NULL, 1),
+(9, 'avng', 'abeyun@gmail.com', 234567890, '$2y$12$pYPuuMCTKzpLgGJXu9bu7eML23QwVTc72M1pwcE8rzO78.756S4Se', NULL, '2021-07-07 13:39:28', NULL, 1),
+(10, 'sdfghjk', 'sdfgh@gmail.com', 23456789, '$2y$12$7Vb261eShvmw02XchRtKD.KnjbXT88..TOoEmvLeFrpGk2bUixAT2', NULL, '2021-07-07 13:41:23', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -393,7 +397,7 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblapplyjob`
 --
 ALTER TABLE `tblapplyjob`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tblcategory`
@@ -405,7 +409,7 @@ ALTER TABLE `tblcategory`
 -- AUTO_INCREMENT for table `tblemployers`
 --
 ALTER TABLE `tblemployers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tbljobs`
@@ -417,7 +421,7 @@ ALTER TABLE `tbljobs`
 -- AUTO_INCREMENT for table `tbljobseekers`
 --
 ALTER TABLE `tbljobseekers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tblmessage`
