@@ -1,15 +1,14 @@
 <?php
- session_start();
-//Database Configuration File
+session_start();
+
 include('includes/config.php');
 error_reporting(0);
 if(isset($_POST['signin']))
   {
 
-    // Getting username/ email and password
     $uname=$_POST['emailmbile'];
     $password=$_POST['password'];
-    // Fetch data from database on the basis of username/email and password
+
     $sql ="SELECT id,FullName,Password FROM tbljobseekers WHERE (EmailId=:usname || ContactNumber=:usname)";
     $query= $dbh -> prepare($sql);
     $query-> bindParam(':usname', $uname, PDO::PARAM_STR);
