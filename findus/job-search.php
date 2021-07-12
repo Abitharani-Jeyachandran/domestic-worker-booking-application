@@ -172,7 +172,7 @@ foreach($results as $row)
 
                       <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Location: <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Calender: <?php  echo htmlentities($row->postinDate);?> </a> </div>
 
-                    <strong class="price">Amount: LKR <?php  echo htmlentities($row->salaryPackage);?></strong>
+                    <strong class="price">Amount: LKR <?php  echo htmlentities($row->salaryPackage);?> <?php  echo htmlentities($row->Pay);?></strong>
                      </div>
 
                 </li>

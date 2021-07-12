@@ -76,7 +76,7 @@ $vid=$_GET['viewid'];
             <div id="content-area">
 
 
-              <h2 style="color: #A020F0">work belong's to category <?php  echo htmlentities($_GET['viewid']);?></h2>
+              <h2 style="color: #A020F0"><?php  echo htmlentities($_GET['viewid']);?></h2>
 
               <ul id="myList">
 
@@ -126,7 +126,7 @@ foreach($results as $row)
 
                       <a href="jobs-details.php?jobid=<?php echo ($row->jobId);?>" class="text">Location: <?php  echo htmlentities($row->jobLocation);?></a></br> <a href="#" class="text">Registered Date: <?php  echo htmlentities($row->postinDate);?> </a> </div>
 
-                    <strong class="price">Amount: LKR<?php  echo htmlentities($row->salaryPackage);?></strong>
+                    <strong class="price">Amount: LKR <?php  echo htmlentities($row->salaryPackage);?>  <?php  echo htmlentities($row->Pay);?></strong>
                      </div>
 
                 </li>
