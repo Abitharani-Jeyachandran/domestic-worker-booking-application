@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2021 at 11:17 PM
+-- Generation Time: Jul 12, 2021 at 05:07 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -94,7 +94,9 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES
-(0, 305109698, 1169881704, 'hio');
+(0, 305109698, 1169881704, 'hio'),
+(0, 305109698, 1169881704, 'wwert'),
+(0, 305109698, 1169881704, 'dfghj');
 
 -- --------------------------------------------------------
 
@@ -181,6 +183,7 @@ CREATE TABLE `tblemployers` (
   `NIC` varchar(250) DEFAULT NULL,
   `Email` varchar(250) DEFAULT NULL,
   `EmpPassword` varchar(250) DEFAULT NULL,
+  `reset_pass` varchar(150) DEFAULT NULL,
   `Image` varchar(200) DEFAULT NULL,
   `RegDtae` timestamp NULL DEFAULT current_timestamp(),
   `LastUpdationDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -253,14 +256,19 @@ CREATE TABLE `tbljobseekers` (
 -- Dumping data for table `tbljobseekers`
 --
 
-INSERT INTO `tbljobseekers` (`id`, `FullName`, `EmailId`, `ContactNumber`, `Password`, `ProfilePic`, `RegDate`, `LastUpdationDate`, `IsActive`) VALUES
-(4, 'Arjun', 'test1@gmail.com', 774637777, '$2y$12$cAG7/aOyKV9JN7fiSkvc4u6RawhB1fh8ypAaalTKR7fKN.qFlobMq', '6c0cc1365ad028a31fac9167aa0bbf891625490135.jpg', '2021-06-21 16:12:47', '2021-07-05 13:08:30', 1),
-(5, 'Joy', 'test2@gmail.com', 774689543, '$2y$12$9ue5ALaKM7JUE35/13MGnOxl8q3YgJGQQscwsvjte6LU2hn9odREm', '8659add0632749f79e747b7259c26cd21624292408.png', '2021-06-21 16:19:18', '2021-06-21 16:20:08', 1),
-(6, 'fghj', 'test5@gmail.com', 653892013, '$2y$12$4oQS5I2lBumZi1UEZWKec.vMYNwboGp0TybIREtB/75xVIiUTH/7y', NULL, '2021-07-05 12:58:36', NULL, 1),
-(7, 'abi', 'test9@gmail.com', 778246778, '$2y$12$AgsGRDZo153o/nN5MzhEqe9Kg0tl3vQzv7Gk7Dyf5C29ArbZ8YQNy', NULL, '2021-07-07 13:25:46', NULL, 1),
-(8, 'abui', 'abi@gmail.com', 75356789, '$2y$12$Jj4QduM7cZyXRSKf9q7Z3.pJUvk0PsEBMHyZHnaLjIyWr1XLVkhwm', NULL, '2021-07-07 13:31:12', NULL, 1),
-(9, 'avng', 'abeyun@gmail.com', 234567890, '$2y$12$pYPuuMCTKzpLgGJXu9bu7eML23QwVTc72M1pwcE8rzO78.756S4Se', NULL, '2021-07-07 13:39:28', NULL, 1),
-(10, 'sdfghjk', 'sdfgh@gmail.com', 23456789, '$2y$12$7Vb261eShvmw02XchRtKD.KnjbXT88..TOoEmvLeFrpGk2bUixAT2', NULL, '2021-07-07 13:41:23', NULL, 1);
+INSERT INTO `tbljobseekers` (`id`, `FullName`, `EmailId`, `ContactNumber`, `Password`, `reset_pass`, `ProfilePic`, `RegDate`, `LastUpdationDate`, `IsActive`) VALUES
+(4, 'Arjun', 'test1@gmail.com', 774637777, '$2y$12$cAG7/aOyKV9JN7fiSkvc4u6RawhB1fh8ypAaalTKR7fKN.qFlobMq', 'e828795a3254c3a30cc0031b80fff7c960e8a6186c9ec', '6c0cc1365ad028a31fac9167aa0bbf891625490135.jpg', '2021-06-21 16:12:47', '2021-07-09 19:40:08', 1),
+(5, 'Joy', 'test2@gmail.com', 774689543, '$2y$12$9ue5ALaKM7JUE35/13MGnOxl8q3YgJGQQscwsvjte6LU2hn9odREm', NULL, '8659add0632749f79e747b7259c26cd21624292408.png', '2021-06-21 16:19:18', '2021-06-21 16:20:08', 1),
+(6, 'fghj', 'test5@gmail.com', 653892013, '$2y$12$4oQS5I2lBumZi1UEZWKec.vMYNwboGp0TybIREtB/75xVIiUTH/7y', NULL, NULL, '2021-07-05 12:58:36', NULL, 1),
+(7, 'abi', 'test9@gmail.com', 778246778, '$2y$12$AgsGRDZo153o/nN5MzhEqe9Kg0tl3vQzv7Gk7Dyf5C29ArbZ8YQNy', NULL, NULL, '2021-07-07 13:25:46', NULL, 1),
+(8, 'abui', 'abi@gmail.com', 75356789, '$2y$12$Jj4QduM7cZyXRSKf9q7Z3.pJUvk0PsEBMHyZHnaLjIyWr1XLVkhwm', NULL, NULL, '2021-07-07 13:31:12', NULL, 1),
+(9, 'avng', 'abeyun@gmail.com', 234567890, '$2y$12$pYPuuMCTKzpLgGJXu9bu7eML23QwVTc72M1pwcE8rzO78.756S4Se', NULL, NULL, '2021-07-07 13:39:28', NULL, 1),
+(10, 'sdfghjk', 'sdfgh@gmail.com', 23456789, '$2y$12$7Vb261eShvmw02XchRtKD.KnjbXT88..TOoEmvLeFrpGk2bUixAT2', NULL, NULL, '2021-07-07 13:41:23', NULL, 1),
+(11, 'abi', 'abitharani009@gmail.com', 987634567, '$2y$10$p8oj9nfeGXWhuL6SjFEWEuKtiNZaiIsZ/5p1VHLahRBXHUdOyOOOO', '', NULL, '2021-07-07 21:23:10', '2021-07-09 19:42:21', 1),
+(12, 'ab', 'cvbn@gmail.com', 234, '$2y$12$l3/epY.HxOl3C6dLBRYvvOT.cBKUp4BP.bkI/4phqrnDpdp0AYWk.', NULL, NULL, '2021-07-08 19:00:49', NULL, 1),
+(13, 'ggg', 'abeji@gmail.com', 0, '$2y$12$m8X6rXbOMkKTkdLCwci2b.W4PavcV813BN50vhrxZkyJGScueNQsC', NULL, NULL, '2021-07-08 19:31:18', NULL, 1),
+(14, 'ggg', 'gg@gmail.com', 777777777, '$2y$12$wUW47L6obNRvMOXmnQJid.TktIzzsBj40YCcLpGP35KB5gV0MZGm6', NULL, NULL, '2021-07-08 19:32:39', NULL, 1),
+(15, 'ggg', 'gkkkkkkkg@gmail.com', 7777777, '$2y$12$yJ5MBGBKoy2ow8ChR2.aouZyhKs9BHr8bma4zfdk2fc9.TKeUBk1u', NULL, NULL, '2021-07-08 19:33:12', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -332,7 +340,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `unique_id`, `username`, `status`) VALUES
-(0, 1169881704, 'Abi', 'Offline now'),
+(0, 1169881704, 'Abi', 'Active now'),
 (0, 305109698, 'Admin', 'Active now');
 
 --
@@ -421,7 +429,7 @@ ALTER TABLE `tbljobs`
 -- AUTO_INCREMENT for table `tbljobseekers`
 --
 ALTER TABLE `tbljobseekers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tblmessage`

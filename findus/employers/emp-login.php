@@ -105,7 +105,7 @@ echo "<script>alert('User not registered with us');</script>";
 
 </div>
 
-            <a href="forgot-password.php" class="login">Forgot your Password</a>
+            <a href="forgetpassword.php" class="login">Forgot your Password</a>
 
             <div class="login-social">
               <p>You Don’t have an Account? <a href="employers-signup.php">SIGN UP NOW</a></p>

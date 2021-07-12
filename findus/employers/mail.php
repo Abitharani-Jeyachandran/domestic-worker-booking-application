@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 // wrapped mail function inside the custom php function
 function my_mail($_token, $receiver){
 // Load Composer's autoloader
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 $set_token =  $_token;
 
 // Instantiation and passing `true` enables exceptions
@@ -43,7 +43,7 @@ try {
     $mail->Subject = 'Here is the subject';
     $mail->Body    = "
         <p>Please click link below to reset the password</p>
-       <a style='background:skyblue;padding:10px 20px;' href='http://localhost/2-2-project/findus/reset.php?token={$set_token}'>RESET PASSWORD</a>"
+       <a style='background:skyblue;padding:10px 20px;' href='http://localhost/2-2-project/findus/employers/reset.php?token={$set_token}'>RESET PASSWORD</a>"
 
        ;
 

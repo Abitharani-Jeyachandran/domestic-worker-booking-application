@@ -80,7 +80,7 @@ else{?>
 
     <div class="container">
 
-      <h1>Clients applied for your work</h1>
+      <h1>Service seekers applied for your work</h1>
 
     </div>
 

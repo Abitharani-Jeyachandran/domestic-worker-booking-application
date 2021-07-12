@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] ==='POST'){
                         $sql = 'UPDATE tblemployers SET reset_pass= "" WHERE Email="'.$email.'"';
                         if($query = $con->prepare($sql)){
                             if($query->execute()){
-                                header("location:index.php?password=changed");
+                                header("location:jobseeker-listings.php");
                             }
                             else{
                                 echo "Password Not Changed";
@@ -63,13 +63,13 @@ if($_SERVER['REQUEST_METHOD'] ==='POST'){
 <head>
 <title>Service Seeker | FIND US</title>
 
-<link href="css/custom.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="../css/custom.css" rel="stylesheet" type="text/css">
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 
-<link href="css/responsive.css" rel="stylesheet" type="text/css">
-<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+<link href="../css/responsive.css" rel="stylesheet" type="text/css">
+<link href="../css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
