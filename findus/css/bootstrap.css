@@ -330,9 +330,7 @@ th {
 .glyphicon-ok:before {
   content: "\e013";
 }
-.glyphicon-remove:before {
-  content: "\e014";
-}
+
 .glyphicon-zoom-in:before {
   content: "\e015";
 }
@@ -594,9 +592,6 @@ th {
 .glyphicon-eye-open:before {
   content: "\e105";
 }
-.glyphicon-eye-close:before {
-  content: "\e106";
-}
 .glyphicon-warning-sign:before {
   content: "\e107";
 }
@@ -626,9 +621,6 @@ th {
 }
 .glyphicon-shopping-cart:before {
   content: "\e116";
-}
-.glyphicon-folder-close:before {
-  content: "\e117";
 }
 .glyphicon-folder-open:before {
   content: "\e118";
@@ -2757,7 +2749,6 @@ select[multiple].input-lg {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
 }
 .form-group-lg select.form-control {
   height: 46px;
@@ -4061,7 +4052,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
 }
 .nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:hover,
@@ -4814,7 +4804,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 5px 14px;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 15px;
 }
 .pager li > a:hover,
 .pager li > a:focus {
@@ -5042,13 +5031,6 @@ a.thumbnail.active {
 .alert-dismissable,
 .alert-dismissible {
   padding-right: 35px;
-}
-.alert-dismissable .close,
-.alert-dismissible .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
 }
 .alert-success {
   color: #3c763d;
@@ -5833,31 +5815,6 @@ button.list-group-item-danger.active:focus {
   padding: 9px;
   border-radius: 3px;
 }
-.close {
-  float: right;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: .2;
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  filter: alpha(opacity=50);
-  opacity: .5;
-}
-button.close {
-  -webkit-appearance: none;
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-}
 .modal-open {
   overflow: hidden;
 }
@@ -5881,19 +5838,10 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
 }
 .modal-content {
   position: relative;
   background-color: #fff;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  border: 1px solid #999;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 6px;
-  outline: 0;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
 }
 .modal-backdrop {
   position: fixed;
@@ -5905,19 +5853,15 @@ button.close {
   background-color: #000;
 }
 .modal-backdrop.fade {
-  filter: alpha(opacity=0);
+  filter: alpha(opacity=100);
   opacity: 0;
 }
 .modal-backdrop.in {
-  filter: alpha(opacity=50);
+  filter: alpha(opacity=100);
   opacity: .5;
 }
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #A020F0;
-}
-.modal-header .close {
-  margin-top: -2px;
 }
 .modal-title {
   margin: 0;
@@ -5928,9 +5872,8 @@ button.close {
   padding: 15px;
 }
 .modal-footer {
-  padding: 15px;
+  padding: 5px;
   text-align: right;
-  border-top: 1px solid #A020F0;
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;
@@ -5967,7 +5910,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
@@ -6013,7 +5956,6 @@ button.close {
   color: #fff;
   text-align: center;
   background-color: #000;
-  border-radius: 4px;
 }
 .tooltip-arrow {
   position: absolute;
@@ -6084,9 +6026,9 @@ button.close {
   left: 0;
   z-index: 1060;
   display: none;
-  max-width: 276px;
+  max-width: 476px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
@@ -6101,15 +6043,6 @@ button.close {
   word-spacing: normal;
   word-wrap: normal;
   white-space: normal;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-
   line-break: auto;
 }
 .popover.top {
@@ -6128,9 +6061,7 @@ button.close {
   padding: 8px 14px;
   margin: 0;
   font-size: 14px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0;
+  background-color: #fff;
 }
 .popover-content {
   padding: 9px 14px;
@@ -6385,7 +6316,6 @@ button.close {
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #fff;
-  border-radius: 10px;
 }
 .carousel-indicators .active {
   width: 12px;

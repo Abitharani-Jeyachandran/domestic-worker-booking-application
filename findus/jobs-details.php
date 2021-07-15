@@ -2,6 +2,47 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
+if(isset($_POST['book']))
+{
+$jobid=intval($_GET['jobid']);
+$userid=$_SESSION['jsid'];
+$edate=$_POST['edate'];
+$est=$_POST['est'];
+$address=$_POST['address'];
+
+// Query for validation of  email-id
+$ret="SELECT * FROM  tblapplyjob where (EDate=:edate || ETime=:est)";
+$queryt = $dbh -> prepare($ret);
+$queryt->bindParam(':edate',$edate,PDO::PARAM_STR);
+$queryt->bindParam(':est',$est,PDO::PARAM_STR);
+$queryt -> execute();
+$results = $queryt -> fetchAll(PDO::FETCH_OBJ);
+if($queryt -> rowCount() == 0)
+{
+
+$sql="INSERT INTO tblapplyjob(JobId,UserId,EDate,ETime,Address) VALUES(:jobid,:userid,:edate,:est,:address)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':userid',$userid,PDO::PARAM_STR);
+$query->bindParam(':edate',$edate,PDO::PARAM_STR);
+$query->bindParam(':est',$est,PDO::PARAM_STR);
+$query->bindParam(':address',$address,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+  echo "<script>alert('Booked Successfully');</script>";
+  }
+}
+else{
+  echo "<script>alert('Already Booked by someone');</script>";
+}
+}
+else {
+  echo "<script>alert('Sign In First');</script>";
+}
+
+
 if(isset($_POST['comment']))
 {
 $jobid=intval($_GET['jobid']);
@@ -24,32 +65,8 @@ else
 echo "<script>alert('Commented Successfully');</script>";
 }
 }
-if(isset($_POST['book']))
-{
-$jobid=intval($_GET['jobid']);
-$userid=$_SESSION['jsid'];
-$edate=$_POST['edate'];
-$est=$_POST['est'];
-$address=$_POST['address'];
 
-$sql="INSERT INTO tblapplyjob(JobId,UserId,EDate,ETime,Address) VALUES(:jobid,:userid,:edate,:est,:address)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
-$query->bindParam(':userid',$userid,PDO::PARAM_STR);
-$query->bindParam(':edate',$edate,PDO::PARAM_STR);
-$query->bindParam(':est',$est,PDO::PARAM_STR);
-$query->bindParam(':address',$address,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-  echo "<script>alert('Booked Successfully');</script>";
-  }
-  else
-  {
-  echo "<script>alert('Sign In First');</script>";
-}
-}
+
 ?>
 <!doctype html>
 

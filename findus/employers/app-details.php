@@ -181,25 +181,19 @@ $results=$query1->fetchAll(PDO::FETCH_OBJ);
  ?>
               <div class="summary-box">
 
-                <h4>Message History</h4>
-
                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
   <tr>
-    <th>#</th>
-<th>Message</th>
 <th>Status</th>
-<th>Time</th>
+<th>Message</th>
 </tr>
 <?php
 foreach($results as $row1)
 {
   ?>
 <tr>
-  <td><?php echo $cnt;?></td>
- <td><?php  echo $row1->Message;?></td>
-  <td><?php  echo $row1->Status;?></td>
-   <td><?php  echo $row1->ResponseDate;?></td>
+<td><?php  echo $row1->Status;?></td>
+<td><?php  echo $row1->Message;?></td>
 </tr>
 <?php $cnt=$cnt+1;} ?>
 
@@ -215,46 +209,47 @@ foreach($results as $row1)
 
 
 
-<p align="center">
- <button class="btn btn-primary waves-effect waves-light w-lg" data-toggle="modal" data-target="#myModal">Take Action</button></p>
+                <p align="center">
+                 <button class="btn btn-primary waves-effect waves-light w-lg" data-toggle="modal" data-target="#myModal">Take Action</button></p>
 
-<?php } } ?>
-<div class="" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-     <div class="modal-content">
-      <div class="modal-header">
-<h5 class="modal-title" id="exampleModalLabel">Take Action</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
- </button>
-</div>
-<div class="modal-body">
-<table class="table table-bordered table-hover data-tables">
+                <?php } } ?>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                      <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Accept/Reject</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                 </button>
+                </div>
+                <div class="modal-body">
+                <table class="table table-bordered table-hover data-tables">
 
- <form method="post" name="submit">
+                 <form method="post" name="submit">
 
-<tr>
-<th>Message :</th>
-<td>
-<textarea name="message" placeholder="Message" rows="12" cols="14" class="form-control wd-450" required="true"></textarea></td>
-  </tr>
+                  <tr>
+                    <th>Status :</th>
+                    <td>
 
-  <tr>
-    <th>Status :</th>
-    <td>
+                   <select name="status" class="form-control wd-450" required="true" >
+                     <option value="Rejected" selected="true">Rejected</option>
+                     <option value="Accepted">Accepted</option>
+                   </select></td>
+                  </tr>
 
-   <select name="status" class="form-control wd-450" required="true" >
-     <option value="Rejected" selected="true">Rejected</option>
-     <option value="Sorted">Sort Listed</option>
-   </select></td>
-  </tr>
-</table>
-</div>
- <div class="modal-footer">
- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-<button type="submit" name="submit" class="btn btn-primary">Update</button>
+                  <tr>
+                  <th>Message :</th>
+                  <td>
+                  <textarea name="message" placeholder="Message" rows="1" cols="14" class="form-control wd-450" required="true"></textarea></td>
+                    </tr>
+                </table>
+                </div>
+                 <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" name="submit" class="btn btn-primary">Update</button>
 
-  </form>
+                  </form>
+
               </div>
 
 

@@ -48,7 +48,7 @@ session_start();
 					<tbody>
 					<?php
 						$ename = ""; $edate = ""; $etime = "";
-						 $sql = "SELECT * FROM `calendar` WHERE date='".$date."/".$month."/".$year."' ORDER BY time ASC";  //fetch all events from database related to processing date
+						 $sql = "SELECT * FROM `calendar` WHERE date='".$date."/".$month."/".$year."' ORDER BY time ASC"; 
 																														//and show them in table format
 						 $result = $conn->query($sql);
 

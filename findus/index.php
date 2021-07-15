@@ -56,7 +56,7 @@ include('includes/config.php');
     <div class="container">
 
         <h2>About Us</h2>
-        <h3>This is a platform to connect <span>domestic service providers</span> and <span>service seekers</span></h3>
+        <h3>Find Us is a Connected Workforce Platform that mobilizes the service providers and service seekers through a digitized platform with day-to-day tasks and provides real-time visibility into all areas of operation. We provide the platform with total transparency and connectivity, executives will have the additional services for our users. This platform will transform the untapped possibilities into tangible solutions and competitive advantage comparing to the current workforce system around the world</h3>
 
     </div>
 
