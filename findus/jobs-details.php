@@ -2,6 +2,29 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
+if(isset($_POST['comment']))
+{
+$jobid=intval($_GET['jobid']);
+$userid=$_SESSION['jsid'];
+$content=$_POST['content'];
+
+$sql="INSERT INTO comment (user_id,Jobid,content) VALUES(:userid,:jobid,:content)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':userid',$userid,PDO::PARAM_STR);
+$query->bindParam(':content',$content,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+echo "<script>alert('Commented Successfully');</script>";
+}
+else
+{
+echo "<script>alert('Commented Successfully');</script>";
+}
+}
+
 if(isset($_POST['book']))
 {
 $jobid=intval($_GET['jobid']);
@@ -33,36 +56,12 @@ if($lastInsertId)
 {
   echo "<script>alert('Booked Successfully');</script>";
   }
-}
 else{
   echo "<script>alert('Already Booked by someone');</script>";
 }
 }
 else {
   echo "<script>alert('Sign In First');</script>";
-}
-
-
-if(isset($_POST['comment']))
-{
-$jobid=intval($_GET['jobid']);
-$userid=$_SESSION['jsid'];
-$content=$_POST['content'];
-
-$sql="INSERT INTO comment (user_id,Jobid,content) VALUES(:userid,:jobid,:content)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
-$query->bindParam(':userid',$userid,PDO::PARAM_STR);
-$query->bindParam(':content',$content,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-echo "<script>alert('Commented Successfully');</script>";
-}
-else
-{
-echo "<script>alert('Commented Successfully');</script>";
 }
 }
 
