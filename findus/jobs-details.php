@@ -177,8 +177,6 @@ foreach($results as $row)
                 </br> <a href="#" class="text">Posted Date : <?php  echo htmlentities($row->postinDate);?> </a>
                 <strong class="price">Amount : LKR <?php  echo htmlentities($row->salaryPackage);?> <?php  echo htmlentities($row->Pay);?></strong>
 
-                <strong class="price"><a href="calendar.php">Calendar</a></strong>
-
 </br></br></br></br></br>
    <div class="col-md-6 col-sm-6">
    <label>Date:<span style="color:red">*</span></label>

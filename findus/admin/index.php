@@ -56,7 +56,7 @@ echo "<script>alert('Invalid Details');</script>";
     <body>
       <section id="inner-banner">
         <div class="container">
-          <h1>Admin Login</h1>
+          <h1 style="color:#fff;">Admin Login</h1>
         </div>
       </section>
 

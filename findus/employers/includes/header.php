@@ -30,7 +30,6 @@
               </li>
 
  <li><a href="jobseeker-listings.php">Service Seeker List</a></li>
- <li><a href="calendar/index.php">Calendar</a></li>
  <div id="google_translate_element"></div>
 
  <script type="text/javascript">
