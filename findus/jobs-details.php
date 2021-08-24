@@ -57,11 +57,11 @@ if($lastInsertId)
   echo "<script>alert('Booked Successfully');</script>";
   }
 else{
-  echo "<script>alert('Already Booked by someone');</script>";
+  echo "<script>alert('Sign In First');</script>";
 }
 }
 else {
-  echo "<script>alert('Sign In First');</script>";
+  echo "<script>alert('Already Booked. Try another date or time');</script>";
 }
 }
 
