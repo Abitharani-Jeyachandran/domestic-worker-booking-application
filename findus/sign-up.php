@@ -145,7 +145,7 @@ error:function (){}
 
 <div class="col-md-6 col-sm-6">
 <label>Your Email</label>
-<input type="email" name="emailid" id="emailid" onBlur="useremailAvailability()"  placeholder="you@domain.com" autocomplete="off"  required>
+<input type="email" name="emailid" id="emailid" onBlur="useremailAvailability()"  placeholder="example@gmail.com" autocomplete="off"  required>
  <span id="user-emailavailability-status" style="font-size:12px;"></span>
 </div>
 

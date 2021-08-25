@@ -82,6 +82,7 @@ foreach($results as $result)
             <li><a href="edit-profile.php">Manage Account</a></li>
 
             <li><a href="change-password.php">Change Password</a></li>
+            <li><a href="../payment/index.php">Subscription</a></li>
             <li><a href="logout.php">Log off</a></li>
 
           </ul>

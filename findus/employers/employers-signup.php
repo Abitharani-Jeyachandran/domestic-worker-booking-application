@@ -155,7 +155,7 @@ return true;
 
 <div class="col-md-6 col-sm-6">
 <label>Nic No</label>
-<input type="text" name="email" id="email" placeholder="Nic Number Here..." autocomplete="off"  required>
+<input type="text" name="email" id="email" placeholder="Nic Number Here..." autocomplete="off" maxlength="12" required>
  <span id="user-availability-status1" style="font-size:12px;"></span>
 </div>
 
