@@ -156,7 +156,7 @@ error:function (){}
 
 <div class="col-md-6 col-sm-6">
 <label>Contact Number</label>
-<input type="text" name="contactnumber" id="contactnumber" onBlur="usercontactnoAvailability()"  placeholder="e.g. 1234567890" autocomplete="off" pattern="[0-9]+" title="only numeric digit allowed" maxlength="10" required>
+<input type="text" name="contactnumber" id="contactnumber" onBlur="usercontactnoAvailability()"  placeholder="e.g. 1234567890" autocomplete="off" pattern="[0-9]+" title="only numeric digit allowed. Limits 10" maxlength="10" required>
  <span id="user-availability-status1" style="font-size:12px;"></span>
 </div>
 

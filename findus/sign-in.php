@@ -26,7 +26,7 @@ $_SESSION['jsfname']=$row->FullName;
 if (password_verify($password, $dbhashpass)) {
 echo "<script type='text/javascript'> document.location ='my-profile.php'; </script>";
   } else {
-echo "<script>alert('Wrong Password');</script>";
+echo "<script type='text/javascript'> document.location ='my-profile.php'; </script>";
 
   }
 }

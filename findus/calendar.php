@@ -1,185 +1,220 @@
 <?php
 session_start();
-	$serverName = "localhost";
-	$userName = "root";
-	$passWord = "";
-	$dbName = "findus";
+error_reporting(0);
+include('includes/config.php');
 
-	$conn = mysqli_connect($serverName, $userName, $passWord, $dbName);
+if(isset($_POST['book']))
+{
+$jobid=intval($_GET['jobid']);
+$userid=$_SESSION['jsid'];
+$edate=$_POST['edate'];
+$est=$_POST['est'];
+$address=$_POST['address'];
 
-  $sql = "SELECT  calendar.*,tbljobs.*,tblemployers.* from tblemployers join tbljobs on tblemployers.id=tbljobs.employerId join calendar on tblemployers.id=calendar.empid";
-	$result = $conn->query($sql);
-	$dates = array();
+// Query for validation of  email-id
+$ret="SELECT * FROM  tblapplyjob where (EDate=:edate || ETime=:est)";
+$queryt = $dbh -> prepare($ret);
+$queryt->bindParam(':edate',$edate,PDO::PARAM_STR);
+$queryt->bindParam(':est',$est,PDO::PARAM_STR);
+$queryt -> execute();
+$results = $queryt -> fetchAll(PDO::FETCH_OBJ);
+if($queryt -> rowCount() == 0)
+{
 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) {
-					$temp = $row["date"];
-
-					array_push($dates, $temp);
-						//store all unique dates in array
-				}
-			}
-		?>
-
-		<html>
-
-		<head>
-		    <link rel="stylesheet" href="employers/calendar/assets/css/main.css">
-			<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-			<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
-		</head>
-
-		<body onload="renderDate()">
-
-			<div class="yearHead">
-				<div class="prev" onclick="moveDate('prev')">  <!--Left arrow-->
-					<span>&#10094;</span>
-				</div>
-				<h1 id="currentYear">2021</h1>
-				<div class="next" onclick="moveDate('next')">  <!--Right arrow-->
-					<span>&#10095;</span>
-				</div>
-			</div>
-
-		<div class="color">
-			<p><span>Red</span> - Booked</p>
-			<p>Others - Available</p>
-		</div>
+$sql="INSERT INTO tblapplyjob(JobId,UserId,EDate,ETime,Address) VALUES(:jobid,:userid,:edate,:est,:address)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':jobid',$jobid,PDO::PARAM_STR);
+$query->bindParam(':userid',$userid,PDO::PARAM_STR);
+$query->bindParam(':edate',$edate,PDO::PARAM_STR);
+$query->bindParam(':est',$est,PDO::PARAM_STR);
+$query->bindParam(':address',$address,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+  echo "<script>alert('Booked Successfully');</script>";
+  }
+else{
+  echo "<script>alert('Sign In First');</script>";
+}
+}
+else {
+  echo "<script>alert('Already Booked. Try another date or time');</script>";
+}
+}
 
 
-		    <div class="wrapper">
-			<?php
-				for($x=0; $x<12; $x++){  //print each month calender 12 times i.e to get year view
-					echo "
-						<div class='calendar'>
-							<div class='month'>
+?>
+<!doctype html>
 
-								<div>
-									<h2 id='month' class='month_text'></h2>
-								</div>
+<html lang="en">
 
-							</div>
-							<div class='weekdays'>
-								<div>Su</div>
-								<div>Mo</div>
-								<div>Tu</div>
-								<div>We</div>
-								<div>Th</div>
-								<div>Fri</div>
-								<div>Sat</div>
-							</div>
-							<div class='days'>
+<head>
 
-							</div>
-						</div>
-					";
-				}
-			?>
-		    </div>
+<meta charset="utf-8">
 
-		    <script>
-				var js_array = [<?php echo '"'.implode('","',  $dates ).'"' ?>];   //get php dates array into js_array javascript
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		        var dt = new Date();
-				var prevYear = 0000;
-				var currentSelectedDate = "";
+<title>FIND US-work Details</title>
 
-		        function renderDate(year = dt.getFullYear()) {
-					prevYear = year                                           //store recieved year in prevYear for future use
-					document.getElementById("currentYear").innerHTML = year;
+<!--CUSTOM CSS-->
 
-		            var today = new Date();
+<link href="css/custom.css" rel="stylesheet" type="text/css">
 
-		            var months = [
-		                "January",
-		                "February",
-		                "March",
-		                "April",
-		                "May",
-		                "June",
-		                "July",
-		                "August",
-		                "September",
-		                "October",
-		                "November",
-		                "December"
-		            ]
+<!--BOOTSTRAP CSS-->
 
-					for(i = 0; i<12; i++){                                                              //print dates into each month i.e 12 times loop
-						document.getElementsByClassName("month_text")[i].innerHTML = months[i];
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
 
-						dt.setFullYear(year, i, 1);                                                     //set date to recieved year, current month in loop and 1 date of that month
-						var day = dt.getDay();                                                          //get day of 1st date i.e in numerical sun = 0, mon = 1, etc.
+<!--OWL CAROUSEL CSS-->
 
-						var endDate = new Date(															//get last date of processing month
-							year,
-							dt.getMonth() + 1,
-							0
-						).getDate();
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
 
-						var cells = "";
+<!--FONTAWESOME CSS-->
 
-						for (x = day; x > 0; x--) {                                                    //loop through 0 to (int) day
-							cells += "<div class='prev_date'>" + " " + "</div>";                       //mark all days before 1st date day as blank in calender to fill space
-						}
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-						for(var j=1; j<=endDate; j++) {
+<!--SCROLL FOR SIDEBAR NAVIGATION-->
 
-							if(js_array.includes(j+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear())){       //check if current date has any events stored i.e check if current date is in js_array
-
-								if (j == today.getDate() && dt.getMonth() == today.getMonth() && dt.getFullYear() == today.getFullYear()){
-									//if date is today then show small circle indicating event marked
-									cells += "<div class='today fas fa-circle' onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + " </div>";
-								}
-								else if(dt.getFullYear() < today.getFullYear() || (dt.getMonth() < today.getMonth() && dt.getFullYear() == today.getFullYear())){
-									//check if date is of previous moth of same year or previous year
-									cells += "<div class='passedEvent'  onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
-								}
-								else if(j < today.getDate() && dt.getMonth() == today.getMonth() && dt.getFullYear() == today.getFullYear()){
-									//check if date is previous of today within same month and year
-									cells += "<div class='passedEvent'  onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
-								}
-								else{
-
-									//else it is upcoming date with event then mark as blue
-									cells += "<div class='upcomingEvent' onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
-								}
-							}
-							else{
-								if (j == today.getDate() && dt.getMonth() == today.getMonth() && dt.getFullYear() == today.getFullYear()){
-									//check if date is today -> mark red
-									cells += "<div class='today'  onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
-								}
-								else{
-									cells += "<div onclick='show(event, "+j+","+(dt.getMonth()+1)+","+dt.getFullYear()+")'>" + j + "</div>";
-								}
-							}
-						}
-
-						document.getElementsByClassName("days")[i].innerHTML = cells;                //append all data in cells string to days class of i'th month
-
-					}
-		        }
-
-				function show(event, date, month, year){         									//go to showevents page to display events
-					window.location.href="showevents.php?date="+date+"&month="+month+"&year="+year;
-				}
-
-		        function moveDate(para) {                                                            //function to change year in calender
-		            if(para == "prev") {
-						console.log(prevYear - 1);
-		                renderDate(prevYear - 1);
-
-		            } else if(para == 'next') {
-						console.log(prevYear + 1);
-		                renderDate(prevYear + 1);
-		            }
-
-		        }
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 
 
-		    </script>
+<!--GOOGLE FONTS-->
 
-		</body>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
 
-		</html>
+
+</head>
+
+
+
+<body class="index">
+
+<!--WRAPPER START-->
+
+<div id="wrapper">
+
+  <!--HEADER START-->
+
+  <?php include_once('includes/header.php');?>
+
+  <section id="inner-banner">
+
+    <div class="container">
+
+      <h1>Booked date and time</h1>
+
+    </div>
+
+  </section>
+
+  <!--INNER BANNER END-->
+
+
+
+  <!--MAIN START-->
+
+  <div id="main">
+
+    <!--RECENT JOB SECTION START-->
+
+    <section class="recent-row padd-tb job-detail">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-8">
+
+            <div id="content-area">
+              <div class="box">
+                <table class="table table-bordered table-striped table-vcenter">
+                    <thead>
+                        <tr>
+                            <th style="color:#000;">Date</th>
+                           <th style="color:#000;">Time</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+              <?php
+            $sql="SELECT * from tblapplyjob";
+            $query = $dbh -> prepare($sql);
+            $query->execute();
+            $results=$query->fetchAll(PDO::FETCH_OBJ);
+
+            $cnt=1;
+            if($query->rowCount() > 0)
+            {
+            foreach($results as $row)
+            {               ?>
+              <tr>
+                <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->EDate);?></td>
+                <td class="font-w600" style="color:#000;"><?php  echo htmlentities($row->ETime);?></td>
+                  </tr>
+              <?php $cnt=$cnt+1;}} ?>
+            </tbody>
+        </table>
+              </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    </section>
+
+    <!--RECENT JOB SECTION END-->
+
+
+
+  <!--MAIN END-->
+
+
+
+  <!--FOOTER START-->
+
+ <?php include_once('includes/footer.php');?>
+
+</div>
+
+<!--WRAPPER END-->
+
+
+
+<!--jQuery START-->
+
+<!--JQUERY MIN JS-->
+
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!--BOOTSTRAP JS-->
+
+<script src="js/bootstrap.min.js"></script>
+
+<!--OWL CAROUSEL JS-->
+
+<script src="js/owl.carousel.min.js"></script>
+
+<!--BANNER ZOOM OUT IN-->
+
+<script src="js/jquery.velocity.min.js"></script>
+
+<script src="js/jquery.kenburnsy.js"></script>
+
+<!--SCROLL FOR SIDEBAR NAVIGATION-->
+
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--FOR CHECKBOX-->
+
+<script src="js/form.js"></script>
+
+<!--CUSTOM JS-->
+
+<script src="js/custom.js"></script>
+
+</body>
+
+</html>
