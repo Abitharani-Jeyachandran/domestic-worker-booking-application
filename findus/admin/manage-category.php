@@ -47,7 +47,7 @@ $query->execute();
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">Manage Category</h3>
+                                    <h3 class="block-title" style="color:white;">Manage Category</h3>
 
                                 </div>
                         <div class="block-content block-content-full">

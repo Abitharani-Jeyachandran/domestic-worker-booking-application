@@ -20,6 +20,42 @@ include('includes/config.php');
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700,900' rel='stylesheet' type='text/css'>
+<script>
+  var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?44174';
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = url;
+  var options = {
+"enabled":true,
+"chatButtonSetting":{
+    "backgroundColor":"#4dc247",
+    "ctaText":"",
+    "borderRadius":"25",
+    "marginLeft":"0",
+    "marginBottom":"50",
+    "marginRight":"50",
+    "position":"right"
+},
+"brandSetting":{
+    "brandName":"Admin",
+    "brandSubTitle":"Typically replies within a day",
+    "brandImg":"https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+    "welcomeText":"Hi there!\nHow can I help you?",
+    "messageText":"",
+    "backgroundColor":"#0a5f54",
+    "ctaText":"Start Chat",
+    "borderRadius":"25",
+    "autoShow":false,
+    "phoneNumber":"94774286778"
+}
+};
+  s.onload = function() {
+      CreateWhatsappChatWidget(options);
+  };
+  var x = document.getElementsByTagName('script')[0];
+  x.parentNode.insertBefore(s, x);
+</script>
 
 </head>
 
